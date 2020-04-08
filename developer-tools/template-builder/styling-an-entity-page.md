@@ -1,0 +1,2 @@
+# Styling an Entity Page
+
