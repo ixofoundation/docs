@@ -1,2 +1,2 @@
-# Project Extensions
+# Project Power-ups
 

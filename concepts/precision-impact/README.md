@@ -6,7 +6,19 @@ description: >-
 
 # Projects
 
-1. Set up projects from templates, or or create your own. 
+A project has
+
+Scope
+
+Deliverables
+
+Resources
+
+Time
+
+
+
+1. et up projects from templates, or or create your own. 
 2. Collect, process & store project data, under your control. 
 3. Decide who has access to your project, using digital identity credentials. 
 4. Employ service providers & verification oracles, with automated payments.
