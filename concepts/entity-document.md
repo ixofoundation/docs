@@ -4,19 +4,21 @@ description: The digital building-block of ixo Protocol Networks.
 
 # ixo Documents
 
-A special type of **digital document** is the digital building-block of ixo Protocol Networks. This document, together with Decentralised Identifiers \(DID\) identifies and describes entities in ixo networks and across all other networks that implement new W3C Internet standards. 
+A special type of **digital document** is the digital building-block of ixo Protocol Networks. An ixo document, together with its associated Decentralised Identifier \(DID\), identifies and describes each entity in an ixo protocol network. This should become interoperable with all other networks that implement new W3C Internet standards for decentralised internets. 
 
-The ixo Document also associates cryptographic objects with  an entity. This gives the entity remarkable capabilities, such as sovereign control over its own identifier and the ability to authenticate with services, using keys that are referenced on the network's decentralised public key infrastructure.
+The ixo Document also associates cryptographic objects with an entity. This gives the entity remarkable capabilities, such as sovereign control over its own identifier and the ability to authenticate with services, using keys that are referenced in the network's decentralised public key infrastructure.
 
 ## What is an ixo Entity?
 
-The Internet of Impact is made up of inter-connected decentralised networks of both physical infrastructure and virtual data nodes. Each node in these networks that implements the ixo protocol standards \(which are based on core new web standards\), is described as an **ixo Entity**. 
+The Internet of Impact is made up of inter-connected decentralised networks of both physical infrastructure and virtual data nodes. Each node in these networks that implements the ixo protocol standards \(which are based on core new web standards\), can be described as an **ixo Entity**. 
 
-An entity has an identity and an associated store of information. 
+An ixo Entity has an identity and an associated store of information. The ixo Document provides the genesis record for this information and can maintain a core record of the entity's information and connections. This includes specifying end-points for locating other information and services that are associated with the entity.  
 
 Entities connect to other entities, using cryptographic proofs. These authenticated connections form [Webs of Trust](https://en.wikipedia.org/wiki/Web_of_trust), through which information and value can securely flow. 
 
-Entity nodes and the connections \(edges\) beween these nodes form a rich knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlink into Web 2.0 networks.  
+By subscribing to standard data models and open schemas, entity nodes and the connections \(edges\) beween these nodes form an ontologically rich and precise knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlinked into Web 2.0 networks.  
+
+#### Entities in the context of ixo protocol networks
 
 An entity in the context of ixo can be a:
 
