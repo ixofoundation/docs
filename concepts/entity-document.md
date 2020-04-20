@@ -8,7 +8,11 @@ description: >-
 
 ## What is an ixo entity?
 
-The Internet of Impact is a web of interconnected Web 3.0 physical and virtual nodes. Each node is described as an entity. This has an identity and store of information. Entities connect to other entities, using cryptographic proofs, to form Webs of Trust. Entity nodes and the connections \(edges\) beween these nodes form a rich knowledge-graph, which can be navigated through ixo protocol networks and beyond, through inter-linked graphs.  
+The Internet of Impact is a web of interconnected Web 3.0 physical and virtual nodes. Each node is described as an **entity**. 
+
+An entity has an identity and a store of information. 
+
+Entities connect to other entities, using cryptographic proofs, to form Webs of Trust. Entity nodes and the connections \(edges\) beween these nodes form a rich knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlink into Web 2.0 nwtworks.  
 
 An entity in the context of ixo can be a:
 
