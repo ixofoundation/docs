@@ -1,18 +1,22 @@
 ---
-description: >-
-  Documents are how ixo entities are identified and described, with
-  cryptographic capabilities.
+description: The digital building-block of ixo Protocol Networks.
 ---
 
 # ixo Documents
 
-## What is an ixo entity?
+A special type of **digital document** is the digital building-block of ixo Protocol Networks. This document, together with Decentralised Identifiers \(DID\) identifies and describes entities in ixo networks and across all other networks that implement new W3C Internet standards. 
 
-The Internet of Impact is a web of interconnected Web 3.0 physical and virtual nodes. Each node is described as an **entity**. 
+The ixo Document also associates cryptographic objects with  an entity. This gives the entity remarkable capabilities, such as sovereign control over its own identifier and the ability to authenticate with services, using keys that are referenced on the network's decentralised public key infrastructure.
 
-An entity has an identity and a store of information. 
+## What is an ixo Entity?
 
-Entities connect to other entities, using cryptographic proofs, to form Webs of Trust. Entity nodes and the connections \(edges\) beween these nodes form a rich knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlink into Web 2.0 networks.  
+The Internet of Impact is made up of inter-connected decentralised networks of both physical infrastructure and virtual data nodes. Each node in these networks that implements the ixo protocol standards \(which are based on core new web standards\), is described as an **ixo Entity**. 
+
+An entity has an identity and an associated store of information. 
+
+Entities connect to other entities, using cryptographic proofs. These authenticated connections form [Webs of Trust](https://en.wikipedia.org/wiki/Web_of_trust), through which information and value can securely flow. 
+
+Entity nodes and the connections \(edges\) beween these nodes form a rich knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlink into Web 2.0 networks.  
 
 An entity in the context of ixo can be a:
 
