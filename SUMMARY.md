@@ -30,7 +30,7 @@
   * [Web of Trust](design/web-of-trust.md)
   * [Technical specifications](design/technical-specifications.md)
 * [Concepts](concepts/README.md)
-  * [Entity document](concepts/entity-document.md)
+  * [ixo Documents](concepts/entity-document.md)
   * [Cell Nodes](concepts/cellular-organisations/README.md)
     * [Cell Node Power-ups](concepts/cellular-organisations/cell-node-power-ups.md)
   * [Projects](concepts/precision-impact/README.md)
