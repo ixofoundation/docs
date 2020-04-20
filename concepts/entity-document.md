@@ -12,7 +12,7 @@ The Internet of Impact is a web of interconnected Web 3.0 physical and virtual n
 
 An entity has an identity and a store of information. 
 
-Entities connect to other entities, using cryptographic proofs, to form Webs of Trust. Entity nodes and the connections \(edges\) beween these nodes form a rich knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlink into Web 2.0 nwtworks.  
+Entities connect to other entities, using cryptographic proofs, to form Webs of Trust. Entity nodes and the connections \(edges\) beween these nodes form a rich knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlink into Web 2.0 networks.  
 
 An entity in the context of ixo can be a:
 
