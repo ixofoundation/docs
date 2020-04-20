@@ -4,13 +4,13 @@ description: The digital building-block of ixo Protocol Networks.
 
 # ixo Documents
 
-A special type of **digital document** is the digital building-block of ixo Protocol Networks. An ixo document, together with its associated Decentralised Identifier \(DID\), identifies and describes each entity in an ixo protocol network. This should become interoperable with all other networks that implement new W3C Internet standards for decentralised internets. 
+A special type of **digital document** is the digital building-block of ixo Protocol Networks. An ixo document, together with its associated Decentralised Identifier \(DID\), identifies and describes each entity in an ixo protocol network. This should become interoperable with all other networks that implement the new W3C Internet standards for decentralised internets. 
 
 The ixo Document also associates cryptographic objects with an entity. This gives the entity remarkable capabilities, such as sovereign control over its own identifier and the ability to authenticate with services, using keys that are referenced in the network's decentralised public key infrastructure.
 
 ## What is an ixo Entity?
 
-The Internet of Impact is made up of inter-connected decentralised networks of both physical infrastructure and virtual data nodes. Each node in these networks that implements the ixo protocol standards \(which are based on core new web standards\), can be described as an **ixo Entity**. 
+The Internet of Impact is formed by inter-connected decentralised networks of both physical infrastructure and virtual data nodes. Every node which  implements the ixo protocol standards can be described as an **ixo Entity.** \(The ixo protocol implements core new web standards from W3C\). 
 
 An ixo Entity has an identity and an associated store of information. The ixo Document provides the genesis record for this information and can maintain a core record of the entity's information and connections. This includes specifying end-points for locating other information and services that are associated with the entity.  
 
