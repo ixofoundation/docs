@@ -40,7 +40,7 @@ An entity is described by information contained in a standard Document format - 
 **A DID Document** is a set of data describing an Entity Node \(the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects)\) in ixo protocol networks. The DDO includes mechanisms, such as cryptographic public keys, that the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects) can use to authenticate itself, to prove their association with the [DID](https://www.w3.org/TR/did-core/#dfn-decentralized-identifiers) and to be given electronic rights \(capabilities\). A DID document might also contain other [attributes](https://en.wikipedia.org/wiki/Attribute_%28computing%29) or [claims](https://en.wikipedia.org/wiki/Claims-based_identity) that describe the subject. These documents are graph-based data structures which the ixo protocol expresses using [JSON-LD](https://www.w3.org/TR/did-core/#bib-json-ld) \(though other compatible graph-based data formats could be used\).
 {% endhint %}
 
-### Document storage
+## Document storage
 
 The ixo Network maintains a distributed registry of entities, which consists of DID:DDO pairs. An entity DID does not change, but the DDO record can be modified. 
 
@@ -52,7 +52,7 @@ As the default, ixo uses IPFS for off-chain document storage to be persistent an
 Learn more about IPFS and content addresses \(CID\).
 {% endhint %}
 
-###  Document Objects
+##  Document Objects
 
 ixo Documents are compiled using a logical structure that can be accessed through standard API interfaces. This builds on the principles of the [Document Object Model](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/introduction.html) \(DOM\), which is a core internet standard from W3C.
 
@@ -75,7 +75,7 @@ See the technical specification \[insert link\] for these document objects.
 A [DID](https://www.w3.org/TR/did-core/#dfn-decentralized-identifiers) and [DID document](https://www.w3.org/TR/did-core/#dfn-did-documents) do not inherently carry any [PII](https://en.wikipedia.org/wiki/Personally_identifiable_information) \(personally-identifiable information\).
 {% endhint %}
 
-### Document versioning
+## Document versioning
 
 When a Document is created on an ixo protocol network, this produces a Genesis Record in the blockchain registry.
 

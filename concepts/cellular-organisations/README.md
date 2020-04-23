@@ -16,11 +16,11 @@ description: Networks of Cell Nodes give rise to the Internet of Impact
 
 Cell nodes enable data to be communicated quickly and securely through a web of trust. All participants in a cell have access to the same information and share intelligence both within their own cell node and through Internet of Impact networks with other organisations.
 
-The digital artefacts created by a cell \(such as Project Documents\) are stored in the node as stateful records which are referenced in a distributed ledger, with public metadata stored in the Interplanetary File System \(IPFS\). This allows cell nodes to retain a form of memory that can be stigmergically shared and rapidly amplified when cells need to be replicated or re-activated.
+The digital artefacts created by a cell \(such as Project Documents\) are stored in the node as stateful records which are referenced in a distributed ledger. Public metadata are stored in the Interplanetary File System \(IPFS\). This allows cell nodes to retain a form of memory that can be [stigmergically](https://wiki.p2pfoundation.net/Stigmergy) shared and rapidly amplified when cells need to be replicated or re-activated.
 
 ## Purpose of a Cell
 
-The purpose of a Cell defines how this will operate in terms of membership, size, location, lifespan, scope of projects it undertakes and other types of organisational characteristics. A Cell Node is configured to fit the purpose of a cell.
+The purpose of a Cell defines how this will operate in terms of membership, size, location, lifespan, scope of projects it undertakes and other types of organisational characteristics. A Cell Node is configured to fit the purpose of a cell. The founder/s of a cell define its purpose - usually with an explicit mission statement.
 
 **Examples of cell types and their primary purpose**
 
@@ -46,7 +46,7 @@ Templates for forming different types of Cells can be found in the [ixo.world te
 
 ## The Cell mission
 
-Each cell defines its mission explicitly in terms of credible commitments that can be collectively monitored. Cell commitments are accountable, measurable and verifiable. For instance a Procurement Cell can define its mission as: _"Source and distribute 10,000 Ventilators to provide care for people infected with the Covid-19 virus."_
+Each cell defines its mission explicitly in terms of credible commitments that can be collectively monitored. Cell commitments are accountable, measurable and verifiable. For instance a Procurement Cell can define its mission as: _"Source and distribute 1,000 Ventilators to provide care for people infected with the Covid-19 virus."_
 
 ## Cell projects
 
@@ -100,24 +100,29 @@ Cells are principally organisations of people with digital super-powers. To be s
 
 Once a cell has been formed, it may be governed by the founder/s or by all the participants in the cell. The Cell Founder configures a governance mechanism when the Cell Node is instantiated.
 
-Decisions and actions may be made by the Cell Founder, or by cell agents. The Cell Node provides governance tools for stakeholders to make proposals, vote and pass executable resolutions. These tools are available as Cell Node plug-ins, such as:
+Decisions and actions may be made by the Cell Founder, or by cell agents. The Cell Node provides governance tools for stakeholders to make proposals, vote and pass executable resolutions. These tools are available as Cell Node plug-ins, such as [DAOStack](http://daostack.io) Holographic consensus.
 
-* DAOStack Holographic consensus
-* Aragon 
-* 
 ## **Cell incentives**
 
-Cells exist within an economy. 
+Cells exist within an economy that broadly had three types of common enterprises. Each common has its own incentive mechanisms:
+
+* The  [Entrepreneurial Common](http://wiki.p2pfoundation.net/index.php?title=Entrepreneurial_Common&action=edit&redlink=1) interface the cell with external ecosystems and markets.  This is responsible for the financial and monetary policy. It will determine the costs of membership, how the cell is owned and how to distribute capital. Incentives may be created by issuing and distributing shares or tokens that embody rights to ownership, economic participation and use of the cell's capital resources. 
+* The Production Common produces goods and services though the collaborative efforts and work of members in the cell. As incentives, contributors may be paid for their work, or receive shares for the value they have created.
+* The For-Benefit Common governs the cell mission, impact goals, operating policies, membership, consensus rules, rights and incentive mechanisms. An incentive for participating in the For-benefit common of a cell will typically include voting rights, which may also be modified by reputation.
 
 ## Cell resources
 
-Resourcing the operations of a cell 
+There are many possible ways of resourcing the operations of a cell from commerical, philanthropic or peer-to-peer sources.
+
+The Cell Node may also use decentralised financing tools such as Alpha Bonds to raise capital. 
+
+Learn more about Alpha Bonds.
 
 ## Features of a Cell Node
 
 Cell Nodes provide access to data and digital tools with powerful Web 3.0 capabilities. These are provided by both the core Cell Node software and through third-party application extensions and integrations.
 
-#### Core Cell Node features currenty include:
+#### Core Cell features currenty include:
 
 * Projects
 * Secure peer-to-peer communication
@@ -125,25 +130,28 @@ Cell Nodes provide access to data and digital tools with powerful Web 3.0 capabi
 * Data marketplace
 * Alpha Bond funding
 * Agent credentialing
-* Blockchain Accounting
 * Token issuance
 
 #### Extended Cell Node features will include:
 
 * Dispute resolution
 * Crowd-funding
-* Prediction market plugin
+* Prediction markets
 * Bounties
-* 
-## Technical setup of a Cell Node
+* Blockchain Accounting
+* Legal agreements
 
-\*\*
+## How to set up of a Cell Node
+
+The easiest way to start is with a template. Browse [ixo.world templates](https://app.ixo.world/templates) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo guide explains this further. 
+
+If you can't find a template that suits your specific needs, start a new cell template with guidance from the ixo-assistant chatbot.
 
 ## The costs of operating a Cell Node
 
 Registering a Cell Node with a Decentralised Identifier and Cell Document on the Sustainability Hub incurs a negligible transaction fee \(gas\) for writing these records to the blockchain.
 
-Hosting costs for the Cell Node data container and related connectors \*\*
+Hosting costs for a Cell Node depends on the choice of hosting service, or self-hosted option. 
 
-\*\* 
+Cells can choose to employ services and acquire applications from a growing network marketplace, where the costs are determined by providers. 
 

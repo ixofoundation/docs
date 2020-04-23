@@ -18,14 +18,15 @@
     * [The Feedback problem](purpose/problem-statement/the-feedback-problem.md)
     * [The Economy Problem](purpose/problem-statement/the-economy-problem.md)
   * [The Solution](purpose/why-this-is-a-solution/README.md)
-    * [Serving the Commons](purpose/why-this-is-a-solution/serving-the-commons.md)
+    * [Serving the Commons](purpose/why-this-is-a-solution/serving-the-commons/README.md)
+      * [Collective Monitoring](purpose/why-this-is-a-solution/serving-the-commons/collective-monitoring.md)
     * [Using feedback loops](purpose/why-this-is-a-solution/using-feedback-loops.md)
     * [Building new economy](purpose/why-this-is-a-solution/building-new-economy.md)
   * [Addressing market needs](purpose/addressing-market-needs.md)
   * [Alternatives](purpose/comparisons/README.md)
     * [Web 2.0 Internet solutions](purpose/comparisons/web-2.0-internet-solutions.md)
 * [Design](design/README.md)
-  * [Untitled](design/untitled.md)
+  * [Immunity](design/untitled.md)
   * [Principles](design/principles.md)
   * [Web of Trust](design/web-of-trust.md)
   * [Technical specifications](design/technical-specifications.md)
@@ -183,6 +184,7 @@
 ## Services
 
 * [Impact Oracles](services/impact-oracles.md)
+* [Compliance layer](compliance-layer.md)
 * [Alpha Bonds](alphabonds.md)
 
 ## Research

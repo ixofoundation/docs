@@ -6,6 +6,10 @@ description: >-
 
 # The Solution
 
+![](../../.gitbook/assets/programmable-capital-black-text.png)
+
+## 
+
 ## Serving the Commons
 
 ### 

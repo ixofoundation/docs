@@ -8,7 +8,7 @@ description: Why we need an Internet of Impact
 
 
 
-## Sensing the state of the world
+## Sense the state of the world
 
 Sensors
 
@@ -20,7 +20,7 @@ Shared intelligence
 
 
 
-## Responding to the state of the world
+## Respond to the state of the world
 
 Coordinating agents
 
@@ -30,7 +30,7 @@ Incentivising agents
 
 Conditional 
 
-## 
+## Incentivise positive future states of the world
 
 
 
