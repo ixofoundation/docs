@@ -6,11 +6,11 @@ description: Networks of Cell Nodes give rise to the Internet of Impact
 
 ## Cells and Cell Nodes
 
-**A Cell** is an intelligent way for people to connect and self-organise to achieve a common mission. 
-
-[Cellular organisational structures](https://en.wikipedia.org/wiki/Cellular_organizational_structure) are common in nature \(think about how human immune cells sense and respond to infections\). Now we can power-up Cells through hyper-connected intelligence networks and using a new generation of digital tools, with high-definition data and programmable capital.
+**A Cell** is a powerful cooperation mechanism which enables people to self-organise and self-govern to achieve a common mission.    
 
 **Cell nodes** provide the digital infrastructure for this decentralised, autonomous, locally responsive, adaptable, highly networked, intelligent and purpose-driven cellular form of organisation.
+
+[Cellular organisational structures](https://en.wikipedia.org/wiki/Cellular_organizational_structure) are common in nature \(think about how human immune cells sense and respond to infections\). Now we can power-up Cells through hyper-connected intelligence networks and using a new generation of digital tools, with high-definition data and programmable capital.
 
 ![People form a Cell to pursue a shared mission](../../.gitbook/assets/cell-node-group3.svg)
 
