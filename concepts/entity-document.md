@@ -22,12 +22,12 @@ By subscribing to standard data models and open schemas, entity nodes and the co
 
 An entity in the context of ixo can be a:
 
-* Cell
-* Project
-* Oracle
+* Cell \(type of Decentralised Autonomous Organisation\)
+* Project \(time-limited coordination mechanism for delivering, evaluating and funding a specificed scope of claims\)
+* Oracle \(software-mediated data service\)
 * Fund \("smart contract"\)
-* Data Asset
-* Relayer
+* Data Asset \(dataset, algorithm or encoded model\)
+* Relayer \(connecting market need to products and services delivered through the network\) 
 * Agent \(person, organisation or machine\)
 
 Each Entity has an identity, which is defined by a [Decentralised Identifier](https://www.w3.org/TR/did-core/) \(DID\). 
