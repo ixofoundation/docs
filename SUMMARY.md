@@ -32,7 +32,7 @@
   * [Technical specifications](design/technical-specifications.md)
 * [Concepts](concepts/README.md)
   * [ixo Documents](concepts/entity-document.md)
-  * [Cell Nodes](concepts/cell-nodes/README.md)
+  * [Cells and Cell Nodes](concepts/cell-nodes/README.md)
     * [Cell Node Power-ups](concepts/cell-nodes/cell-node-power-ups.md)
   * [Projects](concepts/projects/README.md)
     * [Project Types](concepts/projects/project-types.md)
