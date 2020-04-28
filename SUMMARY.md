@@ -174,6 +174,8 @@
   * [Template Builder](developer-tools/template-builder/README.md)
     * [Styling an Entity Page](developer-tools/template-builder/styling-an-entity-page.md)
 * [Chatbot Assistant](chatbot-assistant.md)
+* [ixo Apps](ixo-apps/README.md)
+  * [Matrix App](ixo-apps/matrix-app.md)
 * [Systems Integrations](systems-integrations.md)
 * [Relayer Setup Guide](relayer-setup/README.md)
   * [Step Plan](relayer-setup/step-plan.md)
