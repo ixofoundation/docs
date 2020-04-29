@@ -6,7 +6,7 @@ description: The Internet of Impact is formed by networks of Cell Nodes.
 
 ## Cellular organisations
 
-**Cellular organisations** \(Cells\) are a highly effective cooperation mechanism for people to self-organise and self-govern towards achieving a common mission. By definition, cells are decentralised, autonomous, locally responsive, adaptable, hyper-networked, intelligent and purpose-driven.
+**Cellular organisations** \(Cells\) are a highly effective coordination mechanism for people to self-organise and self-govern towards achieving a common mission. By definition, cells are decentralised, autonomous, locally responsive, adaptable, hyper-networked, intelligent and purpose-driven. They are highly suitable for virtual and remote teams to work together and share common resources.
 
 [Cellular organisational structures](https://en.wikipedia.org/wiki/Cellular_organizational_structure) are common in nature. Think about how human immune cells sense and respond to threats with targeted precision. Immune cells signal other systems, amplify their responses through replication, produce neutralising or catalytic antibodies and build cellular memory. Each of these has strong analogies with digitally-enhanced cellular organisations.
 
@@ -14,7 +14,7 @@ Cellular organisations are taken to a whole new level in the Internet of Impact.
 
 #### Cellular organisations can build a digitally-enhanced immune system for humanity. 
 
-![People form a Cell to pursue a shared mission](../../.gitbook/assets/cell-node-group3.svg)
+![People form a Cell to pursue a shared mission](../../../.gitbook/assets/cell-node-group3.svg)
 
 ## **Cell nodes**
 

@@ -71,7 +71,7 @@ All requests to that create data or access sensitive data require cryptographic 
 
 ### Message Flows <a id="message-flows"></a>
 
-![](../.gitbook/assets/architecture-06-2018-messageflows.png)
+![](../../.gitbook/assets/architecture-06-2018-messageflows.png)
 
 #### Update Messages <a id="update-messages"></a>
 

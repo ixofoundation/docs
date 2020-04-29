@@ -26,7 +26,7 @@
 
 
 
-![](../.gitbook/assets/whatsapp-image-2020-02-25-at-11.25.10.jpeg)
+![](../../.gitbook/assets/whatsapp-image-2020-02-25-at-11.25.10.jpeg)
 
 
 
