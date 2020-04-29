@@ -75,7 +75,7 @@ This script goes through the following steps:
 2. Updates and upgrades Ubuntu packages.
 3. Prompts user to create a new IXO non-sudo user to run the software with.
 4. Sets required environmental variables for Golang.
-5. Clones the ixo-cosmos repo at the specific commit of pandora-1, 7ee1d6f268ce0bee281c165eb5c4c9951dcd3229.
+5. Clones the ixo-blockchain repo at the specific commit of pandora-1, fe91bdceab65133f9a02302a47c7361551f3348f.
 6. Creates the directories required for the ixo node configurations and blockchain data.
 7. Installs the IXO blockchain daemon and CLI tool
 8. Configures the node to use pandora-1's genesis file.
