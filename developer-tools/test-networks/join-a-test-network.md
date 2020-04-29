@@ -100,7 +100,7 @@ nano $HOME/.ixod/config.toml
 The default value of this entry should be "". This must be changed to look as follows:
 
 ```text
-"ffb550c044dcf63726c24d18f54ddbb2d7b15609@46.166.138.209:26656,a9fb4f7437e47b15c8b9f22f4cc960535e21fa99@80.64.208.22:26656"
+"6098df32ec7e5b859032a9f22e415de0f369fbaf@46.166.138.209:26656,19690fa3856dd9d9398c59c7a1eb8bb63fd19683@80.64.208.22:26656"
 ```
 
 **Required**: Enable the peer exchange reactor `pex`, which enables nodes to share each other's peers. This ensures your node discovers other peers on the network.
@@ -148,9 +148,38 @@ Should you have any issues, please [contact ixo support on Telegram](https://t.m
 
 **Final steps**:
 
-1. Backup the generated `priv_validator_key.json`, which is the validator's block/consensus signing key.
+1. Backup the generated `priv_validator_key.json` stored in `$HOME/.ixod/config/`, which is the validator's block/consensus signing key.
 2. Obtain the node's peer ID and IP for sharing with other node operators.
-3. Run the `create-validator` command.
 
+```text
+# Obtain the node's peering ID
+ixod tendermint show-node-id
+
+# Obtain the node's public IP
+curl https://ipinfo.io/ip
+```
+
+4. Create an address to receive testnet tokens on.
+
+You will be prompted to enter a password and then save/backup a seed phrase.
+
+```
+ixocli keys add validator
+```
+
+Once this has been generated, run the following command and take note of the `address` field, which will contain your address.
+
+```
+ixocli keys list
+```
+
+Submit this to the IXO testnet support Telegram chat to receive testnet tokens.
+
+4. Register your validator on-chain `create-validator` command.
+
+Once you have received tokens, you can go ahead and send transactions on the network. Registering your validator to participate in the network's consensus comprises of sending a transaction that will register your software's identity on the network, and it's rights to sign/vote on the blocks/transactions that are being processed.
+```
+ixocli tx staking create-validator   --amount=1000000stake   --pubkey=$(ixod tendermint show-validator)   --moniker="<Enter a validator name here>"   --trust-node=true   --commission-rate="0.10"   --commission-max-rate="0.20"   --commission-max-change-rate="0.01"   --min-self-delegation="1"   --gas="auto"   --gas-prices="0.025stake"   --from=validator
+```
 
 
