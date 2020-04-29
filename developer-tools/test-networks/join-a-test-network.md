@@ -159,7 +159,7 @@ ixod tendermint show-node-id
 curl https://ipinfo.io/ip
 ```
 
-4. Create an address to receive testnet tokens on
+4. Create an address to receive testnet tokens on.
 
 You will be prompted to enter a password and then save/backup a seed phrase.
 
