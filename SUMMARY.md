@@ -207,3 +207,7 @@
 
 * [Untitled](troubleshooting-guide/untitled.md)
 
+## Policies
+
+* [Privacy Policy](policies/privacy-policy.md)
+
