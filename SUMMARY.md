@@ -161,6 +161,7 @@
     * [Claims Module](developers/sdks/blockchain/claims-module.md)
     * [Data assets module](developers/sdks/blockchain/data-assets-module.md)
 * [Developer Tools](developers/developer-tools/README.md)
+  * [Prototyping](developers/developer-tools/prototyping.md)
   * [Test Networks](developers/developer-tools/test-networks/README.md)
     * [Join a Test Network](developers/developer-tools/test-networks/join-a-test-network/README.md)
       * [1. ixo-blockchain setup](developers/developer-tools/test-networks/join-a-test-network/1.-ixo-blockchain-setup.md)

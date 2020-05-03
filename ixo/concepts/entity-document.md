@@ -58,7 +58,7 @@ ixo Documents are compiled using a logical structure that can be accessed throug
 
 The generic structure of an ixo document has 3 sections:   
 
-1. **Header section** which contais the document metadata.
+1. **Header section** which contains the document metadata.
 2. **Page section** which contains public descriptive content about the entity, with a content-addressable link to off-chain document content \(which may be clear-text or encrypted\).  
 3. **Core properties** which contains objects for:
 
