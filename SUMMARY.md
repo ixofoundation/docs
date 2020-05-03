@@ -179,7 +179,6 @@
   * [Matrix App](developers/ixo-apps/matrix-app.md)
 * [Systems Integrations](developers/systems-integrations.md)
 * [Relayer Setup Guide](developers/relayer-setup/README.md)
-  * [Step Plan](developers/relayer-setup/step-plan.md)
   * [Validator node](developers/relayer-setup/validator-node.md)
   * [Explorer \(Block-sync\)](developers/relayer-setup/block-sync.md)
   * [Web portal](developers/relayer-setup/web-portal.md)
