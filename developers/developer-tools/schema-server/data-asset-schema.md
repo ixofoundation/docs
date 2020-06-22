@@ -65,7 +65,9 @@ If the Data Asset is a Dataset, we would use the [schema.org/Dataset](https://sc
       </td>
     </tr>
   </tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">Recommended properties</th>
@@ -266,7 +268,9 @@ If the Data Asset is a Dataset, we would use the [schema.org/Dataset](https://sc
       </td>
     </tr>
   </tbody>
-</table>#### `DataCatalog` <a id="publication"></a>
+</table>
+
+#### `DataCatalog` <a id="publication"></a>
 
 The full definition of `DataCatalog` is available at [schema.org/DataCatalog](https://schema.org/DataCatalog).
 
@@ -290,7 +294,9 @@ Datasets are often published in repositories that contain many other datasets. T
       </td>
     </tr>
   </tbody>
-</table>#### `DataDownload` <a id="download"></a>
+</table>
+
+#### `DataDownload` <a id="download"></a>
 
 The full definition of `DataDownload` is available at [schema.org/DataDownload](https://schema.org/DataDownload). In addition to Dataset properties, add the following properties for datasets that provide download options.
 
@@ -314,7 +320,9 @@ The `distribution` property describes how to get the dataset itself because the 
       </td>
     </tr>
   </tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">Recommended properties</th>
@@ -342,7 +350,9 @@ The `distribution` property describes how to get the dataset itself because the 
       </td>
     </tr>
   </tbody>
-</table>#### Tabular datasets
+</table>
+
+#### Tabular datasets
 
 A [tabular dataset](https://www.w3.org/TR/tabular-data-model/#intro) is one organised primarily in terms of a grid of rows and columns. For pages that embed tabular datasets, you can also create more explicit markup, building on the basic approach described above. 
 

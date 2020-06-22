@@ -104,6 +104,8 @@ The purpose of each module is briefly outlined in the table and described in tec
   </tbody>
 </table>
 
+
+
 ## Built using the Cosmos-SDK framework 
 
 The ixo blockchain SDK shares a set of core blockchain modules with the Cosmos-SDK and is built using the same standards. The Cosmos-SDK is a software development kit for building application-specific blockchains. 

@@ -31,6 +31,9 @@
   * [Web of Trust](ixo/design/web-of-trust.md)
   * [Technical specifications](ixo/design/technical-specifications.md)
 * [Concepts](ixo/concepts/README.md)
+  * [ixo Entities](ixo/concepts/ixo-entities/README.md)
+    * [Oracle Entity](ixo/concepts/ixo-entities/oracle-entity/README.md)
+      * [Evaluation Oracles](ixo/concepts/ixo-entities/oracle-entity/evaluation-oracles.md)
   * [ixo Documents](ixo/concepts/entity-document.md)
   * [Cells and Cell Nodes](ixo/concepts/cell-nodes/README.md)
     * [Cell Node Power-ups](ixo/concepts/cell-nodes/cell-node-power-ups.md)
@@ -104,6 +107,8 @@
 ## User Guides <a id="guides"></a>
 
 * [Connect through a portal](guides/connect-through-a-portal.md)
+* [Create an entity](guides/create-an-entity.md)
+* [Configure a Claim Template](guides/configure-a-claim-template.md)
 * [Set up a Cell Node](guides/set-up-a-cell-node/README.md)
   * [Host your Cell Node](guides/set-up-a-cell-node/host-your-cell-node.md)
   * [Configure your Cell Node](guides/set-up-a-cell-node/configure-your-cell-node.md)
@@ -148,7 +153,7 @@
 
 * [ixo.world](portals/ixo.world.md)
 * [Impact Oracle Launchpad](portals/impact-oracle-launchpad.md)
-* [C-2020](portals/c-2020.md)
+* [Impact Data Consortium](portals/impact-data-consortium.md)
 
 ## DEVELOPERS
 
