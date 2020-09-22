@@ -30,7 +30,7 @@ Access the root user's home directory and clone the repository
 
 ```text
 cd $HOME
-git clone https://www.github.com/franono/genesis.git && git checkout master
+git clone https://www.github.com/ixofoundation/genesis.git && git checkout master
 ```
 
 The pangea-1 directory includes: 
