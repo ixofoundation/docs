@@ -1,5 +1,5 @@
 ---
-description: Guide for setting up a Relayer on the Pangea Test Network.
+description: Guide for setting up a Relayer on the Pangea Network.
 ---
 
 # Join the Pangea IXO Mainnet
