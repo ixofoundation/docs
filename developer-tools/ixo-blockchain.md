@@ -12,7 +12,7 @@
 
 ### Installation
 
-The installation script `InstallPangea.sh` prepares the environment, prerequisites, installs the ixo-blockchain software and guides you through the node setup.
+The installation script `setup.sh` prepares the environment, prerequisites, installs the ixo-blockchain software and guides you through the node setup.
 
 These steps are to be run once logged in as **root** user. Use the following command to access the root user.
 
@@ -33,16 +33,16 @@ cd $HOME
 git clone https://www.github.com/ixofoundation/genesis.git && git checkout master
 ```
 
-The pangea-1 directory includes: 
+The impacthub-1 directory includes: 
 
-* The network genesis fille with pangea-1 network details, parameters and starting data. 
-* `InstallPangea.sh` which is to be run in the next step to install all the requirements and blockchain software to participate in the network.
+* The network genesis fille with impacthub-1 network details, parameters and starting data. 
+* `setup.sh` which is to be run in the next step to install all the requirements and blockchain software to participate in the network.
 
-Access the pangea-1 folder and run the installation script.
+Access the impacthub-1 folder and run the installation script.
 
 ```text
-cd pangea-1
-bash InstallPangea.sh
+cd impacthub-1
+bash setup.sh
 ```
 
 This script goes through the following steps:
@@ -54,7 +54,7 @@ This script goes through the following steps:
 5. Clones the ixo-blockchain repo at the mainnet launch release, v1.3.0.
 6. Creates the directories required for the ixo node configurations and blockchain data.
 7. Installs the IXO blockchain daemon and CLI tool
-8. Configures the node to use pangea-1's genesis file.
+8. Configures the node to use impacthub-1's genesis file.
 9. Creates and an enables a systemd service with which the IXO node daemon will be run.
 
 Follow the configuration steps as the node is installed.
@@ -65,7 +65,7 @@ Switch to the new IXO user
 su ixo
 ```
 
-Access the node's configuration file and add Simply VC's Pangea-1 peers.
+Access the node's configuration file and add Simply VC's Impacthub-1 peers.
 
 ```text
 nano $HOME/.ixod/config.toml
@@ -87,9 +87,9 @@ The default value of this entry should be "false". This must be changed to look 
 pex = true 
 ```
 
-**Optiona**l: The node's moniker can be changed from `Pangea node` to anything of your liking.
+**Optiona**l: The node's moniker can be changed from `Impacthub node` to anything of your liking.
 
-The default value of the `moniker` entry is `"Pangea node".` This can be changed as desired.
+The default value of the `moniker` entry is `"Impacthub node".` This can be changed as desired.
 
 Start the IXO blockchain daemon.
 
@@ -118,7 +118,7 @@ Executed block    module=state height=20 validTxs=0 invalidTxs=0
 Committed state   module=state height=20 txs=0 appHash=3A6BB8049C10D0FB3C9C58A85B8FD840BBD28BDDCB8566621FEDFAB240C2FB5C
 ```
 
-If all these steps were completed successfully, the node should be syncing through the whole Pangea-1 blockchain. 
+If all these steps were completed successfully, the node should be syncing through the whole impacthub-1 blockchain. 
 
 Should you have any issues, please [contact ixo support on Telegram](https://t.me/ixotestnet).
 
@@ -135,12 +135,12 @@ ixod tendermint show-node-id
 curl https://ipinfo.io/ip
 ```
 
-3. Recover your IXO address which you ledgered your DID with on the Pangea network.
+3. Create an IXO address to be the validator operator account.
 
-You will be prompted to recover the seed phrase and an encryption password.
+You will be prompted to backup the seed phrase and enter/backup an encryption password.
 
 ```
-ixocli keys add validator --recover
+ixocli keys add validator
 ```
 
 Once this has been added, run the following command and double checked for your added address.
@@ -149,17 +149,16 @@ Once this has been added, run the following command and double checked for your 
 ixocli keys list
 ```
 
-4. Query the blockchain for a balance in your address.
+
+4. Submit the address generated to the IXO team to be included in the genesis file.
 
 
-```
-ixocli query balance <address here> --chain-id=pangea
-```
 
-5. Register your validator on-chain `create-validator` command.
+
+**Register your validator on-chain post-genesis `create-validator` command.**
 
 Once you have received tokens, you can go ahead and send transactions on the network. Registering your validator to participate in the network's consensus comprises of sending a transaction that will register your software's identity on the network, and it's rights to sign/vote on the blocks/transactions that are being processed.
 ```
-ixocli tx staking create-validator   --amount=1000000uixos   --pubkey=$(ixod tendermint show-validator)   --moniker="<Enter a validator name here>"   --trust-node=true   --commission-rate="0.10"   --commission-max-rate="0.20"   --commission-max-change-rate="0.01"   --min-self-delegation="1"   --gas="auto"   --gas-prices="0.025uxios"   --from=validator --chain-id=pangea-1
+ixocli tx staking create-validator   --amount=1000000uixos   --pubkey=$(ixod tendermint show-validator)   --moniker="<Enter a validator name here>"   --trust-node=true   --commission-rate="0.10"   --commission-max-rate="0.20"   --commission-max-change-rate="0.01"   --min-self-delegation="1"   --gas="auto"   --gas-prices="0.025uxios"   --from=validator --chain-id=impacthub-1
 ```
 
