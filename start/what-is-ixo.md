@@ -12,11 +12,11 @@ description: The Internet of Impact
 
 **ixo Protocol networks** are blockchain-based webs of trust through which to deliver, verify and invest in impacts. This is foundational digital infrastructure for the impact economy.
 
-**Users create verifiable claims** to capture a temper-proof digital record of the state of the world \(about any imaginable subject\). Claims are evaluated by independent trusted verification services \(which ixo calls **Proofing Oracles**\).
+**Users create verifiable claims** to capture a tamper-proof digital record of the state of the world \(about any imaginable subject\). Claims are evaluated by independent trusted verification services \(which ixo describes as **Proofing Oracles**\).
 
 **Verified claims** with their crypto-economic proofs and data assets are tokenised. For instance a Carbon Emission Reduction claim can produce a verified, information-rich Carbon Credit token. 
 
-**Tokenised Impact** makes the results of development processes more precisely measurable and valuable. Tokens can be traded and used in decentralised development finance mechanisms, such as Alpha Bonds.   
+**Tokenised Impact** makes the results of development processes more precisely measurable and valuable. Tokens can be traded and used in decentralised development finance mechanisms, such as AlphaBonds.   
 
 #### **ixo is a technology for all people**.
 
@@ -24,7 +24,7 @@ description: The Internet of Impact
 * If you want to **do more**, join the ixo community.
 * If you are ready to **make an impact**, form your own impact cell and launch projects. Or join a cell and help implement, evaluate or invest in its projects.
 * If you want to **build** **software or data solutions** on the Internet of Impact, visit the ixo Developers Portal.
-* If you want to **become a Relayer** so that your organisation can offer channels to the market in your sector or geographic region, get in touch with the ixo.world team.
+* If you want to **become a Relayer** so that your organisation can offer channels to the market in your sector or geographic region, [get in touch](mailto:%20ixo@ixo.world) with the ixo.world team.
 
 
 
