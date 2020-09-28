@@ -178,7 +178,14 @@ $ cp pre-genesis.json $HOME/.ixod/config/genesis.json
 $ rm -r $HOME/.ixod/config/gentx
 ```
 
-4. Choose your parameters (https://hub.cosmos.network/master/validators/validator-faq.html) and create your genesis tx (this assumes you have your validator key set up using ixocli as described above). The following gentx command bonds 9 out of the 10 ixo funded to validators at genesis.
+4. Change your validator's moniker in config.toml.
+
+```
+$ nano $HOME/.ixod/config/config.toml
+```
+
+
+5. Choose your parameters (https://hub.cosmos.network/master/validators/validator-faq.html) and create your genesis tx (this assumes you have your validator key set up using ixocli as described above). The following gentx command bonds 9 out of the 10 ixo funded to validators at genesis.
 
 ```
 ixod gentx --amount 9000000uxio   \
@@ -188,8 +195,7 @@ ixod gentx --amount 9000000uxio   \
             --website=<add a website here> \
             --min-self-delegation 1 \   
             --details=<add a validator description here> \
-            --name <your validator key's name as shown by 'ixocli keys list'>  \
-            --moniker <your validator's name on chain>
+            --name <your validator key's name as shown by 'ixocli keys list'> 
             
 Genesis transaction written to "~/.ixod/config/gentx/gentx-xyz.json"
 ```
