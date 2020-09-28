@@ -87,7 +87,7 @@ The default value of this entry should be "false". This must be changed to look 
 pex = true 
 ```
 
-**Optiona**l: The node's moniker can be changed from `Impacthub node` to anything of your liking.
+**Optional**: The node's moniker can be changed from `Impacthub node` to anything of your liking.
 
 The default value of the `moniker` entry is `"Impacthub node".` This can be changed as desired.
 
@@ -153,7 +153,7 @@ ixocli keys list
 4. Submit the address generated to the ixo team to be included in the genesis file.
 
 
-**Submitting your gentx for impacthub-1 launch.**
+## Submitting your gentx for impacthub-1 launch.
 
 
 
@@ -197,7 +197,7 @@ Genesis transaction written to "~/.ixod/config/gentx/gentx-xyz.json"
 5. Create a pull request with your gentx in the "gentx" directory in this repository.
 
 
-**Register your validator on-chain post-genesis `create-validator` command.**
+## Register your validator on-chain post-genesis `create-validator` command.
 
 Once you have received tokens, you can go ahead and send transactions on the network. Registering your validator to participate in the network's consensus comprises of sending a transaction that will register your software's identity on the network, and it's rights to sign/vote on the blocks/transactions that are being processed.
 ```
