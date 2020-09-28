@@ -169,7 +169,7 @@ cd genesis/impacthub-1
 2. Copy the final genesis.json file in this directory to $HOME/.ixod/config (backup the existing one if desired)
 
 ```
-$ cp genesis.json $HOME/.ixod/config/
+$ cp pre-genesis.json $HOME/.ixod/config/genesis.json
 ```
 
 3. Remove any existing gentxs:
