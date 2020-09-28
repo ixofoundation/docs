@@ -76,7 +76,7 @@ nano $HOME/.ixod/config.toml
 The default value of this entry should be "". This must be changed to look as follows:
 
 ```text
-"6098df32ec7e5b859032a9f22e415de0f369fbaf@46.166.138.209:26656,19690fa3856dd9d9398c59c7a1eb8bb63fd19683@80.64.208.22:26656"
+"f0d4546fa5e0c2d84a4244def186b9da3c12ba1a@46.166.138.214:26656,dde3d8aacfef1490ef4ae43698e3e2648bb8363c@80.64.208.42:26656"
 ```
 
 **Required**: Enable the peer exchange reactor `pex`, which enables nodes to share each other's peers. This ensures your node discovers other peers on the network.
@@ -150,9 +150,51 @@ ixocli keys list
 ```
 
 
-4. Submit the address generated to the IXO team to be included in the genesis file.
+4. Submit the address generated to the ixo team to be included in the genesis file.
 
 
+**Submitting your gentx for impacthub-1 launch.**
+
+
+
+All validators should perform the following GENTX steps (skip to Step 4 if network has Launched):
+
+1. Ensure you have the final genesis.json with all the starting account balances:
+
+```
+git clone https://gitlab.com/ixofoundation/genesis.git
+cd genesis/impacthub-1
+```
+
+2. Copy the final genesis.json file in this directory to $HOME/.ixod/config (backup the existing one if desired)
+
+```
+$ cp genesis.json $HOME/.ixod/config/
+```
+
+3. Remove any existing gentxs:
+
+```
+$ rm -r $HOME/.ixod/config/gentx
+```
+
+4. Choose your parameters (https://hub.cosmos.network/master/validators/validator-faq.html) and create your genesis tx (this assumes you have your validator key set up using ixocli as described above). The following gentx command bonds 9 out of the 10 ixo funded to validators at genesis.
+
+```
+ixod gentx --amount 9000000uxio   \
+            --commission-rate 0.1  \
+            --commission-max-rate 0.3 \
+            --commission-max-change-rate 0.01 \
+            --website=<add a website here> \
+            --min-self-delegation 1 \   
+            --details=<add a validator description here> \
+            --name <your validator key's name as shown by 'ixocli keys list'>  \
+            --moniker <your validator's name on chain>
+            
+Genesis transaction written to "~/.ixod/config/gentx/gentx-xyz.json"
+```
+
+5. Create a pull request with your gentx in the "gentx" directory in this repository.
 
 
 **Register your validator on-chain post-genesis `create-validator` command.**
