@@ -188,7 +188,7 @@ $ nano $HOME/.ixod/config/config.toml
 5. Choose your parameters (https://hub.cosmos.network/master/validators/validator-faq.html) and create your genesis tx (this assumes you have your validator key set up using ixocli as described above). The following gentx command bonds 9 out of the 10 ixo funded to validators at genesis.
 
 ```
-ixod gentx --amount 9000000uxio   \
+ixod gentx --amount 9000000uixo   \
             --commission-rate 0.1  \
             --commission-max-rate 0.3 \
             --commission-max-change-rate 0.01 \
@@ -207,6 +207,6 @@ Genesis transaction written to "~/.ixod/config/gentx/gentx-xyz.json"
 
 Once you have received tokens, you can go ahead and send transactions on the network. Registering your validator to participate in the network's consensus comprises of sending a transaction that will register your software's identity on the network, and it's rights to sign/vote on the blocks/transactions that are being processed.
 ```
-ixocli tx staking create-validator   --amount=1000000uixos   --pubkey=$(ixod tendermint show-validator)   --moniker="<Enter a validator name here>"   --trust-node=true   --commission-rate="0.10"   --commission-max-rate="0.20"   --commission-max-change-rate="0.01"   --min-self-delegation="1"   --gas="auto"   --gas-prices="0.025uxios"   --from=validator --chain-id=impacthub-1
+ixocli tx staking create-validator   --amount=1000000uixos   --pubkey=$(ixod tendermint show-validator)   --moniker="<Enter a validator name here>"   --trust-node=true   --commission-rate="0.10"   --commission-max-rate="0.20"   --commission-max-change-rate="0.01"   --min-self-delegation="1"   --gas="auto"   --gas-prices="0.025uixos"   --from=validator --chain-id=impacthub-1
 ```
 
