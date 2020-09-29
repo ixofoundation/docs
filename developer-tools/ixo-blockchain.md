@@ -200,7 +200,7 @@ ixod gentx --amount 9000000uxio   \
 Genesis transaction written to "~/.ixod/config/gentx/gentx-xyz.json"
 ```
 
-5. Create a pull request with your gentx in the "gentx" directory in this repository.
+5. Create a pull request with your gentx in the "gentx" directory in this repository: https://github.com/ixofoundation/genesis.
 
 
 ## Register your validator on-chain post-genesis `create-validator` command.
