@@ -216,7 +216,3 @@
 
 * [Privacy Policy](policies/privacy-policy.md)
 
----
-
-* [Use Cases and Requirements](use-cases-and-requirements.md)
-
