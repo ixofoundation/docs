@@ -168,6 +168,20 @@ ixo.claim.listClaimsForProject(data, signature, PDSUrl).then((result) => {
 
 Response: [ixo-cellNode: listClaimsForProject](api.md#pds-listClaimsForProject)
 
+#### List Claims by Template ID
+
+Returns a list of filtered claims for an entity, from a Cell Node, together with the claim status. Claims are filtered by a template ID expected to be included in `data` as `claimTemplateId`.
+
+Request:
+
+```text
+ixo.claim.listClaimsForProjectByTemplateId(data, signature, PDSUrl).then((result) => {
+    console.log('Claim List: ' + result)
+})
+```
+
+Response: [ixo-cellNode: listClaimsForProjectByTemplateId](api.md#pds-listClaimsForProjectByTemplateId)
+
 #### Issue Claim
 
 Issues a claim for an entity.
