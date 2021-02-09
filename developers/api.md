@@ -1006,6 +1006,53 @@ Response:
 }
 ```
 
+#### List Claim by Template ID
+
+List claims and latest status filtered by template ID. The template ID is expected to be included in `<data to filter>` as `claimTemplateId`.
+
+Request:
+
+```text
+{
+    "jsonrpc": "2.0", 
+    "method": "listClaims", 
+    "id": 3, 
+    "params": {
+        "payload": {        
+            "template": {
+                "name": "<template to validate>"
+            },
+            "data": {
+                <data to filter>
+            }
+        },
+        "signature": {
+            "type": <signature type ECDSA or E25519>,
+            "created": <date of signature>, 
+            "creator": <user did>,
+            "signatureValue":  <signature in hex>
+        }
+    }
+}
+```
+
+Response:
+
+```text
+{
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": [
+        {
+            <claim data>,
+            "evaluations": {
+                <claim status data>
+            }
+        }
+    ]
+}
+```
+
 ### Health Check Functions
 
 #### Cell Node Health Check
