@@ -14,7 +14,7 @@ Cellular organisations are taken to a whole new level in the Internet of Impact.
 
 #### Cellular organisations can build a digitally-enhanced immune system for humanity. 
 
-![People form a Cell to pursue a shared mission](../../../.gitbook/assets/cell-node-group3.svg)
+![People form a Cell to pursue a shared mission](../../.gitbook/assets/cell-node-group3.svg)
 
 ## **Cell nodes**
 

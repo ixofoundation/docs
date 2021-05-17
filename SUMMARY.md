@@ -26,7 +26,6 @@
   * [Alternatives](ixo/purpose/comparisons/README.md)
     * [Web 2.0 Internet solutions](ixo/purpose/comparisons/web-2.0-internet-solutions.md)
 * [Design](ixo/design/README.md)
-  * [Immunity](ixo/design/untitled.md)
   * [Principles](ixo/design/principles.md)
   * [Web of Trust](ixo/design/web-of-trust.md)
   * [Technical specifications](ixo/design/technical-specifications.md)
@@ -35,8 +34,7 @@
     * [Oracle Entity](ixo/concepts/ixo-entities/oracle-entity/README.md)
       * [Evaluation Oracles](ixo/concepts/ixo-entities/oracle-entity/evaluation-oracles.md)
   * [ixo Documents](ixo/concepts/entity-document.md)
-  * [Cells and Cell Nodes](ixo/concepts/cell-nodes/README.md)
-    * [Cell Node Power-ups](ixo/concepts/cell-nodes/cell-node-power-ups.md)
+  * [Cells and Cell Nodes](ixo/concepts/cell-nodes.md)
   * [Projects](ixo/concepts/projects/README.md)
     * [Project Types](ixo/concepts/projects/project-types.md)
     * [Project templates](ixo/concepts/projects/untitled.md)
@@ -64,9 +62,6 @@
   * [Impact Valuation](ixo/protocols/impact-valuation.md)
   * [Programmable Capital](ixo/protocols/programmable-capital.md)
 * [Architecture](ixo/architecture/README.md)
-  * [Protocols Layer](ixo/architecture/protocols-layer/README.md)
-    * [Cryptographic keys](ixo/architecture/protocols-layer/cryptographic-keys.md)
-    * [Untitled](ixo/architecture/protocols-layer/untitled.md)
   * [Infrastructure Layer](ixo/architecture/infrastructure-layer/README.md)
     * [ixo Protocol Blockchains](ixo/architecture/infrastructure-layer/ixo-protocol-blockchains.md)
     * [Cell Nodes](ixo/architecture/infrastructure-layer/cell-nodes.md)
@@ -81,8 +76,6 @@
 * [Investors](ixo/investors.md)
 * [Oracles](ixo/oracles.md)
 * [Use-cases](ixo/use-cases.md)
-* [Network Economy](ixo/network-economy/README.md)
-  * [Economic incentives](ixo/network-economy/economic-incentives.md)
 * [Standards](ixo/standards/README.md)
   * [Claim Evaluation Standard](ixo/standards/claim-evaluation-standard.md)
   * [Claim Data Model Standard](ixo/standards/claim-data-model-standard.md)
@@ -98,10 +91,6 @@
   * [Security Standards](ixo/standards/security-standards.md)
   * [Regulatory Compliance](ixo/standards/regulatory-compliance.md)
   * [Privacy and Data Protection Standards](ixo/standards/privacy-and-data-protection-standards.md)
-* [Business model](ixo/business-model/README.md)
-  * [Gas Fees](ixo/business-model/gas-fees.md)
-  * [Oracle Fees](ixo/business-model/oracle-fees.md)
-  * [PoS Bonds](ixo/business-model/pos-bonds.md)
 * [R&D](ixo/r-and-d.md)
 
 ## User Guides <a id="guides"></a>
@@ -133,7 +122,7 @@
   * [Recruit Service Agents](guides/deliver-your-project/recruit-service-agents/README.md)
     * [Define agent roles](guides/deliver-your-project/recruit-service-agents/define-agent-roles.md)
     * [Generate a Project QR Code](guides/deliver-your-project/recruit-service-agents/generate-a-project-qr-code.md)
-* [Employ Impact Oracles](guides/employ-impact-oracles.md)
+* [Employ Precision Oracles](guides/employ-impact-oracles.md)
 * [Manage your project](guides/manage-your-project.md)
 * [Optimise project results](guides/optimise-project-results/README.md)
   * [Generate a Project Alpha score](guides/optimise-project-results/generate-a-project-alpha-score/README.md)
@@ -143,7 +132,7 @@
 * [Project governance](guides/project-governance.md)
 * [Share project data](guides/share-project-data/README.md)
   * [Manage your data assets](guides/share-project-data/manage-your-data-assets.md)
-* [Issue Digital Assets](guides/issue-digital-assets.md)
+* [Mint Digital Assets](guides/issue-digital-assets.md)
 * [Develop solutions](guides/develop-solutions.md)
 * [Manage disputes](guides/manage-disputes.md)
 * [Create or view a Document](guides/create-or-view-a-document/README.md)
@@ -152,7 +141,8 @@
 ## Portals
 
 * [ixo.world](portals/ixo.world.md)
-* [Impact Oracle Launchpad](portals/impact-oracle-launchpad.md)
+* [Launchpad](portals/launchpad.md)
+* [Precision Oracle Foundry](portals/impact-oracle-launchpad.md)
 * [Impact Data Consortium](portals/impact-data-consortium.md)
 
 ## DEVELOPERS
@@ -177,10 +167,10 @@
       * [6. ixo-keysafe setup](developers/developer-tools/test-networks/join-a-test-network/6.-ixo-keysafe-setup.md)
   * [Schemas](developers/developer-tools/schema-server/README.md)
     * [Data Asset Schema](developers/developer-tools/schema-server/data-asset-schema.md)
-  * [Alpha Bond Simulator](developers/developer-tools/alpha-bond-simulator.md)
+  * [Alphabond Simulator](developers/developer-tools/alpha-bond-simulator.md)
   * [Template Builder](developers/developer-tools/template-builder/README.md)
     * [Styling an Entity Page](developers/developer-tools/template-builder/styling-an-entity-page.md)
-* [Chatbot Assistant](developers/chatbot-assistant.md)
+* [Contextual AI Assistant](developers/chatbot-assistant.md)
 * [ixo Apps](developers/ixo-apps/README.md)
   * [Matrix App](developers/ixo-apps/matrix-app.md)
 * [Systems Integrations](developers/systems-integrations.md)
@@ -193,9 +183,9 @@
 
 ## Services
 
-* [Impact Oracles](services/impact-oracles.md)
+* [Precision Oracles](services/impact-oracles.md)
 * [Compliance layer](services/compliance-layer.md)
-* [Alpha Bonds](services/alphabonds.md)
+* [Alphabonds](services/alphabonds.md)
 
 ## Research
 
@@ -204,13 +194,10 @@
 ## Resources
 
 * [FAQ's](resources/faqs.md)
-* [Chatbot](resources/chatbot.md)
 * [Literature References](resources/literature-references.md)
 * [Data Marketplace](resources/data-marketplace.md)
 
 ## Troubleshooting guide
-
-* [Untitled](troubleshooting-guide/untitled.md)
 
 ## Policies
 

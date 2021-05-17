@@ -1,2 +1,0 @@
-# Cell Node Power-ups
-

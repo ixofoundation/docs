@@ -4,140 +4,141 @@ description: The Effective Date of this policy is 1 May 2020
 
 # Privacy Policy
 
-### Purpose of this document
+**Protecting your personal data is important to us**. We are committed to demonstrating the highest level of integrity in dealing with our users, customers, investors, contributors, participants and business partners. When you use our Services and electronic media, we may collect, process and/or disclose data that identify you or make you identifiable \(“Personal Data“\) in accordance with this privacy policy \(“Policy”\). 
 
-This Privacy Policy informs you how, with your consent, ixo.world AG will collect, store, process, use and/or disclose your Personal Data, for each of the specific purposes which are described in this document. 
+We take the utmost care to ensure the confidentiality of your data. In accordance with the provisions of the EU General Data Protection Regulation \(GDPR\) and the Liechtenstein Data Protection Act \(DSG\), the following information gives you an overview of how we process your personal data and  assure your associated rights. 
 
-This Policy was last updated on the effective date noted above. The contents and scope of this policy may be amended or updated from time to time to reflect changes in our privacy practices, legal or regulatory requirements. 
+The Data Protection Responsible Person, as defined by the GDPR is: ixo.world AG, Industriering 10, 9491, Ruggell.  We can be contacted by email at ixo@ixo.world
 
-We encourage you to read this Policy carefully and to regularly check this page, to review any changes we might make. 
+### **Personal Data** 
 
-We will actively notify you of any changes to this policy, by informing you on the next occasion that you use our services or when you access our electronic media.
+We collect, process and use your personal data only with your consent, or on the basis of contractual agreements for the purposes agreed with you, or if there is another legal basis in accordance with the GDPR. This in compliance with the data protection and civil law provisions. Only personal data which is necessary will be collected for the performance and processing of our services, or which you voluntarily provided to us. 
 
-### Our privacy and data protection principles
+Personal data is any data that contains details of personal or material circumstances, such as name, address, telephone number, fax number, e-mail address, gender, date of birth, age, tax ID, identity card data, photos, video and telephone recordings, voice recordings, consulting protocols and cookies. Sensitive data, such as information related to criminal proceedings, may also be included. 
 
-We believe in your data sovereinty, your right to privacy and that it is our duty to protect your personal information. 
+We have a legitimate interest in carrying out personal data Processing for the purpose of managing, operating or promoting our business. However these legitimate interests are not overridden by your interests, fundamental rights, or freedoms.
 
-We want you to know about your legal rights to have your Personal Data protected and your privacy respected.
+The types of personal, corporate, financial, and technical data we may request to collect include:
 
-We will operate services and build systems that have Privacy by Design.
+* Personal details: name, gender, date of birth / age, nationality, passport or national ID number, social security number, tax identification number;
+* Contact details: address, e-mail address, telephone number, social media account details;
+* Financial details: bank information for payments, credit card information for payments, utility bill, credit report, other financial details with respect to ‘Accredited Investor’ verification for residents of the United States of America or Canada;
+* Corporate details: name, place of registration, registration number, transparency register number, details with respect to articles of association and other similar documents / certificates, details with respect to shareholders and/or beneficial owners \(including their personal and contact details\);
+* Technical information \(e.g. IP address\) about the device you use for orders and communication with us, such as mobile phone, tablet, notebook, personal computer, etc. ,
+* Login information \(e-mail address, password\); and
+* Your blockchain wallet account address.
 
-### Your consent
+### **Information and Cancellation** 
 
-When you are using the services and electroinic media of ​IXO.WORLD AG ​​\(“​We​​”, “​ixo” or “the ​Company​​”\)
+As a client of ixo, user of ixo products and services, or generally as an affected party, you have at any time the right to information about your personal data we store, their origin and recipients and the purpose of data processing.
 
-* By accessing the websites operated by ixo.world,
-* Subscribing to a newsletter, or participating in any other marketing initiatives, 
-* Transacting through ixo.world applications and the ixo network,
-* Sending and/or receiving messages through the ixo network.  
+You have the right to request corrections, data transfer, opposition, restriction of processing as well as blocking or deletion of incorrect or inadmissibly processed data. 
 
-**You give us consent** to collect, process and/or disclose data that identify you or make you identifiable \(“​Personal Data​​“\), in accordance with this privacy policy \(“​Policy​​”\). 
+As far as changes of your personal data arise, we ask for appropriate notice. 
 
-### Our obligations
+You have the right at any time to revoke your consent to the use of your personal data. 
 
-We will treat your Personal Data confidentially, in accordance with the applicable data protection laws and, in particular, with the EU General Data Protection Regulation \(the “​GDPR​​”\).
+Your request for information, deletion, correction, opposition and/or data transfer, unless this requires a disproportionate effort, may be addressed to our address. 
 
-We will erase your Personal Data when it is no longer required for the specific purposes listed in this Policy. 
+If you believe that the processing of your personal data by us violates the applicable data protection law or your data protection claims have been violated in any way, you may choose to issue a formal complaint to the competent supervisory authority. The Data Protection Office is responsible for this procedure in Liechtenstein. 
 
-We will also erase your Personal Data if you request this, based on your right to erasure, or if we become legally prohibited from continuing to store or use your data for the purposes you originally agreed.
+### **Use of Data** 
 
-### Definitions
+We will not process the information provided to us for purposes other than those covered by agreements or your consent or otherwise by any provision in accordance with the GDPR. 
 
-* ‘Controller’: The entity that decides how and why Personal Data is processed. In many jurisdictions, the Controller has primary responsibility for complying with applicable data protection laws.
-* ‘Data Protection Authority’: ​​An independent public authority that is legally tasked with overseeing compliance with applicable data protection laws.
-* ‘​EEA​​’: The European Economic Area.
-* ‘Process’​​, ​‘Processing’ ​​or ​‘Processed’: ​​Anything that is done with any Personal Data, automated or not, such as: Collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction.
-* ‘Processor’: ​​Any person or entity that Processes Personal Data on behalf of the Controller \(other than Employees of the Controller\).
-* ‘​Services​​’: Any services provided by us.
-* ‘Sensitive Personal Data’: ​​Personal Data containing information about race or ethnicity, political opinions, religious or philosophical beliefs, trade union membership, physical or mental health, sexual life, any actual or alleged criminal offences or penalties, or any other information that may be deemed to be sensitive under applicable law\(s\).
+The exception from this is the use of your data for statistical purposes, provided that the data provided have been anonymised. 
 
-### Details of the Controller
+The personal data you provide will be processed primarily to provide the services you receive from us. 
 
-* Company: ixo.world AG
-* Address: Industriering 10, Ruggell, 9491, Liechtenstein
-* Email: ​ixo@ixo.world.
+The legal basis for data processing is Article 6 \(1\) \(b\) GDPR. Processing of personal data may be required for the purpose of fulfilling various legal obligations \(eg Tax Act, Due Diligence Act, AEI, FATCA, etc.\) as well as regulatory requirements in relation to token issuance and purchase agreements. 
 
-### Providing third-party access to your data
+The legal basis for data processing is Article 6 \(1\) \(c\) GDPR. When you visit our website, the browser used on your device automatically sends information to the server of our website. This information is temporarily stored in a so-called log file. The following information will be collected without your intervention and stored until automated deletion: IP address of the requesting computer; date and time of access; name and URL of the retrieved file; website from which access is made \(referrer URL\); the browser used and, if applicable, the operating system of your computer and the name of your access provider. The data mentioned are processed by us for the following purposes: Ensuring a smooth connection of the website; ensuring comfortable use of our website; evaluation of system security and stability and for further administrative purposes. The legal basis for data processing is Article 6 \(1\) \(f\) GDPR. Our legitimate interest follows from the data collection purposes listed above. In no case do we use the collected data for the purpose of drawing conclusions about you. In addition, we use cookies when visiting our website, whereas the website contains content from third parties \(hereinafter referred to as ‘Third-party Providers’\). To use such content, the transfer of the user’s IP address to the respective Third-party Provider is required for technical purposes. Because without the IP address, the Third-party Provider would not be able to send the content embedded in the website to the respective user’s browser. We have no influence on whether a Third-party Provider stores or otherwise uses the IP address for statistical purposes. Third-party Providers are independent owners of cookies, so their policies apply. Third-party Providers are: EQUANIMITY, CONFIDO, GOOGLE, FACEBOOK and GOOGLE ANALYTICS. Please refer to the Cookie Policy available on our website for further details. If you contact us by email, letter or telephone, your details will be stored for the purpose of processing the request and in case of follow-up questions. The data processing for the purpose of contacting us takes place in accordance with Article 6 \(1\) \(a\) GDPR on the basis of your voluntarily granted consent. The personal data collected by us will be automatically deleted after completion of the request made by you. 
 
-We may use the services of professional third-party Processors to deliver our services and to meet legal or regulatory requirements, such as KYC \(Know Your Customer\) and AML \(Anti Money Laundering\).  
+### **Transmission of data to third parties.**
 
-In each case where we engage the services of a third-party for these purposes, we enter into data processing agreements in accordance with Art. 28 of the GDPR and implement further appropriate safeguards, as required, in accordane with Art. 46 - 49 of the GDPR.
+We take the protection of your personal rights very seriously. We assure that we will not sell or rent your information to other providers. In order to provide an exemplary service, we may only provide personal information to reputable contractors who are required to protect this information in accordance with the Privacy Policy. These companies work for us \(agencies, subcontractors, newsletter providers, etc\) or can help us to process information, execute orders, accept services, deliver products to you, manage and maintain customer data, and provide customer service, to evaluate your interest in our products and services, conduct market research or conduct customer satisfaction surveys. These companies are required to protect your personal information in accordance with our Privacy Policy for the protection of personal rights and are also subject to the GDPR. 
 
-We also may disclose your Personal Data to other regulated or statutory third parties, such as banks and other financial authorities, credit rating agencies and regulators. 
+With regards to onboarding activities \(KYC, AML, identity verification & payments processing\), we work with reputable third party service providers such as Equanimity and Compliance Labs Liechtenstein, in full compliance of regulatory requirements within Liechtenstein. 
 
-### Purposes for which we process your Personal Data 
+We may also be required by law or legal process to disclose your personal information. Some of the above recipients of your personal data are located outside your country or process your personal information there. The level of data protection in other countries may not be the same as Liechtenstein's. However, we only transfer your personal data to countries for which the EU Commission has determined that they have an adequate level of data protection, or we take measures to ensure that all recipients have an adequate level of data protection, to which we include standard contractual clauses \(2010/87/EC and / or 2004/915/EC\). 
 
-You consent to allow us to collect and process your personal data for the following very specific scope of purposes: 
+### Data Security 
 
-#### **To provide you with a more personalised user experience.** 
+The protection of your personal data takes place through appropriate organisational and technical precautions. These precautions relate in particular to protection against unauthorised, unlawful or accidental access, processing, loss, use and manipulation. Despite security measures, it cannot be ruled out that information that you provide to us via the Internet or by telephone, email, or otherwise in writing, will be viewed and used by other persons. Please note that we therefore accept no liability whatsoever for the disclosure of information due to unintentional errors in the data transfer and/or unauthorised access by third parties \(e.g. hacking on e-mail account or telephone, or intercepting letters\). Our website uses industry standard SSL \(Secure Sockets Layer\) encryption. This will ensure the confidentiality of your personal information over the Internet. We also take internal precautionary measures to protect your personal data from loss, theft and misuse and from unauthorised access, disclosure, modification and destruction. You are also called upon to help us protect your personal data by taking appropriate precautionary measures. Change your password more frequently to protect it and be careful when delivering sensitive information. Use strong passwords and be sure to always use a secure web browser or web services. 
 
-* When you visit the Website, access the ixo Network or transact with us, your device and browser may automatically store an identifier and record certain information \(such as the device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information\), some of which may constitute Personal Data.
-* You always have the option of deleting this identifier information from your device.
+### **Protection of Personal Rights** 
 
-#### To transact with you. 
+To ensure that your personal information is secure, this Privacy Policy is shared with all employees and strict safeguards are put into place to protect personal rights within the company. The website contains links to websites of other companies. We are not responsible for the privacy practices of these companies, so we encourage you to check their privacy policy with these companies. 
 
-* When you contact us for technical support or to obtain further information about our products and services.
-* When you enter into a contractual relationship with us for the purpose of buying and/or selling products and services.
-* If we won’t be able to conclude the contract and perform our contractual obligations without processing your Personal Data.
-* If we are required by regulations to perform identity verificaton for the purpose of KYC and AML.
-* If we have to determine your eligibility to purchase our products and services.
-* If we receive your Personal Data from third parties such as credit reference agencies or law enforcement agencies who
+**Keeping personal information up-to-date** 
 
-  who legally provide this information to us. 
+We have also taken internal steps to ensure that your personal information is always accurate, complete and up-to-date for the purpose intended. Of course, you always have the right to access and modify the personal information you provide. You can help us to make sure that your contact information and preferences are correct, complete and up-to-date. 
 
-* The legal basis for such data processing is Art. 6 para. 1 lit. a & b GDPR.
-* The data collected for this purpose is stored for up to 5 years.
+Email Newsletter & Social Media Platforms \(Twitter, Discord\) 
 
-#### To provide you with offers for our products and services.
+Should you consent, we reserve the right to update you on a regular basis on our renewed service offerings. If you wish to receive the newsletter, we require a valid email address from you, as well as information that allows us to verify that you or the owner of the email address you have agreed to receive the newsletter. Further data is not collected. These data are used only for sending communications to you. Subscribers to the email newsletter may revoke their consent to the storage of the data and their use for sending the newsletter at any time. 
 
-For marketing purposes, we use your email address to communicate offers to you, only if we have received your explicit prior consent to receive these communications and respecting applicable additional legal requirements in your jurisdiction.
+The revocation can be made via a link in the newsletter itself or by email with the subject "unsubscribe". When registering for our newsletter, you will immediately receive an email containing a hyperlink. By clicking on this link, you confirm your newsletter registration \(double opt-in procedure\). If this registration confirmation is not received within 48 hours, we will delete the email address from our temporary list and no registration has been made. Moreover, you may choose to follow us on Twitter at any given time. We also provide updates and information relating to our project and community through a Discord channel. E-mail distribution lists collected from one channel, such as Telegram, may be transferred to another channel, such as Discord. Should you not wish to be part of this transfer, please inform us at ixo@ixo.world.
 
-Your personal information, including email address, will never be shared with third-parties for marketing purposes, without your explicit consent. 
+### Storage of you personal data 
 
-### Categories of Personal Data which we may process
+We will not retain data for longer than is necessary to fulfil our contractual or legal obligations and to avert any possible future liability claims. 
 
-The scope of Personal Data we may process is limited to the following categories. 
+### Profiling  
 
-* **​Personal details**: name, gender, date of birth / age, nationality, passport or national ID number, social security number, tax identification number;
-* **Contact details**: address, e-mail address, telephone number, social media account details;
-* **Financial details​**: documentation to prove the source of funds, such as income statements, salary slips, etc. and similar data for ‘Accredited Investor’ verification for residents of the United States of America, Canada or other such jurisdictions;
-* **Corporate details​**: name, place of registration, registration number, transparency register number, details with respect to articles of association and other similar documents / certificates, details with respect to shareholders and/or beneficial owners \(including their personal and contact details\);
-* **Technical details**: information, such as the IP address,
+We do not use automated decision-making or profiling according to Article 22 GDPR.   
 
-   about the electronic device that you use to run our applications, place orders and communicate with us.
 
-* **Log-in information:** identifiers and public keys;
-* **Crypto-wallet addresses**.
+Announcement of data breaches   
 
-### Links to external business partners and co-branded sites
 
-Certain links on the ixo.world website may direct you to co-branded websites maintained by ixo.world AG or to external entities with which the Company has established business relationships. 
+We will endeavour to ensure that any data breaches are detected early and, where appropriate, promptly reported to you or the relevant regulatory authority, including the relevant data categories involved.   
 
-When you submit information to these co-branded sites or external partners, you may not under any circumstances hold ​ixo.world AG ​responsible or liable for the privacy practices of these parties. We therefore strongly encourage you to read their respective privacy policies, which could differ from our policy.
 
-### Your rights when we process your Personal Data
+#### Updating and changing this Privacy Policy 
 
-You have the following rights which you may exercise them at any time, if the legal conditions of such rights are met.
+This Privacy Policy is currently valid and is valid as of 15.05.2021. 
 
-1. **Right of access**. You have the right at any time to demand information on whether we are processing your Personal Data.
-2. **Right of rectification**. You have the right to demand of us to correct and/or complete your personal data if your personal data processed is incorrect or incomplete.
-3. **Right of erasure**. You may demand your personal data to be deleted if 
-   1. The personal data concerning you is no longer necessary for the purposes for which they were collected or otherwise processed;
-   2. You revoke your consent to the processing and there is no other legal basis for the processing;
-   3. Our personal data have been processed illegally; 
-   4. The deletion of your personal data is necessary to fulfil a legal obligation under Union law or the law of the Member States to which we are subject.
-4. **Right to the restrict how your Personal Data is processed**. You may request the processing of your personal data to be restricted if:
-   1. You believe the personal data we are using is inaccurate;
-   2. Processing is unlawful but you refuse to delete your personal data and instead request a restriction on how this is used; 
-   3. We no longer need your personal data for the purposes of processing but you need us to keep your data for you to assert, exercise or defend legal claims.
-5. **Right to data portability**. You have the right to obtain your personal data in a structured, commonly used and machine-readable format. You have the right to transmit your data to another Controller. Where technically feasible, you have the right to have your data transmitted directly from us to another Controller.
-6. **Right to withdraw consent**. Your consent is provided freely. If you give us your consent to process your Personal Data, you have the right to revoke your consent at any time. The revocation of consent does not affect the lawfulness of processing based on consent before its revocation. To withdraw your consent, please send us an e-mail to ixo@ixo.world
-7. **Right to object**. You have the right to object to the processing of your personal data for certain processing purposes. Such reasons exist in particular if your interests outweigh our interests. For example if we are not aware of these reasons and it could therefore not be taken into account in the context of weighing up interests. If your Personal Data is processed in order to carry out direct advertising, you have the right to object. This also applies to profiling, insofar as it is associated with such direct advertising.
-8. **Right to lodge a complaint with the supervisory authority**. You have the right to address the supervisory authority for any questions or complaints. The supervisory authority is Liechtenstein Data Protection Office, Städtle 38, P.O. Box 684, FL-9490 Vaduz, Principality of Liechtenstein. https://www.datenschutzstelle.li/
+As a result of the further development of our website and new product or service offerings, or due to changes in legal or official requirements, it may be necessary to change this Privacy Policy. 
 
-### Consequences of withdrawing your consent 
+The current Privacy Policy can be viewed and printed out at any time on the website at the privacy URL in the footer.  
 
-If you withdraw your consent for us to use or disclose your personal data, depending on the nature of your request, we may not be in a position to continue providing you with our services or products.
 
-Your withdrawal of consent may also result in the termination of any agreement you have with us. Our legal rights and remedies are expressly reserved in such an event.
+### Declaration of Consent 
+
+We follow the requirements of the Data Protection and Competition Law Declaration of Consent in the use of data for further purposes \(the “Declaration of Consent”\).
+
+By providing your consent, we will assume that you are aware that the submission of this Declaration of Consent is voluntary and has no impact on the performance of the intended purposes described in this policy.
+
+If you no longer wish to receive advertising in future, you can use your right to object to the use of your data for advertising purposes and modify or revoke the given Declaration of Consent at any time without stating any reasons with effect for the future. You can submit the withdrawal either by post or email. 
+
+You will incur no other costs than the postage costs or the transmission costs according to the existing base rates. 
+
+The withdrawal is to be addressed to:
+
+ixo.world AG, Industriering 10, 9491, Ruggell, ixo@ixo.world
+
+### Terms
+
+### Cookie Policy 
+
+As is common on many other corporate websites, we also use so-called "cookies" and other technologies to gain better insight into which areas of our site are particularly popular, how our visitors move around the site, and how much time you spend in different areas. In addition, we use cookies and other technologies to ensure that our online advertising is effective and that customers and users are indeed aware of our products and services. We use cookies and other technologies to analyse traffic on our websites and mobile applications, so that we can further improve their design and functionality, and to investigate the efficiency of communication with our customers. We also use cookies to better tailor the site to your needs and provide you with more navigation convenience every time you visit. As with most websites, we also automatically collect certain information and store it in log files. This information includes Internet Protocol \(IP\) addresses, browser type, Internet Service Provider \(ISP\), referral / end pages, operating system, date / time stamps, and clickstream data. In some of our email messages, we also use so-called "click-through URLs" that are linked to content on our website. If you click in such a URL address, you pass our web server before you reach the actual target web page. We track this "click-through" data to determine the interest in specific topics and to measure the effectiveness of communicating with our customers. If you want to avoid capturing such data, simply do not click on any text or graphic links in emails. In addition, we use so-called "pixel tags" \(tiny image files\) that provide information about which parts of our site customers have visited, this measure how effective customer searches have been on our site. In addition, pixel tags can be used to send email messages in a customer-readable format. It also allows us to check if emails have been opened to ensure that only those messages are sent that really interest our customers. 
+
+#### Use of External Services \(including tracking services\)
+
+Within the website third-party content, videos from YouTube and maps from Google Maps are included. For the use of such content, the transmission of the IP address of the user to the respective third party is technically required. Without the IP address, the third-party providers would not be able to send embedded content in the website to the browser of the respective user. We have no control over whether a third party provider stores or otherwise uses the IP address for statistical purposes, for example. Third party providers are independent owners of cookies, so their policies apply. Third party providers can be: Equanimity, Compliance Lab Liechtenstein.
+
+Newsletter registration and newsletter services such as statistics and analysis services are assigned to various third-party contractors, as are accounting and valuation services. 
+
+#### Use of other various cookie services
+
+What is a cookie? A cookie is a small text file that is stored on your device when you visit a website and helps to identify your device. Cookies are used to store information when you visit various pages on a website or return to a website. They contain no personal information and can not run programs that could trigger a virus. Manage and delete cookies: If you want to block or delete cookies, you can make these changes in the browser settings. For the administration of cookies, most browsers allow you to accept or reject all cookies or to accept only certain types of cookies. You can also set it to ask you every time a website wants to save a cookie. The procedures for managing and deleting cookies vary, depending on which browser you use. To find out how to do this in a specific browser, you can use the browser's built-in help function or alternatively visit www.aboutcookies.org. Here you will find step by step instructions on how to manage and delete cookies in most popular browsers. \`
+
+#### Using Google Analytics
+
+This website uses Google Analytics, a web analytics service provided by Google Inc. \("Google"\). Google Analytics uses so-called "cookies", text files that are stored on your computer and that allow an analysis of the use of the website by them. The information generated by the cookie about your use of this website is usually transmitted to a Google server in the USA and stored there. By activating IP anonymization on this website, however, your IP address will be shortened by Google beforehand within member states of the European Union or in other contracting states of the Agreement on the European Economic Area. Only in exceptional cases will the full IP address be sent to a Google server in the USA and shortened there. On behalf of the operator of this website, Google will use this information to evaluate your use of the website, to compile reports on website activity and to provide other services related to website activity and internet usage to the website operator. The IP address provided by Google Analytics as part of Google Analytics will not be merged with other Google data. You can prevent the storage of cookies by setting your browser software accordingly. Please note, however,  that you may not be able to use all features of this website. 
+
+Data Collection - you can prevent the collection and processing of data  on this website \(including your IP address\) by Google by downloading and installing the browser plug-in available at tools.google.com. You can still prevent Google Analytics from collecting it by clicking on the following. An opt-out cookie is set, which prevents the future collection of your data when visiting this website: Disable Google Analytics. For more information about Google Analytics terms of service and privacy, visit: Google Analytics and support.google.com. This website uses Google Analytics via IP-Masking to ensure an anonymous collection of IP addresses. Please note that we continue to use Google Analytics to analyze data from AdWords and the Double-Click cookie for statistical purposes. If you do not want this, you can disable it through the Ads Preferences Manager at adssettings.google.com.   
+  
+
 

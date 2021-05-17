@@ -1,2 +1,2 @@
-# Chatbot Assistant
+# Contextual AI Assistant
 

@@ -23,7 +23,7 @@ The purpose of documents in the Internet of Impact is to record information in a
 
 The ixo protocol defines a set of standard document types, which are used as building-blocks. 
 
-### 1. DID Document \(DDO\) type
+### 1. DID Document 
 
 Each identifiable subject in the Internet of Impact has a Decentralised Identifier \(DID\). A specific format of document is associated with a DID, which is described as the DID Document \(DDO\). This is based on a specification from the W3C.
 

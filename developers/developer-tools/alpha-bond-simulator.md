@@ -1,2 +1,2 @@
-# Alpha Bond Simulator
+# Alphabond Simulator
 

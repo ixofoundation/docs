@@ -4,10 +4,6 @@ description: How the Internet of Impact is built
 
 # Architecture
 
-### Design principles
-
-#### \*\*\*\*
-
 ### Network topology
 
 #### Internet of Impact
@@ -52,8 +48,6 @@ In addition to the generic Cosmos modules, which have been purposed for the Inte
 * Identity Module
 * Fiat Banking Oracle Module
 * Alpha Oracle Module
-
- 
 
 The ixo blockchain contains the records of evey claim that is issued against a project the the subsequent evaluation of those claims. Each record is validated by a quorum of validator nodes before it is written to the chain and thereafter the record cannot be removed or updated. This data is then aggregated to build out the final states of the projects.
 
