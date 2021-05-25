@@ -28,7 +28,7 @@ The types of personal, corporate, financial, and technical data we may request t
 * **Login information:** such as your e-mail address, encrypted password; and
 * **Your blockchain wallet account address** and public key. _**NOTE We will never ask you to provide your private key or key phrase information.**_
 
-### **Information and Cancellation** 
+### **Right to Information and Cancellation** 
 
 As a client of ixo or user of ixo products and services, or generally as an affected party, you have at any time the right to information about your personal data we store, their origin and recipients and the purpose of processing this information.
 
