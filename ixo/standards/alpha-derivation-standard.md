@@ -1,2 +1,2 @@
-# Alpha Derivation Standard
+# Alpha Derivation
 

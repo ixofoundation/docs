@@ -2,5 +2,5 @@
 description: Inter-blockchain Communication standard.
 ---
 
-# IBC Standard
+# Inter-blockchain Communication
 

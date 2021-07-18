@@ -1,2 +1,2 @@
-# Claim Evaluation Standard
+# Claim Evaluation
 

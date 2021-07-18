@@ -1,2 +1,2 @@
-# Impact Proof Standard
+# Impact Proofing
 

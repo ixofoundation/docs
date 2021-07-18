@@ -1,2 +1,2 @@
-# Claim Data Model Standard
+# Claim Templates
 

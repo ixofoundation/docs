@@ -1,2 +1,2 @@
-# Credential Issuance Standard
+# Credential Issuance
 

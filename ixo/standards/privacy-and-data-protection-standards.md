@@ -1,2 +1,2 @@
-# Privacy and Data Protection Standards
+# Privacy and Data Protection
 

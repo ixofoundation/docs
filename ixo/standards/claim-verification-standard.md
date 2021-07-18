@@ -1,2 +1,2 @@
-# Claim Verification Standard
+# Claim Verification
 

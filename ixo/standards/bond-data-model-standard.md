@@ -1,2 +1,2 @@
-# Bond Data Model Standard
+# Alphabond Issuance
 

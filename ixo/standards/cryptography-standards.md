@@ -1,2 +1,2 @@
-# Cryptography Standards
+# Verification Methods
 
