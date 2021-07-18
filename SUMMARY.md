@@ -81,7 +81,7 @@
   * [Claim Data Model Standard](ixo/standards/claim-data-model-standard.md)
   * [Project Data Model Standard](ixo/standards/project-data-model-standard.md)
   * [Bond Data Model Standard](ixo/standards/bond-data-model-standard.md)
-  * [Identity Credentials Standard](ixo/standards/identity-credentials-standard.md)
+  * [Credential Issuance Standard](ixo/standards/identity-credentials-standard.md)
   * [Claim Verification Standard](ixo/standards/claim-verification-standard.md)
   * [Alpha Derivation Standard](ixo/standards/alpha-derivation-standard.md)
   * [Impact Proof Standard](ixo/standards/impact-proof-standard.md)
@@ -196,8 +196,6 @@
 * [FAQ's](resources/faqs.md)
 * [Literature References](resources/literature-references.md)
 * [Data Marketplace](resources/data-marketplace.md)
-
-## Troubleshooting guide
 
 ## Policies
 

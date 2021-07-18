@@ -1,2 +1,2 @@
-# Identity Credentials Standard
+# Credential Issuance Standard
 
