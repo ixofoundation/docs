@@ -70,6 +70,7 @@
     * [IoT Clients](ixo/architecture/infrastructure-layer/iot-clients.md)
   * [Applications Layer](ixo/architecture/applications-layer.md)
   * [Network of networks](ixo/architecture/network-of-networks.md)
+  * [Example: Upload Project](ixo/architecture/example-upload-project.md)
 * [Applications](ixo/applications/README.md)
   * [Data Applications](ixo/applications/data-applications.md)
   * [Finance Applications](ixo/applications/decentralised-development-finance.md)
