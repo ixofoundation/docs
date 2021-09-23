@@ -2,7 +2,7 @@
 description: >-
   The diagram below offers a view of what happens when an 'upload project'
   message is received from the UI, and which ixo components are involved at
-  every stage.
+  every stage, with focus on Cell Node.
 ---
 
 # Example: Upload Project
