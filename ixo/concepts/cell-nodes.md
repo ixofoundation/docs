@@ -6,13 +6,13 @@ description: The Internet of Impact is formed by networks of Cell Nodes.
 
 ## Cellular organisations
 
-**Cellular organisations** \(Cells\) are a highly effective coordination mechanism for people to self-organise and self-govern towards achieving a common mission. By definition, cells are decentralised, autonomous, locally responsive, adaptable, hyper-networked, intelligent and purpose-driven. They are highly suitable for virtual and remote teams to work together and share common resources.
+**Cellular organisations** (Cells) are a highly effective coordination mechanism for people to self-organise and self-govern towards achieving a common mission. By definition, cells are decentralised, autonomous, locally responsive, adaptable, hyper-networked, intelligent and purpose-driven. They are highly suitable for virtual and remote teams to work together and share common resources.
 
-[Cellular organisational structures](https://en.wikipedia.org/wiki/Cellular_organizational_structure) are common in nature. Think about how human immune cells sense and respond to threats with targeted precision. Immune cells signal other systems, amplify their responses through replication, produce neutralising or catalytic antibodies and build cellular memory. Each of these has strong analogies with digitally-enhanced cellular organisations.
+[Cellular organisational structures](https://en.wikipedia.org/wiki/Cellular\_organizational\_structure) are common in nature. Think about how human immune cells sense and respond to threats with targeted precision. Immune cells signal other systems, amplify their responses through replication, produce neutralising or catalytic antibodies and build cellular memory. Each of these has strong analogies with digitally-enhanced cellular organisations.
 
-Cellular organisations are taken to a whole new level in the Internet of Impact. Cells now benefit from the capabilities of digital communication tools, stateful data, programmable capital and networked intelligence-sharing. 
+Cellular organisations are taken to a whole new level in the Internet of Impact. Cells now benefit from the capabilities of digital communication tools, stateful data, programmable capital and networked intelligence-sharing.&#x20;
 
-#### Cellular organisations can build a digitally-enhanced immune system for humanity. 
+#### Cellular organisations can build a digitally-enhanced immune system for humanity.&#x20;
 
 ![People form a Cell to pursue a shared mission](../../.gitbook/assets/cell-node-group3.svg)
 
@@ -20,9 +20,9 @@ Cellular organisations are taken to a whole new level in the Internet of Impact.
 
 **Cell nodes** are the digital infrastructure for all types of cellular organisations. These are decentralised, autonomous data stores with digital agency and cryptographic signing capabilities.
 
-Cell nodes enable data to be communicated quickly and securely through [webs of trust](https://en.wikipedia.org/wiki/Web_of_trust). All participants in a cell have access to the same information and share intelligence both within their own cell node and with other organisations, through Internet of Impact networks .
+Cell nodes enable data to be communicated quickly and securely through [webs of trust](https://en.wikipedia.org/wiki/Web\_of\_trust). All participants in a cell have access to the same information and share intelligence both within their own cell node and with other organisations, through Internet of Impact networks .
 
-The digital artefacts created by a cell \(such as Project Documents\) are stored in the node as stateful records which are referenced in a distributed ledger. Public metadata are stored using the [Interplanetary File System](https://ipfs.io) \(IPFS\). This allows cell nodes to retain a form of memory that can be [stigmergically](https://wiki.p2pfoundation.net/Stigmergy) shared and rapidly amplified when cells need to be replicated or re-activated.
+The digital artefacts created by a cell (such as Project Documents) are stored in the node as stateful records which are referenced in a distributed ledger. Public metadata are stored using the [Interplanetary File System](https://ipfs.io) (IPFS). This allows cell nodes to retain a form of memory that can be [stigmergically](https://wiki.p2pfoundation.net/Stigmergy) shared and rapidly amplified when cells need to be replicated or re-activated.
 
 ### The capabilities of cell nodes
 
@@ -34,7 +34,7 @@ Cell nodes have powerful built-in Web 3.0 capabilities, such as:
 * Decentralised authentication using cryptographic identifiers and provable credentials.
 * Cryptographic message signing.
 
-Cell nodes also connect to the univers of Web 2.0 services through conventional application-programming interfaces \(APIs\).
+Cell nodes also connect to the univers of Web 2.0 services through conventional application-programming interfaces (APIs).
 
 ### The features of cell nodes
 
@@ -61,26 +61,26 @@ Cell nodes are configured to provide cellular organisations with powerful tools 
 
 ## Purpose of a cell
 
-The purpose of a Cell defines how this will operate in terms of membership, size, location, lifespan, scope of projects it undertakes and other types of organisational characteristics. A Cell Node is configured to fit the purpose of a cell. 
+The purpose of a Cell defines how this will operate in terms of membership, size, location, lifespan, scope of projects it undertakes and other types of organisational characteristics. A Cell Node is configured to fit the purpose of a cell.&#x20;
 
-The founder/s of a cell define its purpose - usually with an explicit mission statement. 
+The founder/s of a cell define its purpose - usually with an explicit mission statement.&#x20;
 
 **Examples of cell types and their primary purpose:**
 
-| Cell Type | Purpose |
-| :--- | :--- |
-| Citizen Cell | Mobilise citizen action towards a common cause. |
-| Hackathon Cell | Hack a prototype solution for a specific challenge. |
-| Procurement Cell | Negotiate the supply of goods/services in an accountable and transparent way. |
-| Investment Cell | Form and allocate capital for debt and/or equity investments. |
-| Startup accelerator Cell | Support ventures to find product-market fit and deploy their value propostions. |
-| Taskforce Cell | Tackle a specific task with a defined mandate and deliverable. |
-| R&D Cell | Research and develop novel solutions though an experimental process. |
-| Cooperative Cell | Facilitate broad economic stake-holding in the supply and/or demand of goods and services. |
-| Mutual Credit Cell | Form and allocate capital through a peer-to-peer marketplace. |
+| Cell Type                | Purpose                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------ |
+| Citizen Cell             | Mobilise citizen action towards a common cause.                                            |
+| Hackathon Cell           | Hack a prototype solution for a specific challenge.                                        |
+| Procurement Cell         | Negotiate the supply of goods/services in an accountable and transparent way.              |
+| Investment Cell          | Form and allocate capital for debt and/or equity investments.                              |
+| Startup accelerator Cell | Support ventures to find product-market fit and deploy their value propostions.            |
+| Taskforce Cell           | Tackle a specific task with a defined mandate and deliverable.                             |
+| R\&D Cell                | Research and develop novel solutions though an experimental process.                       |
+| Cooperative Cell         | Facilitate broad economic stake-holding in the supply and/or demand of goods and services. |
+| Mutual Credit Cell       | Form and allocate capital through a peer-to-peer marketplace.                              |
 
 {% hint style="info" %}
-To view more Cell types and understand the range of purposes for which these have been formed [explore this portal](https://), or search the Internet of Impact through [ixo.world](https://ixo.world/cells).
+To view more Cell types and understand the range of purposes for which these have been formed [explore this portal](https://app.gitbook.com/s/-LjCku60B7sAxJzveU5e/ixo/concepts/cell-nodes), or search the Internet of Impact through [ixo.world](https://ixo.world/cells).
 {% endhint %}
 
 {% hint style="info" %}
@@ -111,7 +111,7 @@ Find out more about Agents.Cell projects
 
 The participants in a cell pursue their mission by implementing one or more projects. The scope of each project is defined in an immutable Project Document. Project information and all the data collected by every project that the cell implements gets stored in the Cell Node.
 
-The performance of each project is tracked through claims which are submitted by cell agents who are authorised to work on the project. Claims are independenly evaluated and verified \(for instance, by Proofing Oracles\).
+The performance of each project is tracked through claims which are submitted by cell agents who are authorised to work on the project. Claims are independenly evaluated and verified (for instance, by Proofing Oracles).
 
 Find out more about Projects and Claims Verification.
 
@@ -133,7 +133,7 @@ The founder of a cell can be:
 
 * One or more identified individuals;
 * One or more identified organisations;
-* A combination of individuals and/or organisations operating through a decentralised autonomous organisation \(DAO\).
+* A combination of individuals and/or organisations operating through a decentralised autonomous organisation (DAO).
 
 Cells are principally organisations of people with digital super-powers. To be successful, participants in a cell need to be well-governed, incentivised and empowered. This requires leadership, cooperation and accountability.
 
@@ -147,7 +147,7 @@ Decisions and actions may be made by the Cell Founder, or by cell agents. The Ce
 
 Cells exist within an economy that broadly had three types of common enterprises, in which cell agents may be incentivised to participate:
 
-* The  **entrepreneurial common** interfaces the cell with external ecosystems and markets.  This common sets financial and monetary policy. It determines the price of cell membership, how the cell is owned and how to distribute capital. Incentives for participation in the entrepreneurial enterprise may be created by issuing and distributing shares or tokens in the cell that embody rights of ownership, economic participation and access to the cell's capital resources. 
+* The  **entrepreneurial common** interfaces the cell with external ecosystems and markets.  This common sets financial and monetary policy. It determines the price of cell membership, how the cell is owned and how to distribute capital. Incentives for participation in the entrepreneurial enterprise may be created by issuing and distributing shares or tokens in the cell that embody rights of ownership, economic participation and access to the cell's capital resources.&#x20;
 * The **production common** produces goods and services though the cooperative efforts of the cell members. As incentives, contributors may be paid for their work or receive shares for the value they have created.
 * The **beneficial common** governs the cell's mission, impact goals, operating policies, membership, consensus rules, rights and incentive mechanisms. Voting rights are an incentive for participating in the beneficial common.
 
@@ -155,13 +155,13 @@ Cells exist within an economy that broadly had three types of common enterprises
 
 There are many possible ways of raising capital resources for a cell. Operating capital can come from more traditional commercial, philanthropic or peer-to-peer sources. Instruments include grants, venture capital, loans, crowd-funding, mutual credit, etc. Now there are also decentralised financing instruments such as tokenisaton, Alpha Bonds and Qaudratic Funding.
 
-The use of capital by a cell can be transparently tracked and accounted for using the Cell Node's blockchain ledger. This includes a mechanism for tracking financial transactions in firat bank accounts and representing these on the ledger. 
+The use of capital by a cell can be transparently tracked and accounted for using the Cell Node's blockchain ledger. This includes a mechanism for tracking financial transactions in firat bank accounts and representing these on the ledger.&#x20;
 
 Capital flows can be programmatically allocated and distributed using Alpha Bonds. Conditional payment triggers are linked to provable results. This has tremendous potential for risk-adjusted financing of new ventures and perfomance-based contracts.
 
 ## How to set up of a Cell Node
 
-The easiest way to start is with a template. Browse [ixo.world templates](https://app.ixo.world/templates) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo guide explains this further. 
+The easiest way to start is with a template. Browse [ixo.world templates](https://app.ixo.world/templates) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo guide explains this further.&#x20;
 
 If you can't find a template that suits your specific needs, start a new cell template with guidance from the ixo-assistant chatbot.
 
@@ -169,7 +169,6 @@ If you can't find a template that suits your specific needs, start a new cell te
 
 The costs of hosting a Cell Node depends on whether this is self-hosted or hosted as a service. For hosted options offered by ixo.world see the [pricing guide](https://ixo.world/pricing).
 
-Registering a Cell Node with a Decentralised Identifier and Cell Document on the Sustainability Hub incurs a negligible transaction fee \(gas\) for writing these records to the blockchain.
+Registering a Cell Node with a Decentralised Identifier and Cell Document on the Sustainability Hub incurs a negligible transaction fee (gas) for writing these records to the blockchain.
 
-Cells can choose to employ services and acquire applications from a growing network marketplace, where the costs are determined by providers. 
-
+Cells can choose to employ services and acquire applications from a growing network marketplace, where the costs are determined by providers.&#x20;

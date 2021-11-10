@@ -1,2 +1,0 @@
-# Contextual AI Assistant
-

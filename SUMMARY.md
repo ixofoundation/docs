@@ -2,14 +2,14 @@
 
 * [Overview](README.md)
 
-## Start Here <a id="start"></a>
+## Start Here <a href="start" id="start"></a>
 
 * [What is ixo?](start/what-is-ixo.md)
 * [FAQs](start/faqs.md)
 * [Glossary](start/glossary.md)
 * [Other resources](start/other-resources.md)
 
-## The Internet of Impact <a id="ixo"></a>
+## The Internet of Impact <a href="ixo" id="ixo"></a>
 
 * [Abstract](ixo/abstract.md)
 * [Purpose](ixo/purpose/README.md)
@@ -93,9 +93,9 @@
   * [Info-tech Security](ixo/standards/security-standards.md)
   * [Regulatory Compliance](ixo/standards/regulatory-compliance.md)
   * [Privacy and Data Protection](ixo/standards/privacy-and-data-protection-standards.md)
-* [R&D](ixo/r-and-d.md)
+* [R\&D](ixo/r-and-d.md)
 
-## User Guides <a id="guides"></a>
+## User Guides <a href="guides" id="guides"></a>
 
 * [Connect through a portal](guides/connect-through-a-portal.md)
 * [Create an entity](guides/create-an-entity.md)
@@ -149,14 +149,20 @@
 
 ## DEVELOPERS
 
-* [API's](developers/api.md)
+* [Interfaces](developers/interfaces/README.md)
+  * [ixo API Module](developers/interfaces/ixo-api-module.md)
+  * [ixo BlockSync](developers/interfaces/ixo-blocksync.md)
+  * [ixo CellNode](developers/interfaces/ixo-cellnode.md)
+  * [ixo KeySafe](developers/interfaces/ixo-keysafe.md)
+  * [ixo Client SDK](developers/interfaces/ixo-client-sdk.md)
+  * [ixo Blockchain Interfaces](developers/interfaces/ixo-blockchain-interfaces.md)
 * [SDK's](developers/sdks/README.md)
-  * [Mobile SDK](developers/sdks/mobile-sdk.md)
-  * [Web SDK](developers/sdks/web-sdk.md)
   * [Blockchain SDK](developers/sdks/blockchain/README.md)
-    * [Cells module](developers/sdks/blockchain/cells-module.md)
-    * [Claims Module](developers/sdks/blockchain/claims-module.md)
-    * [Data assets module](developers/sdks/blockchain/data-assets-module.md)
+    * [Projects module](developers/sdks/blockchain/cells-module.md)
+    * [Bonds Module](developers/sdks/blockchain/claims-module.md)
+    * [Payments module](developers/sdks/blockchain/data-assets-module.md)
+    * [DID Module](developers/sdks/blockchain/mobile-sdk.md)
+  * [Client SDK](https://github.com/ixofoundation/ixo-client-sdk)
 * [Developer Tools](developers/developer-tools/README.md)
   * [Prototyping](developers/developer-tools/prototyping.md)
   * [Test Networks](developers/developer-tools/test-networks/README.md)
@@ -172,13 +178,9 @@
   * [Alphabond Simulator](developers/developer-tools/alpha-bond-simulator.md)
   * [Template Builder](developers/developer-tools/template-builder/README.md)
     * [Styling an Entity Page](developers/developer-tools/template-builder/styling-an-entity-page.md)
-* [Contextual AI Assistant](developers/chatbot-assistant.md)
-* [ixo Apps](developers/ixo-apps/README.md)
-  * [Matrix App](developers/ixo-apps/matrix-app.md)
-* [Systems Integrations](developers/systems-integrations.md)
 * [Relayer Setup Guide](developers/relayer-setup/README.md)
   * [Validator node](developers/relayer-setup/validator-node.md)
-  * [Explorer \(Block-sync\)](developers/relayer-setup/block-sync.md)
+  * [Explorer (Block-sync)](developers/relayer-setup/block-sync.md)
   * [Web portal](developers/relayer-setup/web-portal.md)
   * [Cell Node](developers/relayer-setup/node-cells.md)
   * [ixo-Module](developers/relayer-setup/ixo-module-guide.md)
@@ -202,4 +204,3 @@
 ## Policies
 
 * [Privacy Policy](policies/privacy-policy.md)
-
