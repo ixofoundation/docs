@@ -42,21 +42,21 @@ You can also append the above lines to $HOME/.bashrc file and run the following 
 
 1. Download ixo-cosmos files from the official [Ixo-Cosmos](https://github.com/ixofoundation/ixo-cosmos)
 
-   `go get github.com/ixofoundation/ixo-cosmos`
+   `git clone github.com/ixofoundation/ixo-blockchain`
 
-2. Navigate to the `ixo-cosmos` folder
+2. Navigate to the `ixo-blockchain` folder
 
-   `cd $GOPATH/src/github.com/ixofoundation/ixo-cosmos`
+   `cd ixo-blockchain`
 
-   Check put the production version.
+   Check out the production version.
 
-   `git checkout version0.37`
+   `git checkout v1.6.0`
 
    ![](https://i.imgur.com/5NgrFM3.png)
 
-3. Run following command to install the ixo-cosmos
+3. Run following command to install the ixo-blockchain
 
-   `make all`
+   `make install`
 
    ![](https://i.imgur.com/8UbRTNc.png)
 
