@@ -6,7 +6,5 @@ description: ⚠︎ Page Under Construction
 
 
 
-![](../../.gitbook/assets/outcomes-targets%20%281%29.svg)
-
-
+![](<../../.gitbook/assets/outcomes targets (1).svg>)
 

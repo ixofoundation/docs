@@ -6,13 +6,13 @@ description: >-
 
 # The Solution
 
-![](../../../.gitbook/assets/programmable-capital-black-text.png)
+![](<../../../.gitbook/assets/Programmable Capital black text.png>)
 
-## 
+##
 
 ## Serving the Commons
 
-### 
+###
 
 ## Using feedback loops
 
@@ -25,4 +25,3 @@ Programming capital for sustainability
 Production of digital assets
 
 Digital marketplaces
-

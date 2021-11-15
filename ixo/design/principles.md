@@ -1,6 +1,6 @@
 # Principles
 
-![](../../.gitbook/assets/internet-of-impact.png)
+![](<../../.gitbook/assets/Internet of Impact.png>)
 
 ## Serving the commons
 
@@ -9,4 +9,3 @@
 ## Using feedback systems
 
 ## No Silos
-

@@ -1,5 +1,5 @@
 ---
-description: 'How to create your Cell, Project, Oracle, Investment, Data Asset, or Template.'
+description: How to create your Cell, Project, Oracle, Investment, Data Asset, or Template.
 ---
 
 # Create an entity
@@ -18,14 +18,16 @@ Alternatively, initiate the process of setting up up your entity through the web
 {% hint style="info" %}
 Optionally, developers can choose to configure as JSON Documents, using the latest ixo-Entity JSON Schema and submit this as a signed message through the `ixo-apiModule` Rest API.
 
-Controlled versions of the [document data model](https://github.com/ixofoundation/ixo-protocol/blob/master/entity_document.json) are maintained in Github.
+Controlled versions of the [document data model](https://github.com/ixofoundation/ixo-protocol/blob/master/entity\_document.json) are maintained in Github.
 {% endhint %}
 
 #### What is an Entity?
 
 To understand the concept of an Entity in the Internet of Impact, check out:
 
-{% page-ref page="../ixo/concepts/ixo-entities/" %}
+{% content-ref url="../ixo/concepts/ixo-entities/" %}
+[ixo-entities](../ixo/concepts/ixo-entities/)
+{% endcontent-ref %}
 
 ## What you will need
 
@@ -34,9 +36,9 @@ Before creating any entity in the Internet of Impact, you must have set up an Im
 To publish your entity onto the Internet of Impact, you will sign a transaction with your cryptographic keys, which are stored in your wallet. A small transaction fee in IXO credits must be paid towards the network costs of processing the data and permanently storing your entity document.
 
 {% hint style="info" %}
-Each entity has its own digital identifier, in the format `did:ixo:29wribufwiuw984feuf98348fj9f4`and an associated record which is referred to as the Entity Document \(which conforms to the W3C DID-DDO standard\).
+Each entity has its own digital identifier, in the format `did:ixo:29wribufwiuw984feuf98348fj9f4`and an associated record which is referred to as the Entity Document (which conforms to the W3C DID-DDO standard).
 
-To create this record, you will need to provide the information described below.  
+To create this record, you will need to provide the information described below. &#x20;
 {% endhint %}
 
 ## Configuring your entity
@@ -51,9 +53,9 @@ Entity documents can be set up and published using the ixo client software. For 
 
 ### Configure your entity page content
 
-The Entity Page contains information about your entity that you want end-users will view through web and mobile client software. Think of this as your entity's own web page. 
+The Entity Page contains information about your entity that you want end-users will view through web and mobile client software. Think of this as your entity's own web page.&#x20;
 
-![The user interface on ixo.world for configuring an entity page \(for a Project\)](../.gitbook/assets/create-a-project-template.png)
+![The user interface on ixo.world for configuring an entity page (for a Project)](<../.gitbook/assets/create a project template.png>)
 
 This information is input and displayed using cards. The default types of cards available are:
 
@@ -65,14 +67,14 @@ This information is input and displayed using cards. The default types of cards 
 * Profiles card
 * Linked entities listing card
 
-![Example of the Profiles Card object in the ixo.world entity configuration UI](../.gitbook/assets/profile-card.png)
+![Example of the Profiles Card object in the ixo.world entity configuration UI](<../.gitbook/assets/profile card.png>)
 
-Cards accept plain text and render this in the pre-formatted style determined by the portal through which the page content is being viewed. 
+Cards accept plain text and render this in the pre-formatted style determined by the portal through which the page content is being viewed.&#x20;
 
 {% hint style="info" %}
 A limited range of markup elements can be used, including hypertext links, which can be included using the standard convention of `[link text](link URL)`
 
-For the full list of accepted markdown, see this reference page \[TBC\]
+For the full list of accepted markdown, see this reference page \[TBC]
 {% endhint %}
 
 ### Configure your Entity Settings
@@ -87,7 +89,7 @@ Settings are what define the metadata and operating parameters for your entity. 
 * Filter categories and tags
 * Claims templates for a range of claim types associated with the entity
 
-![](../.gitbook/assets/settings-creator.png)
+![](<../.gitbook/assets/settings creator.png>)
 
 ### Configure Advanced Settings
 
@@ -97,4 +99,3 @@ In this section, you will provide objects such as:
 * Associated entities that are linked to this entity, for mapping relationships
 * Public keys for authentication, message signing and encryption
 * Services and their associated endpoints
-
