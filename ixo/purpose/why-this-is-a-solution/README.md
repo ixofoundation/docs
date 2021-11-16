@@ -6,7 +6,7 @@ description: >-
 
 # The Solution
 
-![](<../../../.gitbook/assets/Programmable Capital black text.png>)
+![](../../../.gitbook/assets/programmable-capital-black-text.png)
 
 ##
 

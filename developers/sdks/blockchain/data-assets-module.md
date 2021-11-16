@@ -1,2 +1,0 @@
-# Data assets module
-

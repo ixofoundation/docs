@@ -55,7 +55,7 @@ Entity documents can be set up and published using the ixo client software. For 
 
 The Entity Page contains information about your entity that you want end-users will view through web and mobile client software. Think of this as your entity's own web page.&#x20;
 
-![The user interface on ixo.world for configuring an entity page (for a Project)](<../.gitbook/assets/create a project template.png>)
+![The user interface on ixo.world for configuring an entity page (for a Project)](../.gitbook/assets/create-a-project-template.png)
 
 This information is input and displayed using cards. The default types of cards available are:
 
@@ -67,7 +67,7 @@ This information is input and displayed using cards. The default types of cards 
 * Profiles card
 * Linked entities listing card
 
-![Example of the Profiles Card object in the ixo.world entity configuration UI](<../.gitbook/assets/profile card.png>)
+![Example of the Profiles Card object in the ixo.world entity configuration UI](../.gitbook/assets/profile-card.png)
 
 Cards accept plain text and render this in the pre-formatted style determined by the portal through which the page content is being viewed.&#x20;
 
@@ -89,7 +89,7 @@ Settings are what define the metadata and operating parameters for your entity. 
 * Filter categories and tags
 * Claims templates for a range of claim types associated with the entity
 
-![](<../.gitbook/assets/settings creator.png>)
+![](../.gitbook/assets/settings-creator.png)
 
 ### Configure Advanced Settings
 

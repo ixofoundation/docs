@@ -1,6 +1,6 @@
 # Principles
 
-![](<../../.gitbook/assets/Internet of Impact.png>)
+![](../../.gitbook/assets/internet-of-impact.png)
 
 ## Serving the commons
 
