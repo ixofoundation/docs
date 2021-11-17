@@ -16,7 +16,7 @@ An ixo Entity has an identity and an associated store of information. The ixo Do
 
 Entities connect to other entities, using cryptographic proofs. These authenticated connections form [Webs of Trust](https://en.wikipedia.org/wiki/Web\_of\_trust), through which information and value can securely flow.
 
-By subscribing to standard data models and open schemas, entity nodes and the connections (edges) between these nodes form an ontologically rich and precise knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlinked into Web 2.0 networks. 
+By subscribing to standard data models and open [data schemas](/ixo/developers/developer-tools/schema-server/data-asset-schema), entity nodes and the connections (edges) between these nodes form an ontologically rich and precise knowledge-graph. These graphs can be searched and navigated through the Internet of Impact and hyperlinked into Web 2.0 networks. 
 
 #### Entities in the context of ixo protocol networks
 

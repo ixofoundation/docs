@@ -25,7 +25,7 @@ The ixo protocol defines a set of standard document types, which are used as bui
 
 ### 1. DID Document 
 
-Each identifiable subject in the Internet of Impact has a Decentralised Identifier \(DID\). A specific format of document is associated with a DID, which is described as the DID Document \(DDO\). This is based on a specification from the W3C.
+Each identifiable subject in the Internet of Impact has a Decentralised Identifier \(DID\). A specifically formatted document is associated with a DID, the DID Document \(DDO\), which is based on the W3C specification.
 
 {% hint style="info" %}
 The W3C describes a DID Document as "A set of data describing the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects), including mechanisms, such as public keys and pseudonymous biometrics, that the [DID subject](https://www.w3.org/TR/did-core/#dfn-did-subjects) can use to authenticate itself and prove their association with the [DID](https://www.w3.org/TR/did-core/#dfn-decentralized-identifiers). 
@@ -47,11 +47,11 @@ The generic structure of an ixo protocol DID Document is illustrated below.
 
 \[insert illustration\]
 
-1. **Document Page** is the information which is displayed to an end-user. This uses standard Markdown Format for styling and to embed media into the page. See the Format a Page guide.
+1. **Document Page** is the information which is displayed to an end-user. This uses standard Markdown Format for styling and to embed media into the page. See the [Page Formatting](/ixo/guides/create-or-view-a-document/page-formatting) guide.
 
 ### 2. Claims document type
 
-Claims are a high-definition data object which encodes information in a way that is portable, self-declarative and verifiable. Claims comply with the document standards by implementing the following features:
+Claims are high-definition data objects which encode information in a way that is portable, self-declarative and verifiable. Claims comply with the document standards by implementing the following features:
 
 * Subjects are identified in a way that can be authenticated, using a DID.
 * A schema context is declared, which resolves the claim data to a set of standard semantic definitions.

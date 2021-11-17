@@ -1,4 +1,3 @@
 # Set up a Cell Node
 
-## Register a Cell wallet
-
+[https://docs.ixo.foundation/ixo/developers/relayer-setup/node-cells](https://docs.ixo.foundation/ixo/developers/relayer-setup/node-cells)
