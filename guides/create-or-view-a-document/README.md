@@ -11,7 +11,7 @@ The purpose of documents in the Internet of Impact is to record information in a
 1. Verifiable
 2. Attributable
 3. Semantically interoperable
-4. Univeral addressable
+4. Universal addressable
 5. Human-readable
 6. Machine-readable
 7. Non-repudiable
@@ -57,7 +57,7 @@ Claims are a high-definition data object which encodes information in a way that
 * A schema context is declared, which resolves the claim data to a set of standard semantic definitions.
 * An issuer is identified and authenticated, using a DID.
 * The claim is cryptographically verifiable by its hash value and signatures.
-* The claim object is content-addressable by its hash value \(using the IPLD specticification\).
+* The claim object is content-addressable by its hash value \(using the IPLD specification\).
 
 The following claims categories are defined in the ixo context:
 
@@ -67,7 +67,7 @@ The following claims categories are defined in the ixo context:
 * Dispute claim
 * Transaction claim
 
-A generic template \(in [JSON Template standard](https://tools.ietf.org/html/draft-jonas-json-template-language-01) format\) for each catgory of claims is currently maintained in Github under custodianship of the ixo Foundation.
+A generic template \(in [JSON Template standard](https://tools.ietf.org/html/draft-jonas-json-template-language-01) format\) for each category of claims is currently maintained in Github under custodianship of the ixo Foundation.
 
 The basic structure of an ixo protocol Claim is illustrated below.
 

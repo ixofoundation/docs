@@ -8,9 +8,9 @@ description: How the Internet of Impact is built
 
 #### Internet of Impact
 
-ixo Protocol networks are formed by connecting distributed blockchain nodes in a way that is designed to create a global **Internet of Impact**. This builds on core Internet protocols and standards, but uses additional and repurposed standard, in the same way as Web 2.0 has been adapted to form the Internets of Commerce, Finance, Social Media, Internet of Things, etc.&#x20;
+ixo Protocol networks are formed by connecting distributed blockchain nodes in a way that is designed to create a global **Internet of Impact**. This builds on core Internet protocols and standards, but uses additional and repurposed standards, in the same way as Web 2.0 has been adapted to form the Internets of Commerce, Finance, Social Media, Internet of Things, etc.&#x20;
 
-The ixo Protocols provide additional common operating protocols and standards that build on foundational new Wrold-wide Web Consortium (W3C) standards for Linked-data, Decentralised Identifiers and Verifiable Claims. ixo also builds on emerging Web3 standards for tokenisation, cryptographic message-signing and validation.&#x20;
+The ixo Protocols provide additional common operating protocols and standards that build on foundational new World-wide Web Consortium (W3C) standards for Linked-data, Decentralised Identifiers and Verifiable Claims. ixo also builds on emerging Web3 standards for tokenisation, cryptographic message-signing and validation.&#x20;
 
 Together, the ixo Protocols provide new ways of:
 
@@ -18,11 +18,11 @@ Together, the ixo Protocols provide new ways of:
 * **Verifying impact **with crypto-economic proofs
 * **Valuing impact **through tokenisation of impact data assets
 
-The Internet of Impact will become interconnected by the **Inter-blockchain Communication (IBC) Protocol**. In future this will also connect across protocols, to a universe of other Web3 networks, including for instance, the Ethereum Network.&#x20;
+The Internet of Impact will become interconnected by the **Inter-blockchain Communication (IBC) Protocol**. In the future this will also connect across protocols, to a universe of other Web3 networks, including for instance, the Ethereum Network.&#x20;
 
 #### Impact Zones
 
-ixo Protcol Networks may be independently configured into zones that have their own security, governance and economic mechanisms. These networks may be public or private, closed or open. The building-blocks are modular, open-source software components that anyone can reuse, build on and repurpose for their own diverse applications and use-cases.
+ixo Protocol Networks may be independently configured into zones that have their own security, governance and economic mechanisms. These networks may be public or private, closed or open. The building-blocks are modular, open-source software components that anyone can reuse, build on and repurpose for their own diverse applications and use-cases.
 
 #### Project Nodals
 
@@ -49,7 +49,7 @@ In addition to the generic Cosmos modules, which have been purposed for the Inte
 * Fiat Banking Oracle Module
 * Alpha Oracle Module
 
-The ixo blockchain contains the records of evey claim that is issued against a project the the subsequent evaluation of those claims. Each record is validated by a quorum of validator nodes before it is written to the chain and thereafter the record cannot be removed or updated. This data is then aggregated to build out the final states of the projects.
+The ixo blockchain contains the records of every claim that is issued against a project and the subsequent evaluation of those claims. Each record is validated by a quorum of validator nodes before it is written to the chain and thereafter the record cannot be removed or updated. This data is then aggregated to build out the final states of the projects.
 
 All the information on the ixo blockchain is publicly available through the ixo Explorer. This data includes the project information, stats regarding the project, the stakeholders of the project and the structure of data being captured against the project. All actual claim data is stored in the Project Datastore.
 
@@ -61,7 +61,7 @@ The ixo Blockchain keeps a link to the location of these project data stores and
 
 ### Security <a href="security" id="security"></a>
 
-All requests to that create data or access sensitive data require cryptographic signatures and a capabilities model supports this to provide finer grained access control.
+All requests that create data or access sensitive data require cryptographic signatures and a capabilities model supports this to provide finer grained access control.
 
 ### Message Flows <a href="message-flows" id="message-flows"></a>
 
@@ -69,9 +69,9 @@ All requests to that create data or access sensitive data require cryptographic 
 
 #### Update Messages <a href="update-messages" id="update-messages"></a>
 
-In general update requests are created and signed on the front end using our keysafe which holds the private keys for the user. The request with it's signature portion is then passed to the Project Datastore (PDS) when it is processed and the results is then ledgered onto the ixo blockchain with hash references back to the original transaction on the PDS. The block containing the request is then processed on the ixo blockchain and the ixo Explorer the synchs this block to the current system state.
+In general update requests are created and signed on the front end using our keysafe which holds the private keys for the user. The request with its signature portion is then passed to the Project Datastore (PDS) when it is processed and the results are then ledgered onto the ixo blockchain with hash references back to the original transaction on the PDS. The block containing the request is then processed on the ixo blockchain and the ixo Explorer syncs this block to the current system state.
 
 #### Read Messages <a href="read-messages" id="read-messages"></a>
 
-When reading publicly availably data a REST call is made to the ixo Explorer that contains the current state of the the blockchain. If private information needs to be accessed than a signed request is submitted to the PDS which will respond with the data if the the signature and capabilities of the user adhere to the policies for that data.
+When reading publicly availably data a REST call is made to the ixo Explorer which contains the current state of the blockchain. If private information needs to be accessed then a signed request is submitted to the PDS which will respond with the data if the the signature and capabilities of the user adhere to the policies for that data.
 
