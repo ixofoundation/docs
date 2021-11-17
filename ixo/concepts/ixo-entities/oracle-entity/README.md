@@ -23,14 +23,14 @@ Users employ ixo Oracles to provide these functions on their data. This helps op
 
 Oracles are categorised into different namespace types, to help identify the their general purpose. Whilst oracles are all the same entity class, some security and technical characteristics can differ, depending on the oracle type. 
 
-For instance, a Treasury Oracle must be listed in the genesis record of an ixo-SDK blockchain. This type of oracle to has the privileged capability to programmatically mint, burn or transfer a specific token on the network. 
+For instance, a Treasury Oracle must be listed in the genesis record of an ixo-SDK blockchain. This type of oracle has the privileged capability to programmatically mint, burn or transfer a specific token on the network. 
 
 | Oracle Type | Purpose \(click the links to learn how\) |
 | :--- | :--- |
 | Evaluation Oracle | Approval of claims |
 | Alpha Oracle | Risk estimation |
 | Verification Oracle | Verification of claim and credential proofs \(including Zero-Knowledge Proofs\) |
-| Credentialing Oracle | Issuance of Verfiable Credentials |
+| Credentialing Oracle | Issuance of Verifiable Credentials |
 | Impact Oracle | Precision impact |
 | Audit Oracle | Claims and transactions audit |
 | Banking Oracle | Banking claims |
