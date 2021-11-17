@@ -183,6 +183,7 @@
   * [Web portal](developers/relayer-setup/web-portal.md)
   * [Cell Node](developers/relayer-setup/node-cells.md)
   * [ixo-Module](developers/relayer-setup/ixo-module-guide.md)
+* [Troubleshooting](developers/troubleshooting.md)
 
 ## Services
 
