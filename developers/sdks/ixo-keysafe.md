@@ -2,6 +2,8 @@
 
 ## Keysafe Browser Extension API
 
+[GitHub ixo-keysafe repo](https://github.com/ixofoundation/ixo-keysafe)
+
 When the keysafe extension operates through the browser `window` object.\
 This can be accessed as follows:
 

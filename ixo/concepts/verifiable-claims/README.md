@@ -44,7 +44,7 @@ Verifiable Claims encode high-definition data, which has the following character
 
 ## Verifiable Claim encoding
 
-Verifiable Claims are serialised as JSON-LD.
+Verifiable Claims are serialised as JSON-LD [data schema](/ixo/developers/developer-tools/schema-server/data-asset-schema).
 
 
 

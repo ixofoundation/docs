@@ -4,11 +4,11 @@ description: The standard for describing a Data Asset
 
 # Data Asset Schema
 
-Document Templates for Data Assets use a structured data format, based on open schemas (mainly [schema.org](https://schema.org)), to describe any type of data asset that exists within the Internet of Impact.
+Templates for Data Assets in ixo Documents use a structured data format based on open schemas (mainly [schema.org](https://schema.org)) to describe any type of Data Asset existing within the Internet of Impact.
 
 ### Types of data assets
 
-* A structured object, such as verifiable claim, with a data model that can be processed using a specific tool or algorithm
+* A structured object, such as Verifiable Claim, with a data model that can be processed using a specific tool or algorithm
 * An algorithm for processing or transforming data
 * A table or a CSV file with some data
 * An organised collection of tables
@@ -20,13 +20,15 @@ Document Templates for Data Assets use a structured data format, based on open s
 
 ### The standard data model (schema) for data assets
 
-The ixo standard for data assets is compatible with mainstream Web 2.0 [guidelines for dataset providers](https://developers.google.com/search/docs/data-types/dataset) to describe their data in a way that search engines, such as Google, can better understand the content of their pages. It is based on the principle that data assets are easier to find and use when they are described with metadata such as their name, description, creator and distribution formats.
+The ixo standard for data assets is compatible with Web 2.0 [guidelines for dataset providers](https://developers.google.com/search/docs/data-types/dataset) used to describe data for search engines such as Google to better understand the content of pages. Data assets are easier to find and understand when they are described with metadata such as name, description, creator, format, etc.
 
-The Page Schema for describing a data asst in its ixo Document uses the  [schema.org Dataset markup](https://schema.org/Dataset).&#x20;
+The schema describing Data Assets within ixo Documents implements the [schema.org Dataset structure](https://schema.org/Dataset).
 
 #### Dataset example
 
-If the Data Asset is a Dataset, we would use the [schema.org/Dataset](https://schema.org/Dataset) definition of  `Dataset`. This includes information about the publication of the dataset, such as the license, when it was published, its [DOI](https://en.wikipedia.org/wiki/Digital\_object\_identifier), or a `sameAs` pointing to a canonical version of the dataset in a different repository. Add `identifier`, `license`, and `sameAs` for datasets that provide provenance and license information.
+For example, if the Data Asset is a Dataset, we would use the [schema.org/Dataset](https://schema.org/Dataset) definition of `Dataset` as described in the following table. Included, is information about the publication of the dataset such as the license, when it was published, and `identifier`[(DOI)](https://en.wikipedia.org/wiki/Digital\_object\_identifier) or `sameAs` pointing to a canonical version of this Dataset object in a different repository.
+
+Add `identifier`, `license`, and `sameAs` for Datasets that provide provenance and license information.
 
 | Required properties |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

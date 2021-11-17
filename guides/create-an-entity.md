@@ -6,7 +6,7 @@ description: How to create your Cell, Project, Oracle, Investment, Data Asset, o
 
 The simplest way to set up a new entity is to use a pre-configured template as a starting document. Search for a relevant template in the web-client Explorer templates library.
 
-Alternatively, initiate the process of setting up up your entity through the web-client explorer control panel, where you will find the relevant button in the Actions panel to:
+Alternatively, initiate the process of setting up your entity through the [web-client](https://app.ixo.world) explorer control panel, where you will find the relevant button in the Actions panel to:
 
 * Create a Cell
 * Create a Project
@@ -18,7 +18,7 @@ Alternatively, initiate the process of setting up up your entity through the web
 {% hint style="info" %}
 Optionally, developers can choose to configure as JSON Documents, using the latest ixo-Entity JSON Schema and submit this as a signed message through the `ixo-apiModule` Rest API.
 
-Controlled versions of the [document data model](https://github.com/ixofoundation/ixo-protocol/blob/master/entity\_document.json) are maintained in Github.
+Controlled versions of the [document data model](https://github.com/ixofoundation/ixo-protocol/tree/master/entities) are maintained in Github.
 {% endhint %}
 
 #### What is an Entity?
@@ -74,7 +74,7 @@ Cards accept plain text and render this in the pre-formatted style determined by
 {% hint style="info" %}
 A limited range of markup elements can be used, including hypertext links, which can be included using the standard convention of `[link text](link URL)`
 
-For the full list of accepted markdown, see this reference page \[TBC]
+For the full list of accepted markdown, see [Page Formatting](/ixo/guides/create-or-view-a-document/page-formatting)
 {% endhint %}
 
 ### Configure your Entity Settings

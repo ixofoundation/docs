@@ -167,7 +167,7 @@
   * [Test Networks](developers/developer-tools/test-networks/README.md)
     * [Join a Test Network](developers/developer-tools/test-networks/join-a-test-network/README.md)
       * [1. ixo-blockchain setup](developers/developer-tools/test-networks/join-a-test-network/1.-ixo-blockchain-setup.md)
-      * [2. ixo.blocksync setup](developers/developer-tools/test-networks/join-a-test-network/2.-ixo.blocksync-setup.md)
+      * [2. ixo-blocksync setup](developers/developer-tools/test-networks/join-a-test-network/2.-ixo.blocksync-setup.md)
       * [3. ixo-apimodule setup](developers/developer-tools/test-networks/join-a-test-network/3.-ixo-apimodule-setup.md)
       * [4. ixo-cellnode setup](developers/developer-tools/test-networks/join-a-test-network/4.-ixo-cellnode-setup.md)
       * [5. ixo-webclient setup](developers/developer-tools/test-networks/join-a-test-network/5.-ixo-webclient-setup.md)
