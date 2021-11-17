@@ -1,6 +1,22 @@
-# Fees Module
+---
+description: How to use the ixo Payments Module
+---
 
-## Fees
+# Payments Module
+
+## The ixo Payments Module
+
+Payments is an [ixo blockchain SDK Go Module](https://github.com/ixofoundation/ixo-blockchain/tree/master/x/payments) developed using the Cosmos SDK framework.
+
+The purpose of this module is to set up Payment Contracts and to effect payments relating to any event.
+
+The standard Payment functions built into this module enable fees to be paid for Claims, when a claim is submitted, evauated, or approved.
+
+An automated fee distribution is included in the specification of fees. For oracle services, this enables the Market Relayer node through which an oracle has been procured to be paid a platform fee on the fee transactions. This also distributes a fraction of the fee payments back into the network treasury, from where these fees will (in future) be added back into the ecosystem DAO, to provide sustainable funding to be reinvested into the ecosystem growth.
+
+The Payments Module provides a versatile range of services that habe many possible ways of being configured as part of the workflows relating to entities and the work performed by service agents and oracles.
+
+## Configuring Payments for an Entity
 
 The Entity Document `fees` property has the struct:
 

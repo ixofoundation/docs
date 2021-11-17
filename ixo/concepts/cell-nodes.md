@@ -10,9 +10,9 @@ description: The Internet of Impact is formed by networks of Cell Nodes.
 
 [Cellular organisational structures](https://en.wikipedia.org/wiki/Cellular\_organizational\_structure) are common in nature. Think about how human immune cells sense and respond to threats with targeted precision. Immune cells signal other systems, amplify their responses through replication, produce neutralising or catalytic antibodies and build cellular memory. Each of these has strong analogies with digitally-enhanced cellular organisations.
 
-Cellular organisations are taken to a whole new level in the Internet of Impact. Cells now benefit from the capabilities of digital communication tools, stateful data, programmable capital and networked intelligence-sharing.&#x20;
+Cellular organisations are taken to a whole new level in the Internet of Impact. Cells now benefit from the capabilities of digital communication tools, stateful data, programmable capital and networked intelligence-sharing.
 
-#### Cellular organisations can build a digitally-enhanced immune system for humanity.&#x20;
+#### Cellular organisations can build a digitally-enhanced immune system for humanity.
 
 ![People form a Cell to pursue a shared mission](../../.gitbook/assets/cell-node-group3.svg)
 
@@ -61,9 +61,9 @@ Cell nodes are configured to provide cellular organisations with powerful tools 
 
 ## Purpose of a cell
 
-The purpose of a Cell defines how it will operate in terms of membership, size, location, lifespan, scope of projects it undertakes and other types of organisational characteristics. A Cell Node is configured to fit the purpose of a cell.&#x20;
+The purpose of a Cell defines how it will operate in terms of membership, size, location, lifespan, scope of projects it undertakes and other types of organisational characteristics. A Cell Node is configured to fit the purpose of a cell.
 
-The founder/s of a cell define its purpose - usually with an explicit mission statement.&#x20;
+The founder/s of a cell define its purpose - usually with an explicit mission statement.
 
 **Examples of cell types and their primary purpose:**
 
@@ -73,14 +73,14 @@ The founder/s of a cell define its purpose - usually with an explicit mission st
 | Hackathon Cell           | Hack a prototype solution for a specific challenge.                                        |
 | Procurement Cell         | Negotiate the supply of goods/services in an accountable and transparent way.              |
 | Investment Cell          | Form and allocate capital for debt and/or equity investments.                              |
-| Startup accelerator Cell | Support ventures to find product-market fit and deploy their value propositions.            |
+| Startup accelerator Cell | Support ventures to find product-market fit and deploy their value propositions.           |
 | Taskforce Cell           | Tackle a specific task with a defined mandate and deliverable.                             |
 | R\&D Cell                | Research and develop novel solutions though an experimental process.                       |
 | Cooperative Cell         | Facilitate broad economic stake-holding in the supply and/or demand of goods and services. |
 | Mutual Credit Cell       | Form and allocate capital through a peer-to-peer marketplace.                              |
 
 {% hint style="info" %}
-To view more Cell types and understand the range of purposes for which these have been formed [explore this portal](https://app.gitbook.com/s/-LjCku60B7sAxJzveU5e/ixo/concepts/cell-nodes), or search the Internet of Impact through [ixo.world](https://ixo.world/cells).
+To view more Cell types and understand the range of purposes for which these have been formed [explore this portal](cell-nodes.md), or search the Internet of Impact through [ixo.world](https://ixo.world/cells).
 {% endhint %}
 
 {% hint style="info" %}
@@ -107,7 +107,7 @@ Agents are given rights for performing specific roles. They issue verifiable cla
 
 Cells may incentivise agents with tokenised rewards, which are tracked by the Cell Node. Agents can also be economically penalised for not operating within the rules of the cell.
 
-Find out more about [Agents](/ixo/ixo/concepts/participants).
+Find out more about [Agents](../ixo/concepts/participants/).
 
 ## Cell projects
 
@@ -115,7 +115,7 @@ The participants in a cell pursue their mission by implementing one or more proj
 
 The performance of each project is tracked through claims which are submitted by cell agents who are authorised to work on the project. Claims are independently evaluated and verified (for instance, by Proofing Oracles).
 
-Find out more about [Projects](/ixo/ixo/concepts/projects) and [Claims Verification](/ixo/ixo/concepts/verifiable-claims).
+Find out more about [Projects](../ixo/concepts/projects/) and [Claims Verification](../ixo/concepts/verifiable-claims/).
 
 ## Cell sovereignty
 
@@ -149,7 +149,7 @@ Decisions and actions may be made by the Cell Founder, or by cell agents. The Ce
 
 Cells exist within an economy that broadly have three types of common enterprises, in which cell agents may be incentivised to participate:
 
-* **Entrepreneurial Common**: interfaces the cell with external ecosystems and markets. This common sets financial and monetary policy. It determines the price of cell membership, how the cell is owned and how to distribute capital. Incentives for participation in the entrepreneurial enterprise may be created by issuing and distributing shares or tokens in the cell that embody rights of ownership, economic participation and access to the cell's capital resources.&#x20;
+* **Entrepreneurial Common**: interfaces the cell with external ecosystems and markets. This common sets financial and monetary policy. It determines the price of cell membership, how the cell is owned and how to distribute capital. Incentives for participation in the entrepreneurial enterprise may be created by issuing and distributing shares or tokens in the cell that embody rights of ownership, economic participation and access to the cell's capital resources.
 * **Production Common**: produces goods and services though the cooperative efforts of the cell members. As incentives, contributors may be paid for their work or receive shares for the value they have created.
 * **Beneficial Common**: governs the cell's mission, impact goals, operating policies, membership, consensus rules, rights and incentive mechanisms. Voting rights are an incentive for participating in the beneficial common.
 
@@ -157,13 +157,13 @@ Cells exist within an economy that broadly have three types of common enterprise
 
 There are many possible ways of raising capital resources for a cell. Operating capital can come from more traditional commercial, philanthropic or peer-to-peer sources. Instruments include grants, venture capital, loans, crowd-funding, mutual credit, etc. Now there are also decentralised financing instruments such as tokenisation, Alpha Bonds and Quadratic Funding.
 
-The use of capital by a cell can be transparently tracked and accounted for using the Cell Node's blockchain ledger. This includes a mechanism for tracking financial transactions in fiat bank accounts and representing these on the ledger.&#x20;
+The use of capital by a cell can be transparently tracked and accounted for using the Cell Node's blockchain ledger. This includes a mechanism for tracking financial transactions in fiat bank accounts and representing these on the ledger.
 
 Capital flows can be programmatically allocated and distributed using Alpha Bonds. Conditional payment triggers are linked to provable results. This has tremendous potential for risk-adjusted financing of new ventures and performance-based contracts.
 
 ## How to set up a Cell Node
 
-The easiest way to start is with a template. Browse [app.ixo.world](https://app.ixo.world/) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo [cell node guide](https://docs.ixo.foundation/ixo/guides/set-up-a-cell-node) explains this further.&#x20;
+The easiest way to start is with a template. Browse [app.ixo.world](https://app.ixo.world) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo [cell node guide](https://docs.ixo.foundation/ixo/guides/set-up-a-cell-node) explains this further.
 
 If you can't find a template that suits your specific needs, start a new cell template with guidance from the ixo-assistant chatbot.
 
@@ -173,4 +173,4 @@ The costs of hosting a Cell Node depends on whether this is self-hosted or hoste
 
 Registering a Cell Node with a Decentralised Identifier and Cell Document on the Sustainability Hub incurs a negligible transaction fee (gas) for writing these records to the blockchain.
 
-Cells can choose to employ services and acquire applications from a growing network marketplace, where the costs are determined by providers.&#x20;
+Cells can choose to employ services and acquire applications from a growing network marketplace, where the costs are determined by providers.
