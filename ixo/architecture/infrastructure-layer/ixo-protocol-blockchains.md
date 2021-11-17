@@ -4,11 +4,11 @@ description: Software infrastructure for the Internet of Impact.
 
 # ixo Protocol Blockchains
 
-The ixo blockchain is open-source software to provide computational and data storage infrastructure for the Internet of Impact. This implements open standards to form an inter-operable network of networks. Anyone set up an ixo blockchain based network, which will provide users with a common set of functionality. 
+The ixo blockchain is open-source software to provide computational and data storage infrastructure for the Internet of Impact. This implements open standards to form an inter-operable network of networks. Anyone can set up an ixo blockchain based network, which will provide users with a common set of functionalities. 
 
 A network running the core ixo blockchain software can fulfil the following functional requirements: 
 
-| Functional Requirement | ixo Blockchain mechanism |
+| **Functional Requirement** | **ixo Blockchain mechanism** |
 | :--- | :--- |
 | Identify agents | Digital Identifiers \(DID\) & Verifiable Credentials |
 | Identify cell nodes | Digital Identifiers \(DID\) |

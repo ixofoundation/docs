@@ -32,7 +32,7 @@ description: 'Understand what we mean, when we say ...'
 | Precision Impact |  Defined by a set of 10 Precision Impact Functions: Proofing, Prediction, Personalisation, Prescription, Planning, Proposing, Prevention, Protection, Profiling, and Participation.|
 | [Precision Oracle](https://docs.ixo.foundation/ixo/ixo/concepts/ixo-entities/oracle-entity) | Oracle that provides Precision Impact Functions \(P-functions\). |
 | Proof | Collected data that supports a claim. |
-| Relayer | A blockchain service provider which transfers (relays) tokenized IBC assets over IBC channels. Or, See Market Relayer. |
+| Relayer | Validator Node operators of the Sustainability Hub are referred to as Relayers. |
 | Specification | The data requirements needed to properly satisfy a valid claim. |
 | State | The observed, verifiable condition of the world. Or, the digital representation of this observed state recorded on blockchain as claim. |
 | Token | A medium of value. Digital asset representing a denominated unit of value or, in the case of a Non-Fungible Token, the representation of a real asset or claim. |
@@ -41,5 +41,5 @@ description: 'Understand what we mean, when we say ...'
 | Verification | The process of evaluating the veracity of a claim. |
 | Verified Claim | Claim which has been verified by evaluation entities such as a Verification Agent, Auditor, or Arbitrator. |
 | Wallet | DID associated encrypted secured agent-store that holds agent's tokens and digital assets. |
-| Zone |  |
+| Zone | ixo Protocol Networks may be independently configured into zones that have their own security, governance and economic mechanisms. |
 

@@ -19,7 +19,7 @@ Verifiable Claims encode high-definition data, which has the following character
 7. 
 #### Types of Verifiable Claims
 
-| Verifiable Claim Type | Primary Purpose |
+| **Verifiable Claim Type** | **Primary Purpose** |
 | :--- | :--- |
 | Service Claim |  |
 | Procurement Claim |  |
