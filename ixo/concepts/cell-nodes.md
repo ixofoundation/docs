@@ -161,9 +161,9 @@ The use of capital by a cell can be transparently tracked and accounted for usin
 
 Capital flows can be programmatically allocated and distributed using Alpha Bonds. Conditional payment triggers are linked to provable results. This has tremendous potential for risk-adjusted financing of new ventures and performance-based contracts.
 
-## How to set up of a Cell Node
+## How to set up a Cell Node
 
-The easiest way to start is with a template. Browse [ixo.world templates](https://app.ixo.world/templates) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo guide explains this further.&#x20;
+The easiest way to start is with a template. Browse [app.ixo.world](https://app.ixo.world/) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo guide explains this further.&#x20;
 
 If you can't find a template that suits your specific needs, start a new cell template with guidance from the ixo-assistant chatbot.
 
