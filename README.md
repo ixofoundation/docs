@@ -23,7 +23,7 @@ This is a living document which will be continuously updated. Please refer to th
 * Give general feedback
 * Test the documentation by using it!
 
-The preferred way to help make improvements is to post a new discussion, or contribute to an existing discussion thread, in [the ixo Forum](https://forum.ixo.world), under a relevant topic area.
+The preferred way to help make improvements is to post a new discussion, or contribute to an existing discussion, in this Github repo.
 
 ## Usage and copy rights
 
