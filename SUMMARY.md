@@ -181,7 +181,7 @@
   * [Template Builder](developers/developer-tools/template-builder/README.md)
     * [Styling an Entity Page](developers/developer-tools/template-builder/styling-an-entity-page.md)
 * [Demos](developers/demos/README.md)
-  * [Project Functions from Start to Finish](https://github.com/ixofoundation/ixo-apimodule/blob/master/test/demo.ts#L299)
+  * [Project api functions from start to finish](https://github.com/ixofoundation/ixo-apimodule/blob/master/test/demo.ts#L299)
 * [Relayer Setup Guide](developers/relayer-setup/README.md)
   * [Validator node](developers/relayer-setup/validator-node.md)
   * [Explorer (Block-sync)](developers/relayer-setup/block-sync.md)
