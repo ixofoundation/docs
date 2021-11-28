@@ -150,6 +150,10 @@
 ## DEVELOPERS
 
 * [Getting Started](developers/getting-started.md)
+* [APIs](developers/apis/README.md)
+  * [CellNode API Specification](https://github.com/ixofoundation/ixo-cellnode/blob/master/api.md)
+  * [Blocksync API (Swagger)](https://app.swaggerhub.com/apis-docs/drshaun/ixo/0.2.3)
+  * [ixo Blockchain Modules gRPC (Swagger)](https://app.swaggerhub.com/apis/ixo-world/ixo-modules\_g\_rpc\_gateway\_docs/1.0.0)
 * [Interfaces](developers/interfaces/README.md)
   * [ixo API Module](developers/interfaces/ixo-api-module.md)
   * [ixo BlockSync](developers/interfaces/ixo-blocksync.md)
