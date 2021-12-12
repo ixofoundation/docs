@@ -2,14 +2,14 @@
 
 * [Overview](README.md)
 
-## Start Here <a href="start" id="start"></a>
+## Start Here <a href="#start" id="start"></a>
 
 * [What is ixo?](start/what-is-ixo.md)
 * [FAQs](start/faqs.md)
 * [Glossary](start/glossary.md)
 * [Other resources](start/other-resources.md)
 
-## The Internet of Impact <a href="ixo" id="ixo"></a>
+## The Internet of Impact <a href="#ixo" id="ixo"></a>
 
 * [Abstract](ixo/abstract.md)
 * [Purpose](ixo/purpose/README.md)
@@ -95,7 +95,7 @@
   * [Privacy and Data Protection](ixo/standards/privacy-and-data-protection-standards.md)
 * [R\&D](ixo/r-and-d.md)
 
-## User Guides <a href="guides" id="guides"></a>
+## User Guides <a href="#guides" id="guides"></a>
 
 * [Connect through a portal](guides/connect-through-a-portal.md)
 * [Create an entity](guides/create-an-entity.md)
@@ -183,7 +183,7 @@
     * [Data Asset Schema](developers/developer-tools/schema-server/data-asset-schema.md)
   * [Alphabond Simulator](developers/developer-tools/alpha-bond-simulator.md)
   * [Template Builder](developers/developer-tools/template-builder/README.md)
-    * [Styling an Entity Page](developers/developer-tools/template-builder/styling-an-entity-page.md)
+    * [Entity Page Styling](developers/developer-tools/template-builder/styling-an-entity-page.md)
 * [Demos](developers/demos/README.md)
   * [Project api functions from start to finish](https://github.com/ixofoundation/ixo-apimodule/blob/master/test/demo.ts#L299)
 * [Relayer Setup Guide](developers/relayer-setup/README.md)
