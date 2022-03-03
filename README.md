@@ -1,5 +1,5 @@
 ---
-description: The ixo Protocol documentation. A work in progress!
+Description: The ixo Protocol documentation. A work in progress!
 ---
 
 # Overview
@@ -19,6 +19,7 @@ This is a living document which will be continuously updated. Please refer to th
 ## Help improve this documentation
 
 * Suggest new content
+* Suggest updates to existing content
 * Request features
 * Give general feedback
 * Test the documentation by using it!
