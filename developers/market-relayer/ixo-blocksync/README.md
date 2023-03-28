@@ -1,8 +1,6 @@
 # ixo BlockSync
 
-## ixo-blocksync Explorer API
-
-Returns a the publicly available data pertaining to entities. May selectively be filtered on sync with the blockchain, to contain only entities associated with a Relayer Node.
+Returns the publicly available data pertaining to entities. May selectively be filtered on sync with the blockchain, to contain only entities associated with a Relayer Node.
 
 ### DID Functions
 

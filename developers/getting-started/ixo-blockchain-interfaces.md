@@ -14,7 +14,7 @@ Each interface can be used to query the state. The command-line interface can be
 
 ### Command-Line Interface
 
-The most straightforward way to interact with a node is using the command-line interface.
+The most straightforward way to interact with a node is using the command-line interface; also known as CLI.
 
 The ixo binary serves as the node client and the application client, meaning the `ixo` binary can be used to both run a node and interact with it. In Quick Start, we started a local node using the `ixo` binary and then interact with that node by submitting queries and transactions.&#x20;
 

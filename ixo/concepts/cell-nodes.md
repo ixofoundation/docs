@@ -163,7 +163,7 @@ Capital flows can be programmatically allocated and distributed using Alpha Bond
 
 ## How to set up a Cell Node
 
-The easiest way to start is with a template. Browse [app.ixo.world](https://app.ixo.world) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo [cell node guide](https://docs.ixo.foundation/ixo/guides/set-up-a-cell-node) explains this further.
+The easiest way to start is with a template. Browse [app.ixo.world](https://app.ixo.world/) to find one that fits close enough to the purpose and other characteristics of the cell you want to form. The ixo [cell node guide](https://docs.ixo.foundation/ixo/guides/set-up-a-cell-node) explains this further.
 
 If you can't find a template that suits your specific needs, start a new cell template with guidance from the ixo-assistant chatbot.
 
