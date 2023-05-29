@@ -6,7 +6,7 @@ Description: The ixo Protocol documentation. A work in progress!
 
 ## Welcome
 
-The open-source ixo Protocol is the basis for building an Internet of Impact for sustainable social, environmental and economic development, and to mitigate climate impacts.
+The open-source ixo Protocol is the basis for building an Internet of Impacts for sustainable social, environmental and economic development, and to mitigate climate impacts.
 
 The vision of ixo is to build a global digital immune system for humanity, which will enable us to far more effectively sense and respond to sustainability threats and to invest intelligently in opportunities for positive impact.
 
@@ -32,11 +32,11 @@ Content in the document is copyright of The ixo Foundation. It may be re-used su
 
 ### Copying content from this documentation
 
-Please attribute the source as _**The ixo Foundation**_.
+Please attribute the source as _**The Impacts DAO Cooperative**_.
 
 ### Contributing content to this documentation
 
-Your contributions will be considered open-source and copyright for permissive re-use will transfer to The ixo Foundation, unless your contributions are based on your own prior art. Please ensure that you do not infringe on the intellectual property rights of others when re-using their content here.
+Your contributions will be considered open-source and copyright for permissive re-use will transfer to The Impacts DAO Cooperative, unless your contributions are based on your own prior art. Please ensure that you do not infringe on the intellectual property rights of others when re-using their content here.
 
 #### Copyright Infringements
 
