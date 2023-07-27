@@ -4,7 +4,19 @@ description: The Impact blockchain for the Cosmos ecosystem
 
 # ixo Blockchain
 
-These instructions allow you to run a single node network on your local machine and interact with it using the command line interface (CLI). It is the simplest way to become familiar with the ixo Blockchain.
+### Links
+
+{% tabs %}
+{% tab title="Mainnet" %}
+[https://github.com/cosmos/chain-registry/tree/master/impacthub](https://github.com/cosmos/chain-registry/tree/master/impacthub)
+{% endtab %}
+
+{% tab title="Testnet" %}
+[https://github.com/cosmos/chain-registry/tree/master/testnets/impacthubtestnet](https://github.com/cosmos/chain-registry/tree/master/testnets/impacthubtestnet)
+{% endtab %}
+{% endtabs %}
+
+The following instructions allow you to run a single node network on your local machine and interact with it using the command line interface (CLI). It is the simplest way to become familiar with the ixo Blockchain.
 
 After completing this guide you can [run a node](https://github.com/ixofoundation/genesis/blob/main/README.md) on the `pandora` testnet.
 
