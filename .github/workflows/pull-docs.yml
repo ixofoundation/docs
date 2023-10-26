@@ -3,7 +3,7 @@ name: Pull README.md from the ixo-blockchain repository
 on:
   pull_request:
     branches:
-      - develop
+      - alwyn-ixopatch-1
 jobs:
   pull-readme:
     runs-on: ubuntu-latest
