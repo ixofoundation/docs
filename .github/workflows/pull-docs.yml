@@ -1,0 +1,22 @@
+name: Pull README.md from the ixo-blockchain repository
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  pull-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get *.md files from the ixo-blockchain repository
+        run: |
+          curl -O https://raw.githubusercontent.com/ixofoundation/ixo-blocksync/develop/**/*.md
+
+
+      - name: Move README.md to destination
+        run: |
+          mv *.md docs/developers/ixo-blockchain
