@@ -1,7 +1,7 @@
 name: Pull README.md from the ixo-blockchain repository
 
 on:
-  issue_comment:    
+  pull_request:
     branches:
       - develop
 jobs:
