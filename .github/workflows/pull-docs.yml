@@ -12,10 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Get README.md from the ixo-blockchain repository
+      - name: Get *.md files from the ixo-blockchain repository
         run: |
-          curl -O https://raw.githubusercontent.com/my-username/my-other-repo/main/README.md
+          curl -O https://raw.githubusercontent.com/ixofoundation/ixo-blocksync/develop/**/*.md
+
 
       - name: Move README.md to destination
         run: |
-          mv README.md docs
+          mv *.md docs/developers/ixo-blockchain
