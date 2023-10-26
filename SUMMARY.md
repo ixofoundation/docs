@@ -4,7 +4,7 @@
 
 ## Start Here <a href="#start" id="start"></a>
 
-* [What is ixo?](start/what-is-ixo.md)
+* [Welcome to The Internet of Impacts](start/what-is-ixo.md)
 * [FAQs](start/faqs.md)
 * [Glossary](start/glossary.md)
 * [Other resources](start/other-resources.md)
@@ -158,7 +158,7 @@
 * [ixo Mobile Client](developers/ixo-mobile-client.md)
 * [Market Relayer](developers/market-relayer/README.md)
   * [ixo BlockSync](developers/market-relayer/ixo-blocksync/README.md)
-    * [ixo BlockSync API  Specification](https://devnet-blocksync.ixo.earth/swagger/)
+    * [ixo BlockSync API Specification](https://devnet-blocksync.ixo.earth/swagger/)
   * [ixo CellNode](developers/market-relayer/ixo-cellnode/README.md)
     * [ixo CellNode API Specification](https://github.com/ixofoundation/ixo-cellnode/blob/master/api.md)
   * [ixo Web Client](developers/market-relayer/ixo-web-client.md)
