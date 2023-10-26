@@ -31,4 +31,4 @@ jobs:
 
       - name: Move README.md to destination
         run: |
-          mv *.md docs/developers/ixo-blockchain
+          mv *.md developers/ixo-blockchain
