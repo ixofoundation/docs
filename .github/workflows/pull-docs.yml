@@ -1,29 +1,22 @@
-name: Pull README.md from the ixo-blockchain repository
+name: Copy README.md from the ixo-blockchain repository
 
 on:
   pull_request:
     branches:
       - alwyn-ixopatch-1
 jobs:
-  pull-readme:
+  copy_files:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout source repo
+        uses: actions/checkout@v2
 
-      - name: Get *.md files from the ixo-blockchain repository
-        run: |
-          curl -O https://raw.githubusercontent.com/ixofoundation/ixo-blocksync/develop/**/*.md
-
-      - name: Move README.md to destination
-        run: |
-          mv *.md developers/ixo-blockchain
-
-      - name: Create PR
-        uses: actions/create-pull-request@v4
+      - name: Copy file to another repo
+        uses: nkoppel/push-files-to-another-repository@1.1.0
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          title: "Pull .md files from ixo-blockchain"
-          body: "This PR pulls the .md files from my-other-repo into the docs directory."
-          branch: "${{GITHUB_BRANCH}}"
-          base: develop
-          files: developers/ixo-blockchain/**/*.md
+          source-files: 'https://github.com/ixofoundation/ixo-blockchain/blob/f4193c31eb73851aec7be091f2845183f2dd0c61/README.md'
+          destination-username: 'alwyn-ixo'
+          destination-repository: 'ixofoundation/docs'
+          commit-email: 'alwyn.vanwyk@ixo.world'
