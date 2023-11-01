@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: ixofoundation/ixo-blockchain
-          path: develop
+          ref: develop
