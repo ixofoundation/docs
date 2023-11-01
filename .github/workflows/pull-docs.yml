@@ -1,9 +1,6 @@
 name: Copy README.md from the ixo-blockchain repository
 
-on:
-  pull_request:
-    branches:
-      - alwyn-ixopatch-1
+on: [push]
 jobs:
   copy_files:
     runs-on: ubuntu-latest
