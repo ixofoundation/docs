@@ -5,8 +5,13 @@ jobs:
   copy-docs-from-blockchain-repo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
+      - run: pwd
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: pwd
+      - name: Checkout ixo-blockchain
+        uses: actions/checkout@v4
         with:
           repository: ixofoundation/ixo-blockchain
           ref: develop
+      - run: pwd
