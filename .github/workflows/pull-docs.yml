@@ -1,19 +1,12 @@
-name: Copy README.md from the ixo-blockchain repository
-
+name: Copy .md from ixo-blockchain
+run-name: ${{ github.actor }} pushed a change.
 on: [push]
 jobs:
-  copy_files:
+  copy-docs-from-blockchain-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source repo
-        uses: actions/checkout@v2
-
-      - name: Copy file to another repo
-        uses: nkoppel/push-files-to-another-repository@1.1.0
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          source-files: 'https://github.com/ixofoundation/ixo-blockchain/blob/f4193c31eb73851aec7be091f2845183f2dd0c61/README.md'
-          destination-username: 'alwyn-ixo'
-          destination-repository: 'ixofoundation/docs'
-          commit-email: 'alwyn.vanwyk@ixo.world'
+          repository: ixofoundation/ixo-blockchain
+          path: develop
