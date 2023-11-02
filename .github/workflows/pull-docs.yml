@@ -5,13 +5,15 @@ jobs:
   copy-docs-from-blockchain-repo:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
       - name: Checkout
         uses: actions/checkout@v4
-      - run: pwd
+        with:
+          ref: develop
+          path: docs
       - name: Checkout ixo-blockchain
         uses: actions/checkout@v4
         with:
           repository: ixofoundation/ixo-blockchain
           ref: develop
-      - run: pwd
+          path: ixo-blockchain
+      - run: find ./ixo-blockchain -type f -name "*.md" -print
