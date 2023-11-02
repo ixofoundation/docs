@@ -9,11 +9,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: develop
-          path: docs
       - name: Checkout ixo-blockchain
         uses: actions/checkout@v4
         with:
           repository: ixofoundation/ixo-blockchain
           ref: develop
           path: ixo-blockchain
-      - run: find ./ixo-blockchain -type f -name "*.md" -print
+      - run: ls -al
+      - run: find ./ixo-blockchain -type f -name "*.md" -exec cp -R {} . \;
+      - run: ls -al
+      - run: git add .
+      - run: git config --global user.email "ixo@ixo.world"
+      - run: git config --global user.name ${{ github.actor }}
+      - run: git commit -m "Copy .md from checkers"
+      - run: git config --global --add safe.directory /home/runner/work/docs/docs
+      - run: git push
