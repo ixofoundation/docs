@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: develop
+          ref: alwyn-ixopatch-1
       - name: Checkout ixo-blockchain
         uses: actions/checkout@v4
         with:
@@ -21,6 +21,6 @@ jobs:
       - run: git add .
       - run: git config --global user.email "ixo@ixo.world"
       - run: git config --global user.name ${{ github.actor }}
-      - run: git commit -m "Copy .md from checkers"
-      - run: git config --global --add safe.directory /home/runner/work/docs/docs
+      - run: git commit -m "Copy *.md files from ixo-blockchain"
+      # - run: git config --global --add safe.directory /home/runner/work/docs/docs
       - run: git push
