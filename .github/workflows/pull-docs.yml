@@ -9,31 +9,40 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: alwyn-ixopatch-1
+
       - name: Checkout ixo-blockchain
         uses: actions/checkout@v4
         with:
           repository: ixofoundation/ixo-blockchain
           ref: develop
           path: ixo-blockchain
+      
       - name: Checkout ixo-signx
         uses: actions/checkout@v4
         with:
           repository: ixofoundation/ixo-signx
           ref: main
           path: ixo-signx
+      
       - name: Checkout ixo-message-relayer
         uses: actions/checkout@v4
         with:
           repository: ixofoundation/ixo-message-relayer
           ref: main
           path: ixo-message-relayer
-      - run: ls -al
+
+      - run: mkdir -p ./developers/ixo-blockchain
       - run: find ./ixo-blockchain -type f -name "*.md" -exec cp -R {} ./developers/ixo-blockchain \;
-      - run: ls -al /developers/ixo-blockchain
+      - run: ls -al ./developers/ixo-blockchain
+      
+      - run: mkdir -p ./developers/ixo-signx
       - run: find ./ixo-signx -type f -name "*.md" -exec cp -R {} ./developers/ixo-signx \;
-      - run: ls -al /developers/ixo-signx
+      - run: ls -al ./developers/ixo-signx
+      
+      - run: mkdir -p ./developers/ixo-message-relayer
       - run: find ./ixo-message-relayer -type f -name "*.md" -exec cp -R {} ./developers/ixo-message-relayer \;
-      - run: ls -al /developers/ixo-message-relayer
+      - run: ls -al ./developers/ixo-message-relayer
+      
       - run: git add .
       - run: git config --global user.email "ixo@ixo.world"
       - run: git config --global user.name ${{ github.actor }}
