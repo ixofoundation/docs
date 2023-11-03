@@ -15,12 +15,28 @@ jobs:
           repository: ixofoundation/ixo-blockchain
           ref: develop
           path: ixo-blockchain
+      - name: Checkout ixo-signx
+        uses: actions/checkout@v4
+        with:
+          repository: ixofoundation/ixo-signx
+          ref: main
+          path: ixo-signx
+      - name: Checkout ixo-message-relayer
+        uses: actions/checkout@v4
+        with:
+          repository: ixofoundation/ixo-blomessage-relayerckchain
+          ref: main
+          path: ixo-message-relayer
       - run: ls -al
-      - run: find ./ixo-blockchain -type f -name "*.md" -exec cp -R {} . \;
-      - run: ls -al
+      - run: find ./ixo-blockchain -type f -name "*.md" -exec cp -R {} ./developers/ixo-blockchain \;
+      - run: ls -al /developers/ixo-blockchain
+      - run: find ./ixo-signx -type f -name "*.md" -exec cp -R {} ./developers/ixo-signx \;
+      - run: ls -al /developers/ixo-signx
+      - run: find ./ixo-message-relayer -type f -name "*.md" -exec cp -R {} ./developers/ixo-message-relayer \;
+      - run: ls -al /developers/ixo-message-relayer
       - run: git add .
       - run: git config --global user.email "ixo@ixo.world"
       - run: git config --global user.name ${{ github.actor }}
-      - run: git commit -m "Copy *.md files from ixo-blockchain"
+      - run: git commit -m "Copy *.md files from other repos"
       # - run: git config --global --add safe.directory /home/runner/work/docs/docs
       - run: git push
