@@ -24,7 +24,7 @@ jobs:
       - name: Checkout ixo-message-relayer
         uses: actions/checkout@v4
         with:
-          repository: ixofoundation/ixo-blomessage-relayerckchain
+          repository: ixofoundation/ixo-message-relayer
           ref: main
           path: ixo-message-relayer
       - run: ls -al
