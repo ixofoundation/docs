@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: alwyn-ixopatch-1
+          ref: alwyn-ixopatch-2
 
       - name: Checkout ixo-blockchain
         uses: actions/checkout@v4
@@ -57,4 +57,4 @@ jobs:
       - run: git config --global user.email "ixo@ixo.world"
       - run: git config --global user.name ${{ github.actor }}
       - run: git commit -m "Copy *.md files from other repos"
-      - run: git push
+      - run: git push origin alwyn-ixopatch-2
