@@ -2,7 +2,7 @@ name: Copy docs from other repositories.
 run-name: ${{ github.actor }} pushed a change.
 on: [push]
 jobs:
-  copy-docs-from-blockchain-repo:
+  copy-docs-from-other-repos:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
