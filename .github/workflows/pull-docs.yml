@@ -49,9 +49,9 @@ jobs:
       - run: mkdir -p ./developers/ixo-message-relayer
       - run: find ./ixo-message-relayer -type f -name "*.md" -exec cp -R {} ./developers/ixo-message-relayer \;
 
-      - run: rm -R ./ixo-blockchain
-      - run: rm -R ./ixo-signx
-      - run: rm -R ./ixo-message-relayer
+      # - run: rm -R ./ixo-blockchain
+      # - run: rm -R ./ixo-signx
+      # - run: rm -R ./ixo-message-relayer
       
       - run: git add .
       - run: git config --global user.email "ixo@ixo.world"
