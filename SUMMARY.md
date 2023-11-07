@@ -150,10 +150,14 @@
 ## DEVELOPERS
 
 * [Introduction](developers/introduction.md)
-* [ixo Blockchain](developers/getting-started/README.md)
+* [ixo Blockchain (new)](developers/ixo-blockchain/README.md)
+  * [ixo Blockchain (old)](developers/getting-started/README.md)
   * [ixo Blockchain Interfaces](developers/getting-started/ixo-blockchain-interfaces.md)
-* [ixo MultiClient SDK](developers/ixo-multiclient-sdk/README.md)
-  * [ixo MultiClient SDK Node Package](https://www.npmjs.com/package/@ixo/impactxclient-sdk)
+* [ixo Software Development Kits - SDKs](developers/sdks/README.md)
+  * [ixo Multi Client SDK](developers/ixo-multiclient-sdk/README.md)
+    * [ixo MultiClient SDK Node Package](https://www.npmjs.com/package/@ixo/impactxclient-sdk)
+  * [ixo SignX SDK](developers/ixo-signx/README.md)
+    * [ixo Message Relayer](developers/ixo-message-relayer/README.md)
 * [JAMBO](developers/jambo.md)
 * [ixo Mobile Client](developers/ixo-mobile-client.md)
 * [Market Relayer](developers/market-relayer/README.md)
