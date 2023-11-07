@@ -23,13 +23,13 @@ The **ixo Blockchain** is a Layer 1 blockchain built using the [Cosmos SDK](http
 
 The **ixo MultiClient SDK** provides a way for client application developers to interact with the ixo Blockchain. It is a package written in [TypeScript](https://www.typescriptlang.org/) and hosted on the [npm Registry](https://www.npmjs.com/package/@ixo/impactxclient-sdk). You can find the ixo MultiClient SDK Github repository [here](https://github.com/ixofoundation/ixo-multiclient-sdk).
 
+### [Impacts X](impacts-x/README.md)
+
+The ixo Mobile Client is a mobile application built using [React Native](https://reactnative.dev/). It uses the [**ixo MultiClient SDK**](ixo-multiclient-sdk/) to implement features supported by the **ixo** ecosystem. You can find the ixo Mobile Client Github repository [here](https://github.com/ixofoundation/ixo-Mobile-dev).
+
 ### [JAMBO](jambo.md)
 
 JAMBO is a [Jamstack](https://jamstack.org/) application that uses [Next.js](https://nextjs.org/) and deploys to [Netlify](https://netlify.com/). It provides developers with a framework for rapid development of dApps compatible with any Cosmos chain. It uses the [**ixo MultiClient SDK**](ixo-multiclient-sdk/) to implement features supported by the **ixo** ecosystem. You can find the JAMBO Github repository [here](https://github.com/ixofoundation/jambo) with detailed instructions.
-
-### [ixo Mobile Client](ixo-mobile-client.md) a.k.a Impact Wallet
-
-The ixo Mobile Client is a mobile application built using [React Native](https://reactnative.dev/). It uses the [**ixo MultiClient SDK**](ixo-multiclient-sdk/) to implement features supported by the **ixo** ecosystem. You can find the ixo Mobile Client Github repository [here](https://github.com/ixofoundation/ixo-Mobile-dev).
 
 ### [ixo Web Client](market-relayer/ixo-web-client.md)
 

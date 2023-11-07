@@ -1,0 +1,60 @@
+name: Copy docs from other repositories.
+run-name: ${{ github.actor }} pushed a change.
+on: [push]
+jobs:
+  copy-docs-from-other-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: alwyn-ixopatch-2
+
+      - name: Checkout ixo-blockchain
+        uses: actions/checkout@v4
+        with:
+          repository: ixofoundation/ixo-blockchain
+          ref: develop
+          path: ixo-blockchain
+      
+      - name: Checkout ixo-signx
+        uses: actions/checkout@v4
+        with:
+          repository: ixofoundation/ixo-signx
+          ref: main
+          path: ixo-signx
+      
+      - name: Checkout ixo-message-relayer
+        uses: actions/checkout@v4
+        with:
+          repository: ixofoundation/ixo-message-relayer
+          ref: main
+          path: ixo-message-relayer
+
+      - run: mkdir -p ./developers/ixo-blockchain/bonds
+      - run: mkdir -p ./developers/ixo-blockchain/claims
+      - run: mkdir -p ./developers/ixo-blockchain/entity
+      - run: mkdir -p ./developers/ixo-blockchain/iid
+      - run: mkdir -p ./developers/ixo-blockchain/token
+
+      - run: cp -R ./ixo-blockchain/x/bonds/spec ./developers/ixo-blockchain/bonds
+      - run: cp -R ./ixo-blockchain/x/claims/spec ./developers/ixo-blockchain/claims
+      - run: cp -R ./ixo-blockchain/x/entity/spec ./developers/ixo-blockchain/entity
+      - run: cp -R ./ixo-blockchain/x/iid/spec ./developers/ixo-blockchain/iid
+      - run: cp -R ./ixo-blockchain/x/token/spec ./developers/ixo-blockchain/token
+      
+      - run: mkdir -p ./developers/ixo-signx
+      - run: find ./ixo-signx -type f -name "*.md" -exec cp -R {} ./developers/ixo-signx \;
+      
+      - run: mkdir -p ./developers/ixo-message-relayer
+      - run: find ./ixo-message-relayer -type f -name "*.md" -exec cp -R {} ./developers/ixo-message-relayer \;
+
+      - run: rm -R ./ixo-blockchain
+      - run: rm -R ./ixo-signx
+      - run: rm -R ./ixo-message-relayer
+      
+      - run: git add .
+      - run: git config --global user.email "ixo@ixo.world"
+      - run: git config --global user.name ${{ github.actor }}
+      - run: git commit -m "Copy *.md files from other repos"
+      - run: git push origin alwyn-ixopatch-2
