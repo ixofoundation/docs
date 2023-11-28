@@ -4,7 +4,7 @@ description: How to Interface with the ixo blockchain SDK
 
 # ixo Blockchain Interfaces
 
-The ixo blockhain SDK provides three interfaces for interacting with a node:
+The ixo blockchain SDK provides three interfaces for interacting with a node:
 
 * command-line interface
 * gRPC interface
