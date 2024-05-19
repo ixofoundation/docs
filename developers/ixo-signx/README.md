@@ -1,25 +1,23 @@
-# SignX SDK
+# ixo SignX SDK
 
-[![ixo](https://img.shields.io/badge/ixo-project-blue)](https://ixo.foundation)
-[![GitHub](https://img.shields.io/github/stars/ixofoundation/jambo?style=social)](https://github.com/ixofoundation/ixo-signx)
-![GitHub repo size](https://img.shields.io/github/repo-size/ixofoundation/ixo-signx)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ixofoundation/ixo-signx/blob/main/LICENSE)
+[![ixo](https://img.shields.io/badge/ixo-project-blue)](https://ixo.foundation) [![GitHub](https://img.shields.io/github/stars/ixofoundation/jambo?style=social)](https://github.com/ixofoundation/ixo-signx) ![GitHub repo size](https://img.shields.io/github/repo-size/ixofoundation/ixo-signx) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ixofoundation/ixo-signx/blob/main/LICENSE)
 
-[![Twitter](https://img.shields.io/twitter/follow/ixo_impact?style=social)](https://twitter.com/ixoworld)
-[![Medium](https://img.shields.io/badge/Medium-ixo-green)](https://ixoworld.medium.com/)
+[![Twitter](https://img.shields.io/twitter/follow/ixo\_impact?style=social)](https://twitter.com/ixoworld) [![Medium](https://img.shields.io/badge/Medium-ixo-green)](https://ixoworld.medium.com/)
 
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge\&logo=node.js\&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge\&logo=typescript\&logoColor=white)
 
-<p align="center">
-  <img  src="assets/images/signX_header.png"/>
-</p>
+<div align="center">
 
-<br />
+<img src="assets/images/signX_header.png" alt="">
+
+</div>
+
+\
+
 
 The SignX SDK provides an easy way to integrate mobile-to-web authentication and transaction signing using the IXO blockchain in your applications.
 
-This repo and product is intentionally managed as Open Source and we aim to use this guide to light our way https://opensource.guide/.
-Let us know how we are doing!
+This repo and product is intentionally managed as Open Source and we aim to use this guide to light our way https://opensource.guide/. Let us know how we are doing!
 
 ## 📝 Description
 
@@ -69,7 +67,7 @@ const loginRequest = await signXClient.login();
 // Use loginRequest data to show QR code to user for scanning by mobile app
 ```
 
-Subscribe to events for success or failure [here](#event-handling)
+Subscribe to events for success or failure [here](./#event-handling)
 
 ### Transacting
 
@@ -81,7 +79,7 @@ const transactRequest = await signXClient.transact(TRANSACT_DTO);
 // Use transactRequest data to show QR code to user for scanning by mobile app
 ```
 
-Subscribe to events for success or failure [here](#event-handling). TRANSACT_DTO type can be seen [here](#types)
+Subscribe to events for success or failure [here](./#event-handling). TRANSACT\_DTO type can be seen [here](./#types)
 
 ### Event Handling
 
@@ -129,36 +127,38 @@ const secureHash = generateSecureHash(hash, nonce);
 
 ### Types
 
-- NETWORK: The network type:
-  ```js
-  type NETWORK = 'mainnet' | 'testnet' | 'devnet';
-  ```
-- TRANSACT_DTO: The data transfer object for transactions:
-  ```js
-  type TRANSACT_DTO = {
-  	address: string, // bech32 encoded address, as received from login (eg ixo123)
-  	did: string, // base64 encoded did, as received from login (eg did:x:1234)
-  	pubkey: string, // hex encoded pubkey, as receivced from login
-  	txBodyHex: string, // hex encoded raw txBodyBytes which can be encoded from the registry exported from @ixo/impactxclient-sdk npm package (eg registry.encodeTxBody({ messages, memo }))
-  	timestamp: string, // stringified utc DateTime, add uniqueness for tx hash to prevent duplicates (eg new Date().toISOString())
-  };
-  ```
+*   NETWORK: The network type:
+
+    ```js
+    type NETWORK = 'mainnet' | 'testnet' | 'devnet';
+    ```
+*   TRANSACT\_DTO: The data transfer object for transactions:
+
+    ```js
+    type TRANSACT_DTO = {
+    	address: string, // bech32 encoded address, as received from login (eg ixo123)
+    	did: string, // base64 encoded did, as received from login (eg did:x:1234)
+    	pubkey: string, // hex encoded pubkey, as receivced from login
+    	txBodyHex: string, // hex encoded raw txBodyBytes which can be encoded from the registry exported from @ixo/impactxclient-sdk npm package (eg registry.encodeTxBody({ messages, memo }))
+    	timestamp: string, // stringified utc DateTime, add uniqueness for tx hash to prevent duplicates (eg new Date().toISOString())
+    };
+    ```
 
 ### Class SignX
 
 #### Properties
 
-- timeout: The timeout for polling in milliseconds (default is 2 minutes).
-- pollingInterval: The interval between polling requests in milliseconds (default is 2.5 seconds).
-- network: The network type.
-- endpoint: The endpoint URL of the SignX server.
-- sitename: The name of your site. (shown on mobile app on request)
+* timeout: The timeout for polling in milliseconds (default is 2 minutes).
+* pollingInterval: The interval between polling requests in milliseconds (default is 2.5 seconds).
+* network: The network type.
+* endpoint: The endpoint URL of the SignX server.
+* sitename: The name of your site. (shown on mobile app on request)
 
 #### Methods
 
-- login: Initiates a login request and starts polling.
-- transact: Initiates a transaction and starts polling.
-- stopPolling: Stops the polling process.
+* login: Initiates a login request and starts polling.
+* transact: Initiates a transaction and starts polling.
+* stopPolling: Stops the polling process.
 
 ## 📱 Examples
 
@@ -318,4 +318,4 @@ export const signXBroadCastMessage = async (
 
 ## 📃 License
 
-This SDK is licensed under the Apache 2 License. See the [LICENSE](/LICENSE) file for more information.
+This SDK is licensed under the Apache 2 License. See the [LICENSE](../../LICENSE/) file for more information.

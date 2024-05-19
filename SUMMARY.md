@@ -1,14 +1,14 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Security](security.md)
 
 ## Start Here <a href="#start" id="start"></a>
 
 * [Welcome to The Internet of Impacts](start/what-is-ixo.md)
 * [FAQs](start/faqs.md)
 * [Glossary](start/glossary.md)
-* [Other resources](start/other-resources.md)
+* [Other resources](start/other-resources/README.md)
+  * [Security](start/other-resources/security.md)
 
 ## The Internet of Impacts <a href="#ixo" id="ixo"></a>
 
