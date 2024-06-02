@@ -42,7 +42,7 @@ The reserve tokens are the tokens that accounts will send to the bond in order t
 
 We can decide to charge a transaction and/or exit fee. Transaction fees are charged whenever an account buys/sells \(i.e. mints/burns\) into/from the curve, whereas an exit fee is charged only when the account sells from the curve. Setting an exit fee disincentivises accounts from selling and is a front-running deterrent.
 
-In this tutorial, we will set the the transaction fee to `0.5%` and the exit fee to `0.1%`. This will mean that when an account sells, a total of `0.6%` will be taken as fees. Fees are sent to a fee address that is picked by the bond creator. In this tutorial, the address underlying the `fee` account \(created when running `make run_with_data`\) will be used.
+In this tutorial, we will set the transaction fee to `0.5%` and the exit fee to `0.1%`. This will mean that when an account sells, a total of `0.6%` will be taken as fees. Fees are sent to a fee address that is picked by the bond creator. In this tutorial, the address underlying the `fee` account \(created when running `make run_with_data`\) will be used.
 
 ### Order Quantity Limits
 
