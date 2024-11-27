@@ -1,0 +1,930 @@
+openapi: 3.0.3
+x-stoplight:
+  id: e5vcwftebh1xd
+info:
+  license:
+    name: Apache 2.0
+  title: Blocksync GraphQL API
+  version: 1.0.0
+servers:
+  - url: 'https://blocksync-graphql.ixo.earth/graphql'
+paths:
+  /ListClaimCollections:
+    post:
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListClaimCollections {
+                      claimCollections {
+                        totalCount
+                        edges {
+                          node {
+                            admin
+                            approved
+                            claimSchemaTypesLoaded
+                            claimsByCollectionId {
+                              totalCount
+                              edges {
+                                node {
+                                  agentAddress
+                                  agentDid
+                                  claimId
+                                  collectionId
+                                  paymentsStatus
+                                  schemaType
+                                  submissionDate
+                                  evaluationByClaimId {
+                                    agentAddress
+                                    agentDid
+                                    amount
+                                    claimId
+                                    collectionId
+                                    evaluationDate
+                                    oracle
+                                    reason
+                                    status
+                                    verificationProof
+                                  }
+                                }
+                              }
+                            }
+                            count
+                            disputed
+                            endDate
+                            entity
+                            evaluated
+                            id
+                            invalidated
+                            payments
+                            protocol
+                            quota
+                            rejected
+                            startDate
+                            state
+                          }
+                          cursor
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claimCollections:
+                    description: Reads and enables pagination through a set of `ClaimCollection`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `ClaimCollection` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `ClaimCollection` at the end of the edge.
+                              nullable: false
+                              properties:
+                                admin:
+                                  nullable: false
+                                  type: string
+                                approved:
+                                  nullable: false
+                                  type: integer
+                                claimSchemaTypesLoaded:
+                                  description: Checks if there are any claims with null schemaType
+                                  nullable: false
+                                  type: boolean
+                                claimsByCollectionId:
+                                  description: Reads and enables pagination through a set of `Claim`.
+                                  nullable: false
+                                  properties:
+                                    edges:
+                                      description: A list of edges which contains the `Claim` and cursor to aid in pagination.
+                                      items:
+                                        properties:
+                                          node:
+                                            description: The `Claim` at the end of the edge.
+                                            nullable: false
+                                            properties:
+                                              agentAddress:
+                                                nullable: false
+                                                type: string
+                                              agentDid:
+                                                nullable: false
+                                                type: string
+                                              claimId:
+                                                nullable: false
+                                                type: string
+                                              collectionId:
+                                                nullable: false
+                                                type: string
+                                              evaluationByClaimId:
+                                                description: Reads a single `Evaluation` that is related to this `Claim`.
+                                                nullable: true
+                                                properties:
+                                                  agentAddress:
+                                                    nullable: false
+                                                    type: string
+                                                  agentDid:
+                                                    nullable: false
+                                                    type: string
+                                                  amount:
+                                                    additionalProperties: true
+                                                    nullable: false
+                                                    type: object
+                                                  claimId:
+                                                    nullable: false
+                                                    type: string
+                                                  collectionId:
+                                                    nullable: false
+                                                    type: string
+                                                  evaluationDate:
+                                                    nullable: false
+                                                    type: string
+                                                  oracle:
+                                                    nullable: false
+                                                    type: string
+                                                  reason:
+                                                    nullable: false
+                                                    type: integer
+                                                  status:
+                                                    nullable: false
+                                                    type: integer
+                                                  verificationProof:
+                                                    nullable: true
+                                                    type: string
+                                                type: object
+                                              paymentsStatus:
+                                                additionalProperties: true
+                                                nullable: false
+                                                type: object
+                                              schemaType:
+                                                nullable: true
+                                                type: string
+                                              submissionDate:
+                                                nullable: false
+                                                type: string
+                                            type: object
+                                        type: object
+                                      nullable: false
+                                      type: array
+                                    totalCount:
+                                      description: The count of *all* `Claim` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                count:
+                                  nullable: false
+                                  type: integer
+                                disputed:
+                                  nullable: false
+                                  type: integer
+                                endDate:
+                                  nullable: true
+                                  type: string
+                                entity:
+                                  nullable: false
+                                  type: string
+                                evaluated:
+                                  nullable: false
+                                  type: integer
+                                id:
+                                  nullable: false
+                                  type: string
+                                invalidated:
+                                  nullable: false
+                                  type: integer
+                                payments:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                protocol:
+                                  nullable: false
+                                  type: string
+                                quota:
+                                  nullable: false
+                                  type: integer
+                                rejected:
+                                  nullable: false
+                                  type: integer
+                                startDate:
+                                  nullable: true
+                                  type: string
+                                state:
+                                  nullable: false
+                                  type: integer
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `ClaimCollection` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: 3pqoznn1ruhbi
+  /ReadClaimCollection:
+    post:
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadClaimCollection {
+                      claimCollection(id: "36") {
+                        admin
+                        approved
+                        claimSchemaTypesLoaded
+                        claimsByCollectionId {
+                          edges {
+                            node {
+                              agentAddress
+                              agentDid
+                              claimId
+                              collectionId
+                              paymentsStatus
+                              schemaType
+                              submissionDate
+                              collection {
+                                admin
+                                approved
+                                claimSchemaTypesLoaded
+                                count
+                                disputed
+                                endDate
+                                entity
+                                evaluated
+                                id
+                                invalidated
+                                payments
+                                protocol
+                                quota
+                                rejected
+                                startDate
+                                state
+                              }
+                              evaluationByClaimId {
+                                agentAddress
+                                agentDid
+                                amount
+                                claimId
+                                collectionId
+                                evaluationDate
+                                oracle
+                                reason
+                                status
+                                verificationProof
+                              }
+                            }
+                          }
+                          totalCount
+                        }
+                        count
+                        disputed
+                        endDate
+                        entity
+                        evaluated
+                        id
+                        invalidated
+                        payments
+                        protocol
+                        quota
+                        rejected
+                        startDate
+                        state
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claimCollection:
+                    nullable: true
+                    properties:
+                      admin:
+                        nullable: false
+                        type: string
+                      approved:
+                        nullable: false
+                        type: integer
+                      claimSchemaTypesLoaded:
+                        description: Checks if there are any claims with null schemaType
+                        nullable: false
+                        type: boolean
+                      claimsByCollectionId:
+                        description: Reads and enables pagination through a set of `Claim`.
+                        nullable: false
+                        properties:
+                          edges:
+                            description: A list of edges which contains the `Claim` and cursor to aid in pagination.
+                            items:
+                              properties:
+                                node:
+                                  description: The `Claim` at the end of the edge.
+                                  nullable: false
+                                  properties:
+                                    agentAddress:
+                                      nullable: false
+                                      type: string
+                                    agentDid:
+                                      nullable: false
+                                      type: string
+                                    claimId:
+                                      nullable: false
+                                      type: string
+                                    collection:
+                                      description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                                      nullable: true
+                                      properties:
+                                        admin:
+                                          nullable: false
+                                          type: string
+                                        approved:
+                                          nullable: false
+                                          type: integer
+                                        claimSchemaTypesLoaded:
+                                          description: Checks if there are any claims with null schemaType
+                                          nullable: false
+                                          type: boolean
+                                        count:
+                                          nullable: false
+                                          type: integer
+                                        disputed:
+                                          nullable: false
+                                          type: integer
+                                        endDate:
+                                          nullable: true
+                                          type: string
+                                        entity:
+                                          nullable: false
+                                          type: string
+                                        evaluated:
+                                          nullable: false
+                                          type: integer
+                                        id:
+                                          nullable: false
+                                          type: string
+                                        invalidated:
+                                          nullable: false
+                                          type: integer
+                                        payments:
+                                          additionalProperties: true
+                                          nullable: false
+                                          type: object
+                                        protocol:
+                                          nullable: false
+                                          type: string
+                                        quota:
+                                          nullable: false
+                                          type: integer
+                                        rejected:
+                                          nullable: false
+                                          type: integer
+                                        startDate:
+                                          nullable: true
+                                          type: string
+                                        state:
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    collectionId:
+                                      nullable: false
+                                      type: string
+                                    evaluationByClaimId:
+                                      description: Reads a single `Evaluation` that is related to this `Claim`.
+                                      nullable: true
+                                      properties:
+                                        agentAddress:
+                                          nullable: false
+                                          type: string
+                                        agentDid:
+                                          nullable: false
+                                          type: string
+                                        amount:
+                                          additionalProperties: true
+                                          nullable: false
+                                          type: object
+                                        claimId:
+                                          nullable: false
+                                          type: string
+                                        collectionId:
+                                          nullable: false
+                                          type: string
+                                        evaluationDate:
+                                          nullable: false
+                                          type: string
+                                        oracle:
+                                          nullable: false
+                                          type: string
+                                        reason:
+                                          nullable: false
+                                          type: integer
+                                        status:
+                                          nullable: false
+                                          type: integer
+                                        verificationProof:
+                                          nullable: true
+                                          type: string
+                                      type: object
+                                    paymentsStatus:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    schemaType:
+                                      nullable: true
+                                      type: string
+                                    submissionDate:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                              type: object
+                            nullable: false
+                            type: array
+                          totalCount:
+                            description: The count of *all* `Claim` you could get from the connection.
+                            nullable: false
+                            type: integer
+                        type: object
+                      count:
+                        nullable: false
+                        type: integer
+                      disputed:
+                        nullable: false
+                        type: integer
+                      endDate:
+                        nullable: true
+                        type: string
+                      entity:
+                        nullable: false
+                        type: string
+                      evaluated:
+                        nullable: false
+                        type: integer
+                      id:
+                        nullable: false
+                        type: string
+                      invalidated:
+                        nullable: false
+                        type: integer
+                      payments:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      protocol:
+                        nullable: false
+                        type: string
+                      quota:
+                        nullable: false
+                        type: integer
+                      rejected:
+                        nullable: false
+                        type: integer
+                      startDate:
+                        nullable: true
+                        type: string
+                      state:
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: 0vguavzszn31p
+  /ListClaims:
+    post:
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListClaims {
+                      claims {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            agentAddress
+                            claimId
+                            agentDid
+                            collectionId
+                            collection {
+                              admin
+                              approved
+                              claimSchemaTypesLoaded
+                              count
+                              disputed
+                              endDate
+                              entity
+                              evaluated
+                              id
+                              invalidated
+                              payments
+                              protocol
+                              quota
+                              rejected
+                              startDate
+                              state
+                            }
+                            paymentsStatus
+                            schemaType
+                            submissionDate
+                            evaluationByClaimId {
+                              agentAddress
+                              agentDid
+                              amount
+                              claimId
+                              collectionId
+                              evaluationDate
+                              oracle
+                              reason
+                              status
+                              verificationProof
+                            }
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claims:
+                    description: Reads and enables pagination through a set of `Claim`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `Claim` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `Claim` at the end of the edge.
+                              nullable: false
+                              properties:
+                                agentAddress:
+                                  nullable: false
+                                  type: string
+                                agentDid:
+                                  nullable: false
+                                  type: string
+                                claimId:
+                                  nullable: false
+                                  type: string
+                                collection:
+                                  description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                                  nullable: true
+                                  properties:
+                                    admin:
+                                      nullable: false
+                                      type: string
+                                    approved:
+                                      nullable: false
+                                      type: integer
+                                    claimSchemaTypesLoaded:
+                                      description: Checks if there are any claims with null schemaType
+                                      nullable: false
+                                      type: boolean
+                                    count:
+                                      nullable: false
+                                      type: integer
+                                    disputed:
+                                      nullable: false
+                                      type: integer
+                                    endDate:
+                                      nullable: true
+                                      type: string
+                                    entity:
+                                      nullable: false
+                                      type: string
+                                    evaluated:
+                                      nullable: false
+                                      type: integer
+                                    id:
+                                      nullable: false
+                                      type: string
+                                    invalidated:
+                                      nullable: false
+                                      type: integer
+                                    payments:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    protocol:
+                                      nullable: false
+                                      type: string
+                                    quota:
+                                      nullable: false
+                                      type: integer
+                                    rejected:
+                                      nullable: false
+                                      type: integer
+                                    startDate:
+                                      nullable: true
+                                      type: string
+                                    state:
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                collectionId:
+                                  nullable: false
+                                  type: string
+                                evaluationByClaimId:
+                                  description: Reads a single `Evaluation` that is related to this `Claim`.
+                                  nullable: true
+                                  properties:
+                                    agentAddress:
+                                      nullable: false
+                                      type: string
+                                    agentDid:
+                                      nullable: false
+                                      type: string
+                                    amount:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    claimId:
+                                      nullable: false
+                                      type: string
+                                    collectionId:
+                                      nullable: false
+                                      type: string
+                                    evaluationDate:
+                                      nullable: false
+                                      type: string
+                                    oracle:
+                                      nullable: false
+                                      type: string
+                                    reason:
+                                      nullable: false
+                                      type: integer
+                                    status:
+                                      nullable: false
+                                      type: integer
+                                    verificationProof:
+                                      nullable: true
+                                      type: string
+                                  type: object
+                                paymentsStatus:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                schemaType:
+                                  nullable: true
+                                  type: string
+                                submissionDate:
+                                  nullable: false
+                                  type: string
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `Claim` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: qf6ncp3hclobr
+  /ReadClaim:
+    post:
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadClaim {
+                      claim(
+                        claimId: "bafkreiblzlbhi47ldymnnkzfoygtstactcjtjajdvpg7xxfjgukn7njwbm"
+                      ) {
+                        agentAddress
+                        agentDid
+                        claimId
+                        collectionId
+                        paymentsStatus
+                        schemaType
+                        submissionDate
+                        evaluationByClaimId {
+                          agentAddress
+                          agentDid
+                          amount
+                          claimId
+                          collectionId
+                          evaluationDate
+                          oracle
+                          reason
+                          status
+                          verificationProof
+                        }
+                        collection {
+                          admin
+                          approved
+                          claimSchemaTypesLoaded
+                          count
+                          disputed
+                          endDate
+                          entity
+                          evaluated
+                          id
+                          invalidated
+                          payments
+                          protocol
+                          quota
+                          rejected
+                          startDate
+                          state
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claim:
+                    nullable: true
+                    properties:
+                      agentAddress:
+                        nullable: false
+                        type: string
+                      agentDid:
+                        nullable: false
+                        type: string
+                      claimId:
+                        nullable: false
+                        type: string
+                      collection:
+                        description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                        nullable: true
+                        properties:
+                          admin:
+                            nullable: false
+                            type: string
+                          approved:
+                            nullable: false
+                            type: integer
+                          claimSchemaTypesLoaded:
+                            description: Checks if there are any claims with null schemaType
+                            nullable: false
+                            type: boolean
+                          count:
+                            nullable: false
+                            type: integer
+                          disputed:
+                            nullable: false
+                            type: integer
+                          endDate:
+                            nullable: true
+                            type: string
+                          entity:
+                            nullable: false
+                            type: string
+                          evaluated:
+                            nullable: false
+                            type: integer
+                          id:
+                            nullable: false
+                            type: string
+                          invalidated:
+                            nullable: false
+                            type: integer
+                          payments:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          protocol:
+                            nullable: false
+                            type: string
+                          quota:
+                            nullable: false
+                            type: integer
+                          rejected:
+                            nullable: false
+                            type: integer
+                          startDate:
+                            nullable: true
+                            type: string
+                          state:
+                            nullable: false
+                            type: integer
+                        type: object
+                      collectionId:
+                        nullable: false
+                        type: string
+                      evaluationByClaimId:
+                        description: Reads a single `Evaluation` that is related to this `Claim`.
+                        nullable: true
+                        properties:
+                          agentAddress:
+                            nullable: false
+                            type: string
+                          agentDid:
+                            nullable: false
+                            type: string
+                          amount:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          claimId:
+                            nullable: false
+                            type: string
+                          collectionId:
+                            nullable: false
+                            type: string
+                          evaluationDate:
+                            nullable: false
+                            type: string
+                          oracle:
+                            nullable: false
+                            type: string
+                          reason:
+                            nullable: false
+                            type: integer
+                          status:
+                            nullable: false
+                            type: integer
+                          verificationProof:
+                            nullable: true
+                            type: string
+                        type: object
+                      paymentsStatus:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      schemaType:
+                        nullable: true
+                        type: string
+                      submissionDate:
+                        nullable: false
+                        type: string
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: fsxfksexvwby0
