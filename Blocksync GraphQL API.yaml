@@ -1,0 +1,4312 @@
+openapi: 3.0.3
+x-stoplight:
+  id: a83effb106a46
+info:
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+  title: Blocksync GraphQL API
+  version: 1.0.0
+  description: 'GraphQL API exposed as REST endpoints. Note that all operations are POST requests to the GraphQL endpoint, regardless of the path name. The path names are for documentation purposes only.'
+  contact:
+    name: IXO World API Support Team
+    url: 'https://www.ixo.world/'
+    email: api-support@ixo.world
+  termsOfService: 'https://app.impacts.exchange/terms'
+servers:
+  - url: 'https://blocksync-graphql.ixo.earth/graphql'
+    description: Live mode
+  - url: 'https://testnet-blocksync-graphql.ixo.earth/graphql'
+    description: Test mode
+paths:
+  /ListClaimCollections:
+    post:
+      parameters: []
+      operationId: listClaimCollections
+      summary: ListClaimCollections
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListClaimCollections {
+                      claimCollections {
+                        totalCount
+                        edges {
+                          node {
+                            admin
+                            approved
+                            claimSchemaTypesLoaded
+                            claimsByCollectionId {
+                              totalCount
+                              edges {
+                                node {
+                                  agentAddress
+                                  agentDid
+                                  claimId
+                                  collectionId
+                                  paymentsStatus
+                                  schemaType
+                                  submissionDate
+                                  evaluationByClaimId {
+                                    agentAddress
+                                    agentDid
+                                    amount
+                                    claimId
+                                    collectionId
+                                    evaluationDate
+                                    oracle
+                                    reason
+                                    status
+                                    verificationProof
+                                  }
+                                }
+                              }
+                            }
+                            count
+                            disputed
+                            endDate
+                            entity
+                            evaluated
+                            id
+                            invalidated
+                            payments
+                            protocol
+                            quota
+                            rejected
+                            startDate
+                            state
+                          }
+                          cursor
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claimCollections:
+                    description: Reads and enables pagination through a set of `ClaimCollection`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `ClaimCollection` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `ClaimCollection` at the end of the edge.
+                              nullable: false
+                              properties:
+                                admin:
+                                  nullable: false
+                                  type: string
+                                approved:
+                                  nullable: false
+                                  type: integer
+                                claimSchemaTypesLoaded:
+                                  description: Checks if there are any claims with null schemaType
+                                  nullable: false
+                                  type: boolean
+                                claimsByCollectionId:
+                                  description: Reads and enables pagination through a set of `Claim`.
+                                  nullable: false
+                                  properties:
+                                    edges:
+                                      description: A list of edges which contains the `Claim` and cursor to aid in pagination.
+                                      items:
+                                        properties:
+                                          node:
+                                            description: The `Claim` at the end of the edge.
+                                            nullable: false
+                                            properties:
+                                              agentAddress:
+                                                nullable: false
+                                                type: string
+                                              agentDid:
+                                                nullable: false
+                                                type: string
+                                              claimId:
+                                                nullable: false
+                                                type: string
+                                              collectionId:
+                                                nullable: false
+                                                type: string
+                                              evaluationByClaimId:
+                                                description: Reads a single `Evaluation` that is related to this `Claim`.
+                                                nullable: true
+                                                properties:
+                                                  agentAddress:
+                                                    nullable: false
+                                                    type: string
+                                                  agentDid:
+                                                    nullable: false
+                                                    type: string
+                                                  amount:
+                                                    additionalProperties: true
+                                                    nullable: false
+                                                    type: object
+                                                  claimId:
+                                                    nullable: false
+                                                    type: string
+                                                  collectionId:
+                                                    nullable: false
+                                                    type: string
+                                                  evaluationDate:
+                                                    nullable: false
+                                                    type: string
+                                                  oracle:
+                                                    nullable: false
+                                                    type: string
+                                                  reason:
+                                                    nullable: false
+                                                    type: integer
+                                                  status:
+                                                    nullable: false
+                                                    type: integer
+                                                  verificationProof:
+                                                    nullable: true
+                                                    type: string
+                                                type: object
+                                              paymentsStatus:
+                                                additionalProperties: true
+                                                nullable: false
+                                                type: object
+                                              schemaType:
+                                                nullable: true
+                                                type: string
+                                              submissionDate:
+                                                nullable: false
+                                                type: string
+                                            type: object
+                                        type: object
+                                      nullable: false
+                                      type: array
+                                    totalCount:
+                                      description: The count of *all* `Claim` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                count:
+                                  nullable: false
+                                  type: integer
+                                disputed:
+                                  nullable: false
+                                  type: integer
+                                endDate:
+                                  nullable: true
+                                  type: string
+                                entity:
+                                  nullable: false
+                                  type: string
+                                evaluated:
+                                  nullable: false
+                                  type: integer
+                                id:
+                                  nullable: false
+                                  type: string
+                                invalidated:
+                                  nullable: false
+                                  type: integer
+                                payments:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                protocol:
+                                  nullable: false
+                                  type: string
+                                quota:
+                                  nullable: false
+                                  type: integer
+                                rejected:
+                                  nullable: false
+                                  type: integer
+                                startDate:
+                                  nullable: true
+                                  type: string
+                                state:
+                                  nullable: false
+                                  type: integer
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `ClaimCollection` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: ko9yixf8v6v74
+  /ReadClaimCollection:
+    post:
+      parameters: []
+      operationId: readClaimCollection
+      summary: ReadClaimCollection
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadClaimCollection {
+                      claimCollection(id: "36") {
+                        admin
+                        approved
+                        claimSchemaTypesLoaded
+                        claimsByCollectionId {
+                          edges {
+                            node {
+                              agentAddress
+                              agentDid
+                              claimId
+                              collectionId
+                              paymentsStatus
+                              schemaType
+                              submissionDate
+                              collection {
+                                admin
+                                approved
+                                claimSchemaTypesLoaded
+                                count
+                                disputed
+                                endDate
+                                entity
+                                evaluated
+                                id
+                                invalidated
+                                payments
+                                protocol
+                                quota
+                                rejected
+                                startDate
+                                state
+                              }
+                              evaluationByClaimId {
+                                agentAddress
+                                agentDid
+                                amount
+                                claimId
+                                collectionId
+                                evaluationDate
+                                oracle
+                                reason
+                                status
+                                verificationProof
+                              }
+                            }
+                          }
+                          totalCount
+                        }
+                        count
+                        disputed
+                        endDate
+                        entity
+                        evaluated
+                        id
+                        invalidated
+                        payments
+                        protocol
+                        quota
+                        rejected
+                        startDate
+                        state
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claimCollection:
+                    nullable: true
+                    properties:
+                      admin:
+                        nullable: false
+                        type: string
+                      approved:
+                        nullable: false
+                        type: integer
+                      claimSchemaTypesLoaded:
+                        description: Checks if there are any claims with null schemaType
+                        nullable: false
+                        type: boolean
+                      claimsByCollectionId:
+                        description: Reads and enables pagination through a set of `Claim`.
+                        nullable: false
+                        properties:
+                          edges:
+                            description: A list of edges which contains the `Claim` and cursor to aid in pagination.
+                            items:
+                              properties:
+                                node:
+                                  description: The `Claim` at the end of the edge.
+                                  nullable: false
+                                  properties:
+                                    agentAddress:
+                                      nullable: false
+                                      type: string
+                                    agentDid:
+                                      nullable: false
+                                      type: string
+                                    claimId:
+                                      nullable: false
+                                      type: string
+                                    collection:
+                                      description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                                      nullable: true
+                                      properties:
+                                        admin:
+                                          nullable: false
+                                          type: string
+                                        approved:
+                                          nullable: false
+                                          type: integer
+                                        claimSchemaTypesLoaded:
+                                          description: Checks if there are any claims with null schemaType
+                                          nullable: false
+                                          type: boolean
+                                        count:
+                                          nullable: false
+                                          type: integer
+                                        disputed:
+                                          nullable: false
+                                          type: integer
+                                        endDate:
+                                          nullable: true
+                                          type: string
+                                        entity:
+                                          nullable: false
+                                          type: string
+                                        evaluated:
+                                          nullable: false
+                                          type: integer
+                                        id:
+                                          nullable: false
+                                          type: string
+                                        invalidated:
+                                          nullable: false
+                                          type: integer
+                                        payments:
+                                          additionalProperties: true
+                                          nullable: false
+                                          type: object
+                                        protocol:
+                                          nullable: false
+                                          type: string
+                                        quota:
+                                          nullable: false
+                                          type: integer
+                                        rejected:
+                                          nullable: false
+                                          type: integer
+                                        startDate:
+                                          nullable: true
+                                          type: string
+                                        state:
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    collectionId:
+                                      nullable: false
+                                      type: string
+                                    evaluationByClaimId:
+                                      description: Reads a single `Evaluation` that is related to this `Claim`.
+                                      nullable: true
+                                      properties:
+                                        agentAddress:
+                                          nullable: false
+                                          type: string
+                                        agentDid:
+                                          nullable: false
+                                          type: string
+                                        amount:
+                                          additionalProperties: true
+                                          nullable: false
+                                          type: object
+                                        claimId:
+                                          nullable: false
+                                          type: string
+                                        collectionId:
+                                          nullable: false
+                                          type: string
+                                        evaluationDate:
+                                          nullable: false
+                                          type: string
+                                        oracle:
+                                          nullable: false
+                                          type: string
+                                        reason:
+                                          nullable: false
+                                          type: integer
+                                        status:
+                                          nullable: false
+                                          type: integer
+                                        verificationProof:
+                                          nullable: true
+                                          type: string
+                                      type: object
+                                    paymentsStatus:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    schemaType:
+                                      nullable: true
+                                      type: string
+                                    submissionDate:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                              type: object
+                            nullable: false
+                            type: array
+                          totalCount:
+                            description: The count of *all* `Claim` you could get from the connection.
+                            nullable: false
+                            type: integer
+                        type: object
+                      count:
+                        nullable: false
+                        type: integer
+                      disputed:
+                        nullable: false
+                        type: integer
+                      endDate:
+                        nullable: true
+                        type: string
+                      entity:
+                        nullable: false
+                        type: string
+                      evaluated:
+                        nullable: false
+                        type: integer
+                      id:
+                        nullable: false
+                        type: string
+                      invalidated:
+                        nullable: false
+                        type: integer
+                      payments:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      protocol:
+                        nullable: false
+                        type: string
+                      quota:
+                        nullable: false
+                        type: integer
+                      rejected:
+                        nullable: false
+                        type: integer
+                      startDate:
+                        nullable: true
+                        type: string
+                      state:
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: e0wz9ohlh8yl9
+  /ListClaims:
+    post:
+      parameters: []
+      operationId: listClaims
+      summary: ListClaims
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListClaims {
+                      claims {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            agentAddress
+                            claimId
+                            agentDid
+                            collectionId
+                            collection {
+                              admin
+                              approved
+                              claimSchemaTypesLoaded
+                              count
+                              disputed
+                              endDate
+                              entity
+                              evaluated
+                              id
+                              invalidated
+                              payments
+                              protocol
+                              quota
+                              rejected
+                              startDate
+                              state
+                            }
+                            paymentsStatus
+                            schemaType
+                            submissionDate
+                            evaluationByClaimId {
+                              agentAddress
+                              agentDid
+                              amount
+                              claimId
+                              collectionId
+                              evaluationDate
+                              oracle
+                              reason
+                              status
+                              verificationProof
+                            }
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claims:
+                    description: Reads and enables pagination through a set of `Claim`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `Claim` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `Claim` at the end of the edge.
+                              nullable: false
+                              properties:
+                                agentAddress:
+                                  nullable: false
+                                  type: string
+                                agentDid:
+                                  nullable: false
+                                  type: string
+                                claimId:
+                                  nullable: false
+                                  type: string
+                                collection:
+                                  description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                                  nullable: true
+                                  properties:
+                                    admin:
+                                      nullable: false
+                                      type: string
+                                    approved:
+                                      nullable: false
+                                      type: integer
+                                    claimSchemaTypesLoaded:
+                                      description: Checks if there are any claims with null schemaType
+                                      nullable: false
+                                      type: boolean
+                                    count:
+                                      nullable: false
+                                      type: integer
+                                    disputed:
+                                      nullable: false
+                                      type: integer
+                                    endDate:
+                                      nullable: true
+                                      type: string
+                                    entity:
+                                      nullable: false
+                                      type: string
+                                    evaluated:
+                                      nullable: false
+                                      type: integer
+                                    id:
+                                      nullable: false
+                                      type: string
+                                    invalidated:
+                                      nullable: false
+                                      type: integer
+                                    payments:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    protocol:
+                                      nullable: false
+                                      type: string
+                                    quota:
+                                      nullable: false
+                                      type: integer
+                                    rejected:
+                                      nullable: false
+                                      type: integer
+                                    startDate:
+                                      nullable: true
+                                      type: string
+                                    state:
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                collectionId:
+                                  nullable: false
+                                  type: string
+                                evaluationByClaimId:
+                                  description: Reads a single `Evaluation` that is related to this `Claim`.
+                                  nullable: true
+                                  properties:
+                                    agentAddress:
+                                      nullable: false
+                                      type: string
+                                    agentDid:
+                                      nullable: false
+                                      type: string
+                                    amount:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    claimId:
+                                      nullable: false
+                                      type: string
+                                    collectionId:
+                                      nullable: false
+                                      type: string
+                                    evaluationDate:
+                                      nullable: false
+                                      type: string
+                                    oracle:
+                                      nullable: false
+                                      type: string
+                                    reason:
+                                      nullable: false
+                                      type: integer
+                                    status:
+                                      nullable: false
+                                      type: integer
+                                    verificationProof:
+                                      nullable: true
+                                      type: string
+                                  type: object
+                                paymentsStatus:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                schemaType:
+                                  nullable: true
+                                  type: string
+                                submissionDate:
+                                  nullable: false
+                                  type: string
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `Claim` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: uyj12f8ce5k1k
+  /ReadClaim:
+    post:
+      parameters: []
+      operationId: readClaim
+      summary: ReadClaim
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadClaim {
+                      claim(
+                        claimId: "bafkreiblzlbhi47ldymnnkzfoygtstactcjtjajdvpg7xxfjgukn7njwbm"
+                      ) {
+                        agentAddress
+                        agentDid
+                        claimId
+                        collectionId
+                        paymentsStatus
+                        schemaType
+                        submissionDate
+                        evaluationByClaimId {
+                          agentAddress
+                          agentDid
+                          amount
+                          claimId
+                          collectionId
+                          evaluationDate
+                          oracle
+                          reason
+                          status
+                          verificationProof
+                        }
+                        collection {
+                          admin
+                          approved
+                          claimSchemaTypesLoaded
+                          count
+                          disputed
+                          endDate
+                          entity
+                          evaluated
+                          id
+                          invalidated
+                          payments
+                          protocol
+                          quota
+                          rejected
+                          startDate
+                          state
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  claim:
+                    nullable: true
+                    properties:
+                      agentAddress:
+                        nullable: false
+                        type: string
+                      agentDid:
+                        nullable: false
+                        type: string
+                      claimId:
+                        nullable: false
+                        type: string
+                      collection:
+                        description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                        nullable: true
+                        properties:
+                          admin:
+                            nullable: false
+                            type: string
+                          approved:
+                            nullable: false
+                            type: integer
+                          claimSchemaTypesLoaded:
+                            description: Checks if there are any claims with null schemaType
+                            nullable: false
+                            type: boolean
+                          count:
+                            nullable: false
+                            type: integer
+                          disputed:
+                            nullable: false
+                            type: integer
+                          endDate:
+                            nullable: true
+                            type: string
+                          entity:
+                            nullable: false
+                            type: string
+                          evaluated:
+                            nullable: false
+                            type: integer
+                          id:
+                            nullable: false
+                            type: string
+                          invalidated:
+                            nullable: false
+                            type: integer
+                          payments:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          protocol:
+                            nullable: false
+                            type: string
+                          quota:
+                            nullable: false
+                            type: integer
+                          rejected:
+                            nullable: false
+                            type: integer
+                          startDate:
+                            nullable: true
+                            type: string
+                          state:
+                            nullable: false
+                            type: integer
+                        type: object
+                      collectionId:
+                        nullable: false
+                        type: string
+                      evaluationByClaimId:
+                        description: Reads a single `Evaluation` that is related to this `Claim`.
+                        nullable: true
+                        properties:
+                          agentAddress:
+                            nullable: false
+                            type: string
+                          agentDid:
+                            nullable: false
+                            type: string
+                          amount:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          claimId:
+                            nullable: false
+                            type: string
+                          collectionId:
+                            nullable: false
+                            type: string
+                          evaluationDate:
+                            nullable: false
+                            type: string
+                          oracle:
+                            nullable: false
+                            type: string
+                          reason:
+                            nullable: false
+                            type: integer
+                          status:
+                            nullable: false
+                            type: integer
+                          verificationProof:
+                            nullable: true
+                            type: string
+                        type: object
+                      paymentsStatus:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      schemaType:
+                        nullable: true
+                        type: string
+                      submissionDate:
+                        nullable: false
+                        type: string
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: xc8qtz5n40kzg
+  /ListEvaluations:
+    post:
+      parameters: []
+      operationId: listEvaluations
+      summary: ListEvaluations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListEvaluations {
+                      evaluations {
+                        totalCount
+                        edges {
+                          node {
+                            agentAddress
+                            agentDid
+                            amount
+                            claimId
+                            collectionId
+                            evaluationDate
+                            oracle
+                            reason
+                            status
+                            verificationProof
+                            claim {
+                              agentAddress
+                              agentDid
+                              claimId
+                              collectionId
+                              paymentsStatus
+                              schemaType
+                              submissionDate
+                              collection {
+                                admin
+                                approved
+                                claimSchemaTypesLoaded
+                                count
+                                disputed
+                                endDate
+                                entity
+                                evaluated
+                                id
+                                invalidated
+                                payments
+                                protocol
+                                quota
+                                rejected
+                                startDate
+                                state
+                              }
+                              evaluationByClaimId {
+                                nodeId
+                              }
+                            }
+                            nodeId
+                          }
+                          cursor
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  evaluations:
+                    description: Reads and enables pagination through a set of `Evaluation`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `Evaluation` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `Evaluation` at the end of the edge.
+                              nullable: false
+                              properties:
+                                agentAddress:
+                                  nullable: false
+                                  type: string
+                                agentDid:
+                                  nullable: false
+                                  type: string
+                                amount:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                claim:
+                                  description: Reads a single `Claim` that is related to this `Evaluation`.
+                                  nullable: true
+                                  properties:
+                                    agentAddress:
+                                      nullable: false
+                                      type: string
+                                    agentDid:
+                                      nullable: false
+                                      type: string
+                                    claimId:
+                                      nullable: false
+                                      type: string
+                                    collection:
+                                      description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                                      nullable: true
+                                      properties:
+                                        admin:
+                                          nullable: false
+                                          type: string
+                                        approved:
+                                          nullable: false
+                                          type: integer
+                                        claimSchemaTypesLoaded:
+                                          description: Checks if there are any claims with null schemaType
+                                          nullable: false
+                                          type: boolean
+                                        count:
+                                          nullable: false
+                                          type: integer
+                                        disputed:
+                                          nullable: false
+                                          type: integer
+                                        endDate:
+                                          nullable: true
+                                          type: string
+                                        entity:
+                                          nullable: false
+                                          type: string
+                                        evaluated:
+                                          nullable: false
+                                          type: integer
+                                        id:
+                                          nullable: false
+                                          type: string
+                                        invalidated:
+                                          nullable: false
+                                          type: integer
+                                        payments:
+                                          additionalProperties: true
+                                          nullable: false
+                                          type: object
+                                        protocol:
+                                          nullable: false
+                                          type: string
+                                        quota:
+                                          nullable: false
+                                          type: integer
+                                        rejected:
+                                          nullable: false
+                                          type: integer
+                                        startDate:
+                                          nullable: true
+                                          type: string
+                                        state:
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    collectionId:
+                                      nullable: false
+                                      type: string
+                                    evaluationByClaimId:
+                                      description: Reads a single `Evaluation` that is related to this `Claim`.
+                                      nullable: true
+                                      properties:
+                                        nodeId:
+                                          description: A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+                                          nullable: false
+                                          type: string
+                                      type: object
+                                    paymentsStatus:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    schemaType:
+                                      nullable: true
+                                      type: string
+                                    submissionDate:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                                claimId:
+                                  nullable: false
+                                  type: string
+                                collectionId:
+                                  nullable: false
+                                  type: string
+                                evaluationDate:
+                                  nullable: false
+                                  type: string
+                                nodeId:
+                                  description: A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+                                  nullable: false
+                                  type: string
+                                oracle:
+                                  nullable: false
+                                  type: string
+                                reason:
+                                  nullable: false
+                                  type: integer
+                                status:
+                                  nullable: false
+                                  type: integer
+                                verificationProof:
+                                  nullable: true
+                                  type: string
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `Evaluation` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: jntm4uewznad0
+  /ReadEvaluation:
+    post:
+      parameters: []
+      operationId: readEvaluation
+      summary: ReadEvaluation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadEvaluation {
+                      evaluation(
+                        claimId: "bafkreiblzlbhi47ldymnnkzfoygtstactcjtjajdvpg7xxfjgukn7njwbm"
+                      ) {
+                        agentAddress
+                        agentDid
+                        amount
+                        claimId
+                        collectionId
+                        evaluationDate
+                        oracle
+                        reason
+                        status
+                        verificationProof
+                        claim {
+                          agentAddress
+                          agentDid
+                          claimId
+                          collectionId
+                          paymentsStatus
+                          schemaType
+                          submissionDate
+                          collection {
+                            claimsByCollectionId {
+                              totalCount
+                            }
+                            admin
+                            approved
+                            claimSchemaTypesLoaded
+                            count
+                            disputed
+                            endDate
+                            entity
+                            evaluated
+                            id
+                            invalidated
+                            payments
+                            protocol
+                            quota
+                            rejected
+                            startDate
+                            state
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  evaluation:
+                    nullable: true
+                    properties:
+                      agentAddress:
+                        nullable: false
+                        type: string
+                      agentDid:
+                        nullable: false
+                        type: string
+                      amount:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      claim:
+                        description: Reads a single `Claim` that is related to this `Evaluation`.
+                        nullable: true
+                        properties:
+                          agentAddress:
+                            nullable: false
+                            type: string
+                          agentDid:
+                            nullable: false
+                            type: string
+                          claimId:
+                            nullable: false
+                            type: string
+                          collection:
+                            description: Reads a single `ClaimCollection` that is related to this `Claim`.
+                            nullable: true
+                            properties:
+                              admin:
+                                nullable: false
+                                type: string
+                              approved:
+                                nullable: false
+                                type: integer
+                              claimSchemaTypesLoaded:
+                                description: Checks if there are any claims with null schemaType
+                                nullable: false
+                                type: boolean
+                              claimsByCollectionId:
+                                description: Reads and enables pagination through a set of `Claim`.
+                                nullable: false
+                                properties:
+                                  totalCount:
+                                    description: The count of *all* `Claim` you could get from the connection.
+                                    nullable: false
+                                    type: integer
+                                type: object
+                              count:
+                                nullable: false
+                                type: integer
+                              disputed:
+                                nullable: false
+                                type: integer
+                              endDate:
+                                nullable: true
+                                type: string
+                              entity:
+                                nullable: false
+                                type: string
+                              evaluated:
+                                nullable: false
+                                type: integer
+                              id:
+                                nullable: false
+                                type: string
+                              invalidated:
+                                nullable: false
+                                type: integer
+                              payments:
+                                additionalProperties: true
+                                nullable: false
+                                type: object
+                              protocol:
+                                nullable: false
+                                type: string
+                              quota:
+                                nullable: false
+                                type: integer
+                              rejected:
+                                nullable: false
+                                type: integer
+                              startDate:
+                                nullable: true
+                                type: string
+                              state:
+                                nullable: false
+                                type: integer
+                            type: object
+                          collectionId:
+                            nullable: false
+                            type: string
+                          paymentsStatus:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          schemaType:
+                            nullable: true
+                            type: string
+                          submissionDate:
+                            nullable: false
+                            type: string
+                        type: object
+                      claimId:
+                        nullable: false
+                        type: string
+                      collectionId:
+                        nullable: false
+                        type: string
+                      evaluationDate:
+                        nullable: false
+                        type: string
+                      oracle:
+                        nullable: false
+                        type: string
+                      reason:
+                        nullable: false
+                        type: integer
+                      status:
+                        nullable: false
+                        type: integer
+                      verificationProof:
+                        nullable: true
+                        type: string
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: zsqtetms8v8kp
+  /ListDisputes:
+    post:
+      parameters: []
+      operationId: listDisputes
+      summary: ListDisputes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListDisputes {
+                      disputes {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            data
+                            proof
+                            subjectId
+                            type
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  disputes:
+                    description: Reads and enables pagination through a set of `Dispute`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `Dispute` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `Dispute` at the end of the edge.
+                              nullable: false
+                              properties:
+                                data:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                proof:
+                                  nullable: false
+                                  type: string
+                                subjectId:
+                                  nullable: false
+                                  type: string
+                                type:
+                                  nullable: false
+                                  type: integer
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `Dispute` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: c8c5emjpsae95
+  /ReadDispute:
+    post:
+      parameters: []
+      operationId: readDispute
+      summary: ReadDispute
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadDispute {
+                      dispute(
+                        proof: "bafkreiblzlbhi47ldymnnkzfoygtstactcjtjajdvpg7xxfjgukn7njwbm"
+                      ) {
+                        data
+                        proof
+                        subjectId
+                        type
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  dispute:
+                    nullable: true
+                    properties:
+                      data:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      proof:
+                        nullable: false
+                        type: string
+                      subjectId:
+                        nullable: false
+                        type: string
+                      type:
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: qzqxfoh2a8g8u
+  /ListIxoSwapPriceHistories:
+    post:
+      parameters: []
+      operationId: listIxoSwapPriceHistories
+      summary: ListIxoSwapPriceHistories
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListIxoSwapPriceHistories {
+                      ixoSwapPriceHistories {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            address
+                            id
+                            timestamp
+                            token1155Price
+                            token1155Volume
+                            token2Price
+                            token2Volume
+                            ixoSwapByAddress {
+                              address
+                              frozen
+                              ixoSwapPriceHistoriesByAddress {
+                                totalCount
+                              }
+                              lpAddress
+                              lpFeePercent
+                              maxSlippagePercent
+                              owner
+                              pendingOwner
+                              protocolFeePercent
+                              protocolFeeRecipient
+                              token1155Denom
+                              token1155Reserve
+                              token2Denom
+                              token2Reserve
+                            }
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ixoSwapPriceHistories:
+                    description: Reads and enables pagination through a set of `IxoSwapPriceHistory`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `IxoSwapPriceHistory` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `IxoSwapPriceHistory` at the end of the edge.
+                              nullable: false
+                              properties:
+                                address:
+                                  nullable: false
+                                  type: string
+                                id:
+                                  nullable: false
+                                  type: integer
+                                ixoSwapByAddress:
+                                  description: Reads a single `IxoSwap` that is related to this `IxoSwapPriceHistory`.
+                                  nullable: true
+                                  properties:
+                                    address:
+                                      nullable: false
+                                      type: string
+                                    frozen:
+                                      nullable: false
+                                      type: boolean
+                                    ixoSwapPriceHistoriesByAddress:
+                                      description: Reads and enables pagination through a set of `IxoSwapPriceHistory`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `IxoSwapPriceHistory` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    lpAddress:
+                                      nullable: false
+                                      type: string
+                                    lpFeePercent:
+                                      nullable: false
+                                      type: string
+                                    maxSlippagePercent:
+                                      nullable: false
+                                      type: string
+                                    owner:
+                                      nullable: false
+                                      type: string
+                                    pendingOwner:
+                                      nullable: true
+                                      type: string
+                                    protocolFeePercent:
+                                      nullable: false
+                                      type: string
+                                    protocolFeeRecipient:
+                                      nullable: false
+                                      type: string
+                                    token1155Denom:
+                                      nullable: false
+                                      type: string
+                                    token1155Reserve:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                    token2Denom:
+                                      nullable: false
+                                      type: string
+                                    token2Reserve:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                  type: object
+                                timestamp:
+                                  nullable: false
+                                  type: string
+                                token1155Price:
+                                  nullable: false
+                                  pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                  type: string
+                                token1155Volume:
+                                  nullable: false
+                                  pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                  type: string
+                                token2Price:
+                                  nullable: false
+                                  pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                  type: string
+                                token2Volume:
+                                  nullable: false
+                                  pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                  type: string
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `IxoSwapPriceHistory` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: 8yfl8639pryo6
+  /ReadIxoSwapPriceHistoryByTimestampAndAddress:
+    post:
+      parameters: []
+      operationId: readIxoSwapPriceHistoryByTimestampAndAddress
+      summary: ReadIxoSwapPriceHistoryByTimestampAndAddress
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadIxoSwapPriceHistoryByTimestampAndAddress {
+                      ixoSwapPriceHistoryByTimestampAndAddress(
+                        address: "ixo14zpkpwze2cu86mx0gt5zjc8jr2fjrfyv658r6sj9g2kcyavg3ugq08v4p6"
+                        timestamp: "\"2024-09-18T07:15:34.907\""
+                      ) {
+                        address
+                        id
+                        ixoSwapByAddress {
+                          address
+                          frozen
+                          lpAddress
+                          lpFeePercent
+                          ixoSwapPriceHistoriesByAddress {
+                            totalCount
+                          }
+                          maxSlippagePercent
+                          owner
+                          pendingOwner
+                          protocolFeePercent
+                          protocolFeeRecipient
+                          token1155Denom
+                          token1155Reserve
+                          token2Denom
+                          token2Reserve
+                        }
+                        timestamp
+                        token1155Price
+                        token1155Volume
+                        token2Price
+                        token2Volume
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ixoSwapPriceHistoryByTimestampAndAddress:
+                    nullable: true
+                    properties:
+                      address:
+                        nullable: false
+                        type: string
+                      id:
+                        nullable: false
+                        type: integer
+                      ixoSwapByAddress:
+                        description: Reads a single `IxoSwap` that is related to this `IxoSwapPriceHistory`.
+                        nullable: true
+                        properties:
+                          address:
+                            nullable: false
+                            type: string
+                          frozen:
+                            nullable: false
+                            type: boolean
+                          ixoSwapPriceHistoriesByAddress:
+                            description: Reads and enables pagination through a set of `IxoSwapPriceHistory`.
+                            nullable: false
+                            properties:
+                              totalCount:
+                                description: The count of *all* `IxoSwapPriceHistory` you could get from the connection.
+                                nullable: false
+                                type: integer
+                            type: object
+                          lpAddress:
+                            nullable: false
+                            type: string
+                          lpFeePercent:
+                            nullable: false
+                            type: string
+                          maxSlippagePercent:
+                            nullable: false
+                            type: string
+                          owner:
+                            nullable: false
+                            type: string
+                          pendingOwner:
+                            nullable: true
+                            type: string
+                          protocolFeePercent:
+                            nullable: false
+                            type: string
+                          protocolFeeRecipient:
+                            nullable: false
+                            type: string
+                          token1155Denom:
+                            nullable: false
+                            type: string
+                          token1155Reserve:
+                            nullable: false
+                            pattern: ^-?\d+$
+                            type: string
+                          token2Denom:
+                            nullable: false
+                            type: string
+                          token2Reserve:
+                            nullable: false
+                            pattern: ^-?\d+$
+                            type: string
+                        type: object
+                      timestamp:
+                        nullable: false
+                        type: string
+                      token1155Price:
+                        nullable: false
+                        pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                        type: string
+                      token1155Volume:
+                        nullable: false
+                        pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                        type: string
+                      token2Price:
+                        nullable: false
+                        pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                        type: string
+                      token2Volume:
+                        nullable: false
+                        pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                        type: string
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: xqfiw218urynk
+  /ListIxoSwaps:
+    post:
+      parameters: []
+      operationId: listIxoSwaps
+      summary: ListIxoSwaps
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListIxoSwaps {
+                      ixoSwaps {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            address
+                            frozen
+                            lpAddress
+                            lpFeePercent
+                            maxSlippagePercent
+                            owner
+                            pendingOwner
+                            protocolFeePercent
+                            protocolFeeRecipient
+                            token1155Denom
+                            token1155Reserve
+                            token2Denom
+                            token2Reserve
+                            ixoSwapPriceHistoriesByAddress {
+                              totalCount
+                              edges {
+                                cursor
+                                node {
+                                  address
+                                  id
+                                  timestamp
+                                  token1155Price
+                                  token1155Volume
+                                  token2Price
+                                  token2Volume
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ixoSwaps:
+                    description: Reads and enables pagination through a set of `IxoSwap`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `IxoSwap` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `IxoSwap` at the end of the edge.
+                              nullable: false
+                              properties:
+                                address:
+                                  nullable: false
+                                  type: string
+                                frozen:
+                                  nullable: false
+                                  type: boolean
+                                ixoSwapPriceHistoriesByAddress:
+                                  description: Reads and enables pagination through a set of `IxoSwapPriceHistory`.
+                                  nullable: false
+                                  properties:
+                                    edges:
+                                      description: A list of edges which contains the `IxoSwapPriceHistory` and cursor to aid in pagination.
+                                      items:
+                                        properties:
+                                          cursor:
+                                            description: A cursor for use in pagination.
+                                            nullable: true
+                                            type: string
+                                          node:
+                                            description: The `IxoSwapPriceHistory` at the end of the edge.
+                                            nullable: false
+                                            properties:
+                                              address:
+                                                nullable: false
+                                                type: string
+                                              id:
+                                                nullable: false
+                                                type: integer
+                                              timestamp:
+                                                nullable: false
+                                                type: string
+                                              token1155Price:
+                                                nullable: false
+                                                pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                                type: string
+                                              token1155Volume:
+                                                nullable: false
+                                                pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                                type: string
+                                              token2Price:
+                                                nullable: false
+                                                pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                                type: string
+                                              token2Volume:
+                                                nullable: false
+                                                pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                                type: string
+                                            type: object
+                                        type: object
+                                      nullable: false
+                                      type: array
+                                    totalCount:
+                                      description: The count of *all* `IxoSwapPriceHistory` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                lpAddress:
+                                  nullable: false
+                                  type: string
+                                lpFeePercent:
+                                  nullable: false
+                                  type: string
+                                maxSlippagePercent:
+                                  nullable: false
+                                  type: string
+                                owner:
+                                  nullable: false
+                                  type: string
+                                pendingOwner:
+                                  nullable: true
+                                  type: string
+                                protocolFeePercent:
+                                  nullable: false
+                                  type: string
+                                protocolFeeRecipient:
+                                  nullable: false
+                                  type: string
+                                token1155Denom:
+                                  nullable: false
+                                  type: string
+                                token1155Reserve:
+                                  nullable: false
+                                  pattern: ^-?\d+$
+                                  type: string
+                                token2Denom:
+                                  nullable: false
+                                  type: string
+                                token2Reserve:
+                                  nullable: false
+                                  pattern: ^-?\d+$
+                                  type: string
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `IxoSwap` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: n9vgk1bk58698
+  /ReadIxoSwap:
+    post:
+      parameters: []
+      operationId: readIxoSwap
+      summary: ReadIxoSwap
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadIxoSwap {
+                      ixoSwap(
+                        address: "ixo14zpkpwze2cu86mx0gt5zjc8jr2fjrfyv658r6sj9g2kcyavg3ugq08v4p6"
+                      ) {
+                        address
+                        frozen
+                        ixoSwapPriceHistoriesByAddress {
+                          totalCount
+                          edges {
+                            cursor
+                            node {
+                              address
+                              id
+                              timestamp
+                              token1155Price
+                              token1155Volume
+                              token2Price
+                              token2Volume
+                            }
+                          }
+                        }
+                        lpAddress
+                        lpFeePercent
+                        maxSlippagePercent
+                        owner
+                        pendingOwner
+                        protocolFeePercent
+                        protocolFeeRecipient
+                        token1155Denom
+                        token1155Reserve
+                        token2Denom
+                        token2Reserve
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  ixoSwap:
+                    nullable: true
+                    properties:
+                      address:
+                        nullable: false
+                        type: string
+                      frozen:
+                        nullable: false
+                        type: boolean
+                      ixoSwapPriceHistoriesByAddress:
+                        description: Reads and enables pagination through a set of `IxoSwapPriceHistory`.
+                        nullable: false
+                        properties:
+                          edges:
+                            description: A list of edges which contains the `IxoSwapPriceHistory` and cursor to aid in pagination.
+                            items:
+                              properties:
+                                cursor:
+                                  description: A cursor for use in pagination.
+                                  nullable: true
+                                  type: string
+                                node:
+                                  description: The `IxoSwapPriceHistory` at the end of the edge.
+                                  nullable: false
+                                  properties:
+                                    address:
+                                      nullable: false
+                                      type: string
+                                    id:
+                                      nullable: false
+                                      type: integer
+                                    timestamp:
+                                      nullable: false
+                                      type: string
+                                    token1155Price:
+                                      nullable: false
+                                      pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                      type: string
+                                    token1155Volume:
+                                      nullable: false
+                                      pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                      type: string
+                                    token2Price:
+                                      nullable: false
+                                      pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                      type: string
+                                    token2Volume:
+                                      nullable: false
+                                      pattern: '^-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?$'
+                                      type: string
+                                  type: object
+                              type: object
+                            nullable: false
+                            type: array
+                          totalCount:
+                            description: The count of *all* `IxoSwapPriceHistory` you could get from the connection.
+                            nullable: false
+                            type: integer
+                        type: object
+                      lpAddress:
+                        nullable: false
+                        type: string
+                      lpFeePercent:
+                        nullable: false
+                        type: string
+                      maxSlippagePercent:
+                        nullable: false
+                        type: string
+                      owner:
+                        nullable: false
+                        type: string
+                      pendingOwner:
+                        nullable: true
+                        type: string
+                      protocolFeePercent:
+                        nullable: false
+                        type: string
+                      protocolFeeRecipient:
+                        nullable: false
+                        type: string
+                      token1155Denom:
+                        nullable: false
+                        type: string
+                      token1155Reserve:
+                        nullable: false
+                        pattern: ^-?\d+$
+                        type: string
+                      token2Denom:
+                        nullable: false
+                        type: string
+                      token2Reserve:
+                        nullable: false
+                        pattern: ^-?\d+$
+                        type: string
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: vxnqump1kwan7
+  /ListTokens:
+    post:
+      parameters: []
+      operationId: listTokens
+      summary: ListTokens
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListTokens {
+                      tokens {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            collection
+                            entityByCollection {
+                              accordedRight
+                              accounts
+                              alsoKnownAs
+                              assertionMethod
+                              authentication
+                              capabilityDelegation
+                              capabilityInvocation
+                              context
+                              controller
+                              credentials
+                              endDate
+                              entityVerified
+                              externalId
+                              id
+                              keyAgreement
+                              linkedClaim
+                              linkedEntity
+                              linkedResource
+                              metadata
+                              owner
+                              relayerNode
+                              service
+                              settings
+                              startDate
+                              status
+                              tokenClassesByClass {
+                                totalCount
+                              }
+                              tokensByCollection {
+                                totalCount
+                              }
+                              type
+                              verificationMethod
+                            }
+                            id
+                            index
+                            name
+                            tokenClassByName {
+                              cap
+                              class
+                              contractAddress
+                              description
+                              image
+                              minter
+                              name
+                              paused
+                              stopped
+                              supply
+                              tokenCancelledsByName {
+                                totalCount
+                              }
+                              tokenRetiredsByName {
+                                totalCount
+                              }
+                              tokensByName {
+                                totalCount
+                              }
+                              type
+                            }
+                            tokenDataByTokenId {
+                              totalCount
+                            }
+                            tokenRetiredsById {
+                              totalCount
+                            }
+                            tokenTransactionsByTokenId {
+                              totalCount
+                            }
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tokens:
+                    description: Reads and enables pagination through a set of `Token`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `Token` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `Token` at the end of the edge.
+                              nullable: false
+                              properties:
+                                collection:
+                                  nullable: false
+                                  type: string
+                                entityByCollection:
+                                  description: Reads a single `Entity` that is related to this `Token`.
+                                  nullable: true
+                                  properties:
+                                    accordedRight:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    accounts:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    alsoKnownAs:
+                                      nullable: false
+                                      type: string
+                                    assertionMethod:
+                                      items:
+                                        nullable: false
+                                        type: string
+                                      nullable: false
+                                      type: array
+                                    authentication:
+                                      items:
+                                        nullable: false
+                                        type: string
+                                      nullable: false
+                                      type: array
+                                    capabilityDelegation:
+                                      items:
+                                        nullable: false
+                                        type: string
+                                      nullable: false
+                                      type: array
+                                    capabilityInvocation:
+                                      items:
+                                        nullable: false
+                                        type: string
+                                      nullable: false
+                                      type: array
+                                    context:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    controller:
+                                      items:
+                                        nullable: false
+                                        type: string
+                                      nullable: false
+                                      type: array
+                                    credentials:
+                                      items:
+                                        nullable: true
+                                        type: string
+                                      nullable: true
+                                      type: array
+                                    endDate:
+                                      nullable: true
+                                      type: string
+                                    entityVerified:
+                                      nullable: false
+                                      type: boolean
+                                    externalId:
+                                      nullable: true
+                                      type: string
+                                    id:
+                                      nullable: false
+                                      type: string
+                                    keyAgreement:
+                                      items:
+                                        nullable: false
+                                        type: string
+                                      nullable: false
+                                      type: array
+                                    linkedClaim:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    linkedEntity:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    linkedResource:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    metadata:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    owner:
+                                      nullable: true
+                                      type: string
+                                    relayerNode:
+                                      nullable: false
+                                      type: string
+                                    service:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    settings:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                    startDate:
+                                      nullable: true
+                                      type: string
+                                    status:
+                                      nullable: false
+                                      type: integer
+                                    tokenClassesByClass:
+                                      description: Reads and enables pagination through a set of `TokenClass`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `TokenClass` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    tokensByCollection:
+                                      description: Reads and enables pagination through a set of `Token`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `Token` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    type:
+                                      nullable: false
+                                      type: string
+                                    verificationMethod:
+                                      additionalProperties: true
+                                      nullable: false
+                                      type: object
+                                  type: object
+                                id:
+                                  nullable: false
+                                  type: string
+                                index:
+                                  nullable: false
+                                  type: string
+                                name:
+                                  nullable: false
+                                  type: string
+                                tokenClassByName:
+                                  description: Reads a single `TokenClass` that is related to this `Token`.
+                                  nullable: true
+                                  properties:
+                                    cap:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                    class:
+                                      nullable: false
+                                      type: string
+                                    contractAddress:
+                                      nullable: false
+                                      type: string
+                                    description:
+                                      nullable: false
+                                      type: string
+                                    image:
+                                      nullable: false
+                                      type: string
+                                    minter:
+                                      nullable: false
+                                      type: string
+                                    name:
+                                      nullable: false
+                                      type: string
+                                    paused:
+                                      nullable: false
+                                      type: boolean
+                                    stopped:
+                                      nullable: false
+                                      type: boolean
+                                    supply:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                    tokenCancelledsByName:
+                                      description: Reads and enables pagination through a set of `TokenCancelled`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `TokenCancelled` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    tokenRetiredsByName:
+                                      description: Reads and enables pagination through a set of `TokenRetired`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `TokenRetired` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    tokensByName:
+                                      description: Reads and enables pagination through a set of `Token`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `Token` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    type:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                                tokenDataByTokenId:
+                                  description: Reads and enables pagination through a set of `TokenDatum`.
+                                  nullable: false
+                                  properties:
+                                    totalCount:
+                                      description: The count of *all* `TokenDatum` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                tokenRetiredsById:
+                                  description: Reads and enables pagination through a set of `TokenRetired`.
+                                  nullable: false
+                                  properties:
+                                    totalCount:
+                                      description: The count of *all* `TokenRetired` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                tokenTransactionsByTokenId:
+                                  description: Reads and enables pagination through a set of `TokenTransaction`.
+                                  nullable: false
+                                  properties:
+                                    totalCount:
+                                      description: The count of *all* `TokenTransaction` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `Token` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: o30lry5nw5uok
+  /ReadToken:
+    post:
+      parameters: []
+      operationId: readToken
+      summary: ReadToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadToken {
+                      token(id: "000061c8656b1bd0c3daa3f40003b023") {
+                        collection
+                        entityByCollection {
+                          accordedRight
+                          accounts
+                          alsoKnownAs
+                          assertionMethod
+                          authentication
+                          capabilityDelegation
+                          capabilityInvocation
+                          context
+                          controller
+                          credentials
+                          endDate
+                          entityVerified
+                          externalId
+                          id
+                          iidById {
+                            id
+                          }
+                          keyAgreement
+                          linkedClaim
+                          linkedEntity
+                          linkedResource
+                          metadata
+                          owner
+                          relayerNode
+                          service
+                          settings
+                          startDate
+                          status
+                          tokenClassesByClass {
+                            totalCount
+                          }
+                          tokensByCollection {
+                            totalCount
+                          }
+                          type
+                          verificationMethod
+                        }
+                        id
+                        index
+                        name
+                        tokenClassByName {
+                          cap
+                          class
+                          contractAddress
+                          description
+                          image
+                          minter
+                          name
+                          paused
+                          stopped
+                          supply
+                          tokenCancelledsByName {
+                            totalCount
+                          }
+                          tokenRetiredsByName {
+                            totalCount
+                          }
+                          tokensByName {
+                            totalCount
+                          }
+                          type
+                        }
+                        tokenDataByTokenId {
+                          totalCount
+                        }
+                        tokenRetiredsById {
+                          totalCount
+                        }
+                        tokenTransactionsByTokenId {
+                          totalCount
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  token:
+                    nullable: true
+                    properties:
+                      collection:
+                        nullable: false
+                        type: string
+                      entityByCollection:
+                        description: Reads a single `Entity` that is related to this `Token`.
+                        nullable: true
+                        properties:
+                          accordedRight:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          accounts:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          alsoKnownAs:
+                            nullable: false
+                            type: string
+                          assertionMethod:
+                            items:
+                              nullable: false
+                              type: string
+                            nullable: false
+                            type: array
+                          authentication:
+                            items:
+                              nullable: false
+                              type: string
+                            nullable: false
+                            type: array
+                          capabilityDelegation:
+                            items:
+                              nullable: false
+                              type: string
+                            nullable: false
+                            type: array
+                          capabilityInvocation:
+                            items:
+                              nullable: false
+                              type: string
+                            nullable: false
+                            type: array
+                          context:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          controller:
+                            items:
+                              nullable: false
+                              type: string
+                            nullable: false
+                            type: array
+                          credentials:
+                            items:
+                              nullable: true
+                              type: string
+                            nullable: true
+                            type: array
+                          endDate:
+                            nullable: true
+                            type: string
+                          entityVerified:
+                            nullable: false
+                            type: boolean
+                          externalId:
+                            nullable: true
+                            type: string
+                          id:
+                            nullable: false
+                            type: string
+                          iidById:
+                            description: Reads a single `Iid` that is related to this `Entity`.
+                            nullable: true
+                            properties:
+                              id:
+                                nullable: false
+                                type: string
+                            type: object
+                          keyAgreement:
+                            items:
+                              nullable: false
+                              type: string
+                            nullable: false
+                            type: array
+                          linkedClaim:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          linkedEntity:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          linkedResource:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          metadata:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          owner:
+                            nullable: true
+                            type: string
+                          relayerNode:
+                            nullable: false
+                            type: string
+                          service:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          settings:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          startDate:
+                            nullable: true
+                            type: string
+                          status:
+                            nullable: false
+                            type: integer
+                          tokenClassesByClass:
+                            description: Reads and enables pagination through a set of `TokenClass`.
+                            nullable: false
+                            properties:
+                              totalCount:
+                                description: The count of *all* `TokenClass` you could get from the connection.
+                                nullable: false
+                                type: integer
+                            type: object
+                          tokensByCollection:
+                            description: Reads and enables pagination through a set of `Token`.
+                            nullable: false
+                            properties:
+                              totalCount:
+                                description: The count of *all* `Token` you could get from the connection.
+                                nullable: false
+                                type: integer
+                            type: object
+                          type:
+                            nullable: false
+                            type: string
+                          verificationMethod:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                        type: object
+                      id:
+                        nullable: false
+                        type: string
+                      index:
+                        nullable: false
+                        type: string
+                      name:
+                        nullable: false
+                        type: string
+                      tokenClassByName:
+                        description: Reads a single `TokenClass` that is related to this `Token`.
+                        nullable: true
+                        properties:
+                          cap:
+                            nullable: false
+                            pattern: ^-?\d+$
+                            type: string
+                          class:
+                            nullable: false
+                            type: string
+                          contractAddress:
+                            nullable: false
+                            type: string
+                          description:
+                            nullable: false
+                            type: string
+                          image:
+                            nullable: false
+                            type: string
+                          minter:
+                            nullable: false
+                            type: string
+                          name:
+                            nullable: false
+                            type: string
+                          paused:
+                            nullable: false
+                            type: boolean
+                          stopped:
+                            nullable: false
+                            type: boolean
+                          supply:
+                            nullable: false
+                            pattern: ^-?\d+$
+                            type: string
+                          tokenCancelledsByName:
+                            description: Reads and enables pagination through a set of `TokenCancelled`.
+                            nullable: false
+                            properties:
+                              totalCount:
+                                description: The count of *all* `TokenCancelled` you could get from the connection.
+                                nullable: false
+                                type: integer
+                            type: object
+                          tokenRetiredsByName:
+                            description: Reads and enables pagination through a set of `TokenRetired`.
+                            nullable: false
+                            properties:
+                              totalCount:
+                                description: The count of *all* `TokenRetired` you could get from the connection.
+                                nullable: false
+                                type: integer
+                            type: object
+                          tokensByName:
+                            description: Reads and enables pagination through a set of `Token`.
+                            nullable: false
+                            properties:
+                              totalCount:
+                                description: The count of *all* `Token` you could get from the connection.
+                                nullable: false
+                                type: integer
+                            type: object
+                          type:
+                            nullable: false
+                            type: string
+                        type: object
+                      tokenDataByTokenId:
+                        description: Reads and enables pagination through a set of `TokenDatum`.
+                        nullable: false
+                        properties:
+                          totalCount:
+                            description: The count of *all* `TokenDatum` you could get from the connection.
+                            nullable: false
+                            type: integer
+                        type: object
+                      tokenRetiredsById:
+                        description: Reads and enables pagination through a set of `TokenRetired`.
+                        nullable: false
+                        properties:
+                          totalCount:
+                            description: The count of *all* `TokenRetired` you could get from the connection.
+                            nullable: false
+                            type: integer
+                        type: object
+                      tokenTransactionsByTokenId:
+                        description: Reads and enables pagination through a set of `TokenTransaction`.
+                        nullable: false
+                        properties:
+                          totalCount:
+                            description: The count of *all* `TokenTransaction` you could get from the connection.
+                            nullable: false
+                            type: integer
+                        type: object
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: 1o7gifkuiil85
+  /ListTokenCancelleds:
+    post:
+      parameters: []
+      operationId: listCancelledTokens
+      summary: ListCancelledTokens
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListTokenCancelleds {
+                      tokenCancelleds {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            aid
+                            amount
+                            id
+                            name
+                            owner
+                            reason
+                            tokenClassByName {
+                              cap
+                              class
+                              contractAddress
+                              description
+                              image
+                              minter
+                              name
+                              paused
+                              stopped
+                              supply
+                              type
+                            }
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tokenCancelleds:
+                    description: Reads and enables pagination through a set of `TokenCancelled`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `TokenCancelled` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `TokenCancelled` at the end of the edge.
+                              nullable: false
+                              properties:
+                                aid:
+                                  nullable: false
+                                  type: integer
+                                amount:
+                                  nullable: false
+                                  pattern: ^-?\d+$
+                                  type: string
+                                id:
+                                  nullable: false
+                                  type: string
+                                name:
+                                  nullable: false
+                                  type: string
+                                owner:
+                                  nullable: false
+                                  type: string
+                                reason:
+                                  nullable: false
+                                  type: string
+                                tokenClassByName:
+                                  description: Reads a single `TokenClass` that is related to this `TokenCancelled`.
+                                  nullable: true
+                                  properties:
+                                    cap:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                    class:
+                                      nullable: false
+                                      type: string
+                                    contractAddress:
+                                      nullable: false
+                                      type: string
+                                    description:
+                                      nullable: false
+                                      type: string
+                                    image:
+                                      nullable: false
+                                      type: string
+                                    minter:
+                                      nullable: false
+                                      type: string
+                                    name:
+                                      nullable: false
+                                      type: string
+                                    paused:
+                                      nullable: false
+                                      type: boolean
+                                    stopped:
+                                      nullable: false
+                                      type: boolean
+                                    supply:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                    type:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `TokenCancelled` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: m2rcbx2fnn8op
+  /ReadTokenCancelled:
+    post:
+      parameters: []
+      operationId: readCancelledToken
+      summary: ReadCancelledToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadTokenCancelled {
+                      tokenCancelled(aid: 10) {
+                        aid
+                        amount
+                        id
+                        name
+                        owner
+                        reason
+                        tokenClassByName {
+                          cap
+                          class
+                          contractAddress
+                          description
+                          image
+                          minter
+                          name
+                          paused
+                          stopped
+                          supply
+                          type
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tokenCancelled:
+                    nullable: true
+                    properties:
+                      aid:
+                        nullable: false
+                        type: integer
+                      amount:
+                        nullable: false
+                        pattern: ^-?\d+$
+                        type: string
+                      id:
+                        nullable: false
+                        type: string
+                      name:
+                        nullable: false
+                        type: string
+                      owner:
+                        nullable: false
+                        type: string
+                      reason:
+                        nullable: false
+                        type: string
+                      tokenClassByName:
+                        description: Reads a single `TokenClass` that is related to this `TokenCancelled`.
+                        nullable: true
+                        properties:
+                          cap:
+                            nullable: false
+                            pattern: ^-?\d+$
+                            type: string
+                          class:
+                            nullable: false
+                            type: string
+                          contractAddress:
+                            nullable: false
+                            type: string
+                          description:
+                            nullable: false
+                            type: string
+                          image:
+                            nullable: false
+                            type: string
+                          minter:
+                            nullable: false
+                            type: string
+                          name:
+                            nullable: false
+                            type: string
+                          paused:
+                            nullable: false
+                            type: boolean
+                          stopped:
+                            nullable: false
+                            type: boolean
+                          supply:
+                            nullable: false
+                            pattern: ^-?\d+$
+                            type: string
+                          type:
+                            nullable: false
+                            type: string
+                        type: object
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: fv4qbetkgbqp3
+  /ListTokenRetireds:
+    post:
+      parameters: []
+      operationId: listRetiredTokens
+      summary: ListRetiredTokens
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListTokenRetireds {
+                      tokenRetireds {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            aid
+                            amount
+                            id
+                            jurisdiction
+                            name
+                            owner
+                            reason
+                            tokenById {
+                              collection
+                              id
+                              index
+                              name
+                              entityByCollection {
+                                id
+                              }
+                            }
+                            tokenClassByName {
+                              cap
+                              class
+                              contractAddress
+                              description
+                              image
+                              minter
+                              name
+                              paused
+                              stopped
+                              supply
+                              type
+                              tokenCancelledsByName {
+                                totalCount
+                              }
+                              tokenRetiredsByName {
+                                totalCount
+                              }
+                              tokensByName {
+                                totalCount
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tokenRetireds:
+                    description: Reads and enables pagination through a set of `TokenRetired`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `TokenRetired` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `TokenRetired` at the end of the edge.
+                              nullable: false
+                              properties:
+                                aid:
+                                  nullable: false
+                                  type: integer
+                                amount:
+                                  nullable: false
+                                  pattern: ^-?\d+$
+                                  type: string
+                                id:
+                                  nullable: false
+                                  type: string
+                                jurisdiction:
+                                  nullable: false
+                                  type: string
+                                name:
+                                  nullable: false
+                                  type: string
+                                owner:
+                                  nullable: false
+                                  type: string
+                                reason:
+                                  nullable: false
+                                  type: string
+                                tokenById:
+                                  description: Reads a single `Token` that is related to this `TokenRetired`.
+                                  nullable: true
+                                  properties:
+                                    collection:
+                                      nullable: false
+                                      type: string
+                                    entityByCollection:
+                                      description: Reads a single `Entity` that is related to this `Token`.
+                                      nullable: true
+                                      properties:
+                                        id:
+                                          nullable: false
+                                          type: string
+                                      type: object
+                                    id:
+                                      nullable: false
+                                      type: string
+                                    index:
+                                      nullable: false
+                                      type: string
+                                    name:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                                tokenClassByName:
+                                  description: Reads a single `TokenClass` that is related to this `TokenRetired`.
+                                  nullable: true
+                                  properties:
+                                    cap:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                    class:
+                                      nullable: false
+                                      type: string
+                                    contractAddress:
+                                      nullable: false
+                                      type: string
+                                    description:
+                                      nullable: false
+                                      type: string
+                                    image:
+                                      nullable: false
+                                      type: string
+                                    minter:
+                                      nullable: false
+                                      type: string
+                                    name:
+                                      nullable: false
+                                      type: string
+                                    paused:
+                                      nullable: false
+                                      type: boolean
+                                    stopped:
+                                      nullable: false
+                                      type: boolean
+                                    supply:
+                                      nullable: false
+                                      pattern: ^-?\d+$
+                                      type: string
+                                    tokenCancelledsByName:
+                                      description: Reads and enables pagination through a set of `TokenCancelled`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `TokenCancelled` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    tokenRetiredsByName:
+                                      description: Reads and enables pagination through a set of `TokenRetired`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `TokenRetired` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    tokensByName:
+                                      description: Reads and enables pagination through a set of `Token`.
+                                      nullable: false
+                                      properties:
+                                        totalCount:
+                                          description: The count of *all* `Token` you could get from the connection.
+                                          nullable: false
+                                          type: integer
+                                      type: object
+                                    type:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `TokenRetired` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: 64583ouxy3o1p
+  /ReadTokenRetired:
+    post:
+      parameters: []
+      operationId: readRetiredToken
+      summary: ReadRetiredToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadTokenRetired {
+                      tokenRetired(aid: 10) {
+                        aid
+                        amount
+                        id
+                        jurisdiction
+                        name
+                        owner
+                        reason
+                        tokenById {
+                          collection
+                          entityByCollection {
+                            id
+                          }
+                          id
+                          index
+                          name
+                          tokenClassByName {
+                            name
+                            nodeId
+                          }
+                        }
+                        tokenClassByName {
+                          name
+                          nodeId
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tokenRetired:
+                    nullable: true
+                    properties:
+                      aid:
+                        nullable: false
+                        type: integer
+                      amount:
+                        nullable: false
+                        pattern: ^-?\d+$
+                        type: string
+                      id:
+                        nullable: false
+                        type: string
+                      jurisdiction:
+                        nullable: false
+                        type: string
+                      name:
+                        nullable: false
+                        type: string
+                      owner:
+                        nullable: false
+                        type: string
+                      reason:
+                        nullable: false
+                        type: string
+                      tokenById:
+                        description: Reads a single `Token` that is related to this `TokenRetired`.
+                        nullable: true
+                        properties:
+                          collection:
+                            nullable: false
+                            type: string
+                          entityByCollection:
+                            description: Reads a single `Entity` that is related to this `Token`.
+                            nullable: true
+                            properties:
+                              id:
+                                nullable: false
+                                type: string
+                            type: object
+                          id:
+                            nullable: false
+                            type: string
+                          index:
+                            nullable: false
+                            type: string
+                          name:
+                            nullable: false
+                            type: string
+                          tokenClassByName:
+                            description: Reads a single `TokenClass` that is related to this `Token`.
+                            nullable: true
+                            properties:
+                              name:
+                                nullable: false
+                                type: string
+                              nodeId:
+                                description: A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+                                nullable: false
+                                type: string
+                            type: object
+                        type: object
+                      tokenClassByName:
+                        description: Reads a single `TokenClass` that is related to this `TokenRetired`.
+                        nullable: true
+                        properties:
+                          name:
+                            nullable: false
+                            type: string
+                          nodeId:
+                            description: A globally unique identifier. Can be used in various places throughout the system to identify this single value.
+                            nullable: false
+                            type: string
+                        type: object
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: y4ygpmc3v3rlx
+  /ListTokenTransactions:
+    post:
+      parameters: []
+      operationId: listTokenTransactions
+      summary: ListTokenTransactions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListTokenTransactions {
+                      tokenTransactions {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            aid
+                            amount
+                            from
+                            to
+                            token {
+                              collection
+                              id
+                              index
+                              name
+                            }
+                            tokenId
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tokenTransactions:
+                    description: Reads and enables pagination through a set of `TokenTransaction`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `TokenTransaction` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `TokenTransaction` at the end of the edge.
+                              nullable: false
+                              properties:
+                                aid:
+                                  nullable: false
+                                  type: integer
+                                amount:
+                                  nullable: false
+                                  pattern: ^-?\d+$
+                                  type: string
+                                from:
+                                  nullable: false
+                                  type: string
+                                to:
+                                  nullable: false
+                                  type: string
+                                token:
+                                  description: Reads a single `Token` that is related to this `TokenTransaction`.
+                                  nullable: true
+                                  properties:
+                                    collection:
+                                      nullable: false
+                                      type: string
+                                    id:
+                                      nullable: false
+                                      type: string
+                                    index:
+                                      nullable: false
+                                      type: string
+                                    name:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                                tokenId:
+                                  nullable: false
+                                  type: string
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `TokenTransaction` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: 6woblqp1brgh4
+  /ReadTokenTransaction:
+    post:
+      parameters: []
+      operationId: readTokenTransaction
+      summary: ReadTokenTransaction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadTokenTransaction {
+                      tokenTransaction(aid: 10) {
+                        aid
+                        amount
+                        from
+                        to
+                        token {
+                          collection
+                          id
+                          index
+                          name
+                        }
+                        tokenId
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  tokenTransaction:
+                    nullable: true
+                    properties:
+                      aid:
+                        nullable: false
+                        type: integer
+                      amount:
+                        nullable: false
+                        pattern: ^-?\d+$
+                        type: string
+                      from:
+                        nullable: false
+                        type: string
+                      to:
+                        nullable: false
+                        type: string
+                      token:
+                        description: Reads a single `Token` that is related to this `TokenTransaction`.
+                        nullable: true
+                        properties:
+                          collection:
+                            nullable: false
+                            type: string
+                          id:
+                            nullable: false
+                            type: string
+                          index:
+                            nullable: false
+                            type: string
+                          name:
+                            nullable: false
+                            type: string
+                        type: object
+                      tokenId:
+                        nullable: false
+                        type: string
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: wh68xdml3iihv
+  /ListTokensForAddressPerContract:
+    post:
+      parameters: []
+      operationId: listTokensForAddressPerContract
+      summary: ListTokensForAddressPerContract
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListTokensForAddressPerContract {
+                      getAccountTokens(address: "ixo1xwn45d6xhe3egcz3nqlfc2elpc3h6usy6yw3uk")
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  getAccountTokens:
+                    additionalProperties: true
+                    nullable: false
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: f8iq9fcdf1ijx
+  /ListTokensTotalForAddressPerOwnedAsset:
+    post:
+      parameters: []
+      operationId: listTokensTotalForAddressPerOwnedAsset
+      summary: ListTokensTotalForAddressPerOwnedAsset
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListTokensTotalForAddressPerOwnedAsset {
+                      getTokensTotalByAddress(address: "ixo1xwn45d6xhe3egcz3nqlfc2elpc3h6usy6yw3uk")
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  getTokensTotalByAddress:
+                    additionalProperties: true
+                    nullable: false
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: kwija18jfgo1r
+  /ListTokensTotalForAssetPerOwnedAsset:
+    post:
+      parameters: []
+      operationId: listTokensTotalForAssetPerOwnedAsset
+      summary: ListTokensTotalForAssetPerOwnedAsset
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListTokensTotalForAssetPerOwnedAsset {
+                      getTokensTotalForEntities(
+                        address: "ixo1xwn45d6xhe3egcz3nqlfc2elpc3h6usy6yw3uk"
+                      )
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  getTokensTotalForEntities:
+                    additionalProperties: true
+                    nullable: false
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: agebzhrvwjl10
+  /ListEntities:
+    post:
+      parameters: []
+      operationId: listEntities
+      summary: ListEntities
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ListEntities {
+                      entities {
+                        totalCount
+                        edges {
+                          cursor
+                          node {
+                            accordedRight
+                            accounts
+                            alsoKnownAs
+                            assertionMethod
+                            authentication
+                            capabilityDelegation
+                            capabilityInvocation
+                            context
+                            controller
+                            credentials
+                            endDate
+                            entityVerified
+                            externalId
+                            id
+                            iidById {
+                              id
+                            }
+                            keyAgreement
+                            linkedClaim
+                            linkedEntity
+                            linkedResource
+                            metadata
+                            owner
+                            relayerNode
+                            service
+                            settings
+                            startDate
+                            status
+                            tokenClassesByClass {
+                              totalCount
+                            }
+                            tokensByCollection {
+                              totalCount
+                            }
+                            type
+                            verificationMethod
+                          }
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  entities:
+                    description: Reads and enables pagination through a set of `Entity`.
+                    nullable: true
+                    properties:
+                      edges:
+                        description: A list of edges which contains the `Entity` and cursor to aid in pagination.
+                        items:
+                          properties:
+                            cursor:
+                              description: A cursor for use in pagination.
+                              nullable: true
+                              type: string
+                            node:
+                              description: The `Entity` at the end of the edge.
+                              nullable: false
+                              properties:
+                                accordedRight:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                accounts:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                alsoKnownAs:
+                                  nullable: false
+                                  type: string
+                                assertionMethod:
+                                  items:
+                                    nullable: false
+                                    type: string
+                                  nullable: false
+                                  type: array
+                                authentication:
+                                  items:
+                                    nullable: false
+                                    type: string
+                                  nullable: false
+                                  type: array
+                                capabilityDelegation:
+                                  items:
+                                    nullable: false
+                                    type: string
+                                  nullable: false
+                                  type: array
+                                capabilityInvocation:
+                                  items:
+                                    nullable: false
+                                    type: string
+                                  nullable: false
+                                  type: array
+                                context:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                controller:
+                                  items:
+                                    nullable: false
+                                    type: string
+                                  nullable: false
+                                  type: array
+                                credentials:
+                                  items:
+                                    nullable: true
+                                    type: string
+                                  nullable: true
+                                  type: array
+                                endDate:
+                                  nullable: true
+                                  type: string
+                                entityVerified:
+                                  nullable: false
+                                  type: boolean
+                                externalId:
+                                  nullable: true
+                                  type: string
+                                id:
+                                  nullable: false
+                                  type: string
+                                iidById:
+                                  description: Reads a single `Iid` that is related to this `Entity`.
+                                  nullable: true
+                                  properties:
+                                    id:
+                                      nullable: false
+                                      type: string
+                                  type: object
+                                keyAgreement:
+                                  items:
+                                    nullable: false
+                                    type: string
+                                  nullable: false
+                                  type: array
+                                linkedClaim:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                linkedEntity:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                linkedResource:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                metadata:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                owner:
+                                  nullable: true
+                                  type: string
+                                relayerNode:
+                                  nullable: false
+                                  type: string
+                                service:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                settings:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                                startDate:
+                                  nullable: true
+                                  type: string
+                                status:
+                                  nullable: false
+                                  type: integer
+                                tokenClassesByClass:
+                                  description: Reads and enables pagination through a set of `TokenClass`.
+                                  nullable: false
+                                  properties:
+                                    totalCount:
+                                      description: The count of *all* `TokenClass` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                tokensByCollection:
+                                  description: Reads and enables pagination through a set of `Token`.
+                                  nullable: false
+                                  properties:
+                                    totalCount:
+                                      description: The count of *all* `Token` you could get from the connection.
+                                      nullable: false
+                                      type: integer
+                                  type: object
+                                type:
+                                  nullable: false
+                                  type: string
+                                verificationMethod:
+                                  additionalProperties: true
+                                  nullable: false
+                                  type: object
+                              type: object
+                          type: object
+                        nullable: false
+                        type: array
+                      totalCount:
+                        description: The count of *all* `Entity` you could get from the connection.
+                        nullable: false
+                        type: integer
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: ind1pqwvil21c
+  /ReadEntity:
+    post:
+      parameters: []
+      operationId: readEntity
+      summary: ReadEntity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                query:
+                  example: |-
+                    query ReadEntity {
+                      entity(id: "did:ixo:entity:2f22535f8b179a51d77a0e302e68d35d") {
+                        accordedRight
+                        accounts
+                        alsoKnownAs
+                        assertionMethod
+                        authentication
+                        capabilityDelegation
+                        capabilityInvocation
+                        context
+                        controller
+                        credentials
+                        endDate
+                        entityVerified
+                        externalId
+                        id
+                        iidById {
+                          accordedRight
+                          alsoKnownAs
+                          assertionMethod
+                          authentication
+                          capabilityDelegation
+                          capabilityInvocation
+                          context
+                          controller
+                          entityById {
+                            id
+                          }
+                          id
+                          keyAgreement
+                          linkedClaim
+                          linkedEntity
+                          linkedResource
+                          metadata
+                          service
+                          verificationMethod
+                        }
+                      }
+                    }
+                  type: string
+                variables:
+                  additionalProperties: true
+                  nullable: true
+                  type: object
+              required:
+                - query
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  entity:
+                    nullable: true
+                    properties:
+                      accordedRight:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      accounts:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      alsoKnownAs:
+                        nullable: false
+                        type: string
+                      assertionMethod:
+                        items:
+                          nullable: false
+                          type: string
+                        nullable: false
+                        type: array
+                      authentication:
+                        items:
+                          nullable: false
+                          type: string
+                        nullable: false
+                        type: array
+                      capabilityDelegation:
+                        items:
+                          nullable: false
+                          type: string
+                        nullable: false
+                        type: array
+                      capabilityInvocation:
+                        items:
+                          nullable: false
+                          type: string
+                        nullable: false
+                        type: array
+                      context:
+                        additionalProperties: true
+                        nullable: false
+                        type: object
+                      controller:
+                        items:
+                          nullable: false
+                          type: string
+                        nullable: false
+                        type: array
+                      credentials:
+                        items:
+                          nullable: true
+                          type: string
+                        nullable: true
+                        type: array
+                      endDate:
+                        nullable: true
+                        type: string
+                      entityVerified:
+                        nullable: false
+                        type: boolean
+                      externalId:
+                        nullable: true
+                        type: string
+                      id:
+                        nullable: false
+                        type: string
+                      iidById:
+                        description: Reads a single `Iid` that is related to this `Entity`.
+                        nullable: true
+                        properties:
+                          accordedRight:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          alsoKnownAs:
+                            nullable: false
+                            type: string
+                          assertionMethod:
+                            items:
+                              nullable: true
+                              type: string
+                            nullable: true
+                            type: array
+                          authentication:
+                            items:
+                              nullable: true
+                              type: string
+                            nullable: true
+                            type: array
+                          capabilityDelegation:
+                            items:
+                              nullable: true
+                              type: string
+                            nullable: true
+                            type: array
+                          capabilityInvocation:
+                            items:
+                              nullable: true
+                              type: string
+                            nullable: true
+                            type: array
+                          context:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          controller:
+                            items:
+                              nullable: true
+                              type: string
+                            nullable: true
+                            type: array
+                          entityById:
+                            description: Reads a single `Entity` that is related to this `Iid`.
+                            nullable: true
+                            properties:
+                              id:
+                                nullable: false
+                                type: string
+                            type: object
+                          id:
+                            nullable: false
+                            type: string
+                          keyAgreement:
+                            items:
+                              nullable: true
+                              type: string
+                            nullable: true
+                            type: array
+                          linkedClaim:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          linkedEntity:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          linkedResource:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          metadata:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          service:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                          verificationMethod:
+                            additionalProperties: true
+                            nullable: false
+                            type: object
+                        type: object
+                    type: object
+                type: object
+          description: response
+      x-stoplight:
+        id: wtge2sl9wz767

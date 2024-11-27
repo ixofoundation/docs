@@ -105,8 +105,8 @@
     },
     {
       "type": "item",
-      "title": "GraphQL Queries for Claims and Evaluations",
-      "uri": "/Claims and Evaluations.yaml"
+      "title": "Blocksync GraphQL API",
+      "uri": "/Blocksync GraphQL API.yaml"
     },
     {
       "type": "item",

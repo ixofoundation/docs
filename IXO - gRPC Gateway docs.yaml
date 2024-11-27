@@ -3,7 +3,7 @@ x-stoplight:
   id: srcpbvhpljpfb
 info:
   description: A REST interface for state queries.
-  title: IXO - gRPC Gateway docs
+  title: gRPC Gateway API
   version: 1.0.0
 servers:
   - url: ''
