@@ -1,0 +1,133 @@
+{
+  "collapseTableOfContents": false,
+  "items": [
+    {
+      "type": "group",
+      "title": "Introduction",
+      "items": [
+    {
+      "type": "item",
+      "title": "API Reference",
+      "uri": "/docs/API Reference.md"
+    },
+    {
+      "type": "item",
+      "title": "Authentication",
+      "uri": "/docs/Authentication.md"
+    },
+    {
+      "type": "item",
+      "title": "Errors",
+      "uri": "/docs/Errors.md"
+    }
+     ]
+    },
+    {
+      "type": "group",
+      "title": "Platforms",
+      "items": [
+    {
+      "type": "group",
+      "title": "Emerging",
+      "items": [
+        {
+          "type": "item",
+          "title": "Audits",
+          "uri": "/docs/Platforms/Emerging/Audits.md"
+        },
+        {
+          "type": "item",
+          "title": "Claims",
+          "uri": "/docs/Platforms/Emerging/Claims Submissions.md"
+        },
+        {
+          "type": "item",
+          "title": "Claims-Verifications",
+          "uri": "/docs/Platforms/Emerging/Claims-Verifications.md"
+        },
+        {
+          "type": "item",
+          "title": "Credits-Issuance",
+          "uri": "/docs/Platforms/Emerging/Credits-Issuance.md"
+        },
+        {
+          "type": "item",
+          "title": "Credits-Retirements",
+          "uri": "/docs/Platforms/Emerging/Credits-Retirements.md"
+        },
+        {
+          "type": "item",
+          "title": "Device Usage Monitoring",
+          "uri": "/docs/Platforms/Emerging/Device Usage Monitoring.md"
+        },
+        {
+          "type": "item",
+          "title": "Digital-Vouchers",
+          "uri": "/docs/Platforms/Emerging/Digital-Vouchers.md"
+        },
+        {
+          "type": "item",
+          "title": "dMRV Registry",
+          "uri": "/docs/Platforms/Emerging/dMRV Registry.md"
+        },
+        {
+          "type": "item",
+          "title": "Internationally-Transferred Mitigation Outcomes (ITMOS)",
+          "uri": "/docs/Platforms/Emerging/ITMOs.md"
+        },
+        {
+          "type": "item",
+          "title": "Registration",
+          "uri": "/docs/Platforms/Emerging/Registration.md"
+        },
+        {
+          "type": "item",
+          "title": "Reporting",
+          "uri": "/docs/Platforms/Emerging/Reporting.md"
+        },
+        {
+          "type": "item",
+          "title": "Self-Certification",
+          "uri": "/docs/Platforms/Emerging/Self-Certification.md"
+        },
+        {
+          "type": "item",
+          "title": "Validation-and-Verification Bodies",
+          "uri": "/docs/Platforms/Emerging/Validation-and-Verification.md"
+        }
+      ]
+    }
+      ]
+    },
+    {
+      "type": "divider",
+      "title": "APIS"
+    },
+    {
+      "type": "item",
+      "title": "Blocksync GraphQL API",
+      "uri": "/Blocksync GraphQL API.yaml"
+    },
+    {
+      "type": "item",
+      "title": "IXO - gRPC Gateway docs",
+      "uri": "/IXO - gRPC Gateway docs.yaml"
+    },
+    {
+      "type": "divider",
+      "title": "Schemas"
+    },
+    {
+      "type": "group",
+      "title": "registry",
+      "items": [
+        {
+          "type": "item",
+          "title": "Credits Registry",
+          "uri": "/models/Credits-Registry.json"
+        }
+      ],
+      "itemsType": "model"
+    }
+  ]
+}

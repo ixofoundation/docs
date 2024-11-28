@@ -1,0 +1,20 @@
+{
+  "title": "Credits Registry",
+  "x-stoplight": {
+    "id": "535qql2cfj6ub"
+  },
+  "x-tags": [
+    "registry"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "jb7afvtkmaw5p"
+      }
+    }
+  },
+  "description": "Credits Registry functions provide an API interface for the `Tokens` module of IXO Protocol Blockchains. The state and services of this decentralised registry may be accessed through any RPC gateway connected to a node of the blockchain.",
+  "x-internal": true
+}
