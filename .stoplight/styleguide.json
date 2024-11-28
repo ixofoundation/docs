@@ -1,0 +1,35 @@
+{
+  "name": "docs",
+  "description": "",
+  "spectralExtends": [],
+  "extends": [],
+  "formats": [
+    "oas2",
+    "oas3",
+    "oas3.0",
+    "oas3.1"
+  ],
+  "aliases": {},
+  "rules": {},
+  "inheritedOverrides": {
+    "path-parameters-snake-case": {
+      "severity": "error"
+    },
+    "path-casing": {
+      "severity": "info"
+    },
+    "406-response-codes": {
+      "severity": "info"
+    },
+    "415-response-codes": {
+      "severity": "info"
+    },
+    "request-content-type": {
+      "severity": "info"
+    },
+    "response-content-type": {
+      "severity": "info"
+    }
+  },
+  "extendedDefault": false
+}
