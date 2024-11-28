@@ -1,22 +1,17 @@
-<div align=center>
+# ixo Message Relayer
 
-![Logo](/logo.png)
+![Logo](../../logo.png)
 
-# Ixo Message Relayer
+## Ixo Message Relayer
 
-![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge\&logo=docker\&logoColor=white) ![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge\&logo=nestjs\&logoColor=white) ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=nodedotjs\&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge\&logo=Prisma\&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge\&logo=typescript\&logoColor=white)
 
-[![ixo](https://img.shields.io/badge/ixo-project-blue)](https://ixo.foundation)
-[![GitHub](https://img.shields.io/github/stars/ixofoundation/jambo?style=social)](https://github.com/ixofoundation/ixo-message-relayer)
-![GitHub repo size](https://img.shields.io/github/repo-size/ixofoundation/ixo-message-relayer)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ixofoundation/ixo-message-relayer/blob/main/LICENSE)
+[![ixo](https://img.shields.io/badge/ixo-project-blue)](https://ixo.foundation) [![GitHub](https://img.shields.io/github/stars/ixofoundation/jambo?style=social)](https://github.com/ixofoundation/ixo-message-relayer) ![GitHub repo size](https://img.shields.io/github/repo-size/ixofoundation/ixo-message-relayer) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ixofoundation/ixo-message-relayer/blob/main/LICENSE)
 
-[![Twitter](https://img.shields.io/twitter/follow/ixo_impact?style=social)](https://twitter.com/ixoworld)
-[![Medium](https://img.shields.io/badge/Medium-ixo-green)](https://ixoworld.medium.com/)
+[![Twitter](https://img.shields.io/twitter/follow/ixo\_impact?style=social)](https://twitter.com/ixoworld) [![Medium](https://img.shields.io/badge/Medium-ixo-green)](https://ixoworld.medium.com/)
 
-</div>
+\
 
-<br />
 
 The Ixo Message Relayer is a server that facilitates a meticulously coordinated sequence of operations ensuring mobile-to-web authentication and transaction signing on the IXO blockchain. The process kicks off with the Login module, where the SDK generates a random hash and a secureHash (which is a SHA-256 hash of the hash and a secureNonce). A QR code, containing this hash, is then displayed for the mobile app to scan. Once scanned, the mobile app uploads the user data to the server using this hash as an identifier of the login request, which the SDK is polling for. This endpoint is secured with an AUTHORIZATION environment variable, ensuring only the mobile app with the correct authorization can upload this data. Subsequently, the SDK polls the server to fetch the login data, providing a secureNonce in the process. The server validates the request by hashing the provided hash and secureNonce to ensure it matches the secureHash, thereby affirming the authenticity of the user making the request. Upon validation, the server returns the login data to the SDK and purges the data from the server to maintain data cleanliness.
 
@@ -26,28 +21,28 @@ The server's response to all endpoints is structured in a consistent format, enc
 
 The server is designed to work seamlessly with a complementary SDK which facilitates the management of various authentication and transaction flows between web clients, mobile applications, and the server itself. For more comprehensive insights and utilization of the server's capabilities, you may explore the SDK source code hosted on [this repository](https://github.com/ixofoundation/ixo-signx) or directly integrate the SDK into your projects via the published [NPM package](https://www.npmjs.com/package/@ixo/signx-sdk).
 
-## Environment Variables
+### Environment Variables
 
 Ensuring the secure and efficient operation of the Ixo Message Relayer Nest.js server, various environment variables are configured to govern aspects like authorization, and database management. The `.env.example` file illustrates a templated structure of these variables, providing a guideline for environment setup.
 
 Here's an overview of each environment variable and its utility within the application:
 
-- **PORT**: Specifies the port number on which the Nest.js server will run.
-- **AUTHORIZATION**: Utilized for authorizing API requests, ensuring they originate from authenticated sources. The Authorization header in API requests must precisely match this value (example: `Bearer u4D81XDt4YsbXo6KSynYFChk`).
-- **DATABASE_URL**: The full PostgresQL database uri as provided in example.
-- **SENTRY_DSN**: Sentry DNS for Sentry error logging to catch production issues.
+* **PORT**: Specifies the port number on which the Nest.js server will run.
+* **AUTHORIZATION**: Utilized for authorizing API requests, ensuring they originate from authenticated sources. The Authorization header in API requests must precisely match this value (example: `Bearer u4D81XDt4YsbXo6KSynYFChk`).
+* **DATABASE\_URL**: The full PostgresQL database uri as provided in example.
+* **SENTRY\_DSN**: Sentry DNS for Sentry error logging to catch production issues.
 
-### Security Note
+#### Security Note
 
-It is paramount that sensitive variables such as AUTHORIZATION and DATABASE_URL are secured and not exposed to unauthorized personnel or systems. Employ stringent security practices like utilizing secrets management tools, employing strict access controls, and conducting periodic security audits to ensure the confidentiality and integrity of these critical data points.
+It is paramount that sensitive variables such as AUTHORIZATION and DATABASE\_URL are secured and not exposed to unauthorized personnel or systems. Employ stringent security practices like utilizing secrets management tools, employing strict access controls, and conducting periodic security audits to ensure the confidentiality and integrity of these critical data points.
 
-### Usage Note
+#### Usage Note
 
 To implement these configurations, developers need to create an `.env` file, using `.env.example` as a template, and supply the appropriate values for each variable, ensuring the secure and tailored operation of the server based on the specific deployment environment and use case.
 
 This environment configuration section can serve as a guide to developers, system administrators, and other stakeholders involved in the deployment and maintenance of the server, providing a structured view of the configurable elements that dictate the server’s functionality and security.
 
-## Running the app
+### Running the app
 
 ```bash
 # Clone the repository
@@ -68,11 +63,11 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-## Docker Usage
+### Docker Usage
 
 If you prefer to run the application inside a Docker container, we've provided a Docker image for convenience. The image is available at `ghcr.io/ixofoundation/ixo-message-relayer:v0.0.1` and an example docker-compose file is below for reference:
 
-### docker-compose.yaml
+#### docker-compose.yaml
 
 ```yaml
 version: '3.7'
@@ -110,20 +105,20 @@ services:
       - ./prisma/migrations/20230301091449_init/:/docker-entrypoint-initdb.d/
 ```
 
-## API Documentation
+### API Documentation
 
-### POST `/login/create`
+#### POST `/login/create`
 
 This endpoint is utilized by the mobile app to store login request data on the server. Upon scanning a QR code generated by the SDK, the mobile app initiates a login request by sending the relevant data to this endpoint. The login data is stored on the server under a unique hash identifier generated by the SDK, which facilitates subsequent polling by the SDK to retrieve this data for user login. The endpoint is protected by an authorization mechanism to ensure that only the mobile app can upload login data.
 
-#### Parameters
+**Parameters**
 
-- `hash`: A unique identifier for the login request.
-- `secureHash`: A secure hash generated by hashing the `hash` and a `secureNonce`.
-- `data`: The login request data.
-- `success`: A boolean indicating the success status of the login request.
+* `hash`: A unique identifier for the login request.
+* `secureHash`: A secure hash generated by hashing the `hash` and a `secureNonce`.
+* `data`: The login request data.
+* `success`: A boolean indicating the success status of the login request.
 
-#### Request Body
+**Request Body**
 
 ```json
 {
@@ -134,7 +129,7 @@ This endpoint is utilized by the mobile app to store login request data on the s
 }
 ```
 
-#### Response Body
+**Response Body**
 
 ```json
 {
@@ -145,13 +140,13 @@ This endpoint is utilized by the mobile app to store login request data on the s
 }
 ```
 
-#### Response Properties
+**Response Properties**
 
-- **success**: Indicates whether the request to server was successful.
-- **data**:
-  - **message**: A message explaining the success or failure of the request.
+* **success**: Indicates whether the request to server was successful.
+* **data**:
+  * **message**: A message explaining the success or failure of the request.
 
-#### Usage
+**Usage**
 
 ```bash
 curl -X POST https://[server-address]/login/create \
@@ -159,16 +154,16 @@ curl -X POST https://[server-address]/login/create \
 -d '{"hash": "uniqueHash", "secureHash": "secureHashValue", "data": { ... }, "success": true}'
 ```
 
-### POST `/login/fetch`
+#### POST `/login/fetch`
 
 This endpoint facilitates the retrieval of login request data that was previously stored on the server by the mobile app. The SDK polls this endpoint to fetch the login data for a user based on a unique hash identifier. The server validates the request by hashing the provided hash and a secureNonce to ensure it matches the stored secureHash, thereby affirming the authenticity of the user making the request. Upon validation, the server returns the login data to the SDK and deletes the data from the server to maintain data cleanliness.
 
-#### Parameters
+**Parameters**
 
-- `hash`: A unique identifier for the login request.
-- `secureNonce`: A secure nonce generated by the SDK.
+* `hash`: A unique identifier for the login request.
+* `secureNonce`: A secure nonce generated by the SDK.
 
-#### Request Body
+**Request Body**
 
 ```json
 {
@@ -177,7 +172,7 @@ This endpoint facilitates the retrieval of login request data that was previousl
 }
 ```
 
-#### Response Body
+**Response Body**
 
 ```json
 {
@@ -191,16 +186,16 @@ This endpoint facilitates the retrieval of login request data that was previousl
 }
 ```
 
-#### Response Properties
+**Response Properties**
 
-- **success**: Indicates whether the request to server was successful.
-- **code**: A code indicating whether the SDK should continue polling (418 if it should continue).
-- **data**:
-  - **message**: A message explaining the success or failure of the request.
-  - **data**: The login data
-  - **success**: Wether the login was a sucess or fail due to rejection on mobile for example
+* **success**: Indicates whether the request to server was successful.
+* **code**: A code indicating whether the SDK should continue polling (418 if it should continue).
+* **data**:
+  * **message**: A message explaining the success or failure of the request.
+  * **data**: The login data
+  * **success**: Wether the login was a sucess or fail due to rejection on mobile for example
 
-#### Usage
+**Usage**
 
 ```bash
 curl -X POST https://[server-address]/login/fetch \
@@ -208,20 +203,20 @@ curl -X POST https://[server-address]/login/fetch \
 -d '{"hash": "uniqueHash", "secureNonce": "secureNonceValue"}'
 ```
 
-### POST `/transaction/create`
+#### POST `/transaction/create`
 
 This endpoint is utilized by the SDK to store transaction request data on the server. The SDK initiates a transaction request by sending the relevant data, along with a unique hash identifier (which is also the hash of the transaction data), to this endpoint. This hash facilitates subsequent retrieval of this data by the mobile app for signing and broadcasting the transaction. The endpoint validates the request by hashing the provided transaction data and ensuring it matches the provided hash, thereby affirming the authenticity of the transaction data.
 
-#### Parameters
+**Parameters**
 
-- `hash`: A unique identifier for the transaction request which is also the hash of the transaction data.
-- `address`: The address involved in the transaction.
-- `did`: The decentralized identifier involved in the transaction.
-- `pubkey`: The public key of the user initiating the transaction.
-- `txBodyHex`: The hexadecimal encoded raw txBodyBytes which can be encoded from the registry exported from @ixo/impactxclient-sdk npm package (eg registry.encodeTxBody({ messages, memo }))
-- `timestamp`: The stringified utc DateTime, add uniqueness for tx hash to prevent duplicates (eg new Date().toISOString())
+* `hash`: A unique identifier for the transaction request which is also the hash of the transaction data.
+* `address`: The address involved in the transaction.
+* `did`: The decentralized identifier involved in the transaction.
+* `pubkey`: The public key of the user initiating the transaction.
+* `txBodyHex`: The hexadecimal encoded raw txBodyBytes which can be encoded from the registry exported from @ixo/impactxclient-sdk npm package (eg registry.encodeTxBody({ messages, memo }))
+* `timestamp`: The stringified utc DateTime, add uniqueness for tx hash to prevent duplicates (eg new Date().toISOString())
 
-#### Request Body
+**Request Body**
 
 ```json
 {
@@ -234,7 +229,7 @@ This endpoint is utilized by the SDK to store transaction request data on the se
 }
 ```
 
-#### Response Body
+**Response Body**
 
 ```json
 {
@@ -246,14 +241,14 @@ This endpoint is utilized by the SDK to store transaction request data on the se
 }
 ```
 
-#### Response Properties
+**Response Properties**
 
-- **success**: Indicates whether the request to server was successful.
-- **data**:
-  - **message**: A message explaining the success or failure of the request.
-  - **validUntil**: The ISO 8601 formatted datetime string indicating the expiry time of the transaction request
+* **success**: Indicates whether the request to server was successful.
+* **data**:
+  * **message**: A message explaining the success or failure of the request.
+  * **validUntil**: The ISO 8601 formatted datetime string indicating the expiry time of the transaction request
 
-#### Usage
+**Usage**
 
 ```bash
 curl -X POST https://[server-address]/transaction/create \
@@ -261,15 +256,15 @@ curl -X POST https://[server-address]/transaction/create \
 -d '{"hash": "uniqueHash", "address": "userAddress", "did": "userDid", "pubkey": "userPubKey", "txBodyHex": "transactionBodyHex", "timestamp": "transactionTimestamp"}'
 ```
 
-### POST `/transaction/fetch`
+#### POST `/transaction/fetch`
 
 This endpoint allows the mobile app to fetch the data of a specific transaction request based on a unique hash identifier. After scanning the QR code displayed by the SDK, the mobile app uses the hash to retrieve the transaction data from this endpoint for signing and broadcasting the transaction. The endpoint is protected to ensure only the mobile app can access the transaction data, and it validates the request by checking the hash against the stored transaction data to ensure data authenticity.
 
-#### Parameters
+**Parameters**
 
-- `hash`: A unique identifier for the transaction request.
+* `hash`: A unique identifier for the transaction request.
 
-#### Request Body
+**Request Body**
 
 ```json
 {
@@ -277,7 +272,7 @@ This endpoint allows the mobile app to fetch the data of a specific transaction 
 }
 ```
 
-#### Response Body
+**Response Body**
 
 ```json
 {
@@ -293,18 +288,18 @@ This endpoint allows the mobile app to fetch the data of a specific transaction 
 }
 ```
 
-#### Response Properties
+**Response Properties**
 
-- **success**: Indicates whether the request to server was successful.
-- **data**:
-  - **message**: A message explaining the success or failure of the request.
-  - **address**: The address involved in the transaction.
-  - **did**: The decentralized identifier involved in the transaction.
-  - **pubkey**: The public key of the user initiating the transaction.
-  - **txBodyHex**: The hexadecimal representation of the raw encoded transaction body.
-  - **timestamp**: The The ISO 8601 formatted timestamp when the transaction request was created.
+* **success**: Indicates whether the request to server was successful.
+* **data**:
+  * **message**: A message explaining the success or failure of the request.
+  * **address**: The address involved in the transaction.
+  * **did**: The decentralized identifier involved in the transaction.
+  * **pubkey**: The public key of the user initiating the transaction.
+  * **txBodyHex**: The hexadecimal representation of the raw encoded transaction body.
+  * **timestamp**: The The ISO 8601 formatted timestamp when the transaction request was created.
 
-#### Usage
+**Usage**
 
 ```bash
 curl -X POST https://[server-address]/transaction/fetch \
@@ -312,17 +307,17 @@ curl -X POST https://[server-address]/transaction/fetch \
 -d '{"hash": "uniqueHash"}'
 ```
 
-### POST `/transaction/update`
+#### POST `/transaction/update`
 
 This endpoint is leveraged by the mobile app to update a transaction request's data on the server following the signing and broadcasting of the transaction. The mobile app sends the transaction response data to this endpoint, which then updates the corresponding transaction request record on the server. The endpoint is protected to ensure only the mobile app can update the transaction data.
 
-#### Parameters
+**Parameters**
 
-- `hash`: A unique identifier for the transaction request.
-- `data`: The response data of the transaction.
-- `success`: A boolean indicating whether the transaction was successful or failed.
+* `hash`: A unique identifier for the transaction request.
+* `data`: The response data of the transaction.
+* `success`: A boolean indicating whether the transaction was successful or failed.
 
-#### Request Body
+**Request Body**
 
 ```json
 {
@@ -332,7 +327,7 @@ This endpoint is leveraged by the mobile app to update a transaction request's d
 }
 ```
 
-#### Response Body
+**Response Body**
 
 ```json
 {
@@ -343,13 +338,13 @@ This endpoint is leveraged by the mobile app to update a transaction request's d
 }
 ```
 
-#### Response Properties
+**Response Properties**
 
-- **success**: Indicates whether the request to server was successful.
-- **data**:
-  - **message**: A message explaining the success or failure of the request.
+* **success**: Indicates whether the request to server was successful.
+* **data**:
+  * **message**: A message explaining the success or failure of the request.
 
-#### Usage
+**Usage**
 
 ```bash
 curl -X POST https://[server-address]/transaction/update \
@@ -357,15 +352,15 @@ curl -X POST https://[server-address]/transaction/update \
 -d '{"hash": "uniqueHash", "data": "transactionResponseData", "success": true}'
 ```
 
-### POST `/transaction/response`
+#### POST `/transaction/response`
 
 This endpoint is utilized by the SDK to poll the server for a response to a specific transaction request. By providing the unique hash identifier for the transaction, the SDK can retrieve the response data updated by the mobile app. This endpoint facilitates the flow where after the mobile app signs and broadcasts the transaction, and updates the server with the response data, the SDK polls this endpoint to obtain the response.
 
-#### Parameters
+**Parameters**
 
-- `hash`: A unique identifier for the transaction request.
+* `hash`: A unique identifier for the transaction request.
 
-#### Request Body
+**Request Body**
 
 ```json
 {
@@ -373,7 +368,7 @@ This endpoint is utilized by the SDK to poll the server for a response to a spec
 }
 ```
 
-#### Response Body
+**Response Body**
 
 ```json
 {
@@ -387,16 +382,16 @@ This endpoint is utilized by the SDK to poll the server for a response to a spec
 }
 ```
 
-#### Response Properties
+**Response Properties**
 
-- **success**: Indicates whether the request to server was successful.
-- **code**: A code indicating whether the SDK should continue polling (418 if it should continue).
-- **data**:
-  - **message**: A message explaining the success or failure of the request.
-  - **data**: The response data of the transaction.
-  - **success**: Whether the transaction was a success or fail due to rejection on mobile for example.
+* **success**: Indicates whether the request to server was successful.
+* **code**: A code indicating whether the SDK should continue polling (418 if it should continue).
+* **data**:
+  * **message**: A message explaining the success or failure of the request.
+  * **data**: The response data of the transaction.
+  * **success**: Whether the transaction was a success or fail due to rejection on mobile for example.
 
-#### Usage
+**Usage**
 
 ```bash
 curl -X POST https://[server-address]/transaction/response \
@@ -404,6 +399,6 @@ curl -X POST https://[server-address]/transaction/response \
 -d '{"hash": "uniqueHash"}'
 ```
 
-## 📃 License
+### 📃 License
 
-This SDK is licensed under the Apache 2 License. See the [LICENSE](/LICENSE) file for more information.
+This SDK is licensed under the Apache 2 License. See the [LICENSE](../../LICENSE/) file for more information.

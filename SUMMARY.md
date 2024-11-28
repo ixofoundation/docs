@@ -7,9 +7,10 @@
 * [Welcome to The Internet of Impacts](start/what-is-ixo.md)
 * [FAQs](start/faqs.md)
 * [Glossary](start/glossary.md)
-* [Other resources](start/other-resources.md)
+* [Other resources](start/other-resources/README.md)
+  * [Security](start/other-resources/security.md)
 
-## The Internet of Impact <a href="#ixo" id="ixo"></a>
+## The Internet of Impacts <a href="#ixo" id="ixo"></a>
 
 * [Abstract](ixo/abstract.md)
 * [Purpose](ixo/purpose/README.md)
@@ -150,10 +151,14 @@
 ## DEVELOPERS
 
 * [Introduction](developers/introduction.md)
-* [ixo Blockchain](developers/getting-started/README.md)
+* [ixo Blockchain (new)](developers/ixo-blockchain-new/README.md)
+  * [ixo Blockchain (old)](developers/getting-started/README.md)
   * [ixo Blockchain Interfaces](developers/getting-started/ixo-blockchain-interfaces.md)
-* [ixo MultiClient SDK](developers/ixo-multiclient-sdk/README.md)
-  * [ixo MultiClient SDK Node Package](https://www.npmjs.com/package/@ixo/impactxclient-sdk)
+* [ixo Software Development Kits - SDKs](developers/ixo-software-development-kits-sdks/README.md)
+  * [ixo Multi Client SDK](developers/ixo-multiclient-sdk/README.md)
+    * [ixo MultiClient SDK Node Package](https://www.npmjs.com/package/@ixo/impactxclient-sdk)
+  * [ixo SignX SDK](developers/ixo-signx/README.md)
+    * [ixo Message Relayer](developers/ixo-message-relayer/README.md)
 * [JAMBO](developers/jambo.md)
 * [ixo Mobile Client](developers/ixo-mobile-client.md)
 * [Market Relayer](developers/market-relayer/README.md)
