@@ -15,6 +15,9 @@
     },
     "markdown": {
       "rootDir": ".",
+      "include": [  
+        "**/*.md"
+      ]
     },
     "image": {
       "rootDir": "assets/images"
