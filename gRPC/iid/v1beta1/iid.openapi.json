@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "w5w6yv1sm7274"
+  },
+  "info": {
+    "title": "ixo/iid/v1beta1/iid.proto",
+    "version": "version not set"
+  },
+  "servers": [],
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Any": {
+        "additionalProperties": {},
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "j6ugqr9qpmmxu"
+        }
+      },
+      "Status": {
+        "properties": {
+          "code": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "details": {
+            "items": {
+              "$ref": "#/components/schemas/Any",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "rqubss2i239ng"
+        }
+      }
+    }
+  }
+}

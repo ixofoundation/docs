@@ -1,0 +1,278 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "561e584a899fe"
+  },
+  "info": {
+    "title": "ixo/claims/v1beta1/tx.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "Msg"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {},
+  "definitions": {
+    "Any": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "CW20Payment": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string",
+          "format": "uint64",
+          "title": "chose uint64 for now as amounts should be small enough to fit in a\nuint64(max 18446744073709551615)"
+        }
+      }
+    },
+    "Coin": {
+      "type": "object",
+      "properties": {
+        "denom": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        }
+      },
+      "description": "Coin defines a token with a denomination and an amount.\n\nNOTE: The amount field is an Int which implements the custom method\nsignatures required by gogoproto."
+    },
+    "CollectionIntentOptions": {
+      "type": "string",
+      "enum": [
+        "ALLOW",
+        "DENY",
+        "REQUIRED"
+      ],
+      "default": "ALLOW",
+      "description": " - ALLOW: Allow: Intents can be made for claims, but claims can also be made without\nintents.\n - DENY: Deny: Intents cannot be made for claims for the collection.\n - REQUIRED: Required: Claims cannot be made without an associated intent. An intent is\nmandatory before a claim can be submitted."
+    },
+    "CollectionState": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "PAUSED",
+        "CLOSED"
+      ],
+      "default": "OPEN"
+    },
+    "Contract1155Payment": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "tokenId": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "DisputeData": {
+      "type": "object",
+      "properties": {
+        "uri": {
+          "type": "string",
+          "title": "dispute link ***.ipfs"
+        },
+        "type": {
+          "type": "string"
+        },
+        "proof": {
+          "type": "string"
+        },
+        "encrypted": {
+          "type": "boolean"
+        }
+      }
+    },
+    "EvaluationStatus": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "APPROVED",
+        "REJECTED",
+        "DISPUTED",
+        "INVALIDATED"
+      ],
+      "default": "PENDING"
+    },
+    "Input": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "coins": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Coin"
+          }
+        }
+      },
+      "description": "Input models transaction input."
+    },
+    "MsgClaimIntentResponse": {
+      "type": "object",
+      "properties": {
+        "intentId": {
+          "type": "string",
+          "description": "Resulting intent id."
+        },
+        "expireAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timeout period for the intent. If the claim is not submitted by this time,\nthe intent expires."
+        }
+      },
+      "description": "MsgClaimIntentResponse defines the response after submitting an intent."
+    },
+    "MsgCreateCollectionResponse": {
+      "type": "object"
+    },
+    "MsgDisputeClaimResponse": {
+      "type": "object"
+    },
+    "MsgEvaluateClaimResponse": {
+      "type": "object"
+    },
+    "MsgSubmitClaimResponse": {
+      "type": "object"
+    },
+    "MsgUpdateCollectionDatesResponse": {
+      "type": "object"
+    },
+    "MsgUpdateCollectionIntentsResponse": {
+      "type": "object"
+    },
+    "MsgUpdateCollectionPaymentsResponse": {
+      "type": "object"
+    },
+    "MsgUpdateCollectionStateResponse": {
+      "type": "object"
+    },
+    "MsgWithdrawPaymentResponse": {
+      "type": "object"
+    },
+    "Output": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "coins": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Coin"
+          }
+        }
+      },
+      "description": "Output models transaction outputs."
+    },
+    "Payment": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "type": "string",
+          "title": "account is the entity account address from which the payment will be made"
+        },
+        "amount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Coin"
+          }
+        },
+        "contract1155Payment": {
+          "$ref": "#/definitions/Contract1155Payment",
+          "title": "if empty(nil) then no contract payment, not allowed for Evaluation Payment"
+        },
+        "timeoutNs": {
+          "type": "string",
+          "title": "timeout after claim/evaluation to create authZ for payment, if 0 then\nimmediate direct payment"
+        },
+        "cw20Payment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/CW20Payment"
+          },
+          "title": "cw20 payments, can be empty or multiple"
+        },
+        "isOraclePayment": {
+          "type": "boolean",
+          "title": "boolean to indicate if the payment is for oracle payments, aka it will go\nthrough network fees split NOTE: if true the payment can only have amount\nvalues(Native coins), no cw20 payments allowed then"
+        }
+      }
+    },
+    "PaymentType": {
+      "type": "string",
+      "enum": [
+        "SUBMISSION",
+        "APPROVAL",
+        "EVALUATION",
+        "REJECTION"
+      ],
+      "default": "SUBMISSION"
+    },
+    "Payments": {
+      "type": "object",
+      "properties": {
+        "submission": {
+          "$ref": "#/definitions/Payment"
+        },
+        "evaluation": {
+          "$ref": "#/definitions/Payment"
+        },
+        "approval": {
+          "$ref": "#/definitions/Payment"
+        },
+        "rejection": {
+          "$ref": "#/definitions/Payment",
+          "title": "Payment penalty = 5;"
+        }
+      }
+    },
+    "Status": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Any"
+          }
+        }
+      }
+    }
+  }
+}

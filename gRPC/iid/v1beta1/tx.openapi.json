@@ -1,0 +1,367 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "65r1kjc0c2pfp"
+  },
+  "info": {
+    "title": "ixo/iid/v1beta1/tx.proto",
+    "version": "version not set"
+  },
+  "servers": [],
+  "paths": {},
+  "components": {
+    "schemas": {
+      "AccordedRight": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "mechanism": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "vzvgefb3awu3v"
+        }
+      },
+      "Any": {
+        "additionalProperties": {},
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "n9utekcz73i1q"
+        }
+      },
+      "Context": {
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "val": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "naz3fuywxlwfj"
+        }
+      },
+      "LinkedClaim": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "encrypted": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "proof": {
+            "type": "string"
+          },
+          "right": {
+            "type": "string"
+          },
+          "serviceEndpoint": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "q3om734f8j5ud"
+        }
+      },
+      "LinkedEntity": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "4h86upzaxhek6"
+        }
+      },
+      "LinkedResource": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "encrypted": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "mediaType": {
+            "type": "string"
+          },
+          "proof": {
+            "type": "string"
+          },
+          "right": {
+            "type": "string"
+          },
+          "serviceEndpoint": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "p21n3ev9g1ip7"
+        }
+      },
+      "MsgAddAccordedRightResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "5n053fc12ibie"
+        }
+      },
+      "MsgAddControllerResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "2ge508vp01qid"
+        }
+      },
+      "MsgAddIidContextResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "mucqtu7b6o4xh"
+        }
+      },
+      "MsgAddLinkedClaimResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "jwb66xcdcldrf"
+        }
+      },
+      "MsgAddLinkedEntityResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "v2hzeypdiw0ca"
+        }
+      },
+      "MsgAddLinkedResourceResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "80oxjh2avwqts"
+        }
+      },
+      "MsgAddServiceResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "d0uorqamfe5cd"
+        }
+      },
+      "MsgAddVerificationResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "jp3gls4pzlrfn"
+        }
+      },
+      "MsgCreateIidDocumentResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "hmoq3uorshjkw"
+        }
+      },
+      "MsgDeactivateIIDResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "w6mzyzdqy8vxt"
+        }
+      },
+      "MsgDeleteAccordedRightResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "vp9p975tgrxr5"
+        }
+      },
+      "MsgDeleteControllerResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "z6i4hcx5tnfkt"
+        }
+      },
+      "MsgDeleteIidContextResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "fn2y2ztahrj6w"
+        }
+      },
+      "MsgDeleteLinkedClaimResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "a3o66kgucdasd"
+        }
+      },
+      "MsgDeleteLinkedEntityResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "s7nj1td9x4m0c"
+        }
+      },
+      "MsgDeleteLinkedResourceResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "8vlr64boo9pvv"
+        }
+      },
+      "MsgDeleteServiceResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "kmsxlv3ckae29"
+        }
+      },
+      "MsgRevokeVerificationResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "xm15ey90weoh1"
+        }
+      },
+      "MsgSetVerificationRelationshipsResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "8zg6qtsgm4zbd"
+        }
+      },
+      "MsgUpdateIidDocumentResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "y4vi1hl76xcp3"
+        }
+      },
+      "Service": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serviceEndpoint": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "8xm0aywmpyjrl"
+        }
+      },
+      "Status": {
+        "properties": {
+          "code": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "details": {
+            "items": {
+              "$ref": "#/components/schemas/Any",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "h5u51v0yau80o"
+        }
+      },
+      "Verification": {
+        "properties": {
+          "context": {
+            "items": {
+              "type": "string"
+            },
+            "title": "additional contexts (json ld schemas)",
+            "type": "array"
+          },
+          "method": {
+            "$ref": "#/components/schemas/VerificationMethod",
+            "description": "public key associated with the did document."
+          },
+          "relationships": {
+            "description": "relationships that the method is allowed into.",
+            "items": {
+              "type": "string"
+            },
+            "title": "verificationRelationships defines which relationships\nare allowed to use the verification method",
+            "type": "array"
+          }
+        },
+        "title": "Verification is a message that allows to assign a verification method\nto one or more verification relationships",
+        "type": "object",
+        "x-stoplight": {
+          "id": "t8hv4wiewz8xm"
+        }
+      },
+      "VerificationMethod": {
+        "properties": {
+          "blockchainAccountID": {
+            "type": "string"
+          },
+          "controller": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "publicKeyBase58": {
+            "type": "string"
+          },
+          "publicKeyHex": {
+            "type": "string"
+          },
+          "publicKeyMultibase": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "toqxpm1kr0ma8"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Msg"
+    }
+  ]
+}

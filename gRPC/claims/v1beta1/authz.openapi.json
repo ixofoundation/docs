@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "kv9p2yf256nls"
+  },
+  "info": {
+    "title": "ixo/claims/v1beta1/authz.proto",
+    "version": "version not set"
+  },
+  "servers": [],
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Any": {
+        "additionalProperties": {},
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "njoof0fza8hp0"
+        }
+      },
+      "Status": {
+        "properties": {
+          "code": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "details": {
+            "items": {
+              "$ref": "#/components/schemas/Any",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "ibb3khzlr1seb"
+        }
+      }
+    }
+  }
+}

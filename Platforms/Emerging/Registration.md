@@ -32,6 +32,8 @@ To create a new entity, use the function `msgCreateEntity`. The structure of thi
 [TODO: Add Message Struct]
 ```
 
+[msgCreateEntity](../../gRPC/entity/v1beta1/tx.swagger.json)
+
 Other chain services include:
 - **msgEditEntity**: To edit an existing entity.
 - **msgTransferEntity**: To transfer ownership of an entity.
@@ -39,8 +41,14 @@ Other chain services include:
 ## Protocol Templates
 The Emerging Platform includes a collection of Protocol Templates specific to the domain. These define schemas for claims, credentials, data models, documentation templates, and entity class properties. To view available protocols, query the Blocksync chain index database for the Emerging Market Relayer identifier and filter entities of type `Protocol`.
 
-```
-TODO: API call for the GraphQL query
+```graphql
+query EntitiesByRelayerNodeAndType {
+  entities(
+    filter: {relayerNode: {equalTo: "did:ixo:entity:a1fcead81eab2f1158a726597d872413"}, type: {equalTo: "protocol"}}
+  ) {
+    totalCount
+  }
+}
 ```
 
 ## Governance
