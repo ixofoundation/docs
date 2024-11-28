@@ -8,17 +8,17 @@
     {
       "type": "item",
       "title": "API Reference",
-      "uri": "/docs/API Reference.md"
+      "uri": "/API Reference.md"
     },
     {
       "type": "item",
       "title": "Authentication",
-      "uri": "/docs/Authentication.md"
+      "uri": "/Authentication.md"
     },
     {
       "type": "item",
       "title": "Errors",
-      "uri": "/docs/Errors.md"
+      "uri": "/Errors.md"
     }
      ]
     },
@@ -33,67 +33,67 @@
         {
           "type": "item",
           "title": "Audits",
-          "uri": "/docs/Platforms/Emerging/Audits.md"
+          "uri": "/Platforms/Emerging/Audits.md"
         },
         {
           "type": "item",
           "title": "Claims",
-          "uri": "/docs/Platforms/Emerging/Claims Submissions.md"
+          "uri": "/Platforms/Emerging/Claims Submissions.md"
         },
         {
           "type": "item",
           "title": "Claims-Verifications",
-          "uri": "/docs/Platforms/Emerging/Claims-Verifications.md"
+          "uri": "/Platforms/Emerging/Claims-Verifications.md"
         },
         {
           "type": "item",
           "title": "Credits-Issuance",
-          "uri": "/docs/Platforms/Emerging/Credits-Issuance.md"
+          "uri": "/Platforms/Emerging/Credits-Issuance.md"
         },
         {
           "type": "item",
           "title": "Credits-Retirements",
-          "uri": "/docs/Platforms/Emerging/Credits-Retirements.md"
+          "uri": "/Platforms/Emerging/Credits-Retirements.md"
         },
         {
           "type": "item",
           "title": "Device Usage Monitoring",
-          "uri": "/docs/Platforms/Emerging/Device Usage Monitoring.md"
+          "uri": "/Platforms/Emerging/Device Usage Monitoring.md"
         },
         {
           "type": "item",
           "title": "Digital-Vouchers",
-          "uri": "/docs/Platforms/Emerging/Digital-Vouchers.md"
+          "uri": "/Platforms/Emerging/Digital-Vouchers.md"
         },
         {
           "type": "item",
           "title": "dMRV Registry",
-          "uri": "/docs/Platforms/Emerging/dMRV Registry.md"
+          "uri": "/Platforms/Emerging/dMRV Registry.md"
         },
         {
           "type": "item",
           "title": "Internationally-Transferred Mitigation Outcomes (ITMOS)",
-          "uri": "/docs/Platforms/Emerging/ITMOs.md"
+          "uri": "/Platforms/Emerging/ITMOs.md"
         },
         {
           "type": "item",
           "title": "Registration",
-          "uri": "/docs/Platforms/Emerging/Registration.md"
+          "uri": "/Platforms/Emerging/Registration.md"
         },
         {
           "type": "item",
           "title": "Reporting",
-          "uri": "/docs/Platforms/Emerging/Reporting.md"
+          "uri": "/Platforms/Emerging/Reporting.md"
         },
         {
           "type": "item",
           "title": "Self-Certification",
-          "uri": "/docs/Platforms/Emerging/Self-Certification.md"
+          "uri": "/Platforms/Emerging/Self-Certification.md"
         },
         {
           "type": "item",
           "title": "Validation-and-Verification Bodies",
-          "uri": "/docs/Platforms/Emerging/Validation-and-Verification.md"
+          "uri": "/Platforms/Emerging/Validation-and-Verification.md"
         }
       ]
     }
@@ -105,13 +105,13 @@
     },
     {
       "type": "item",
-      "title": "Blocksync GraphQL API",
-      "uri": "/Blocksync GraphQL API.yaml"
+      "title": "GraphQL API",
+      "uri": "/GraphQL API.yaml"
     },
     {
       "type": "item",
-      "title": "IXO - gRPC Gateway docs",
-      "uri": "/IXO - gRPC Gateway docs.yaml"
+      "title": "gRPC Gateway",
+      "uri": "/gRPC Gateway.yaml"
     },
     {
       "type": "divider",

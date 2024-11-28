@@ -1,5 +1,23 @@
 {
-  "exclude": [],
+  "exclude": [
+        ".gitbook/*.md",
+        ".github/*.md",
+        "concepts/*.md",
+        "developer-tools/*.md",
+        "developers/*.md",
+        "guides/*.md",
+        "ixo/*.md",
+        "models/*.md",
+        "policies/*.md",
+        "portals/*.md",
+        "purpose/*.md",
+        "research/*.md",
+        "resources/*.md",
+        "services/*.md",
+        "start/*.md",
+        "README.md",
+        "SUMMARY.md"
+  ],
   "formats": {
     "openapi": {
       "rootDir": "reference",
@@ -15,7 +33,7 @@
     },
     "markdown": {
       "rootDir": ".",
-      "include": [  
+      "include": [
         "**/*.md"
       ]
     },
