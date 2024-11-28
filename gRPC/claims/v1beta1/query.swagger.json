@@ -1,0 +1,1086 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "d6a0b9f9c47b9"
+  },
+  "info": {
+    "title": "ixo/claims/v1beta1/query.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "Query"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/ixo/claims/claim/{id}": {
+      "get": {
+        "operationId": "Claim",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryClaimResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/claims": {
+      "get": {
+        "operationId": "ClaimList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryClaimListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagination.key",
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "byte"
+          },
+          {
+            "name": "pagination.offset",
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.limit",
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.countTotal",
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "pagination.reverse",
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/collection/{id}": {
+      "get": {
+        "operationId": "Collection",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryCollectionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/collections": {
+      "get": {
+        "operationId": "CollectionList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryCollectionListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagination.key",
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "byte"
+          },
+          {
+            "name": "pagination.offset",
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.limit",
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.countTotal",
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "pagination.reverse",
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/dispute/{proof}": {
+      "get": {
+        "operationId": "Dispute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryDisputeResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "proof",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/disputes": {
+      "get": {
+        "operationId": "DisputeList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryDisputeListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagination.key",
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "byte"
+          },
+          {
+            "name": "pagination.offset",
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.limit",
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.countTotal",
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "pagination.reverse",
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/intent/{agentAddress}/{collectionId}/{id}": {
+      "get": {
+        "operationId": "Intent",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryIntentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "agentAddress",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "collectionId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/intents": {
+      "get": {
+        "operationId": "IntentList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryIntentListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagination.key",
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "byte"
+          },
+          {
+            "name": "pagination.offset",
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.limit",
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.countTotal",
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "pagination.reverse",
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "tags": [
+          "Query"
+        ]
+      }
+    },
+    "/ixo/claims/params": {
+      "get": {
+        "summary": "Parameters queries the parameters of the module.",
+        "operationId": "Params",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryParamsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "tags": [
+          "Query"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Any": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "CW20Payment": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string",
+          "format": "uint64",
+          "title": "chose uint64 for now as amounts should be small enough to fit in a\nuint64(max 18446744073709551615)"
+        }
+      }
+    },
+    "ClaimPayments": {
+      "type": "object",
+      "properties": {
+        "submission": {
+          "$ref": "#/definitions/PaymentStatus"
+        },
+        "evaluation": {
+          "$ref": "#/definitions/PaymentStatus"
+        },
+        "approval": {
+          "$ref": "#/definitions/PaymentStatus"
+        },
+        "rejection": {
+          "$ref": "#/definitions/PaymentStatus",
+          "title": "PaymentStatus penalty = 5;"
+        }
+      }
+    },
+    "Coin": {
+      "type": "object",
+      "properties": {
+        "denom": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        }
+      },
+      "description": "Coin defines a token with a denomination and an amount.\n\nNOTE: The amount field is an Int which implements the custom method\nsignatures required by gogoproto."
+    },
+    "CollectionIntentOptions": {
+      "type": "string",
+      "enum": [
+        "ALLOW",
+        "DENY",
+        "REQUIRED"
+      ],
+      "default": "ALLOW",
+      "description": " - ALLOW: Allow: Intents can be made for claims, but claims can also be made without\nintents.\n - DENY: Deny: Intents cannot be made for claims for the collection.\n - REQUIRED: Required: Claims cannot be made without an associated intent. An intent is\nmandatory before a claim can be submitted."
+    },
+    "CollectionState": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "PAUSED",
+        "CLOSED"
+      ],
+      "default": "OPEN"
+    },
+    "Contract1155Payment": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "tokenId": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "DisputeData": {
+      "type": "object",
+      "properties": {
+        "uri": {
+          "type": "string",
+          "title": "dispute link ***.ipfs"
+        },
+        "type": {
+          "type": "string"
+        },
+        "proof": {
+          "type": "string"
+        },
+        "encrypted": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Evaluation": {
+      "type": "object",
+      "properties": {
+        "claimId": {
+          "type": "string",
+          "title": "claim_id indicates which Claim this evaluation is for"
+        },
+        "collectionId": {
+          "type": "string",
+          "title": "collection_id indicates to which Collection the claim being evaluated\nbelongs to"
+        },
+        "oracle": {
+          "type": "string",
+          "title": "oracle is the DID of the Oracle entity that evaluates the claim"
+        },
+        "agentDid": {
+          "type": "string",
+          "title": "agent is the DID of the agent that submits the evaluation"
+        },
+        "agentAddress": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/EvaluationStatus",
+          "title": "status is the evaluation status expressed as an integer (2=approved,\n3=rejected, ...)"
+        },
+        "reason": {
+          "type": "integer",
+          "format": "int64",
+          "title": "reason is the code expressed as an integer, for why the evaluation result\nwas given (codes defined by evaluator)"
+        },
+        "verificationProof": {
+          "type": "string",
+          "title": "verificationProof is the cid of the evaluation Verfiable Credential"
+        },
+        "evaluationDate": {
+          "type": "string",
+          "format": "date-time",
+          "title": "evaluationDate is the date and time that the claim evaluation was submitted\non-chain"
+        },
+        "amount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Coin"
+          },
+          "title": "if both amount and cw20 amount are empty then use default by Collection\ncustom amount specified by evaluator for claim approval"
+        },
+        "cw20Payment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/CW20Payment"
+          },
+          "title": "custom cw20 payments specified by evaluator for claim approval"
+        }
+      }
+    },
+    "EvaluationStatus": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "APPROVED",
+        "REJECTED",
+        "DISPUTED",
+        "INVALIDATED"
+      ],
+      "default": "PENDING"
+    },
+    "IntentStatus": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "FULFILLED",
+        "EXPIRED"
+      ],
+      "default": "ACTIVE",
+      "title": "- ACTIVE: Active: Intent is created and active, payments have been transferred to\nescrow if there is any\n - FULFILLED: Fulfilled: Intent is fulfilled, was used to create a claim and funds will\nbe released on claim APPROVAL, or funds will be reverted on claim REJECTION\nor DISPUTE\n - EXPIRED: Expired: Intent has expired, payments have been transferred back out of\nescrow"
+    },
+    "PageRequest": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "format": "byte",
+          "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set."
+        },
+        "offset": {
+          "type": "string",
+          "format": "uint64",
+          "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set."
+        },
+        "limit": {
+          "type": "string",
+          "format": "uint64",
+          "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app."
+        },
+        "countTotal": {
+          "type": "boolean",
+          "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set."
+        },
+        "reverse": {
+          "type": "boolean",
+          "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43"
+        }
+      },
+      "description": "message SomeRequest {\n         Foo some_parameter = 1;\n         PageRequest pagination = 2;\n }",
+      "title": "PageRequest is to be embedded in gRPC request messages for efficient\npagination. Ex:"
+    },
+    "PageResponse": {
+      "type": "object",
+      "properties": {
+        "nextKey": {
+          "type": "string",
+          "format": "byte",
+          "description": "next_key is the key to be passed to PageRequest.key to\nquery the next page most efficiently. It will be empty if\nthere are no more results."
+        },
+        "total": {
+          "type": "string",
+          "format": "uint64",
+          "title": "total is total number of results available if PageRequest.count_total\nwas set, its value is undefined otherwise"
+        }
+      },
+      "description": "PageResponse is to be embedded in gRPC response messages where the\ncorresponding request message has used PageRequest.\n\n message SomeResponse {\n         repeated Bar results = 1;\n         PageResponse page = 2;\n }"
+    },
+    "Payment": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "type": "string",
+          "title": "account is the entity account address from which the payment will be made"
+        },
+        "amount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Coin"
+          }
+        },
+        "contract1155Payment": {
+          "$ref": "#/definitions/Contract1155Payment",
+          "title": "if empty(nil) then no contract payment, not allowed for Evaluation Payment"
+        },
+        "timeoutNs": {
+          "type": "string",
+          "title": "timeout after claim/evaluation to create authZ for payment, if 0 then\nimmediate direct payment"
+        },
+        "cw20Payment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/CW20Payment"
+          },
+          "title": "cw20 payments, can be empty or multiple"
+        },
+        "isOraclePayment": {
+          "type": "boolean",
+          "title": "boolean to indicate if the payment is for oracle payments, aka it will go\nthrough network fees split NOTE: if true the payment can only have amount\nvalues(Native coins), no cw20 payments allowed then"
+        }
+      }
+    },
+    "PaymentStatus": {
+      "type": "string",
+      "enum": [
+        "NO_PAYMENT",
+        "PROMISED",
+        "AUTHORIZED",
+        "GUARANTEED",
+        "PAID",
+        "FAILED",
+        "DISPUTED_PAYMENT"
+      ],
+      "default": "NO_PAYMENT",
+      "title": "- PROMISED: Promised: Agent is contracted to receive payment\n - AUTHORIZED: Authorized: Authz set up, no guarantee\n - GUARANTEED: Guaranteed: Escrow set up with funds blocked\n - PAID: Paid: Funds have been paid\n - FAILED: Failed: Payment failed, most probably due to insufficient funds\n - DISPUTED_PAYMENT: DisputedPayment: Payment disputed"
+    },
+    "Payments": {
+      "type": "object",
+      "properties": {
+        "submission": {
+          "$ref": "#/definitions/Payment"
+        },
+        "evaluation": {
+          "$ref": "#/definitions/Payment"
+        },
+        "approval": {
+          "$ref": "#/definitions/Payment"
+        },
+        "rejection": {
+          "$ref": "#/definitions/Payment",
+          "title": "Payment penalty = 5;"
+        }
+      }
+    },
+    "QueryClaimListResponse": {
+      "type": "object",
+      "properties": {
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1beta1.Claim"
+          }
+        },
+        "pagination": {
+          "$ref": "#/definitions/PageResponse"
+        }
+      }
+    },
+    "QueryClaimResponse": {
+      "type": "object",
+      "properties": {
+        "claim": {
+          "$ref": "#/definitions/v1beta1.Claim"
+        }
+      }
+    },
+    "QueryCollectionListResponse": {
+      "type": "object",
+      "properties": {
+        "collections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1beta1.Collection"
+          }
+        },
+        "pagination": {
+          "$ref": "#/definitions/PageResponse"
+        }
+      }
+    },
+    "QueryCollectionResponse": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "$ref": "#/definitions/v1beta1.Collection"
+        }
+      }
+    },
+    "QueryDisputeListResponse": {
+      "type": "object",
+      "properties": {
+        "disputes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1beta1.Dispute"
+          }
+        },
+        "pagination": {
+          "$ref": "#/definitions/PageResponse"
+        }
+      }
+    },
+    "QueryDisputeResponse": {
+      "type": "object",
+      "properties": {
+        "dispute": {
+          "$ref": "#/definitions/v1beta1.Dispute"
+        }
+      }
+    },
+    "QueryIntentListResponse": {
+      "type": "object",
+      "properties": {
+        "intents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1beta1.Intent"
+          }
+        },
+        "pagination": {
+          "$ref": "#/definitions/PageResponse"
+        }
+      }
+    },
+    "QueryIntentResponse": {
+      "type": "object",
+      "properties": {
+        "intent": {
+          "$ref": "#/definitions/v1beta1.Intent"
+        }
+      }
+    },
+    "QueryParamsResponse": {
+      "type": "object",
+      "properties": {
+        "params": {
+          "$ref": "#/definitions/claims.v1beta1.Params",
+          "description": "params holds all the parameters of this module."
+        }
+      }
+    },
+    "Status": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Any"
+          }
+        }
+      }
+    },
+    "claims.v1beta1.Params": {
+      "type": "object",
+      "properties": {
+        "collectionSequence": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "ixoAccount": {
+          "type": "string"
+        },
+        "networkFeePercentage": {
+          "type": "string"
+        },
+        "nodeFeePercentage": {
+          "type": "string"
+        },
+        "intentSequence": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "v1beta1.Claim": {
+      "type": "object",
+      "properties": {
+        "collectionId": {
+          "type": "string",
+          "title": "collection_id indicates to which Collection this claim belongs"
+        },
+        "agentDid": {
+          "type": "string",
+          "title": "agent is the DID of the agent submitting the claim"
+        },
+        "agentAddress": {
+          "type": "string"
+        },
+        "submissionDate": {
+          "type": "string",
+          "format": "date-time",
+          "title": "submissionDate is the date and time that the claim was submitted on-chain"
+        },
+        "claimId": {
+          "type": "string",
+          "title": "claimID is the unique identifier of the claim in the cid hash format"
+        },
+        "evaluation": {
+          "$ref": "#/definitions/Evaluation",
+          "title": "evaluation is the result of one or more claim evaluations"
+        },
+        "paymentsStatus": {
+          "$ref": "#/definitions/ClaimPayments",
+          "title": "payments_status is the status of the payments for the claim"
+        },
+        "useIntent": {
+          "type": "boolean",
+          "title": "intent_id is the id of the intent for this claim, if any"
+        },
+        "amount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Coin"
+          },
+          "title": "NOTE: if both amount and cw20 amount are empty then use default by\nCollection custom amount specified by service agent for claim approval"
+        },
+        "cw20Payment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/CW20Payment"
+          },
+          "title": "NOTE: if both amount and cw20 amount are empty then use default by\nCollection custom cw20 payments specified by service agent for claim\napproval"
+        }
+      }
+    },
+    "v1beta1.Collection": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "collection id is the incremented internal id for the collection of claims"
+        },
+        "entity": {
+          "type": "string",
+          "title": "entity is the DID of the entity for which the claims are being created"
+        },
+        "admin": {
+          "type": "string",
+          "title": "admin is the account address that will authorize or revoke agents and\npayments (the grantor), and can update the collection"
+        },
+        "protocol": {
+          "type": "string",
+          "title": "protocol is the DID of the claim protocol"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time",
+          "title": "startDate is the date after which claims may be submitted"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date-time",
+          "title": "endDate is the date after which no more claims may be submitted (no endDate\nis allowed)"
+        },
+        "quota": {
+          "type": "string",
+          "format": "uint64",
+          "title": "quota is the maximum number of claims that may be submitted, 0 is unlimited"
+        },
+        "count": {
+          "type": "string",
+          "format": "uint64",
+          "title": "count is the number of claims already submitted (internally calculated)"
+        },
+        "evaluated": {
+          "type": "string",
+          "format": "uint64",
+          "title": "evaluated is the number of claims that have been evaluated (internally\ncalculated)"
+        },
+        "approved": {
+          "type": "string",
+          "format": "uint64",
+          "title": "approved is the number of claims that have been evaluated and approved\n(internally calculated)"
+        },
+        "rejected": {
+          "type": "string",
+          "format": "uint64",
+          "title": "rejected is the number of claims that have been evaluated and rejected\n(internally calculated)"
+        },
+        "disputed": {
+          "type": "string",
+          "format": "uint64",
+          "title": "disputed is the number of claims that have disputed status (internally\ncalculated)"
+        },
+        "state": {
+          "$ref": "#/definitions/CollectionState",
+          "title": "state is the current state of this Collection (open, paused, closed)"
+        },
+        "payments": {
+          "$ref": "#/definitions/Payments",
+          "title": "payments is the amount paid for claim submission, evaluation, approval, or\nrejection"
+        },
+        "signer": {
+          "type": "string",
+          "title": "signer address"
+        },
+        "invalidated": {
+          "type": "string",
+          "format": "uint64",
+          "title": "invalidated is the number of claims that have been evaluated as invalid\n(internally calculated)"
+        },
+        "escrowAccount": {
+          "type": "string",
+          "title": "escrow_account is the escrow account address for this collection created at\ncollection creation, current purpose is to transfer payments to escrow\naccount for GUARANTEED payments through intents"
+        },
+        "intents": {
+          "$ref": "#/definitions/CollectionIntentOptions",
+          "title": "intents is the option for intents for this collection (allow, deny,\nrequired)"
+        }
+      }
+    },
+    "v1beta1.Dispute": {
+      "type": "object",
+      "properties": {
+        "subjectId": {
+          "type": "string"
+        },
+        "type": {
+          "type": "integer",
+          "format": "int32",
+          "title": "type is expressed as an integer, interpreted by the client"
+        },
+        "data": {
+          "$ref": "#/definitions/DisputeData"
+        }
+      }
+    },
+    "v1beta1.Intent": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "id is the incremented internal id for the intent"
+        },
+        "agentDid": {
+          "type": "string",
+          "description": "The service agent's DID (Decentralized Identifier)."
+        },
+        "agentAddress": {
+          "type": "string",
+          "description": "The service agent's address."
+        },
+        "collectionId": {
+          "type": "string",
+          "description": "The id of the collection this intent is linked to."
+        },
+        "claimId": {
+          "type": "string",
+          "title": "claim_id (optional, set when claim is submitted)"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time the intent was created."
+        },
+        "expireAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timeout period for the intent. If the claim is not submitted by this time,\nthe intent expires."
+        },
+        "status": {
+          "$ref": "#/definitions/IntentStatus",
+          "description": "Status of the intent (e.g., \"ACTIVE\" or \"FULFILLED\")."
+        },
+        "amount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Coin"
+          },
+          "description": "The payment amount the agent intends to claim, if any."
+        },
+        "cw20Payment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/CW20Payment"
+          },
+          "description": "The CW20Payment amount the agent intends to claim, if any."
+        },
+        "fromAddress": {
+          "type": "string",
+          "title": "the address the escrow payment came from"
+        },
+        "escrowAddress": {
+          "type": "string",
+          "title": "the escrow account address"
+        }
+      },
+      "description": "Intent defines the structure for a service agent's claim intent."
+    }
+  }
+}

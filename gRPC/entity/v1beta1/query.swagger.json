@@ -1,0 +1,821 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "vzeem444wxz7s"
+  },
+  "info": {
+    "title": "ixo/entity/v1beta1/query.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "Query"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/ixo/entity": {
+      "get": {
+        "operationId": "EntityList",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryEntityListResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagination.key",
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "byte"
+          },
+          {
+            "name": "pagination.offset",
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.limit",
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "pagination.countTotal",
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "pagination.reverse",
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "tags": [
+          "Query"
+        ],
+        "x-stoplight": {
+          "id": "eorhsl6gsis4n"
+        }
+      }
+    },
+    "/ixo/entity/params": {
+      "get": {
+        "operationId": "Params",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryParamsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "x-stoplight": {
+          "id": "f3oly2f1k4q9g"
+        }
+      }
+    },
+    "/ixo/entity/{id}": {
+      "get": {
+        "operationId": "Entity",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryEntityResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ],
+        "x-stoplight": {
+          "id": "4jkt0aum843ev"
+        }
+      }
+    },
+    "/ixo/entity/{id}/iiddocument": {
+      "get": {
+        "operationId": "EntityIidDocument",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryEntityIidDocumentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ],
+        "x-stoplight": {
+          "id": "03zxmyluk3ez0"
+        }
+      }
+    },
+    "/ixo/entity/{id}/metadata": {
+      "get": {
+        "operationId": "EntityMetaData",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryEntityMetadataResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ],
+        "x-stoplight": {
+          "id": "6peq9g2h31ua5"
+        }
+      }
+    },
+    "/ixo/entity/{id}/verified": {
+      "get": {
+        "operationId": "EntityVerified",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/QueryEntityVerifiedResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Query"
+        ],
+        "x-stoplight": {
+          "id": "p76uhz3xi1rm8"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AccordedRight": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "mechanism": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "service": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "07ahj5vkb0fej"
+      }
+    },
+    "Any": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com. As of May 2023, there are no widely used type server\nimplementations and no plans to implement one.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
+        }
+      },
+      "additionalProperties": {},
+      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(&foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n    // or ...\n    if (any.isSameTypeAs(Foo.getDefaultInstance())) {\n      foo = any.unpack(Foo.getDefaultInstance());\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := &pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := &pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": <string>,\n      \"lastName\": <string>\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }",
+      "x-stoplight": {
+        "id": "rd3czx3hnnvd5"
+      }
+    },
+    "Context": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "val": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "gz08zvoy2dym8"
+      }
+    },
+    "EntityAccount": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "fd03kneskmr87"
+      }
+    },
+    "EntityMetadata": {
+      "type": "object",
+      "properties": {
+        "versionId": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "EntityMetadata defines metadata associated to a entity",
+      "x-stoplight": {
+        "id": "4c4wwkyqhcze5"
+      }
+    },
+    "IidDocument": {
+      "type": "object",
+      "properties": {
+        "context": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Context"
+          },
+          "description": "@context is spec for did document."
+        },
+        "id": {
+          "type": "string",
+          "description": "id represents the id for the did document."
+        },
+        "controller": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "A DID controller is an entity that is authorized to make changes to a DID\ndocument. cfr. https://www.w3.org/TR/did-core/#did-controller"
+        },
+        "verificationMethod": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/VerificationMethod"
+          },
+          "title": "A DID document can express verification methods,\nsuch as cryptographic public keys, which can be used\nto authenticate or authorize interactions with the DID subject or\nassociated parties. https://www.w3.org/TR/did-core/#verification-methods"
+        },
+        "service": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Service"
+          },
+          "title": "Services are used in DID documents to express ways of communicating\nwith the DID subject or associated entities.\nhttps://www.w3.org/TR/did-core/#services"
+        },
+        "authentication": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "NOTE: below this line there are the relationships\nAuthentication represents public key associated with the did document.\ncfr. https://www.w3.org/TR/did-core/#authentication"
+        },
+        "assertionMethod": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Used to specify how the DID subject is expected to express claims,\nsuch as for the purposes of issuing a Verifiable Credential.\ncfr. https://www.w3.org/TR/did-core/#assertion"
+        },
+        "keyAgreement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "used to specify how an entity can generate encryption material\nin order to transmit confidential information intended for the DID subject.\nhttps://www.w3.org/TR/did-core/#key-agreement"
+        },
+        "capabilityInvocation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Used to specify a verification method that might be used by the DID subject\nto invoke a cryptographic capability, such as the authorization\nto update the DID Document.\nhttps://www.w3.org/TR/did-core/#capability-invocation"
+        },
+        "capabilityDelegation": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Used to specify a mechanism that might be used by the DID subject\nto delegate a cryptographic capability to another party.\nhttps://www.w3.org/TR/did-core/#capability-delegation"
+        },
+        "linkedResource": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/LinkedResource"
+          }
+        },
+        "linkedClaim": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/LinkedClaim"
+          }
+        },
+        "accordedRight": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/AccordedRight"
+          }
+        },
+        "linkedEntity": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/LinkedEntity"
+          }
+        },
+        "alsoKnownAs": {
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/IidMetadata",
+          "title": "Metadata concerning the IidDocument such as versionId, created, updated and\ndeactivated"
+        }
+      },
+      "x-stoplight": {
+        "id": "fs8go5sh1z3ss"
+      }
+    },
+    "IidMetadata": {
+      "type": "object",
+      "properties": {
+        "versionId": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deactivated": {
+          "type": "boolean"
+        }
+      },
+      "x-stoplight": {
+        "id": "nmpoc46p2vqny"
+      }
+    },
+    "LinkedClaim": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "serviceEndpoint": {
+          "type": "string"
+        },
+        "proof": {
+          "type": "string"
+        },
+        "encrypted": {
+          "type": "string"
+        },
+        "right": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "b1zspgqdo1rb7"
+      }
+    },
+    "LinkedEntity": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "relationship": {
+          "type": "string"
+        },
+        "service": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "smn5c4h3fx1rr"
+      }
+    },
+    "LinkedResource": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "serviceEndpoint": {
+          "type": "string"
+        },
+        "proof": {
+          "type": "string"
+        },
+        "encrypted": {
+          "type": "string"
+        },
+        "right": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "aqw9mdtquewgg"
+      }
+    },
+    "PageRequest": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "format": "byte",
+          "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set."
+        },
+        "offset": {
+          "type": "string",
+          "format": "uint64",
+          "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set."
+        },
+        "limit": {
+          "type": "string",
+          "format": "uint64",
+          "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app."
+        },
+        "countTotal": {
+          "type": "boolean",
+          "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set."
+        },
+        "reverse": {
+          "type": "boolean",
+          "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43"
+        }
+      },
+      "description": "message SomeRequest {\n         Foo some_parameter = 1;\n         PageRequest pagination = 2;\n }",
+      "title": "PageRequest is to be embedded in gRPC request messages for efficient\npagination. Ex:",
+      "x-stoplight": {
+        "id": "taxkhj2qpampe"
+      }
+    },
+    "PageResponse": {
+      "type": "object",
+      "properties": {
+        "nextKey": {
+          "type": "string",
+          "format": "byte",
+          "description": "next_key is the key to be passed to PageRequest.key to\nquery the next page most efficiently. It will be empty if\nthere are no more results."
+        },
+        "total": {
+          "type": "string",
+          "format": "uint64",
+          "title": "total is total number of results available if PageRequest.count_total\nwas set, its value is undefined otherwise"
+        }
+      },
+      "description": "PageResponse is to be embedded in gRPC response messages where the\ncorresponding request message has used PageRequest.\n\n message SomeResponse {\n         repeated Bar results = 1;\n         PageResponse page = 2;\n }",
+      "x-stoplight": {
+        "id": "43cfywfwz1cku"
+      }
+    },
+    "QueryEntityIidDocumentResponse": {
+      "type": "object",
+      "properties": {
+        "iidDocument": {
+          "$ref": "#/definitions/IidDocument"
+        }
+      },
+      "x-stoplight": {
+        "id": "21xf3psokz5eq"
+      }
+    },
+    "QueryEntityListResponse": {
+      "type": "object",
+      "properties": {
+        "entities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1beta1.Entity"
+          }
+        },
+        "pagination": {
+          "$ref": "#/definitions/PageResponse"
+        }
+      },
+      "x-stoplight": {
+        "id": "w6h5zamerpzqv"
+      }
+    },
+    "QueryEntityMetadataResponse": {
+      "type": "object",
+      "properties": {
+        "entity": {
+          "$ref": "#/definitions/v1beta1.Entity"
+        }
+      },
+      "x-stoplight": {
+        "id": "7rkdpgcfhw63c"
+      }
+    },
+    "QueryEntityResponse": {
+      "type": "object",
+      "properties": {
+        "entity": {
+          "$ref": "#/definitions/v1beta1.Entity"
+        },
+        "iidDocument": {
+          "$ref": "#/definitions/IidDocument"
+        }
+      },
+      "x-stoplight": {
+        "id": "mxcqglky8srd8"
+      }
+    },
+    "QueryEntityVerifiedResponse": {
+      "type": "object",
+      "properties": {
+        "entityVerified": {
+          "type": "boolean"
+        }
+      },
+      "x-stoplight": {
+        "id": "rc76vg0jd0c7e"
+      }
+    },
+    "QueryParamsResponse": {
+      "type": "object",
+      "properties": {
+        "params": {
+          "$ref": "#/definitions/v1beta1.Params",
+          "description": "params holds all the parameters of this module."
+        }
+      },
+      "x-stoplight": {
+        "id": "2rxn75w6y8971"
+      }
+    },
+    "Service": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "serviceEndpoint": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "hglfiskmm8lmb"
+      }
+    },
+    "Status": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Any"
+          }
+        }
+      },
+      "x-stoplight": {
+        "id": "0pwhk2b1dehbb"
+      }
+    },
+    "VerificationMethod": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "controller": {
+          "type": "string"
+        },
+        "blockchainAccountID": {
+          "type": "string"
+        },
+        "publicKeyHex": {
+          "type": "string"
+        },
+        "publicKeyMultibase": {
+          "type": "string"
+        },
+        "publicKeyBase58": {
+          "type": "string"
+        }
+      },
+      "x-stoplight": {
+        "id": "0z8hljjb5ooti"
+      }
+    },
+    "v1beta1.Entity": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "id represents the id for the entity document."
+        },
+        "type": {
+          "type": "string",
+          "title": "Type of entity, eg protocol or asset"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Start Date of the Entity as defined by the implementer and interpreted by\nClient applications"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date-time",
+          "title": "End Date of the Entity as defined by the implementer and interpreted by\nClient applications"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "title": "Status of the Entity as defined by the implementer and interpreted by\nClient applications"
+        },
+        "relayerNode": {
+          "type": "string",
+          "title": "Did of the operator through which the Entity was created"
+        },
+        "credentials": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Credentials of the entity to be verified"
+        },
+        "entityVerified": {
+          "type": "boolean",
+          "title": "Used as check whether the credentials of entity is verified"
+        },
+        "metadata": {
+          "$ref": "#/definitions/EntityMetadata",
+          "title": "Metadata concerning the Entity such as versionId, created, updated and\ndeactivated"
+        },
+        "accounts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/EntityAccount"
+          },
+          "title": "module accounts created for entity"
+        }
+      },
+      "x-stoplight": {
+        "id": "vql4m4uc4cl08"
+      }
+    },
+    "v1beta1.Params": {
+      "type": "object",
+      "properties": {
+        "nftContractAddress": {
+          "type": "string"
+        },
+        "nftContractMinter": {
+          "type": "string"
+        },
+        "createSequence": {
+          "type": "string",
+          "format": "uint64"
+        }
+      },
+      "x-stoplight": {
+        "id": "u0unvps3oin9t"
+      }
+    }
+  }
+}

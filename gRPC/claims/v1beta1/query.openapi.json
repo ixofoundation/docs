@@ -1,0 +1,1327 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "ynffzi657srlv"
+  },
+  "info": {
+    "title": "ixo/claims/v1beta1/query.proto",
+    "version": "version not set"
+  },
+  "servers": [],
+  "paths": {
+    "/ixo/claims/claim/{id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryClaimResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "Claim",
+        "x-stoplight": {
+          "id": "j874pupx2qz1j"
+        }
+      }
+    },
+    "/ixo/claims/claims": {
+      "get": {
+        "parameters": [
+          {
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "name": "pagination.key",
+            "required": false,
+            "schema": {
+              "format": "byte",
+              "type": "string"
+            }
+          },
+          {
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "name": "pagination.offset",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "name": "pagination.limit",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "name": "pagination.countTotal",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "name": "pagination.reverse",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryClaimListResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "ClaimList",
+        "x-stoplight": {
+          "id": "3jpm20pwk2fxm"
+        }
+      }
+    },
+    "/ixo/claims/collection/{id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryCollectionResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "Collection",
+        "x-stoplight": {
+          "id": "f5mkx2dnf6j9l"
+        }
+      }
+    },
+    "/ixo/claims/collections": {
+      "get": {
+        "parameters": [
+          {
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "name": "pagination.key",
+            "required": false,
+            "schema": {
+              "format": "byte",
+              "type": "string"
+            }
+          },
+          {
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "name": "pagination.offset",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "name": "pagination.limit",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "name": "pagination.countTotal",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "name": "pagination.reverse",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryCollectionListResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "CollectionList",
+        "x-stoplight": {
+          "id": "nhvkaprt84tg9"
+        }
+      }
+    },
+    "/ixo/claims/dispute/{proof}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "proof",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryDisputeResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "Dispute",
+        "x-stoplight": {
+          "id": "s3da5ph9k6fb2"
+        }
+      }
+    },
+    "/ixo/claims/disputes": {
+      "get": {
+        "parameters": [
+          {
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "name": "pagination.key",
+            "required": false,
+            "schema": {
+              "format": "byte",
+              "type": "string"
+            }
+          },
+          {
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "name": "pagination.offset",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "name": "pagination.limit",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "name": "pagination.countTotal",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "name": "pagination.reverse",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryDisputeListResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "DisputeList",
+        "x-stoplight": {
+          "id": "onf4n4fklws0a"
+        }
+      }
+    },
+    "/ixo/claims/intent/{agentAddress}/{collectionId}/{id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "agentAddress",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "collectionId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryIntentResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "Intent",
+        "x-stoplight": {
+          "id": "t9k1e04op9yim"
+        }
+      }
+    },
+    "/ixo/claims/intents": {
+      "get": {
+        "parameters": [
+          {
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "in": "query",
+            "name": "pagination.key",
+            "required": false,
+            "schema": {
+              "format": "byte",
+              "type": "string"
+            }
+          },
+          {
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "in": "query",
+            "name": "pagination.offset",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "in": "query",
+            "name": "pagination.limit",
+            "required": false,
+            "schema": {
+              "format": "uint64",
+              "type": "string"
+            }
+          },
+          {
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "in": "query",
+            "name": "pagination.countTotal",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "in": "query",
+            "name": "pagination.reverse",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryIntentListResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "IntentList",
+        "x-stoplight": {
+          "id": "2d5jqdfqt7kjr"
+        }
+      }
+    },
+    "/ixo/claims/params": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryParamsResponse"
+                }
+              }
+            },
+            "description": "A successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "An unexpected error response."
+          }
+        },
+        "tags": [
+          "Query"
+        ],
+        "operationId": "Params",
+        "summary": "Parameters queries the parameters of the module.",
+        "x-stoplight": {
+          "id": "scj00iqf7jnly"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Any": {
+        "additionalProperties": {},
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "579rmz1xoga3z"
+        }
+      },
+      "CW20Payment": {
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "amount": {
+            "format": "uint64",
+            "title": "chose uint64 for now as amounts should be small enough to fit in a\nuint64(max 18446744073709551615)",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "ndqs27my9b8kn"
+        }
+      },
+      "ClaimPayments": {
+        "properties": {
+          "approval": {
+            "$ref": "#/components/schemas/PaymentStatus"
+          },
+          "evaluation": {
+            "$ref": "#/components/schemas/PaymentStatus"
+          },
+          "rejection": {
+            "$ref": "#/components/schemas/PaymentStatus",
+            "title": "PaymentStatus penalty = 5;"
+          },
+          "submission": {
+            "$ref": "#/components/schemas/PaymentStatus"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "tj042825u2zsq"
+        }
+      },
+      "Coin": {
+        "description": "Coin defines a token with a denomination and an amount.\n\nNOTE: The amount field is an Int which implements the custom method\nsignatures required by gogoproto.",
+        "properties": {
+          "amount": {
+            "type": "string"
+          },
+          "denom": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "u7lex46ihkrwy"
+        }
+      },
+      "CollectionIntentOptions": {
+        "default": "ALLOW",
+        "description": " - ALLOW: Allow: Intents can be made for claims, but claims can also be made without\nintents.\n - DENY: Deny: Intents cannot be made for claims for the collection.\n - REQUIRED: Required: Claims cannot be made without an associated intent. An intent is\nmandatory before a claim can be submitted.",
+        "enum": [
+          "ALLOW",
+          "DENY",
+          "REQUIRED"
+        ],
+        "type": "string",
+        "x-stoplight": {
+          "id": "l3tt9b085g3ix"
+        }
+      },
+      "CollectionState": {
+        "default": "OPEN",
+        "enum": [
+          "OPEN",
+          "PAUSED",
+          "CLOSED"
+        ],
+        "type": "string",
+        "x-stoplight": {
+          "id": "ubuo5kiuz9th3"
+        }
+      },
+      "Contract1155Payment": {
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "amount": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "tokenId": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "u4rdowg848j9s"
+        }
+      },
+      "DisputeData": {
+        "properties": {
+          "encrypted": {
+            "type": "boolean"
+          },
+          "proof": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "uri": {
+            "title": "dispute link ***.ipfs",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "i4udnr7z30fkv"
+        }
+      },
+      "Evaluation": {
+        "properties": {
+          "agentAddress": {
+            "type": "string"
+          },
+          "agentDid": {
+            "title": "agent is the DID of the agent that submits the evaluation",
+            "type": "string"
+          },
+          "amount": {
+            "items": {
+              "$ref": "#/components/schemas/Coin",
+              "type": "object"
+            },
+            "title": "if both amount and cw20 amount are empty then use default by Collection\ncustom amount specified by evaluator for claim approval",
+            "type": "array"
+          },
+          "claimId": {
+            "title": "claim_id indicates which Claim this evaluation is for",
+            "type": "string"
+          },
+          "collectionId": {
+            "title": "collection_id indicates to which Collection the claim being evaluated\nbelongs to",
+            "type": "string"
+          },
+          "cw20Payment": {
+            "items": {
+              "$ref": "#/components/schemas/CW20Payment",
+              "type": "object"
+            },
+            "title": "custom cw20 payments specified by evaluator for claim approval",
+            "type": "array"
+          },
+          "evaluationDate": {
+            "format": "date-time",
+            "title": "evaluationDate is the date and time that the claim evaluation was submitted\non-chain",
+            "type": "string"
+          },
+          "oracle": {
+            "title": "oracle is the DID of the Oracle entity that evaluates the claim",
+            "type": "string"
+          },
+          "reason": {
+            "format": "int64",
+            "title": "reason is the code expressed as an integer, for why the evaluation result\nwas given (codes defined by evaluator)",
+            "type": "integer"
+          },
+          "status": {
+            "$ref": "#/components/schemas/EvaluationStatus",
+            "title": "status is the evaluation status expressed as an integer (2=approved,\n3=rejected, ...)"
+          },
+          "verificationProof": {
+            "title": "verificationProof is the cid of the evaluation Verfiable Credential",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "nojdwf4ytyqlw"
+        }
+      },
+      "EvaluationStatus": {
+        "default": "PENDING",
+        "enum": [
+          "PENDING",
+          "APPROVED",
+          "REJECTED",
+          "DISPUTED",
+          "INVALIDATED"
+        ],
+        "type": "string",
+        "x-stoplight": {
+          "id": "v2dypyhp424so"
+        }
+      },
+      "IntentStatus": {
+        "default": "ACTIVE",
+        "enum": [
+          "ACTIVE",
+          "FULFILLED",
+          "EXPIRED"
+        ],
+        "title": "- ACTIVE: Active: Intent is created and active, payments have been transferred to\nescrow if there is any\n - FULFILLED: Fulfilled: Intent is fulfilled, was used to create a claim and funds will\nbe released on claim APPROVAL, or funds will be reverted on claim REJECTION\nor DISPUTE\n - EXPIRED: Expired: Intent has expired, payments have been transferred back out of\nescrow",
+        "type": "string",
+        "x-stoplight": {
+          "id": "1bvmg9l4gvci8"
+        }
+      },
+      "PageRequest": {
+        "description": "message SomeRequest {\n         Foo some_parameter = 1;\n         PageRequest pagination = 2;\n }",
+        "properties": {
+          "countTotal": {
+            "description": "count_total is set to true  to indicate that the result set should include\na count of the total number of items available for pagination in UIs.\ncount_total is only respected when offset is used. It is ignored when key\nis set.",
+            "type": "boolean"
+          },
+          "key": {
+            "description": "key is a value returned in PageResponse.next_key to begin\nquerying the next page most efficiently. Only one of offset or key\nshould be set.",
+            "format": "byte",
+            "type": "string"
+          },
+          "limit": {
+            "description": "limit is the total number of results to be returned in the result page.\nIf left empty it will default to a value to be set by each app.",
+            "format": "uint64",
+            "type": "string"
+          },
+          "offset": {
+            "description": "offset is a numeric offset that can be used when key is unavailable.\nIt is less efficient than using key. Only one of offset or key should\nbe set.",
+            "format": "uint64",
+            "type": "string"
+          },
+          "reverse": {
+            "description": "reverse is set to true if results are to be returned in the descending order.\n\nSince: cosmos-sdk 0.43",
+            "type": "boolean"
+          }
+        },
+        "title": "PageRequest is to be embedded in gRPC request messages for efficient\npagination. Ex:",
+        "type": "object",
+        "x-stoplight": {
+          "id": "c4y0pdc1coanb"
+        }
+      },
+      "PageResponse": {
+        "description": "PageResponse is to be embedded in gRPC response messages where the\ncorresponding request message has used PageRequest.\n\n message SomeResponse {\n         repeated Bar results = 1;\n         PageResponse page = 2;\n }",
+        "properties": {
+          "nextKey": {
+            "description": "next_key is the key to be passed to PageRequest.key to\nquery the next page most efficiently. It will be empty if\nthere are no more results.",
+            "format": "byte",
+            "type": "string"
+          },
+          "total": {
+            "format": "uint64",
+            "title": "total is total number of results available if PageRequest.count_total\nwas set, its value is undefined otherwise",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "s1i9n7xfr0yen"
+        }
+      },
+      "Payment": {
+        "properties": {
+          "account": {
+            "title": "account is the entity account address from which the payment will be made",
+            "type": "string"
+          },
+          "amount": {
+            "items": {
+              "$ref": "#/components/schemas/Coin",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "contract1155Payment": {
+            "$ref": "#/components/schemas/Contract1155Payment",
+            "title": "if empty(nil) then no contract payment, not allowed for Evaluation Payment"
+          },
+          "cw20Payment": {
+            "items": {
+              "$ref": "#/components/schemas/CW20Payment",
+              "type": "object"
+            },
+            "title": "cw20 payments, can be empty or multiple",
+            "type": "array"
+          },
+          "isOraclePayment": {
+            "title": "boolean to indicate if the payment is for oracle payments, aka it will go\nthrough network fees split NOTE: if true the payment can only have amount\nvalues(Native coins), no cw20 payments allowed then",
+            "type": "boolean"
+          },
+          "timeoutNs": {
+            "title": "timeout after claim/evaluation to create authZ for payment, if 0 then\nimmediate direct payment",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "97ne8ewd1kfz2"
+        }
+      },
+      "PaymentStatus": {
+        "default": "NO_PAYMENT",
+        "enum": [
+          "NO_PAYMENT",
+          "PROMISED",
+          "AUTHORIZED",
+          "GUARANTEED",
+          "PAID",
+          "FAILED",
+          "DISPUTED_PAYMENT"
+        ],
+        "title": "- PROMISED: Promised: Agent is contracted to receive payment\n - AUTHORIZED: Authorized: Authz set up, no guarantee\n - GUARANTEED: Guaranteed: Escrow set up with funds blocked\n - PAID: Paid: Funds have been paid\n - FAILED: Failed: Payment failed, most probably due to insufficient funds\n - DISPUTED_PAYMENT: DisputedPayment: Payment disputed",
+        "type": "string",
+        "x-stoplight": {
+          "id": "6e0ylixnm7pfn"
+        }
+      },
+      "Payments": {
+        "properties": {
+          "approval": {
+            "$ref": "#/components/schemas/Payment"
+          },
+          "evaluation": {
+            "$ref": "#/components/schemas/Payment"
+          },
+          "rejection": {
+            "$ref": "#/components/schemas/Payment",
+            "title": "Payment penalty = 5;"
+          },
+          "submission": {
+            "$ref": "#/components/schemas/Payment"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "0f78y141fx5u9"
+        }
+      },
+      "QueryClaimListResponse": {
+        "properties": {
+          "claims": {
+            "items": {
+              "$ref": "#/components/schemas/v1beta1.Claim",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/PageResponse"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "o2jv2bh5u6reh"
+        }
+      },
+      "QueryClaimResponse": {
+        "properties": {
+          "claim": {
+            "$ref": "#/components/schemas/v1beta1.Claim"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "gtkdrmk7nher1"
+        }
+      },
+      "QueryCollectionListResponse": {
+        "properties": {
+          "collections": {
+            "items": {
+              "$ref": "#/components/schemas/v1beta1.Collection",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/PageResponse"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "iyw04crxeaoir"
+        }
+      },
+      "QueryCollectionResponse": {
+        "properties": {
+          "collection": {
+            "$ref": "#/components/schemas/v1beta1.Collection"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "pi30qrn0oluke"
+        }
+      },
+      "QueryDisputeListResponse": {
+        "properties": {
+          "disputes": {
+            "items": {
+              "$ref": "#/components/schemas/v1beta1.Dispute",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/PageResponse"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "xm9bfi2ywh0ij"
+        }
+      },
+      "QueryDisputeResponse": {
+        "properties": {
+          "dispute": {
+            "$ref": "#/components/schemas/v1beta1.Dispute"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "uk9ubli8slml9"
+        }
+      },
+      "QueryIntentListResponse": {
+        "properties": {
+          "intents": {
+            "items": {
+              "$ref": "#/components/schemas/v1beta1.Intent",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/PageResponse"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "11qtp7k1xt2u9"
+        }
+      },
+      "QueryIntentResponse": {
+        "properties": {
+          "intent": {
+            "$ref": "#/components/schemas/v1beta1.Intent"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "ccnwbwlxeqs25"
+        }
+      },
+      "QueryParamsResponse": {
+        "properties": {
+          "params": {
+            "$ref": "#/components/schemas/claims.v1beta1.Params",
+            "description": "params holds all the parameters of this module."
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "iv1v1dy2weo8r"
+        }
+      },
+      "Status": {
+        "properties": {
+          "code": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "details": {
+            "items": {
+              "$ref": "#/components/schemas/Any",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "m9qvbj3633wi0"
+        }
+      },
+      "claims.v1beta1.Params": {
+        "properties": {
+          "collectionSequence": {
+            "format": "uint64",
+            "type": "string"
+          },
+          "intentSequence": {
+            "format": "uint64",
+            "type": "string"
+          },
+          "ixoAccount": {
+            "type": "string"
+          },
+          "networkFeePercentage": {
+            "type": "string"
+          },
+          "nodeFeePercentage": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "fpira56k7vcnf"
+        }
+      },
+      "v1beta1.Claim": {
+        "properties": {
+          "agentAddress": {
+            "type": "string"
+          },
+          "agentDid": {
+            "title": "agent is the DID of the agent submitting the claim",
+            "type": "string"
+          },
+          "amount": {
+            "items": {
+              "$ref": "#/components/schemas/Coin",
+              "type": "object"
+            },
+            "title": "NOTE: if both amount and cw20 amount are empty then use default by\nCollection custom amount specified by service agent for claim approval",
+            "type": "array"
+          },
+          "claimId": {
+            "title": "claimID is the unique identifier of the claim in the cid hash format",
+            "type": "string"
+          },
+          "collectionId": {
+            "title": "collection_id indicates to which Collection this claim belongs",
+            "type": "string"
+          },
+          "cw20Payment": {
+            "items": {
+              "$ref": "#/components/schemas/CW20Payment",
+              "type": "object"
+            },
+            "title": "NOTE: if both amount and cw20 amount are empty then use default by\nCollection custom cw20 payments specified by service agent for claim\napproval",
+            "type": "array"
+          },
+          "evaluation": {
+            "$ref": "#/components/schemas/Evaluation",
+            "title": "evaluation is the result of one or more claim evaluations"
+          },
+          "paymentsStatus": {
+            "$ref": "#/components/schemas/ClaimPayments",
+            "title": "payments_status is the status of the payments for the claim"
+          },
+          "submissionDate": {
+            "format": "date-time",
+            "title": "submissionDate is the date and time that the claim was submitted on-chain",
+            "type": "string"
+          },
+          "useIntent": {
+            "title": "intent_id is the id of the intent for this claim, if any",
+            "type": "boolean"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "cb3aho6eobnet"
+        }
+      },
+      "v1beta1.Collection": {
+        "properties": {
+          "admin": {
+            "title": "admin is the account address that will authorize or revoke agents and\npayments (the grantor), and can update the collection",
+            "type": "string"
+          },
+          "approved": {
+            "format": "uint64",
+            "title": "approved is the number of claims that have been evaluated and approved\n(internally calculated)",
+            "type": "string"
+          },
+          "count": {
+            "format": "uint64",
+            "title": "count is the number of claims already submitted (internally calculated)",
+            "type": "string"
+          },
+          "disputed": {
+            "format": "uint64",
+            "title": "disputed is the number of claims that have disputed status (internally\ncalculated)",
+            "type": "string"
+          },
+          "endDate": {
+            "format": "date-time",
+            "title": "endDate is the date after which no more claims may be submitted (no endDate\nis allowed)",
+            "type": "string"
+          },
+          "entity": {
+            "title": "entity is the DID of the entity for which the claims are being created",
+            "type": "string"
+          },
+          "escrowAccount": {
+            "title": "escrow_account is the escrow account address for this collection created at\ncollection creation, current purpose is to transfer payments to escrow\naccount for GUARANTEED payments through intents",
+            "type": "string"
+          },
+          "evaluated": {
+            "format": "uint64",
+            "title": "evaluated is the number of claims that have been evaluated (internally\ncalculated)",
+            "type": "string"
+          },
+          "id": {
+            "title": "collection id is the incremented internal id for the collection of claims",
+            "type": "string"
+          },
+          "intents": {
+            "$ref": "#/components/schemas/CollectionIntentOptions",
+            "title": "intents is the option for intents for this collection (allow, deny,\nrequired)"
+          },
+          "invalidated": {
+            "format": "uint64",
+            "title": "invalidated is the number of claims that have been evaluated as invalid\n(internally calculated)",
+            "type": "string"
+          },
+          "payments": {
+            "$ref": "#/components/schemas/Payments",
+            "title": "payments is the amount paid for claim submission, evaluation, approval, or\nrejection"
+          },
+          "protocol": {
+            "title": "protocol is the DID of the claim protocol",
+            "type": "string"
+          },
+          "quota": {
+            "format": "uint64",
+            "title": "quota is the maximum number of claims that may be submitted, 0 is unlimited",
+            "type": "string"
+          },
+          "rejected": {
+            "format": "uint64",
+            "title": "rejected is the number of claims that have been evaluated and rejected\n(internally calculated)",
+            "type": "string"
+          },
+          "signer": {
+            "title": "signer address",
+            "type": "string"
+          },
+          "startDate": {
+            "format": "date-time",
+            "title": "startDate is the date after which claims may be submitted",
+            "type": "string"
+          },
+          "state": {
+            "$ref": "#/components/schemas/CollectionState",
+            "title": "state is the current state of this Collection (open, paused, closed)"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "zighysdzfc9e7"
+        }
+      },
+      "v1beta1.Dispute": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/DisputeData"
+          },
+          "subjectId": {
+            "type": "string"
+          },
+          "type": {
+            "format": "int32",
+            "title": "type is expressed as an integer, interpreted by the client",
+            "type": "integer"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "ofb2n5vaq1czn"
+        }
+      },
+      "v1beta1.Intent": {
+        "description": "Intent defines the structure for a service agent's claim intent.",
+        "properties": {
+          "agentAddress": {
+            "description": "The service agent's address.",
+            "type": "string"
+          },
+          "agentDid": {
+            "description": "The service agent's DID (Decentralized Identifier).",
+            "type": "string"
+          },
+          "amount": {
+            "description": "The payment amount the agent intends to claim, if any.",
+            "items": {
+              "$ref": "#/components/schemas/Coin",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "claimId": {
+            "title": "claim_id (optional, set when claim is submitted)",
+            "type": "string"
+          },
+          "collectionId": {
+            "description": "The id of the collection this intent is linked to.",
+            "type": "string"
+          },
+          "createdAt": {
+            "description": "The time the intent was created.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "cw20Payment": {
+            "description": "The CW20Payment amount the agent intends to claim, if any.",
+            "items": {
+              "$ref": "#/components/schemas/CW20Payment",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "escrowAddress": {
+            "title": "the escrow account address",
+            "type": "string"
+          },
+          "expireAt": {
+            "description": "Timeout period for the intent. If the claim is not submitted by this time,\nthe intent expires.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "fromAddress": {
+            "title": "the address the escrow payment came from",
+            "type": "string"
+          },
+          "id": {
+            "title": "id is the incremented internal id for the intent",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/IntentStatus",
+            "description": "Status of the intent (e.g., \"ACTIVE\" or \"FULFILLED\")."
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "n82wtjtdno060"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Query"
+    }
+  ]
+}

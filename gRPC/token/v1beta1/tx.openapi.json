@@ -1,0 +1,171 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "lgqf5kva6srhi"
+  },
+  "info": {
+    "title": "ixo/token/v1beta1/tx.proto",
+    "version": "version not set"
+  },
+  "servers": [],
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Any": {
+        "additionalProperties": {},
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "vcostnxq8d9z4"
+        }
+      },
+      "MintBatch": {
+        "properties": {
+          "amount": {
+            "title": "amount is the number of tokens to mint",
+            "type": "string"
+          },
+          "collection": {
+            "title": "did of collection (eg Supamoto Malawi)",
+            "type": "string"
+          },
+          "index": {
+            "title": "index is the unique identifier hexstring that identifies the token",
+            "type": "string"
+          },
+          "name": {
+            "title": "name is the token name, which must be unique (namespace), will be verified\nagainst Token name provided on msgCreateToken",
+            "type": "string"
+          },
+          "tokenData": {
+            "items": {
+              "$ref": "#/components/schemas/TokenData",
+              "type": "object"
+            },
+            "title": "tokenData is the linkedResources added to tokenMetadata when queried eg\n(credential link ***.ipfs)",
+            "type": "array"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "o9hgbolg1sce4"
+        }
+      },
+      "MsgCancelTokenResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "uwgk3dya3b7mq"
+        }
+      },
+      "MsgCreateTokenResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "ztjdrfpu895fm"
+        }
+      },
+      "MsgMintTokenResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "b665t4gclbnzc"
+        }
+      },
+      "MsgPauseTokenResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "bqzlpoppfyi7h"
+        }
+      },
+      "MsgRetireTokenResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "rjy7cteadz7fp"
+        }
+      },
+      "MsgStopTokenResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "3hdu7sw4z88wp"
+        }
+      },
+      "MsgTransferTokenResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "pwlnztmar46ba"
+        }
+      },
+      "Status": {
+        "properties": {
+          "code": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "details": {
+            "items": {
+              "$ref": "#/components/schemas/Any",
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "0ail7sburmfsq"
+        }
+      },
+      "TokenBatch": {
+        "properties": {
+          "amount": {
+            "title": "amount is the number of tokens to transfer",
+            "type": "string"
+          },
+          "id": {
+            "title": "id that identifies the token",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "qfuztz0fru05s"
+        }
+      },
+      "TokenData": {
+        "properties": {
+          "encrypted": {
+            "type": "boolean"
+          },
+          "id": {
+            "title": "did of entity to map token to",
+            "type": "string"
+          },
+          "proof": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "uri": {
+            "description": "credential link ***.ipfs",
+            "title": "media type value should always be \"application/json\"",
+            "type": "string"
+          }
+        },
+        "type": "object",
+        "x-stoplight": {
+          "id": "qbanqcuzduwj3"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Msg"
+    }
+  ]
+}

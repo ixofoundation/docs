@@ -3914,7 +3914,7 @@ paths:
               type: object
         required: true
       responses:
-        '200':
+        "200":
           content:
             application/json:
               schema:
@@ -3924,7 +3924,8 @@ paths:
                     nullable: true
                     properties:
                       edges:
-                        description: A list of edges which contains the `Entity` and cursor to aid in pagination.
+                        description: A list of edges which contains the `Entity` and cursor to aid in
+                          pagination.
                         items:
                           properties:
                             cursor:
@@ -4084,68 +4085,40 @@ paths:
                     type: object
                 type: object
           description: response
-      x-stoplight:
-        id: ind1pqwvil21c
   /ReadEntity:
     post:
       parameters: []
       operationId: readEntity
-      summary: ReadEntity
+      summary: Fetch entity details by ID
       requestBody:
         content:
+          description: |
+            This endpoint accepts a GraphQL query to fetch details of an entity. 
+            Use the `query` field to specify the operation, and `variables` to pass dynamic parameters.
+            The query supports fetching entity attributes such as ID, accounts, and metadata. 
           application/json:
             schema:
               properties:
                 query:
-                  example: |-
-                    query ReadEntity {
-                      entity(id: "did:ixo:entity:2f22535f8b179a51d77a0e302e68d35d") {
-                        accordedRight
-                        accounts
-                        alsoKnownAs
-                        assertionMethod
-                        authentication
-                        capabilityDelegation
-                        capabilityInvocation
-                        context
-                        controller
-                        credentials
-                        endDate
-                        entityVerified
-                        externalId
+                  type: string
+                  example: |
+                    query ReadEntity($id: ID!) {
+                      entity(id: $id) {
                         id
-                        iidById {
-                          accordedRight
-                          alsoKnownAs
-                          assertionMethod
-                          authentication
-                          capabilityDelegation
-                          capabilityInvocation
-                          context
-                          controller
-                          entityById {
-                            id
-                          }
-                          id
-                          keyAgreement
-                          linkedClaim
-                          linkedEntity
-                          linkedResource
-                          metadata
-                          service
-                          verificationMethod
-                        }
                       }
                     }
-                  type: string
+                  description: |
+                    The GraphQL query string. Use variables for dynamic inputs.
                 variables:
-                  additionalProperties: true
-                  nullable: true
                   type: object
+                  nullable: true
+                  additionalProperties: true
+                  description: |
+                    An optional object containing dynamic variables to parameterize the GraphQL query.
               required:
                 - query
               type: object
-        required: true
+            required: true
       responses:
         '200':
           content:
@@ -4307,6 +4280,5 @@ paths:
                         type: object
                     type: object
                 type: object
-          description: response
       x-stoplight:
         id: wtge2sl9wz767
