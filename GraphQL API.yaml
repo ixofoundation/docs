@@ -5,7 +5,7 @@ info:
   license:
     name: Apache 2.0
     url: 'https://www.apache.org/licenses/LICENSE-2.0'
-  title: Blocksync GraphQL API
+  title: GraphQL API
   version: 1.0.0
   description: 'GraphQL API exposed as REST endpoints. Note that all operations are POST requests to the GraphQL endpoint, regardless of the path name. The path names are for documentation purposes only.'
   contact:
