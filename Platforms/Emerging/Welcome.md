@@ -37,7 +37,9 @@ This offers a full-stack solution for:
 
 To begin using the Emerging Platform for Modern Energy Cooking:
 
-1. **Register an Account**: Download the Impacts X mobile app from the Apple App Store or Google Playstore to create your self-custodial digital account and cryptographic keys. To use the IXO Testnet, [TODO: Alwyn provide details on how to get a developer account and credentials]
+1. **Register an Account**: Download the Impacts X mobile app from the Apple App Store or Google Playstore to create your self-custodial digital account and cryptographic keys. To use the IXO Testnet, long-press on the `Confirm` button to reveal the PIN keypad. Use `2468` to reveal network options. Select `IXO Testnet`, close the modal by pressing `X` and tap `Confirm` to continue.
+![CleanShot 2024-11-29 at 07.06.06@2x.png](<../../assets/images/CleanShot 2024-11-29 at 07.06.06@2x.png>)
+
 2. **Obtain API Credentials**: Generate your API keys in the developer portal
 3. **Explore the Documentation**: Use this documentation to understand the platform's capabilities
 4. **Start Building**: Begin creating innovative Spatial Web solutions for Modern Energy Cooking and Emerging Households, using the Spatial Web platform tools and services
