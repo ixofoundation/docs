@@ -32,8 +32,6 @@ To create a new entity, use the function `msgCreateEntity`. The structure of thi
 [TODO: Add Message Struct]
 ```
 
-[msgCreateEntity](../../gRPC/entity/v1beta1/tx.swagger.json)
-
 Other chain services include:
 - **msgEditEntity**: To edit an existing entity.
 - **msgTransferEntity**: To transfer ownership of an entity.

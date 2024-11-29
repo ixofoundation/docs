@@ -23,13 +23,13 @@ Digital Identifiers in the registry are self-sovereign and all records are priva
 
 ## Registry Functions 
 The registry provides the following services for digital Measurement, Reporting, and Verification (dMRV) of Article 6 Mitigation Activities:
-1. [Registration]()
-2. [Credential Issuance]()
-3. [Claims Submissions]()
-4. [Claims Evaluations]()
-5. [Self-Certification]()
-6. [Credits Issuance]()
+1. [Registration](./Registration.md)
+2. [Credential Issuance](./Credits-Issuance.md)
+3. [Claims Submissions](./Claims-Submissions.md)
+4. [Claims Evaluations](Claims-Verifications.md)
+5. [Self-Certification](./Self-Certification.md)
+6. [Credits Issuance](./Credits-Issuance.md)
 7. [Credits Transfers]()
-8. [Credits Retirements]()
-9. [International Settlements]()
-10. [Audits]()
+8. [Credits Retirements](./Credits-Retirements.md)
+9. [International Settlements](./ITMOs.md)
+10. [Audits](./Audits.md)

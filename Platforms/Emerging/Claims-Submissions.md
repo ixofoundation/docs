@@ -1,5 +1,5 @@
 ---
-stoplight-id: szo7nmv96aa1s
+stoplight-id: tfoyzkf9nkdgr
 ---
 
 # Verifiable Claims
@@ -128,13 +128,13 @@ To implement Verifiable Claims in your application:
 1. **Install the IXO SDK**:
 
 ```bash
-npm install @ixo/sdk
+npm i @ixo/impactxclient-sdk
 ```
 
 2. **Import the necessary modules**:
 
 ```javascript
-import { VerifiableClaim, DID } from '@ixo/sdk';
+import { VerifiableClaim, DID } from '@ixo/impactxclient-sdk';
 ```
 
 3. **Create a new Verifiable Claim**:

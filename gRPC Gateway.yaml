@@ -22158,6 +22158,9 @@ paths:
 
 
 
+
+
+
              - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults
             to ASC in this case.
              - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order
@@ -40460,6 +40463,9 @@ paths:
 
 
 
+
+
+
                            - ALLOW: Allow: Intents can be made for claims, but claims can also be made without
                           intents.
                            - DENY: Deny: Intents cannot be made for claims for the collection.
@@ -40877,6 +40883,9 @@ paths:
                         intents:
                           default: ALLOW
                           description: |2-
+
+
+
 
 
 
@@ -68511,6 +68520,9 @@ components:
 
 
 
+
+
+
              - ALLOW: Allow: Intents can be made for claims, but claims can also be made without
             intents.
              - DENY: Deny: Intents cannot be made for claims for the collection.
@@ -68794,6 +68806,9 @@ components:
     ixo.claims.v1beta1.CollectionIntentOptions:
       default: ALLOW
       description: |2-
+
+
+
 
 
 
@@ -69888,6 +69903,9 @@ components:
 
 
 
+
+
+
                    - ALLOW: Allow: Intents can be made for claims, but claims can also be made without
                   intents.
                    - DENY: Deny: Intents cannot be made for claims for the collection.
@@ -70246,6 +70264,9 @@ components:
             intents:
               default: ALLOW
               description: |2-
+
+
+
 
 
 
@@ -70887,6 +70908,7 @@ components:
       type: object
       x-stoplight:
         id: xa674inf4balg
+      description: ''
     ixo.entity.v1beta1.EntityAccount:
       properties:
         address:
