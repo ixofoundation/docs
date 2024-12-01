@@ -2,13 +2,18 @@
   "collapseTableOfContents": false,
   "items": [
     {
-      "type": "group",
-      "title": "Introduction",
-      "items": [
+      "type": "divider",
+      "title": "introduction"
+    },
+    {
+      "type": "item",
+      "title": "Welcome",
+      "uri": "/Platforms/Emerging/Welcome.md"
+    },
     {
       "type": "item",
       "title": "API Reference",
-      "uri": "/API Reference.md"
+      "uri": "/API-Reference.md"
     },
     {
       "type": "item",
@@ -19,13 +24,31 @@
       "type": "item",
       "title": "Errors",
       "uri": "/Errors.md"
-    }
-     ]
     },
     {
-      "type": "group",
-      "title": "Platforms",
-      "items": [
+      "type": "item",
+      "title": "Pagination",
+      "uri": "/Pagination.md"
+    },
+    {
+      "type": "item",
+      "title": "Versioning",
+      "uri": "/Versioning.md"
+    },
+    {
+      "type": "item",
+      "title": "Blocksync GraphQL Queries",
+      "uri": "/GraphQL.md"
+    },
+    {
+      "type": "item",
+      "title": "Impact Hub gRPC Gateway",
+      "uri": "/gRPC.md"
+    },
+    {
+      "type": "divider",
+      "title": "platforms"
+    },
     {
       "type": "group",
       "title": "Emerging",
@@ -38,7 +61,7 @@
         {
           "type": "item",
           "title": "Claims",
-          "uri": "/Platforms/Emerging/Claims Submissions.md"
+          "uri": "/Platforms/Emerging/Claims-Submissions.md"
         },
         {
           "type": "item",
@@ -96,38 +119,6 @@
           "uri": "/Platforms/Emerging/Validation-and-Verification.md"
         }
       ]
-    }
-      ]
-    },
-    {
-      "type": "divider",
-      "title": "APIS"
-    },
-    {
-      "type": "item",
-      "title": "GraphQL API",
-      "uri": "/GraphQL API.yaml"
-    },
-    {
-      "type": "item",
-      "title": "gRPC Gateway",
-      "uri": "/gRPC Gateway.yaml"
-    },
-    {
-      "type": "divider",
-      "title": "Schemas"
-    },
-    {
-      "type": "group",
-      "title": "registry",
-      "items": [
-        {
-          "type": "item",
-          "title": "Credits Registry",
-          "uri": "/models/Credits-Registry.json"
-        }
-      ],
-      "itemsType": "model"
     }
   ]
 }
