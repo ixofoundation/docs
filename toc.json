@@ -8,12 +8,12 @@
     },
     {
       "type": "divider",
-      "title": "IXO World Spatial Web API"
+      "title": "API Reference"
     },
     {
       "type": "item",
-      "title": "API Reference",
-      "uri": "/API-Reference.md"
+      "title": "Overview",
+      "uri": "/API-Overview.md"
     },
     {
       "type": "item",
@@ -69,6 +69,42 @@
       "type": "item",
       "title": "Matrix Bots & App Services REST API",
       "uri": "/Matrix-Bots-App-Services-REST-API/Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "SDKs and Libraries"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/SDKs-and-Articles-Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "Best Practices"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/Best-Practices-Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "Use Cases"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/Use-Cases-Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "Tutorials"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/Tutorials-Overview.md"
     },
     {
       "type": "divider",

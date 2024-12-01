@@ -48,11 +48,11 @@ To begin using the Emerging Platform for Modern Energy Cooking:
 
 The documentation is organized into the following sections:
 
-- **API Reference**: Detailed information about available endpoints and authentication
-- **SDKs and Libraries**: Resources for integrating the platform into various programming languages
-- **Best Practices**: Guidelines for optimal use of the platform and its services
-- **Use Cases**: Real-world examples of applications built using the Emerging Platform
-- **Tutorials**: Step-by-step guides to help you get started with the platform
+- [**API Reference**](../../API-Reference-Overview.md): Detailed information about available endpoints and authentication
+- [**SDKs and Libraries**](../../SDKs-and-Articles-Overview.md): Resources for integrating the platform into various programming languages
+- [**Best Practices**](../../Best-Practices-Overview.md): Guidelines for optimal use of the platform and its services
+- [**Use Cases**](../../Use-Cases-Overview.md): Real-world examples of applications built using the Emerging Platform
+- [**Tutorials**](../../Tutorials-Overview.md): Step-by-step guides to help you get started with the platform
 
 ## Impacts of the Platform
 
