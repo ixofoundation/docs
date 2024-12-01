@@ -2,13 +2,13 @@
   "collapseTableOfContents": false,
   "items": [
     {
-      "type": "divider",
-      "title": "introduction"
-    },
-    {
       "type": "item",
       "title": "Welcome",
       "uri": "/Platforms/Emerging/Welcome.md"
+    },
+    {
+      "type": "divider",
+      "title": "IXO World Spatial Web API"
     },
     {
       "type": "item",
@@ -32,18 +32,43 @@
     },
     {
       "type": "item",
+      "title": "Idempotency",
+      "uri": "/Idempotency.md"
+    },
+    {
+      "type": "item",
+      "title": "Webhooks",
+      "uri": "/Webhooks.md"
+    },
+    {
+      "type": "item",
       "title": "Versioning",
       "uri": "/Versioning.md"
     },
     {
       "type": "item",
-      "title": "Blocksync GraphQL Queries",
-      "uri": "/GraphQL.md"
+      "title": "RPC API",
+      "uri": "/RPC-API/Overview.md"
     },
     {
       "type": "item",
-      "title": "Impact Hub gRPC Gateway",
-      "uri": "/gRPC.md"
+      "title": "gRPC Gateway",
+      "uri": "/gRPC-Gateway/Overview.md"
+    },
+    {
+      "type": "item",
+      "title": "Blocksync GraphQL API",
+      "uri": "/Blocksync-GraphQL-API/Overview.md"
+    },
+    {
+      "type": "item",
+      "title": "Matrix REST API",
+      "uri": "/Matrix-REST-API/Overview.md"
+    },
+    {
+      "type": "item",
+      "title": "Matrix Bots & App Services REST API",
+      "uri": "/Matrix-Bots-App-Services-REST-API/Overview.md"
     },
     {
       "type": "divider",
