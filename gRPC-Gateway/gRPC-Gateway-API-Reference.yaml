@@ -3,8 +3,66 @@ x-stoplight:
   id: xu38fh7rr23jp
 info:
   title: gRPC Gateway API Reference
-  description: A REST interface for state queries.
-  version: 1.0.0
+  version: v1.0.0
+  description: |
+    The **gRPC Gateway API Reference** provides a comprehensive guide to accessing and interacting with the IXO blockchain using a RESTful interface. This document serves as an essential resource for developers and integrators looking to perform state queries via the gRPC Gateway, which bridges the gap between gRPC and REST, making the API more accessible for web-based applications. It includes detailed information about the available endpoints, query parameters, response formats, and examples to facilitate efficient interaction with the blockchain data.
+
+    The following are the key IXO-specific endpoints available in this API reference:
+
+    - /ixo/bonds/bonds
+    - /ixo/bonds/bonds_detailed
+    - /ixo/bonds/params
+    - /ixo/bonds/{bond_did}
+    - /ixo/bonds/{bond_did}/alpha_maximums
+    - /ixo/bonds/{bond_did}/available_reserve
+    - /ixo/bonds/{bond_did}/batch
+    - /ixo/bonds/{bond_did}/buy_price/{bond_amount}
+    - /ixo/bonds/{bond_did}/current_price
+    - /ixo/bonds/{bond_did}/current_reserve
+    - /ixo/bonds/{bond_did}/last_batch
+    - /ixo/bonds/{bond_did}/price/{bond_amount}
+    - /ixo/bonds/{bond_did}/sell_return/{bond_amount}
+    - /ixo/bonds/{bond_did}/swap_return/{from_token_with_amount}/{to_token}
+    - /ixo/claims/claim/{id}
+    - /ixo/claims/claims
+    - /ixo/claims/collection/{id}
+    - /ixo/claims/collections
+    - /ixo/claims/dispute/{proof}
+    - /ixo/claims/disputes
+    - /ixo/claims/intent/{agentAddress}/{collectionId}/{id}
+    - /ixo/claims/intents
+    - /ixo/claims/params
+    - /ixo/entity
+    - /ixo/entity/params
+    - /ixo/entity/{id}
+    - /ixo/entity/{id}/iiddocument
+    - /ixo/entity/{id}/metadata
+    - /ixo/entity/{id}/verified
+    - /ixo/did/dids
+    - /ixo/did/dids/{id}
+    - /ixo/epochs/v1beta1/epochs
+    - /ixo/epochs/v1beta1/epochs/{identifier}
+    - /ixo/liquidstake/v1beta1/params
+    - /ixo/liquidstake/v1beta1/states
+    - /ixo/liquidstake/v1beta1/validators
+    - /ixo/mint/v1beta1/epoch_provisions
+    - /ixo/mint/v1beta1/params
+    - /ixo/smartaccount/authenticator/{account}/{authenticator_id}
+    - /ixo/smartaccount/authenticators/{account}
+    - /ixo/smartaccount/params
+    - /ixo/token/metadata/{id}
+    - /ixo/token/minter/{minter}
+    - /ixo/token/minter/{minter}/{contract_address}
+    - /ixo/token/params
+
+  contact:
+    name: IXO World
+    url: 'https://www.ixo.world'
+    email: ixo@ixo.world
+  termsOfService: 'https://www.ixo.world/imprint'
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
 paths:
   '/cosmos/auth/v1beta1/account_info/{address}':
     get:
@@ -21504,6 +21562,19 @@ paths:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
              - ORDER_BY_UNSPECIFIED: ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults
             to ASC in this case.
              - ORDER_BY_ASC: ORDER_BY_ASC defines ascending order
@@ -39346,6 +39417,19 @@ paths:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                        - ALLOW: Allow: Intents can be made for claims, but claims can also be made without
                       intents.
                        - DENY: Deny: Intents cannot be made for claims for the collection.
@@ -39716,6 +39800,19 @@ paths:
                         - REQUIRED
                       default: ALLOW
                       description: |2-
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70885,6 +70982,19 @@ definitions:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
            - ALLOW: Allow: Intents can be made for claims, but claims can also be made without
           intents.
            - DENY: Deny: Intents cannot be made for claims for the collection.
@@ -70900,6 +71010,19 @@ definitions:
       - REQUIRED
     default: ALLOW
     description: |2-
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -72266,6 +72389,19 @@ definitions:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                  - ALLOW: Allow: Intents can be made for claims, but claims can also be made without
                 intents.
                  - DENY: Deny: Intents cannot be made for claims for the collection.
@@ -72623,6 +72759,19 @@ definitions:
               - REQUIRED
             default: ALLOW
             description: |2-
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
