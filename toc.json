@@ -3,17 +3,13 @@
   "items": [
     {
       "type": "item",
-      "title": "Welcome",
-      "uri": "/Platforms/Emerging/Welcome.md"
-    },
-    {
-      "type": "divider",
-      "title": "IXO World Spatial Web API"
+      "title": "Introduction",
+      "uri": "/Introduction.md"
     },
     {
       "type": "item",
       "title": "API Reference",
-      "uri": "/API-Reference.md"
+      "uri": "/API-Reference-Overview.md"
     },
     {
       "type": "item",
@@ -46,9 +42,15 @@
       "uri": "/Versioning.md"
     },
     {
-      "type": "item",
+      "type": "group",
       "title": "RPC API",
-      "uri": "/RPC-API/Overview.md"
+      "items": [
+        {
+          "type": "item",
+          "title": "Overview",
+          "uri": "/RPC-API/Overview.md"
+        }
+      ]
     },
     {
       "type": "item",
@@ -72,12 +74,53 @@
     },
     {
       "type": "divider",
+      "title": "SDKs and Libraries"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/SDKs-and-Articles-Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "Best Practices"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/Best-Practices-Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "Use Cases"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/Use-Cases-Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "Tutorials"
+    },
+    {
+      "type": "item",
+      "title": "Overview",
+      "uri": "/Tutorials-Overview.md"
+    },
+    {
+      "type": "divider",
       "title": "platforms"
     },
     {
       "type": "group",
       "title": "Emerging",
       "items": [
+        {
+          "type": "item",
+          "title": "Welcome",
+          "uri": "/Platforms/Emerging/Welcome.md"
+        },
         {
           "type": "item",
           "title": "Audits",
