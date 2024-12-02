@@ -4,73 +4,81 @@
     {
       "type": "item",
       "title": "Introduction",
-      "uri": "/Introduction.md"
+      "uri": "Introduction.md"
     },
     {
       "type": "item",
       "title": "API Reference",
-      "uri": "/API-Reference-Overview.md"
+      "uri": "API-Reference-Overview.md"
     },
     {
       "type": "item",
       "title": "Authentication",
-      "uri": "/Authentication.md"
+      "uri": "Authentication.md"
     },
     {
       "type": "item",
       "title": "Errors",
-      "uri": "/Errors.md"
+      "uri": "Errors.md"
     },
     {
       "type": "item",
       "title": "Pagination",
-      "uri": "/Pagination.md"
+      "uri": "Pagination.md"
     },
     {
       "type": "item",
       "title": "Idempotency",
-      "uri": "/Idempotency.md"
+      "uri": "Idempotency.md"
     },
     {
       "type": "item",
       "title": "Webhooks",
-      "uri": "/Webhooks.md"
+      "uri": "Webhooks.md"
     },
     {
       "type": "item",
       "title": "Versioning",
-      "uri": "/Versioning.md"
+      "uri": "Versioning.md"
     },
     {
-      "type": "group",
+      "type": "item",
+      "title": "Best Practices",
+      "uri": "Best-Practices-Overview.md"
+    },
+    {
+      "type": "divider",
+      "title": "APIs"
+    },
+    {
+      "type": "item",
       "title": "RPC API",
-      "items": [
-        {
-          "type": "item",
-          "title": "Overview",
-          "uri": "/RPC-API/Overview.md"
-        }
-      ]
+      "uri": "RPC-API/RPC-API-Overview.md"
     },
     {
       "type": "item",
       "title": "gRPC Gateway",
-      "uri": "/gRPC-Gateway/Overview.md"
+      "uri": "gRPC-Gateway/gRPC-Gateway-Overview.md"
     },
     {
       "type": "item",
       "title": "Blocksync GraphQL API",
-      "uri": "/Blocksync-GraphQL-API/Overview.md"
+      "uri": "Blocksync-GraphQL-API/Blocksync-GraphQL-API-Overview.md"
     },
     {
       "type": "item",
       "title": "Matrix REST API",
-      "uri": "/Matrix-REST-API/Overview.md"
+      "uri": "Matrix-REST-API/Overview.md"
     },
     {
       "type": "item",
       "title": "Matrix Bots & App Services REST API",
-      "uri": "/Matrix-Bots-App-Services-REST-API/Overview.md"
+      "uri": "Matrix-Bots-App-Services-REST-API/Overview.md"
+    },
+    {
+      "type": "item",
+      "title": "AI Companion REST API",
+      "uri": "AI-Companion-REST-API/AI-Companion-REST-API-Overview.md"
     },
     {
       "type": "divider",
@@ -80,15 +88,6 @@
       "type": "item",
       "title": "Overview",
       "uri": "/SDKs-and-Articles-Overview.md"
-    },
-    {
-      "type": "divider",
-      "title": "Best Practices"
-    },
-    {
-      "type": "item",
-      "title": "Overview",
-      "uri": "/Best-Practices-Overview.md"
     },
     {
       "type": "divider",
