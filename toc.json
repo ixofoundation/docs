@@ -3,17 +3,13 @@
   "items": [
     {
       "type": "item",
-      "title": "Welcome",
-      "uri": "/Platforms/Emerging/Welcome.md"
-    },
-    {
-      "type": "divider",
-      "title": "API Reference"
+      "title": "Introduction",
+      "uri": "/Introduction.md"
     },
     {
       "type": "item",
-      "title": "Overview",
-      "uri": "/API-Overview.md"
+      "title": "API Reference",
+      "uri": "/API-Reference-Overview.md"
     },
     {
       "type": "item",
@@ -46,9 +42,15 @@
       "uri": "/Versioning.md"
     },
     {
-      "type": "item",
+      "type": "group",
       "title": "RPC API",
-      "uri": "/RPC-API/Overview.md"
+      "items": [
+        {
+          "type": "item",
+          "title": "Overview",
+          "uri": "/RPC-API/Overview.md"
+        }
+      ]
     },
     {
       "type": "item",
@@ -114,6 +116,11 @@
       "type": "group",
       "title": "Emerging",
       "items": [
+        {
+          "type": "item",
+          "title": "Welcome",
+          "uri": "/Platforms/Emerging/Welcome.md"
+        },
         {
           "type": "item",
           "title": "Audits",
