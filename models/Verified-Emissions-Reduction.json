@@ -1,0 +1,3575 @@
+{
+  "type": "object",
+  "x-stoplight": {
+    "id": "u2cdm1lmky0kj"
+  },
+  "x-examples": {
+    "Example 1": {
+      "$id": "root",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
+        },
+        "id": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "did:ixo:entity:abc123#1"
+          ]
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "VerifiableCredential"
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:abc123"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "issuanceDate": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2022-01-01T00:00:00Z"
+          ],
+          "format": "date-time"
+        },
+        "validFrom": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2022-01-01T00:00:00Z"
+          ],
+          "format": "date-time"
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:123abc"
+              ]
+            },
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "ixo:entity"
+              }
+            },
+            "impact": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "protocol:VER"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:VER"
+                },
+                "claim": {
+                  "type": "string",
+                  "default": "GHG Emission Reduction"
+                },
+                "description": {
+                  "type": "string",
+                  "default": "Verified reduction in the emission of GHGs achieved by using a modern energy cooking device",
+                  "examples": [
+                    "Verified reduction in the emission of GHGs achieved by using a modern energy cooking device"
+                  ]
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "claim:GasifyingBiomass"
+                      ]
+                    },
+                    "credential": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:789xyz#ProjectCredential"
+                          ]
+                        },
+                        "type": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "default": "VerifiableCredential"
+                          }
+                        },
+                        "issuer": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:abc123"
+                          ]
+                        },
+                        "proof": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "type",
+                        "issuer",
+                        "proof"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "credential"
+                  ],
+                  "additionalProperties": false
+                },
+                "location": {
+                  "type": "object",
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "ZM"
+                      ]
+                    },
+                    "region": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Africa"
+                      ]
+                    },
+                    "setting": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Domestic"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "country",
+                    "region",
+                    "setting"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "claim",
+                "description",
+                "project",
+                "location"
+              ],
+              "additionalProperties": false
+            },
+            "evaluation": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "protocol#Evaluation-VER"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:Evaluation"
+                },
+                "methodology": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "https://globalgoals.goldstandard.org/431_ee_ics_methodology-for-metered-measured-energy-cooking-devices/"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "claim:GoldStandard"
+                      ]
+                    },
+                    "description": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Methodology for Metered and Measured Cooking Devices"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "description"
+                  ],
+                  "additionalProperties": false
+                },
+                "model": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "methodology",
+                "model",
+                "version",
+                "date"
+              ],
+              "additionalProperties": false
+            },
+            "evaluator": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "did:ixo:entity:abc123"
+                  ]
+                },
+                "type": {
+                  "type": "string",
+                  "default": "ixo:oracle"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "impact",
+            "evaluation",
+            "evaluator"
+          ],
+          "additionalProperties": false
+        },
+        "outcome": {
+          "type": "object",
+          "properties": {
+            "linkedClaim": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "ixo:VER",
+                  "examples": [
+                    "ixo:VER"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                },
+                "issuanceDate": {
+                  "type": "string"
+                },
+                "issuer": {
+                  "type": "string"
+                },
+                "digestMultibase": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "description",
+                "issuanceDate",
+                "issuer",
+                "digestMultibase"
+              ],
+              "additionalProperties": false
+            },
+            "period": {
+              "type": "object",
+              "properties": {
+                "startDate": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "2022-01-01T00:00:00Z"
+                  ],
+                  "format": "date-time"
+                },
+                "endDate": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "2022-01-01T00:00:00Z"
+                  ],
+                  "format": "date-time"
+                }
+              },
+              "required": [
+                "startDate",
+                "endDate"
+              ],
+              "additionalProperties": false
+            },
+            "calculation": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:EmissionReductionFactor",
+                  "examples": [
+                    "claim:EmissionReductionFactor"
+                  ]
+                },
+                "factor": {
+                  "type": "number",
+                  "default": "",
+                  "examples": [
+                    11
+                  ]
+                },
+                "quantity": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "default": "claim:CookingFuel",
+                        "examples": [
+                          "claim:CookingFuel"
+                        ]
+                      }
+                    },
+                    "amount": {
+                      "type": "integer",
+                      "default": "",
+                      "examples": [
+                        50
+                      ]
+                    },
+                    "units": {
+                      "type": "string",
+                      "default": "kg",
+                      "examples": [
+                        "kg"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "amount",
+                    "units"
+                  ],
+                  "additionalProperties": false
+                },
+                "result": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "claim:Carbon"
+                    },
+                    "amount": {
+                      "type": "number",
+                      "default": "",
+                      "examples": [
+                        550
+                      ]
+                    },
+                    "units": {
+                      "type": "string",
+                      "default": "kg",
+                      "examples": [
+                        "kg"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "amount",
+                    "units"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "factor",
+                "quantity",
+                "result"
+              ],
+              "additionalProperties": false
+            },
+            "confidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string",
+                    "default": "claim:Statistical",
+                    "examples": [
+                      "claim:Statistical"
+                    ]
+                  },
+                  "score": {
+                    "type": "string"
+                  },
+                  "threshold": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "https://library.emerging.eco/codes/A"
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "default": "claim:Violation"
+                        },
+                        "description": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "Claim is not signed"
+                          ]
+                        },
+                        "result": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "rejected",
+                            "accepted",
+                            "disputed"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "type",
+                        "description",
+                        "result"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "type",
+                  "score",
+                  "threshold",
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "linkedClaim",
+            "period",
+            "calculation",
+            "confidence"
+          ],
+          "additionalProperties": false
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "default": "linkedClaim"
+              },
+              "description": {
+                "type": "string",
+                "default": "Fuel Purchase",
+                "examples": [
+                  "Fuel Purchase"
+                ]
+              },
+              "collectionId": {
+                "type": "string",
+                "default": 0,
+                "examples": [
+                  "1"
+                ]
+              },
+              "claimEvaluation": {
+                "type": "object",
+                "properties": {
+                  "submitted": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      100
+                    ]
+                  },
+                  "pending": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "approved": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      100
+                    ]
+                  },
+                  "rejected": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "disputed": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  }
+                },
+                "required": [
+                  "submitted",
+                  "pending",
+                  "approved",
+                  "rejected",
+                  "disputed"
+                ],
+                "additionalProperties": false
+              },
+              "proof": {
+                "type": "object",
+                "properties": {
+                  "digestMultibase": {
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "abc1skjhfbweoucbew"
+                    ]
+                  }
+                },
+                "required": [
+                  "digestMultibase"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "description"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "status": {
+          "type": "string",
+          "default": "verified",
+          "examples": [
+            "verified"
+          ]
+        },
+        "proof": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      "required": [
+        "@context",
+        "id",
+        "type",
+        "issuer",
+        "issuanceDate",
+        "validFrom",
+        "credentialSubject",
+        "outcome",
+        "evidence",
+        "status",
+        "proof"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "$id": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "wyq86yhdx0dzp"
+      }
+    },
+    "$schema": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "nwe860qohl9ls"
+      }
+    },
+    "type": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "7qb9gym8otubw"
+      }
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "2ftbmbk6o490q"
+              }
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "x7f3wmbrvz75x"
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "n4gr1skf5j3em"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "y622pokkdg1mx"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "0akh0ao9mjjjp"
+          }
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "16lkqzfftz2ea"
+              }
+            },
+            "default": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "oxyh310vun3wd"
+              }
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "ew1ij9dgxu62s"
+                }
+              },
+              "x-stoplight": {
+                "id": "6qxl5g3ze6drf"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "x01nu12us3aq4"
+          }
+        },
+        "type": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "iehoe8yxvnj1r"
+              }
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "pmryfxrw451vt"
+                  }
+                },
+                "default": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "ig6787u5i33q0"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "6sun9v4dhan6i"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "jzf87vcz1x1un"
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "6wbqy9eqfyhi8"
+              }
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "t54rk5j8ip8jt"
+                      }
+                    },
+                    "default": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "9kb1xwyyurrzm"
+                      }
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "ve0y88695b2gq"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "emad7u91jpidf"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "v70l4qilf41me"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "hi6x4dqnz33nk"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "2llkfdy621352"
+                }
+              },
+              "x-stoplight": {
+                "id": "d5k1oakbupjtv"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "jmjcb0i23t7do"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "ew0dsjumob94k"
+          }
+        },
+        "issuanceDate": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "y51n6r578cci3"
+              }
+            },
+            "default": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "q4p9o78pz1dv6"
+              }
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "t1tj9fwpkhnvz"
+                }
+              },
+              "x-stoplight": {
+                "id": "lc06nb3h9uhbn"
+              }
+            },
+            "format": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "8kfsw1u8fp0ja"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "jyldxl6cr7t5c"
+          }
+        },
+        "validFrom": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "2wsse6xz3ebsv"
+              }
+            },
+            "default": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "uyzcgcfg6og51"
+              }
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "vv3d9bf1fva6x"
+                }
+              },
+              "x-stoplight": {
+                "id": "epzf0oxknqrkf"
+              }
+            },
+            "format": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "0365h6kuknm4h"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "347zygann992h"
+          }
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "uapnc6xr5uo5q"
+              }
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "e2saqnb90gtiu"
+                      }
+                    },
+                    "default": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "9grmfle090ow4"
+                      }
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "3byxl2ws1fzfd"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "wwlck1axwkf33"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "fuwsbgtctcny2"
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "s2uomv8laaunt"
+                      }
+                    },
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "1g1if9herbtbf"
+                          }
+                        },
+                        "default": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "208yj9bgkd7cl"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "06y1whnbygqkx"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "fh30cl59yzl9a"
+                  }
+                },
+                "impact": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "43nsuekssw0i4"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "bh1h7i0m4egqm"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "tzncqsjd1dyrq"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "4c2tcip5yrkrt"
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "groa7sz7qwnj6"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "afazcgxbh9d0d"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "zt5y5gdx59t70"
+                          }
+                        },
+                        "claim": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "ekvl5bhbd3qgd"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "p9l9iimjoilty"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "qnvm1ui1w9j1b"
+                          }
+                        },
+                        "description": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "3j8ugn16g8sce"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "l5fv566rn01o9"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "nrojtos15vp6v"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "02iy09wqycvb8"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "slmg6z8y9foyg"
+                          }
+                        },
+                        "project": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "dmajzwyrxo3u7"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "5mb57mo7469uy"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "yyu2cdebmlbrl"
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "4vu7oom6d0rdy"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "dtdqbqmct3lfw"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "pjaw3zldd6wr8"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "a8al43kbfi49y"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "x43gx05aleppz"
+                                  }
+                                },
+                                "credential": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "scrfigsm7v8sm"
+                                      }
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "4txd2vfr04rzy"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "iso9zieqww09i"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "c5f6owlf2tsee"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "vsktzmqs1gh7e"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "f87fes147oby9"
+                                          }
+                                        },
+                                        "type": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "2nqerpn3vl8ra"
+                                              }
+                                            },
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "type": {
+                                                  "type": "string",
+                                                  "x-stoplight": {
+                                                    "id": "iuj180dxx5njh"
+                                                  }
+                                                },
+                                                "default": {
+                                                  "type": "string",
+                                                  "x-stoplight": {
+                                                    "id": "4hnvbulo6h4ql"
+                                                  }
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "ccunpv3lp8o89"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "0ntpudk0almzc"
+                                          }
+                                        },
+                                        "issuer": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "9mxtjypxmexup"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "cy948g8vm15k8"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "eqxacrquw6a64"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "cbvjud2dc65na"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "jmjcvfj0zkp9s"
+                                          }
+                                        },
+                                        "proof": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "bute7zj2pab2q"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "3baa1p29zyv0c"
+                                          }
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "on44mdqxc3lxh"
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "gkksmtaqlxoit"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "pudelyiajvakk"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean",
+                                      "x-stoplight": {
+                                        "id": "xg0gjpanjidvx"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "8hh03o2q7lw8s"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "jsg4hywwn3fdl"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "v1jww7vx4yrb5"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "u0ch9d2ag0qfn"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "itxe88ob7riqg"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "lzk8i93x8dp9p"
+                          }
+                        },
+                        "location": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "j8g1nidupgnkn"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "country": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "uskonsr658u3r"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "6fwzjxobpy3je"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "pggw9onkri09d"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "4idq1d63l9j28"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "inuxayn3ae8pf"
+                                  }
+                                },
+                                "region": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "r3q8td7t0yc6t"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "hhog8mmng1tiw"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "66r4wml38wayt"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "vq1lvul0a2uyp"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "sd552rphdt5e3"
+                                  }
+                                },
+                                "setting": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "fqstrakxzu6p8"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "96q19nnksu7u3"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "uty5ct5mzota0"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "i4xme3ul9meiz"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "cjizsww4mhs1s"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "cde891j15txz0"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "q518l3dl411z0"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "i56zfyfi1uqzb"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "rj5e8eeo09glo"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "a063nmtz2wrxh"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "0g1l10h2wtxra"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "gpvpjx92rkn93"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "8gepzavks5bga"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "7hdmrpxpfzs91"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "ougcf2rtuyi3c"
+                  }
+                },
+                "evaluation": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "g1xyxcikddz68"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "8ezdm3087o9g0"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "ckkt499wbeh0l"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "61g48y9t8zp83"
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "gp14ixuvu529s"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "f7awk24m4tbri"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "hahz8904teffo"
+                          }
+                        },
+                        "methodology": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "jufv3jvgmw63n"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "l0txkryz57spm"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "k86d5gvahq1eq"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "7c6t2l1xys445"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "qg5m957w2uagh"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "d87yrqq4v174y"
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "r0zzghqs19ice"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "q6hzwb8ndbaja"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "sytdo9fwnedhm"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "wy21umjo2hwm4"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "7wfcc8rshv9yk"
+                                  }
+                                },
+                                "description": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "6xcstlvd4dlp9"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "4om32cd86lzvv"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "gfn38eojz9lzn"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "77uyfqkk2g6z6"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "ptcjh095rkliz"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "ufo8qjase815h"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "fmfe3h4iz32s0"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "vwd7ltlp69it5"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "h1hiqmrymhfq6"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "652hwwwn59mio"
+                          }
+                        },
+                        "model": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "i6tiahtfyi7ut"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "lx27gza2iwmhv"
+                          }
+                        },
+                        "version": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "7vhcroskoiy6r"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "okrattpemfefd"
+                          }
+                        },
+                        "date": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "wtd15ve6xjv8u"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "gfpeh6sod6nqq"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "kl6g43nqoi5kh"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "my0v143whbx9d"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "nfjva0fdqnym5"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "fspvbefcib47t"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "qc5cqklww1zjy"
+                  }
+                },
+                "evaluator": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "fn9knx6miu8xz"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "bz18bxtst06c0"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "z0zq85t4w2qsg"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "44005o4z5vegy"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "qmluenej9h2za"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "j2ru0m09mbiec"
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "arxstmgzng874"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "crj6dgz2uv986"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "qe7psseqigemg"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "ksilut13kcylz"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "v584muhizsqi7"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "ulzf624g29vjm"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "mhy8chysavnuf"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "kgg0ul8j0h0nm"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "qxuc3nuzhdvrx"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "37b4ktfzfw9lm"
+                }
+              },
+              "x-stoplight": {
+                "id": "fcorg5puo571j"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "nzjmkoinmntr5"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "29gjxhoqmrwj5"
+          }
+        },
+        "outcome": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "15db3nrh7s4yp"
+              }
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "linkedClaim": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "rqdzhy1zkj94q"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "xq7c27zgw56uj"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "uglw4a2gegaa5"
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "5l2pg6kmsp2i4"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "4ogvl8j3fj8iu"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "n4lgayyq5s836"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "6n8q9mcsq8i20"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "3vt9707yt3llf"
+                          }
+                        },
+                        "description": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "8wrl3oxkxn5bg"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "64q2pkazof4eb"
+                          }
+                        },
+                        "issuanceDate": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "wbuhnnwryvsd9"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "5e48j7gi8i297"
+                          }
+                        },
+                        "issuer": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "fw2i6ywsl4ycg"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "9383e4a0b7lmn"
+                          }
+                        },
+                        "digestMultibase": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "lzebrtuq6e350"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "1i35h0v210z9t"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "j0pyhoipqpi34"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "lp06xlo4n8xxc"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "xqwem2mh8a1mr"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "rybd2gpp1tpyq"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "wqw3vek5i6duk"
+                  }
+                },
+                "period": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "j3kvg9uql52vq"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "startDate": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "c3orzrebvy0k7"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "9ywfu5qbc2m17"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "irzmp9vgv9qez"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "wsfgtst65ohhi"
+                              }
+                            },
+                            "format": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "r0bdrvkh280g1"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "z9qdocz9a041a"
+                          }
+                        },
+                        "endDate": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "f7ttl804gasnw"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "k1zy01lacf9ob"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "489zc1qbpp1e0"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "4dhzx10c7yqxg"
+                              }
+                            },
+                            "format": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "tgy60nfnrd6g4"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "1ukgz6x5vpmgp"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "q2eeqz49m5m3b"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "futwlwe3sga4r"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "f9xw4mzw41yw1"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "3xby7ohzlyug6"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "8hqzxgv1drn3x"
+                  }
+                },
+                "calculation": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "lqzmrmbtu73cq"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "ay7eenv1pla78"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "xtlg134jprusn"
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "j2bvc1vridlwp"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "ofwjgl4ajiv6a"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "9oxx9tc6o6ci8"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "468ct1v5o26yt"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "qe5ekbqltvi1x"
+                          }
+                        },
+                        "factor": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "21gr22ryl3c66"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "15uo03uat8t1x"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer",
+                                "x-stoplight": {
+                                  "id": "fwutzql0oql26"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "wsj9sg4r6ony1"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "a7xjjpp9q8xbs"
+                          }
+                        },
+                        "quantity": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "06fihyerv86xl"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "8q2ju4ip1ddly"
+                                      }
+                                    },
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "type": {
+                                          "type": "string",
+                                          "x-stoplight": {
+                                            "id": "wu9i2tg5t7sfj"
+                                          }
+                                        },
+                                        "default": {
+                                          "type": "string",
+                                          "x-stoplight": {
+                                            "id": "230kesmvpv8mm"
+                                          }
+                                        },
+                                        "examples": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "string",
+                                            "x-stoplight": {
+                                              "id": "dt2vk2hzi50sc"
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "vipbzqha2cu0c"
+                                          }
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "lj41n5np1rrji"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "77s3a96giedg9"
+                                  }
+                                },
+                                "amount": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "vb0fxt3w572yd"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "khmbw4byp2djr"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "integer",
+                                        "x-stoplight": {
+                                          "id": "ktl3n3n1g0qmp"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "qlp8q2dtlrnfc"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "iaur6phcp933n"
+                                  }
+                                },
+                                "units": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "e2d9x4e13vel4"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "d9yh93i4ydowq"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "5mwyjfpxsohfq"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "rak973jj43nsd"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "3q7n7oikzjt69"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "etf01chokqt1o"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "t31s9pl4i81h1"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "wjcbkzafbcr5y"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "tkpah3fpulsps"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "eqkynsb86tej9"
+                          }
+                        },
+                        "result": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "7m2vpews4s3zk"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "xwnq7rhyg4vdi"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "figv9mt0fx66e"
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "n0thr3ay6tgss"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "4fu2m331n6jvq"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "8ptsbeia7qfbp"
+                                  }
+                                },
+                                "amount": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "rg7kd9357s4lx"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "g0p3otvbbvvf7"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "integer",
+                                        "x-stoplight": {
+                                          "id": "twlx7keqcl7sp"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "e17wt1qs800vc"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "tk6kfver8hkz6"
+                                  }
+                                },
+                                "units": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "62sji63mkilbo"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "glwcxsrrw4zs0"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "5erp5ytvk28ys"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "2fkjex3kkqcm5"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "392ckla8wfkzy"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "7tqugk4d7x19i"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "8f12nlwhz5zeb"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "irkxgu51khe12"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "rwleloedac1z8"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "rwk5hb86xcp7k"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "cwp1s524mmjqk"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "eg9kdhh4m1609"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "l6wsp916jhqti"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "gcvpo9bl8xz45"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "79gwmxzmyn76q"
+                  }
+                },
+                "confidence": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "qcxamzlhnzlc0"
+                      }
+                    },
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "vijt8c0j9oafe"
+                          }
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "49klnc7eoj0on"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "65oeezym8vuxi"
+                              }
+                            },
+                            "type": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "29dchu7qjlndp"
+                                  }
+                                },
+                                "default": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "uu16xrkbqfk54"
+                                  }
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "x-stoplight": {
+                                      "id": "lrlsnbxb62n2k"
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "1qo5k57ha72cg"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "l3p19zw56q9lt"
+                              }
+                            },
+                            "score": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "2gue0raitpfzg"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "8b7agmp2weq5p"
+                              }
+                            },
+                            "threshold": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "1hfvzgylllnbo"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "ywtx0wf6f9ts7"
+                              }
+                            },
+                            "reason": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "r6nod9f8pyift"
+                                  }
+                                },
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "yvovf99gh543j"
+                                      }
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "fi0d9025xhr7b"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "oo0yvhy1wd6q5"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "0wsq9e8tyk97c"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "d6g94vhy5ujik"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "kzk1ou7o2d3tb"
+                                          }
+                                        },
+                                        "type": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "sxapw0c0paito"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "umr3ya29f2r6h"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "j0ovqrfe2qwvv"
+                                          }
+                                        },
+                                        "description": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "nju0ojx0xo55w"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "40k15tw9ap50x"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "zxoqyk1dww7of"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "6dkbj0cvphpvg"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "8ggtovftu0ax9"
+                                          }
+                                        },
+                                        "result": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "o4pz5ckhqe7qy"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "ja7tr6bftlcel"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "8e2ec1ckn5oss"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "n1y5zkjlqbdao"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "d61szjd2op67q"
+                                          }
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "6mjp0lyi10pfu"
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "declu5jgpizul"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "4lkz7e2mr45eq"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean",
+                                      "x-stoplight": {
+                                        "id": "cdbx12f6s4s8f"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "8gzo66ly6og7t"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "x72nxtwg0bmzh"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "4ie0qp0bf6nwv"
+                          }
+                        },
+                        "required": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "1spda90yzekxl"
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "zzh95izms5p1g"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "boolean",
+                          "x-stoplight": {
+                            "id": "rvpg0tgl8jowo"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "2jmxrtpf71krp"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "v8ys93fyog04t"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "0h1xnc8lrak5k"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "ug1lycie97avd"
+                }
+              },
+              "x-stoplight": {
+                "id": "wznfo5e9ldzxv"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "y8287rebxoahs"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "sb869m3evi5bd"
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "h2op6x37078xx"
+              }
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "6pn34ohk9vu99"
+                  }
+                },
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "tssngl8oqdjzp"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "o73c19o259xd4"
+                      }
+                    },
+                    "type": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "vrkzdvx74liv5"
+                          }
+                        },
+                        "default": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "4ta5jg851vlkc"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "cj3t9w3kf95yr"
+                      }
+                    },
+                    "description": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "4dupbmoy8ncx8"
+                          }
+                        },
+                        "default": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "1gp5mwujbtoti"
+                          }
+                        },
+                        "examples": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "lwb0ygiv82k5t"
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "h80rgcliuml2s"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "o5evt5av7g9h3"
+                      }
+                    },
+                    "collectionId": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "0krrpist37b3n"
+                          }
+                        },
+                        "default": {
+                          "type": "integer",
+                          "x-stoplight": {
+                            "id": "xv58b139o9cay"
+                          }
+                        },
+                        "examples": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "gncwt9tadywe2"
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "vzh47xjbe2i89"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "5etr7lungnzuh"
+                      }
+                    },
+                    "claimEvaluation": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "cwk70scyxsgjy"
+                          }
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "submitted": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "hq9tevpq0bhrw"
+                                  }
+                                },
+                                "default": {
+                                  "type": "integer",
+                                  "x-stoplight": {
+                                    "id": "cza6xs8b9lgb5"
+                                  }
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer",
+                                    "x-stoplight": {
+                                      "id": "r5dko4qhf626a"
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "iphpcxbcdgwgu"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "3a2f79ssx1mu3"
+                              }
+                            },
+                            "pending": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "l1uiw81a42b1m"
+                                  }
+                                },
+                                "default": {
+                                  "type": "integer",
+                                  "x-stoplight": {
+                                    "id": "n4vc3rsz8lx6a"
+                                  }
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer",
+                                    "x-stoplight": {
+                                      "id": "7a92ist4n2ir7"
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "ds1divlxg4c9k"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "w378cjsart3kf"
+                              }
+                            },
+                            "approved": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "o84cs47vkx0tq"
+                                  }
+                                },
+                                "default": {
+                                  "type": "integer",
+                                  "x-stoplight": {
+                                    "id": "uk1d15y66elcx"
+                                  }
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer",
+                                    "x-stoplight": {
+                                      "id": "dl2pdnx1h9wxb"
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "32dr6ni1n8nc8"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "wgyy9vndula0u"
+                              }
+                            },
+                            "rejected": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "i780fzuy243dz"
+                                  }
+                                },
+                                "default": {
+                                  "type": "integer",
+                                  "x-stoplight": {
+                                    "id": "40xpa1hax4h01"
+                                  }
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer",
+                                    "x-stoplight": {
+                                      "id": "3gm91eejfjlnx"
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "6yd89fvbojwo8"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "ffcyym5bd7ab1"
+                              }
+                            },
+                            "disputed": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "9t01w44kcbuky"
+                                  }
+                                },
+                                "default": {
+                                  "type": "integer",
+                                  "x-stoplight": {
+                                    "id": "y5cntif73xj90"
+                                  }
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer",
+                                    "x-stoplight": {
+                                      "id": "rmi6n95zni5sl"
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "h2vsx7wx42y0k"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "1l2bf7g7h0dwv"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "jexcbdb7ulnfn"
+                          }
+                        },
+                        "required": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "f0l8xut7nav5m"
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "exscv65o24cqx"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "boolean",
+                          "x-stoplight": {
+                            "id": "ogf1vf1zzyf6o"
+                          }
+                        },
+                        "": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "2dgh2uskur7jb"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "0wj8gyir6ghpp"
+                      }
+                    },
+                    "proof": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "trqaoqgsg1l83"
+                          }
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "digestMultibase": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "fdvdfenbippal"
+                                  }
+                                },
+                                "default": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "66vzka6io1c96"
+                                  }
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "x-stoplight": {
+                                      "id": "a5a2uavqwp1a7"
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "mufbx8jzipszj"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "16s7g26zs22ck"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "n0d3q1m042dn7"
+                          }
+                        },
+                        "required": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "7xfbev52evj60"
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "zz5jdyguy48rj"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "boolean",
+                          "x-stoplight": {
+                            "id": "4nfrq57ffc6n0"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "8onrm477wc79e"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "is4qfthreu161"
+                  }
+                },
+                "required": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "5eqvkdmdpasv8"
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "s7gr6l3i0fyg3"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "boolean",
+                  "x-stoplight": {
+                    "id": "f36c65jjaat2q"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "yr7inhneh1coi"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "v7l0k4s2y3uf3"
+          }
+        },
+        "status": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "x40goahp19s7i"
+              }
+            },
+            "default": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "rmeyb2nkbb8xt"
+              }
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "bnza4fc0zxlxf"
+                }
+              },
+              "x-stoplight": {
+                "id": "olf5mplipuom9"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "zyek9ssin552e"
+          }
+        },
+        "proof": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "n07xl2jwyhau6"
+              }
+            },
+            "properties": {
+              "type": "object",
+              "x-stoplight": {
+                "id": "lstkngxpa9dix"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "x-stoplight": {
+                  "id": "n5o6dhl50qnwi"
+                }
+              },
+              "x-stoplight": {
+                "id": "xc7l49yppil1q"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "w3njbvfby8q87"
+          }
+        }
+      },
+      "x-stoplight": {
+        "id": "clz8mr10esoql"
+      }
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "x-stoplight": {
+          "id": "r4iigoqe7t1sj"
+        }
+      },
+      "x-stoplight": {
+        "id": "j9mi83l5j89qs"
+      }
+    },
+    "additionalProperties": {
+      "type": "boolean",
+      "x-stoplight": {
+        "id": "n81elakwkvq0p"
+      }
+    }
+  },
+  "examples": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        {
+          "ixo": "https://w3id.org/ixo/context/v1",
+          "claim": "https://w3id.org/emerging/vocab/v1",
+          "protocol": "did:ixo:entity:8fcbc757e75c120dd4beae0e5696fd38#",
+          "web3": "https://ipfs.io/ipfs/",
+          "cellnode": "https://cellnode.ixo.world",
+          "type": "@type",
+          "@protected": true,
+          "@version": 1.1
+        }
+      ],
+      "id": "urn:uuid:b708846f-7930-43bc-b704-4413aa0f01de",
+      "type": [
+        "VerifiableCredential",
+        "ixo:credential",
+        "claim:VER"
+      ],
+      "validFrom": "2024-05-20T18:56:49.634Z",
+      "status": "verified",
+      "credentialSubject": {
+        "id": "did:ixo:entity:00ee7c392cc9a9e56677cd298c5aae1c",
+        "type": [
+          "ixo:entity",
+          "claim:CleanCooking",
+          "claim:CER"
+        ],
+        "impact": {
+          "id": "protocol:VER",
+          "type": "claim:VER",
+          "claim": "GHG Emission Reduction",
+          "description": "Verified reduction in the emission of GHGs achieved by using a modern energy cooking device",
+          "project": {
+            "id": "did:ixo:entity:b3839c8bccf7ecff3cb6822869bb0d81",
+            "type": "claim:GasifyingBiomass",
+            "credential": {
+              "id": "did:ixo:entity:eb98bb2c92a62557b6c88c6f80e8d258#projectCredential",
+              "type": [
+                "VerifiableCredential",
+                "claim:ProjectCredential"
+              ],
+              "issuer": "did:ixo:entity:a1fcead81eab2f1158a726597d872413",
+              "proof": "bafybeihxer3dxr4zaagzntb7w7rrg3ck33rox6x42ersgb4p4z5ccnxkti"
+            }
+          },
+          "location": {
+            "country": "ZM",
+            "region": "Africa",
+            "setting": "Domestic"
+          }
+        },
+        "evaluation": {
+          "id": "protocol:Evaluation-VER",
+          "type": "claim:Evaluation",
+          "methodology": {
+            "id": "https://globalgoals.goldstandard.org/431_ee_ics_methodology-for-metered-measured-energy-cooking-devices/",
+            "type": "claim:GoldStandard",
+            "description": "Simplified Methodology for Metered and Measured Modern Energy Cooking Devices"
+          },
+          "model": "ProbabilisticModel1",
+          "version": "0cece87f-1d09-42e4-a629-e460f8ebb7cd",
+          "date": "2024-05-20T18:56:49.634Z"
+        },
+        "evaluator": {
+          "id": "did:ixo:entity:7889238a0a6a68554f65f5c7da96f13b",
+          "type": "ixo:oracle"
+        }
+      },
+      "outcome": {
+        "linkedClaim": {
+          "id": "cellnode:/bafkreidkufxgtiib7gyebnqfrdxkepj2umzuelgrk6rveftt4e3bbqcpsa",
+          "type": "ixo:CER",
+          "description": "Carbon Emission Reduction",
+          "issuanceDate": "2024-05-20T17:31:07.293Z",
+          "issuer": "did:ixo:entity:a1fcead81eab2f1158a726597d872413",
+          "digestMultibase": "bafkreidkufxgtiib7gyebnqfrdxkepj2umzuelgrk6rveftt4e3bbqcpsa"
+        },
+        "period": {
+          "startDate": "2023-11-06T00:00:00.000Z",
+          "endDate": "2023-12-06T00:00:00.000Z"
+        },
+        "calculation": {
+          "id": "web3:bafkreiahmy2t52a4zwmmzi644g27xuf3nzkngzpw7migxhmfnrjmzkeq24",
+          "type": "claim:EmissionReductionFactor",
+          "factor": 10.94,
+          "quantity": {
+            "type": [
+              "claim:CookingFuel",
+              "claim:BiomassPellets"
+            ],
+            "amount": 30,
+            "units": "kg"
+          },
+          "result": {
+            "id": "https://w3id.org/emerging/vocab/v1#Carbon",
+            "type": "claim:Carbon",
+            "amount": 328.2,
+            "units": "kgCO2"
+          }
+        },
+        "confidence": [
+          {
+            "id": "https://w3id.org/emerging/vocab/v1#Statistical",
+            "type": "claim:Statistical",
+            "score": "1",
+            "threshold": "0.95",
+            "reason": []
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "cellnode:/bafkreife4hc4ehzctmopgtpf4lxvhhnohe3oovol3kgfo3hqgl5yuz3dsi",
+          "type": "linkedClaim",
+          "description": "Fuel Purchase",
+          "collectionId": "3",
+          "claimEvaluation": {
+            "submitted": 1,
+            "pending": 0,
+            "approved": 1,
+            "rejected": 0,
+            "disputed": 0
+          },
+          "proof": {
+            "digestMultibase": "bafkreife4hc4ehzctmopgtpf4lxvhhnohe3oovol3kgfo3hqgl5yuz3dsi"
+          }
+        },
+        {
+          "id": "https://api.supamoto.app/api/v2/stoves/202200311/sessions/cooking?pageSize=500&startDate=2023-11-06&endDate=2023-12-06",
+          "type": "claim:Data",
+          "description": "Cooking sessions monitored by IoT sensor"
+        }
+      ],
+      "issuer": {
+        "id": "did:ixo:entity:7889238a0a6a68554f65f5c7da96f13b"
+      },
+      "issuanceDate": "2024-05-20T18:56:54.178Z",
+      "proof": {
+        "type": "Ed25519Signature2018",
+        "created": "2024-05-20T18:56:54Z",
+        "verificationMethod": "did:ixo:entity:7889238a0a6a68554f65f5c7da96f13b#Dbux33xp6XEKAesTjewc4uUECtc9tywxvmaM28dpHN2R",
+        "proofPurpose": "assertionMethod",
+        "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..1eLiFElSN5SvlpiTGLRL6VyHgR_huHfmoseOl52OkHzBe7WY_Uu8AV3T5Gau3RtYACvUjZBSJq3zHNcJ6FVvBw"
+      }
+    }
+  ]
+}

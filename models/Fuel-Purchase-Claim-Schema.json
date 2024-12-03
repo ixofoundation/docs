@@ -1,0 +1,2118 @@
+{
+  "type": "object",
+  "x-stoplight": {
+    "id": "1yyk1xufv9xni"
+  },
+  "properties": {
+    "$id": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "cp2h4q7qjzer4"
+      }
+    },
+    "$schema": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "pjt9tongb3jfk"
+      }
+    },
+    "type": {
+      "type": "string",
+      "x-stoplight": {
+        "id": "60wie9iitkb1d"
+      }
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "64vyloripw6pb"
+              }
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "fiimiswvd7y80"
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "66eqebjkmrjt1"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "96j3pbntuw258"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "678rvv4yllrl4"
+          }
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "erbhu2z24p299"
+              }
+            },
+            "default": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "34qg7jrbqy7j9"
+              }
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "xnhievspv38od"
+                }
+              },
+              "x-stoplight": {
+                "id": "yjnyz08napbow"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "0b0346md8xlw4"
+          }
+        },
+        "type": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "4bpti32sn8em7"
+              }
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "9ie2l3ybwr46h"
+                  }
+                },
+                "default": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "z3ktury78ajq4"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "chi7ixa208k6h"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "xj3smknyprg86"
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "jhbykmxpim1tc"
+              }
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "kdtgr624l1n7a"
+                      }
+                    },
+                    "default": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "rla8q76dh061p"
+                      }
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "497zg7r2l29yg"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "iqz8fe1pvn95m"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "ypm1q202e85ft"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "fsfoxyr23i299"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "l9ogksx793uqr"
+                }
+              },
+              "x-stoplight": {
+                "id": "fjzirebh34i1g"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "1k7ellfvlj1q1"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "x0wvsqrmlp3ey"
+          }
+        },
+        "issuanceDate": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "kgzgf663eea10"
+              }
+            },
+            "default": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "i6bi0d2k9ilkj"
+              }
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "qzj8ce611548i"
+                }
+              },
+              "x-stoplight": {
+                "id": "dbm1vs9wte417"
+              }
+            },
+            "format": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "x32qwtejoswg7"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "1kivc2vsonzzp"
+          }
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "exm32sn22s422"
+              }
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "ogtkxb56e7572"
+                      }
+                    },
+                    "default": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "ioa8djse94eab"
+                      }
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "331vxtope5qlo"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "3sl1x2fmzfkvl"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "mwl0aevmfimiw"
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "5tu6hle1blz5t"
+                      }
+                    },
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "46rpushdkcqwe"
+                          }
+                        },
+                        "default": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "pmupjge07lmhi"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "l8q4dlc60mklk"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "yddae1jc97rns"
+                  }
+                },
+                "claim": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "9uwfgy6d411w7"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "ngx6p61bml88h"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "5fwe8qs6z58xw"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "0lwuzmwmw6xh8"
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "ecmhrlolwp9sr"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "038skhv7c628g"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "mtxaxh3r81vwm"
+                          }
+                        },
+                        "project": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "igwajkjsl57u8"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "g48i7uh6kt6ll"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "8okaiq4af4bg3"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "rrzkdokvmxrmi"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "yly1gx3ioyef8"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "6azl39qjqhwf0"
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "gmy8jaa6lrb5g"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "r88lpmjm433r1"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "n9i6v3aogl4am"
+                                  }
+                                },
+                                "credential": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "qstskbt4k4o96"
+                                      }
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "etboizs1771zw"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "ijkd0gxf6l9mo"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "dwy26jz4o7uyg"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "0kbggstpkmuoo"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "p4owt1dg3lcpr"
+                                          }
+                                        },
+                                        "type": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "bn3bn49qvkpqe"
+                                              }
+                                            },
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "type": {
+                                                  "type": "string",
+                                                  "x-stoplight": {
+                                                    "id": "3lvbu55wd5mox"
+                                                  }
+                                                },
+                                                "default": {
+                                                  "type": "string",
+                                                  "x-stoplight": {
+                                                    "id": "6oyuhj3x6wcdl"
+                                                  }
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "icu5fv8bp19e5"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "3qtictibarp8o"
+                                          }
+                                        },
+                                        "issuer": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "qivh44s246tgh"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "cqgqs0fyxuki5"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "yrac64v12tq59"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "lupzarscxyou8"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "50bqefhho23k7"
+                                          }
+                                        },
+                                        "proof": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "1klntrtvyxtpj"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "9mdudtsc3m9to"
+                                          }
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "b87v4rcn2d758"
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "b36t179rgpcw3"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "y5toun7y1zkb8"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean",
+                                      "x-stoplight": {
+                                        "id": "8rojtcfrku82h"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "y2gehr4zw21hg"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "hz582zvcgzll7"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "qsu7wbz4fu7gy"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "0fgypbad2h2o2"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "6ps1z74cgm79j"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "ym5kytcdcirm8"
+                          }
+                        },
+                        "location": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "de8en01gio42y"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "country": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "ei1mj7g4sd4n5"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "7l6uotj9igb8k"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "5ntf012nnp5o5"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "bnl7b3xbpg4pn"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "t8gb4hjq189v1"
+                                  }
+                                },
+                                "region": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "7s1nbqkvveso9"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "jpckkvyaqt3qk"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "vkuwrmijg1b20"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "zzury59kvclga"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "0xq5r7l1qecxm"
+                                  }
+                                },
+                                "setting": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "096zvlwciwx9j"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "900tis8x75pay"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "6ayc8o4lc7x1j"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "kqct1p9h02d1d"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "24gphjq0qr22k"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "jpxorv9opirv6"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "pgtklpdv0wdy2"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "v1qfvlot1gwl0"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "ow2wo2rgksnr0"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "p38chmd5k7vk1"
+                          }
+                        },
+                        "product": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "oodbjdzqsrsii"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "si3hgi0qg1rca"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "t11ooz8rl4jck"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "nd5mwhr82nnpj"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "kh3vgxbxipfva"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "3tmfszde9sg0g"
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "5ehxt90jjilxy"
+                                      }
+                                    },
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "type": {
+                                          "type": "string",
+                                          "x-stoplight": {
+                                            "id": "l39azijqnqnjl"
+                                          }
+                                        },
+                                        "default": {
+                                          "type": "string",
+                                          "x-stoplight": {
+                                            "id": "p2vr1icv2eoht"
+                                          }
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "aaxu9bj48t0mb"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "em7c0wm1dchoh"
+                                  }
+                                },
+                                "producer": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "u0my24qcvd8zp"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "a4ghkhanuvora"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "7tvgr5plizi7t"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "68i6wm16s9c36"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "v3c47ufyaz4nf"
+                                  }
+                                },
+                                "distributor": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "7k778ukbrnlcl"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "m65odm7aahmiu"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "k3nux3nfvcdft"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "4gqukm7apy21s"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "3tecrdx20aqoh"
+                                  }
+                                },
+                                "quantity": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "gy3996bofhahl"
+                                      }
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "amount": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "ombkc3e1zs7dr"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "rvftn3rvr0h2i"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "integer",
+                                                "x-stoplight": {
+                                                  "id": "bx4fnqrr29skl"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "idl9cnnu5q11u"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "tntpwv2wbxspo"
+                                          }
+                                        },
+                                        "units": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "wtig99vln6nph"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "5a7cm2ebb8iyt"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "54zkta7956gvi"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "ict7rtd05tsa6"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "7rcfllmtyt83g"
+                                          }
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "y380bdwi8za4a"
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "c1nrycqi7yiy3"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "r48qoo7f8klyg"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean",
+                                      "x-stoplight": {
+                                        "id": "y4uiz1vgnbzs5"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "9zbfpexzq7874"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "kr1gsdexqf203"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "xhhp6e7tc6v5k"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "qdsqxfd092lxb"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "g9or2zrl5bwch"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "p1zb0h42xer5a"
+                          }
+                        },
+                        "customer": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "zvmcfs5afvulo"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "6layil1z3a2vv"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "7kg4t3oazpc4k"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "vjymcc1w35vts"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "bstxspyakfzre"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "1ioipfdd8up82"
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "wqd52zv5nbzbf"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "s709l8k4e4aal"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "emvxlz1fay8c9"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "2s832ly7pu9ir"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "pi28czvy6r4ve"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "b51vuy7g5siju"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "r0p950xgofk45"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "z0q7vvkvgtn7c"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "c36ymuhsd2ds0"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "8oziu1e1xn209"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "4snoadty9qlv4"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "bw2e0t2jnpt93"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "3lu68ipdcvbns"
+                  }
+                },
+                "evidence": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "9nvr36cvgcr22"
+                      }
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "zhx0hs9lv1jzp"
+                              }
+                            },
+                            "default": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "r49qqmhigkefn"
+                              }
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "681be1sku7rz9"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "je7xsuaj9kuar"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "nw5d6mn2bb6uc"
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "serz2ijspg4w7"
+                              }
+                            },
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "9y92l7gxbucfx"
+                                  }
+                                },
+                                "default": {
+                                  "type": "string",
+                                  "x-stoplight": {
+                                    "id": "cqgfknsayq1pf"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "umd54niy5xg14"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "kmqkcc30wfqos"
+                          }
+                        },
+                        "payment": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "3addxwe9u73kd"
+                              }
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "identifier": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "hwlok2ybzzyo2"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "563lgm743ciug"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "pcapims9y3btn"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "tkr31fwvwxfgc"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "1j4flnp9mjd2b"
+                                  }
+                                },
+                                "name": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "tqtb588zbskqs"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "zmfivlrdioxt0"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "ldgi67tmpqflr"
+                                  }
+                                },
+                                "method": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "ltwmhddpundm6"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "nubhfnrf741h4"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "ly9n9s5xxpi1d"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "j5beheuojko88"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "vm0ayf71496zm"
+                                  }
+                                },
+                                "provider": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "zjvolbp2m83mt"
+                                      }
+                                    },
+                                    "default": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "5gfpcfthq6siy"
+                                      }
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "npizf75o1dwem"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "8839pujsbj0sa"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "xsqfak8a3fsyc"
+                                  }
+                                },
+                                "amount": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "x-stoplight": {
+                                        "id": "x5k1kv3tynasz"
+                                      }
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "tbup3g5syj5rt"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "integer",
+                                              "x-stoplight": {
+                                                "id": "e6rh9oq20rvpl"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "integer",
+                                                "x-stoplight": {
+                                                  "id": "l7ktrfmz7ihko"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "k5xkzj0frxt5t"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "gk9qpk74g3i4s"
+                                          }
+                                        },
+                                        "currency": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "hidhvu98sxrnm"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "cv4056tl7e8yu"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "ce4g48kus2l4k"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "xy0h3rxdb3i2k"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "5hkq035239h5b"
+                                          }
+                                        },
+                                        "dateTime": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "l841pexgpeuwk"
+                                              }
+                                            },
+                                            "default": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "7ue2s2hsxlhqt"
+                                              }
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string",
+                                                "x-stoplight": {
+                                                  "id": "tezeuup1teeqn"
+                                                }
+                                              },
+                                              "x-stoplight": {
+                                                "id": "9ok8bxa6asz38"
+                                              }
+                                            },
+                                            "format": {
+                                              "type": "string",
+                                              "x-stoplight": {
+                                                "id": "2w1xtu3mup01n"
+                                              }
+                                            }
+                                          },
+                                          "x-stoplight": {
+                                            "id": "2rlpuuscsdnpo"
+                                          }
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "6wuvb0pucm47x"
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string",
+                                        "x-stoplight": {
+                                          "id": "2wyr5so03okak"
+                                        }
+                                      },
+                                      "x-stoplight": {
+                                        "id": "q4geit21cvl35"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean",
+                                      "x-stoplight": {
+                                        "id": "foj0uemwdxccj"
+                                      }
+                                    }
+                                  },
+                                  "x-stoplight": {
+                                    "id": "e9e1wmrh4408u"
+                                  }
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "6trokbz7evr8b"
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "x-stoplight": {
+                                  "id": "h5igsto1aj8dj"
+                                }
+                              },
+                              "x-stoplight": {
+                                "id": "vikxxn7hiotio"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean",
+                              "x-stoplight": {
+                                "id": "kytfz7ehid72j"
+                              }
+                            }
+                          },
+                          "x-stoplight": {
+                            "id": "930n69y17z585"
+                          }
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "f1ywz0rz2cit2"
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "ao3myt0i3qhxn"
+                        }
+                      },
+                      "x-stoplight": {
+                        "id": "2w8zyvm7hzm63"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "rhw9q56nq43h9"
+                      }
+                    }
+                  },
+                  "x-stoplight": {
+                    "id": "gtpw279qqqrrm"
+                  }
+                }
+              },
+              "x-stoplight": {
+                "id": "zv1okb7b3okni"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "c4rwfck5ft5p8"
+                }
+              },
+              "x-stoplight": {
+                "id": "rxil5och7z7z8"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "f5qemnu7cngc1"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "ep6k3khqvz4o1"
+          }
+        },
+        "proof": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "xop5xgg4drt6a"
+              }
+            },
+            "properties": {
+              "type": "object",
+              "properties": {},
+              "x-stoplight": {
+                "id": "ryxycy2gigqs4"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {},
+                "x-stoplight": {
+                  "id": "oztg6w9jtocfx"
+                }
+              },
+              "x-stoplight": {
+                "id": "o7zxo0xaeu8a4"
+              }
+            }
+          },
+          "x-stoplight": {
+            "id": "3ccht2oz3ktnl"
+          }
+        }
+      },
+      "x-stoplight": {
+        "id": "r48gvjhci6ykc"
+      }
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "x-stoplight": {
+          "id": "tttcpwbccbpit"
+        }
+      },
+      "x-stoplight": {
+        "id": "uovk01pxvuiq9"
+      }
+    },
+    "additionalProperties": {
+      "type": "boolean",
+      "x-stoplight": {
+        "id": "fh48wjsdo32gq"
+      }
+    }
+  },
+  "x-examples": {
+    "Example 1": {
+      "$id": "root",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
+        },
+        "id": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "did:ixo:entity:abc123#FuelPurchase"
+          ]
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "VerifiableCredential"
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:abc123"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "issuanceDate": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2023-01-01T19:23:24Z"
+          ],
+          "format": "date-time"
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:abc123"
+              ]
+            },
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "ixo:entity"
+              }
+            },
+            "claim": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "protocol:FuelPurchase"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:FuelPurchase"
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "web3:xyz123"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "claim:GasifyingBiomass"
+                    },
+                    "credential": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:789xyz#ProjectCredential"
+                          ]
+                        },
+                        "type": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "default": "VerifiableCredential"
+                          }
+                        },
+                        "issuer": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:abc123"
+                          ]
+                        },
+                        "proof": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "type",
+                        "issuer",
+                        "proof"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "credential"
+                  ],
+                  "additionalProperties": false
+                },
+                "location": {
+                  "type": "object",
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "ZM"
+                      ]
+                    },
+                    "region": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Africa"
+                      ]
+                    },
+                    "setting": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Domestic"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "country",
+                    "region",
+                    "setting"
+                  ],
+                  "additionalProperties": false
+                },
+                "product": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "web3:zxy987"
+                      ]
+                    },
+                    "type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "default": "claim:CookingFuel"
+                      }
+                    },
+                    "producer": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Emerging Cooking Solutions Zambia"
+                      ]
+                    },
+                    "distributor": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Emerging Cooking Solutions Zambia"
+                      ]
+                    },
+                    "quantity": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "integer",
+                          "default": "",
+                          "examples": [
+                            50
+                          ]
+                        },
+                        "units": {
+                          "type": "string",
+                          "default": "kg",
+                          "examples": [
+                            "kg"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "units"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "producer",
+                    "distributor",
+                    "quantity"
+                  ],
+                  "additionalProperties": false
+                },
+                "customer": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "https://crm.emerging.eco/123"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "emerging:vocab#Domestic"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "project",
+                "location",
+                "product"
+              ],
+              "additionalProperties": false
+            },
+            "evidence": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "https://api.supamoto.app/api/v2/456"
+                  ]
+                },
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "default": "claim:PaymentTransaction"
+                  }
+                },
+                "payment": {
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "MP220804.0000.D00000"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "default": "TransactionId"
+                    },
+                    "method": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "telco"
+                      ]
+                    },
+                    "provider": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Airtel"
+                      ]
+                    },
+                    "amount": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            8000
+                          ]
+                        },
+                        "currency": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "MWK"
+                          ]
+                        },
+                        "dateTime": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "2023-01-01T19:23:24Z"
+                          ],
+                          "format": "date-time"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "currency",
+                        "dateTime"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "identifier",
+                    "name",
+                    "method",
+                    "provider",
+                    "amount"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "payment"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "claim",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "proof": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      "required": [
+        "@context",
+        "id",
+        "type",
+        "issuer",
+        "issuanceDate",
+        "credentialSubject",
+        "proof"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "description": "Fuel Purchase",
+  "examples": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        {
+          "ixo": "https://w3id.org/ixo/context/v1",
+          "claim": "https://w3id.org/emerging/vocab/v1",
+          "protocol": "did:ixo:entity:32a5a11ebf1ce614a6eb8ef874898eee#",
+          "web3": "https://ipfs.io/ipfs/",
+          "type": "@type",
+          "@protected": true,
+          "@version": 1.1
+        }
+      ],
+      "id": "urn:uuid:700d962e-7a35-44ee-ba01-e869e4789db5",
+      "type": [
+        "VerifiableCredential",
+        "ixo:claim",
+        "claim:FuelPurchase"
+      ],
+      "credentialSubject": {
+        "id": "did:ixo:entity:4c73552dbf8a4343016e7f7952836014",
+        "type": [
+          "ixo:entity",
+          "claim:CleanCooking",
+          "claim:FuelPurchase"
+        ],
+        "claim": {
+          "id": "protocol:fuelPurchase",
+          "type": "claim:FuelPurchase",
+          "project": {
+            "id": "web3:bafybeihxer3dxr4zaagzntb7w7rrg3ck33rox6x42ersgb4p4z5ccnxkti",
+            "type": "claim:GasifyingBiomass",
+            "credential": {
+              "id": "did:ixo:entity:7f0cc7a072d514b38cb90bdf2e215901#projectCredential",
+              "type": [
+                "VerifiableCredential",
+                "claim:ProjectCredential"
+              ],
+              "issuer": "did:ixo:entity:237cb945b1368ed450ec67c7c4ac56ac",
+              "proof": "bafybeihxer3dxr4zaagzntb7w7rrg3ck33rox6x42ersgb4p4z5ccnxkti"
+            }
+          },
+          "location": {
+            "country": "ZM",
+            "region": "Africa",
+            "setting": "Domestic"
+          },
+          "product": {
+            "id": "web3:bafkreihnles23ry5plqpcgirjmhldftg5gjc2pziilkqwszid6ziaxuqyq",
+            "type": [
+              "claim:CookingFuel",
+              "claim:BiomassPellets"
+            ],
+            "producer": "Emerging Cooking Solutions Zambia",
+            "distributor": "Emerging Cooking Solutions Zambia",
+            "quantity": {
+              "amount": 30,
+              "units": "kg"
+            }
+          }
+        },
+        "evidence": {
+          "id": "https://api.supamoto.app/api/v2/stoves/pellets/purchases?transactionIds=2994029793",
+          "type": [
+            "claim:PaymentTransaction",
+            "claim:PaymentMethod",
+            "claim:PriceSpecification"
+          ],
+          "payment": {
+            "identifier": "2994029793",
+            "name": "TransactionId",
+            "method": "telco",
+            "provider": "mtn",
+            "amount": {
+              "value": 130,
+              "currency": "ZMW",
+              "dateTime": "2022-05-11T13:15:33.000Z"
+            }
+          }
+        }
+      },
+      "issuer": {
+        "id": "did:ixo:entity:237cb945b1368ed450ec67c7c4ac56ac"
+      },
+      "issuanceDate": "2023-07-06T16:09:31.086Z",
+      "proof": {
+        "type": "Ed25519Signature2018",
+        "created": "2023-07-06T16:09:31Z",
+        "verificationMethod": "did:ixo:entity:237cb945b1368ed450ec67c7c4ac56ac#DQPAV2hR3RQzRATr2r6EHa3LW8zk1E6fw5gpNUZJkAzx",
+        "proofPurpose": "assertionMethod",
+        "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..y7gVtm5dVNNMHoNDPGUiEVVQ0o1uvq7-NlRd_Vckf6ovWHa3ph4dU6A1KXDUWSnX6kBqWDXtM21U1k4gD5GuDg"
+      }
+    }
+  ]
+}
