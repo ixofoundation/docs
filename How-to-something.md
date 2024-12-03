@@ -12,7 +12,18 @@ stoplight-id: jltzpgiodtir6
 
 ## Steps
 
-In order to create a new entity, use the SDK in a similar way to this Typescript module named Entity.ts:
+In order to create a new entity, use the SDK in a similar way to this Typescript test:
+```typescript
+    let entityDid;
+    testMsg("/ixo.entity.v1beta1.MsgCreateEntity asset", async () => {
+      const res = await Entity.CreateEntity();
+      entityDid = utils.common.getValueFromEvents(res, "wasm", "token_id");
+      console.log({ entityDid });
+      return res;
+    });
+```
+
+The test invokes the `CreateEntity` function in the module named Entity.ts:
 ```typescript
 export const CreateEntity = async (
   entityType: string = "asset",
@@ -63,5 +74,38 @@ Test is [here](https://vscode.dev/github/ixofoundation/ixo-multiclient-sdk/blob/
 
 Entity.js class is [here](https://vscode.dev/github/ixofoundation/ixo-multiclient-sdk/blob/main/__tests__/modules/Entity.ts)
 
-Once you have created the entity and it has been 
-
+Once you have created the entity and you have logged the entity's DID, then you can query the GraphQL endpoint directly to retrieve details for the entity.
+```graphql
+query MyQuery {
+  entity(id: "did:ixo:entity:eaff254f2fc62aefca0d831bc7361c14") {
+    id
+    type
+    owner
+    relayerNode
+    startDate
+    endDate
+    metadata
+    entityVerified
+    controller
+    verificationMethod
+    service
+    status
+    settings
+    accordedRight
+    accounts
+    alsoKnownAs
+    assertionMethod
+    authentication
+    capabilityDelegation
+    capabilityInvocation
+    context
+    credentials
+    externalId
+    linkedResource
+    linkedEntity
+    keyAgreement
+    linkedClaim
+  }
+}
+```
+In a similar manner, you can update the entity and perform the other functions available in the Entity.js module.

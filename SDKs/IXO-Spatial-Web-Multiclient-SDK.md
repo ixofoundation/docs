@@ -12,8 +12,8 @@ https://www.npmjs.com/package/@ixo/impactxclient-sdk
 npm i @ixo/impactxclient-sdk
 ```
 
-Tests
-https://vscode.dev/github/ixofoundation/ixo-multiclient-sdk/blob/main/__tests__
+Tests can be found [here](https://vscode.dev/github/ixofoundation/ixo-multiclient-sdk/blob/main/__tests__) in the `__tests__` directory.
+
 
 Guidelines for the tests.
 - These tests are mostly commented out to prevent you from running them accidentally.
