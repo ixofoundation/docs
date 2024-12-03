@@ -1,0 +1,1371 @@
+{
+  "type": "object",
+  "properties": {
+    "$id": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "default": {
+              "type": "string"
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "type": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "default": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "default": {
+                      "type": "string"
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          }
+        },
+        "issuanceDate": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "default": {
+              "type": "string"
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "format": {
+              "type": "string"
+            }
+          }
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "default": {
+                      "type": "string"
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "default": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "claim": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "project": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "credential": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "type": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "type": {
+                                                  "type": "string"
+                                                },
+                                                "default": {
+                                                  "type": "string"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "issuer": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "proof": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "location": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "country": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "region": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "setting": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "product": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "default": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "producer": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "distributor": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "quantity": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "amount": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "integer"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "units": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "customer": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "evidence": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "payment": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "identifier": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "name": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "method": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "provider": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "amount": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "value": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "integer"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "integer"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "currency": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "dateTime": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "format": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          }
+        },
+        "proof": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {}
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": {
+      "type": "boolean"
+    }
+  },
+  "x-examples": {
+    "Example 1": {
+      "$id": "root",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
+        },
+        "id": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "did:ixo:entity:abc123#FuelPurchase"
+          ]
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "VerifiableCredential"
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:abc123"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "issuanceDate": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2023-01-01T19:23:24Z"
+          ],
+          "format": "date-time"
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:abc123"
+              ]
+            },
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "ixo:entity"
+              }
+            },
+            "claim": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "protocol:FuelPurchase"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:FuelPurchase"
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "web3:xyz123"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "claim:GasifyingBiomass"
+                    },
+                    "credential": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:789xyz#ProjectCredential"
+                          ]
+                        },
+                        "type": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "default": "VerifiableCredential"
+                          }
+                        },
+                        "issuer": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:abc123"
+                          ]
+                        },
+                        "proof": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "type",
+                        "issuer",
+                        "proof"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "credential"
+                  ],
+                  "additionalProperties": false
+                },
+                "location": {
+                  "type": "object",
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "ZM"
+                      ]
+                    },
+                    "region": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Africa"
+                      ]
+                    },
+                    "setting": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Domestic"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "country",
+                    "region",
+                    "setting"
+                  ],
+                  "additionalProperties": false
+                },
+                "product": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "web3:zxy987"
+                      ]
+                    },
+                    "type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "default": "claim:CookingFuel"
+                      }
+                    },
+                    "producer": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Emerging Cooking Solutions Zambia"
+                      ]
+                    },
+                    "distributor": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Emerging Cooking Solutions Zambia"
+                      ]
+                    },
+                    "quantity": {
+                      "type": "object",
+                      "properties": {
+                        "amount": {
+                          "type": "integer",
+                          "default": "",
+                          "examples": [
+                            50
+                          ]
+                        },
+                        "units": {
+                          "type": "string",
+                          "default": "kg",
+                          "examples": [
+                            "kg"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "amount",
+                        "units"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "producer",
+                    "distributor",
+                    "quantity"
+                  ],
+                  "additionalProperties": false
+                },
+                "customer": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "https://crm.emerging.eco/123"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "emerging:vocab#Domestic"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "project",
+                "location",
+                "product"
+              ],
+              "additionalProperties": false
+            },
+            "evidence": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "https://api.supamoto.app/api/v2/456"
+                  ]
+                },
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "default": "claim:PaymentTransaction"
+                  }
+                },
+                "payment": {
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "MP220804.0000.D00000"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "default": "TransactionId"
+                    },
+                    "method": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "telco"
+                      ]
+                    },
+                    "provider": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Airtel"
+                      ]
+                    },
+                    "amount": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            8000
+                          ]
+                        },
+                        "currency": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "MWK"
+                          ]
+                        },
+                        "dateTime": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "2023-01-01T19:23:24Z"
+                          ],
+                          "format": "date-time"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "currency",
+                        "dateTime"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "identifier",
+                    "name",
+                    "method",
+                    "provider",
+                    "amount"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "payment"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "claim",
+            "evidence"
+          ],
+          "additionalProperties": false
+        },
+        "proof": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      "required": [
+        "@context",
+        "id",
+        "type",
+        "issuer",
+        "issuanceDate",
+        "credentialSubject",
+        "proof"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "description": "Fuel Purchase",
+  "examples": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        {
+          "ixo": "https://w3id.org/ixo/context/v1",
+          "claim": "https://w3id.org/emerging/vocab/v1",
+          "protocol": "did:ixo:entity:32a5a11ebf1ce614a6eb8ef874898eee#",
+          "web3": "https://ipfs.io/ipfs/",
+          "type": "@type",
+          "@protected": true,
+          "@version": 1.1
+        }
+      ],
+      "id": "urn:uuid:700d962e-7a35-44ee-ba01-e869e4789db5",
+      "type": [
+        "VerifiableCredential",
+        "ixo:claim",
+        "claim:FuelPurchase"
+      ],
+      "credentialSubject": {
+        "id": "did:ixo:entity:4c73552dbf8a4343016e7f7952836014",
+        "type": [
+          "ixo:entity",
+          "claim:CleanCooking",
+          "claim:FuelPurchase"
+        ],
+        "claim": {
+          "id": "protocol:fuelPurchase",
+          "type": "claim:FuelPurchase",
+          "project": {
+            "id": "web3:bafybeihxer3dxr4zaagzntb7w7rrg3ck33rox6x42ersgb4p4z5ccnxkti",
+            "type": "claim:GasifyingBiomass",
+            "credential": {
+              "id": "did:ixo:entity:7f0cc7a072d514b38cb90bdf2e215901#projectCredential",
+              "type": [
+                "VerifiableCredential",
+                "claim:ProjectCredential"
+              ],
+              "issuer": "did:ixo:entity:237cb945b1368ed450ec67c7c4ac56ac",
+              "proof": "bafybeihxer3dxr4zaagzntb7w7rrg3ck33rox6x42ersgb4p4z5ccnxkti"
+            }
+          },
+          "location": {
+            "country": "ZM",
+            "region": "Africa",
+            "setting": "Domestic"
+          },
+          "product": {
+            "id": "web3:bafkreihnles23ry5plqpcgirjmhldftg5gjc2pziilkqwszid6ziaxuqyq",
+            "type": [
+              "claim:CookingFuel",
+              "claim:BiomassPellets"
+            ],
+            "producer": "Emerging Cooking Solutions Zambia",
+            "distributor": "Emerging Cooking Solutions Zambia",
+            "quantity": {
+              "amount": 30,
+              "units": "kg"
+            }
+          }
+        },
+        "evidence": {
+          "id": "https://api.supamoto.app/api/v2/stoves/pellets/purchases?transactionIds=2994029793",
+          "type": [
+            "claim:PaymentTransaction",
+            "claim:PaymentMethod",
+            "claim:PriceSpecification"
+          ],
+          "payment": {
+            "identifier": "2994029793",
+            "name": "TransactionId",
+            "method": "telco",
+            "provider": "mtn",
+            "amount": {
+              "value": 130,
+              "currency": "ZMW",
+              "dateTime": "2022-05-11T13:15:33.000Z"
+            }
+          }
+        }
+      },
+      "issuer": {
+        "id": "did:ixo:entity:237cb945b1368ed450ec67c7c4ac56ac"
+      },
+      "issuanceDate": "2023-07-06T16:09:31.086Z",
+      "proof": {
+        "type": "Ed25519Signature2018",
+        "created": "2023-07-06T16:09:31Z",
+        "verificationMethod": "did:ixo:entity:237cb945b1368ed450ec67c7c4ac56ac#DQPAV2hR3RQzRATr2r6EHa3LW8zk1E6fw5gpNUZJkAzx",
+        "proofPurpose": "assertionMethod",
+        "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..y7gVtm5dVNNMHoNDPGUiEVVQ0o1uvq7-NlRd_Vckf6ovWHa3ph4dU6A1KXDUWSnX6kBqWDXtM21U1k4gD5GuDg"
+      }
+    }
+  ]
+}
