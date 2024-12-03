@@ -67,12 +67,27 @@
     },
     {
       "type": "divider",
-      "title": "SDKs and Libraries"
+      "title": "Software Development Kits"
     },
     {
       "type": "item",
       "title": "Overview",
-      "uri": "SDKs-and-Articles-Overview.md"
+      "uri": "SDKs/SDKs-Overview.md"
+    },
+    {
+      "type": "item",
+      "title": "Multiclient SDK",
+      "uri": ""
+    },
+    {
+      "type": "item",
+      "title": "Multiclient SDK",
+      "uri": ""
+    },
+    {
+      "type": "item",
+      "title": "Multiclient SDK",
+      "uri": ""
     },
     {
       "type": "divider",

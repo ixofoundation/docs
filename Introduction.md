@@ -32,6 +32,8 @@ Ready to get your hands dirty? Here's how to dive in:
 > Tap `Confirm` to continue.
 > ![CleanShot 2024-11-29 at 07.06.06@2x.png](<assets/images/CleanShot 2024-11-29 at 07.06.06@2x.png>)
 - **Explore the Docs**: Dig into our documentation to unlock the potential of IXO's tools and services.
+  - These documents are a good place to start, or
+  - The Github [documentation](https://github.com/ixofoundation).
 - **Start Building**: Whether you're building community infrastructure, streamlining financial services, or ensuring impact measurement—we have you covered.
 
 ## Documentation Structure
