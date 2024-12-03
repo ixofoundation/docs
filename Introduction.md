@@ -32,9 +32,11 @@ Ready to get your hands dirty? Here's how to dive in:
 > Tap `Confirm` to continue.
 > ![CleanShot 2024-11-29 at 07.06.06@2x.png](<assets/images/CleanShot 2024-11-29 at 07.06.06@2x.png>)
 - **Explore the Docs**: Dig into our documentation to unlock the potential of IXO's tools and services.
+  - These documents are a good place to start, or
+  - The Github [documentation](https://github.com/ixofoundation).
 - **Start Building**: Whether you're building community infrastructure, streamlining financial services, or ensuring impact measurement—we have you covered.
 
-## Documentation Roadmap
+## Documentation Structure
 
 Our docs are structured to get you from zero to production as smoothly as possible:
 
@@ -44,9 +46,15 @@ Our docs are structured to get you from zero to production as smoothly as possib
 - **Use Cases**: Real-world projects built using IXO to spark your imagination.
 - **Tutorials**: Step-by-step guides to get you up and running - fast.
 
-## Let’s Create Impact Together
+## Platforms Implementing IXO Spatial Web
+
+Have a look at the Platforms section for successful implementations of the IXO Spatial Web infrastructure. The [Emerging platform](Platforms/Emerging/Welcome.md) is currently our flagship partnership with SupaMoto in Zambia.
+
+## Let's Create Impact Together
 
 The power of the IXO Spatial Web is in your hands. We can't wait to see how you push boundaries, solve gnarly problems, and make an impact with your projects. Whether it's managing infrastructure, tokenising outcomes, or building decentralised apps that matter — the possibilities are endless.
+
+Connect with us through [Linktree](https://linktr.ee/ixo_world).
 
 Happy building, and welcome to the future of spatial web development!
 

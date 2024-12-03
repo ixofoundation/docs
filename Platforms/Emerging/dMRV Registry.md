@@ -17,19 +17,19 @@ The Impact Hub Network provides a decentralised, globally-distributed public reg
 
 The registry enables all claims and data relating to Article 6 Mitigation Activities to be authenticated and independently verified.
 
-The registry is offered through a Digital Public Good public blockchain infrastructure –the Impact Hub– that is hosted by a network of globally-distributed independent Validator Node operators.
+The registry is offered through a Digital Public Good public blockchain infrastructure – the Impact Hub – that is hosted by a network of globally-distributed independent Validator Node operators.
 
 Digital Identifiers in the registry are self-sovereign and all records are privacy-preserving, with no personally-identifiable information (PII) stored on the public blockchain.
 
 ## Registry Functions 
 The registry provides the following services for digital Measurement, Reporting, and Verification (dMRV) of Article 6 Mitigation Activities:
-1. [Registration](./Registration.md)
-2. [Credential Issuance](./Credits-Issuance.md)
-3. [Claims Submissions](./Claims-Submissions.md)
-4. [Claims Evaluations](Claims-Verifications.md)
-5. [Self-Certification](./Self-Certification.md)
-6. [Credits Issuance](./Credits-Issuance.md)
-7. [Credits Transfers]()
-8. [Credits Retirements](./Credits-Retirements.md)
-9. [International Settlements](./ITMOs.md)
-10. [Audits](./Audits.md)
+1. [Registration](Registration.md)
+2. Credential Issuance
+3. [Claims Submissions](Claims-Submissions.md)
+4. [Claims Evaluations](Claims-Evaluations.md)
+5. Self-Certification
+6. Credits Issuance
+7. Credits Transfers
+8. Credits Retirements
+9. International Settlements
+10. Audits

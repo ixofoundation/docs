@@ -66,28 +66,28 @@
       "uri": "Blocksync-GraphQL-API/Blocksync-GraphQL-API-Overview.md"
     },
     {
-      "type": "item",
-      "title": "Matrix REST API",
-      "uri": "Matrix-REST-API/Overview.md"
-    },
-    {
-      "type": "item",
-      "title": "Matrix Bots & App Services REST API",
-      "uri": "Matrix-Bots-App-Services-REST-API/Overview.md"
-    },
-    {
-      "type": "item",
-      "title": "AI Companion REST API",
-      "uri": "AI-Companion-REST-API/AI-Companion-REST-API-Overview.md"
-    },
-    {
       "type": "divider",
-      "title": "SDKs and Libraries"
+      "title": "Software Development Kits"
     },
     {
       "type": "item",
       "title": "Overview",
-      "uri": "/SDKs-and-Articles-Overview.md"
+      "uri": "SDKs/SDKs-Overview.md"
+    },
+    {
+      "type": "item",
+      "title": "Multiclient SDK",
+      "uri": ""
+    },
+    {
+      "type": "item",
+      "title": "Multiclient SDK",
+      "uri": ""
+    },
+    {
+      "type": "item",
+      "title": "Multiclient SDK",
+      "uri": ""
     },
     {
       "type": "divider",
@@ -96,7 +96,7 @@
     {
       "type": "item",
       "title": "Overview",
-      "uri": "/Use-Cases-Overview.md"
+      "uri": "Use-Cases-Overview.md"
     },
     {
       "type": "divider",
@@ -105,7 +105,7 @@
     {
       "type": "item",
       "title": "Overview",
-      "uri": "/Tutorials-Overview.md"
+      "uri": "Tutorials-Overview.md"
     },
     {
       "type": "divider",
@@ -118,72 +118,27 @@
         {
           "type": "item",
           "title": "Welcome",
-          "uri": "/Platforms/Emerging/Welcome.md"
-        },
-        {
-          "type": "item",
-          "title": "Audits",
-          "uri": "/Platforms/Emerging/Audits.md"
-        },
-        {
-          "type": "item",
-          "title": "Claims",
-          "uri": "/Platforms/Emerging/Claims-Submissions.md"
-        },
-        {
-          "type": "item",
-          "title": "Claims-Verifications",
-          "uri": "/Platforms/Emerging/Claims-Verifications.md"
-        },
-        {
-          "type": "item",
-          "title": "Credits-Issuance",
-          "uri": "/Platforms/Emerging/Credits-Issuance.md"
-        },
-        {
-          "type": "item",
-          "title": "Credits-Retirements",
-          "uri": "/Platforms/Emerging/Credits-Retirements.md"
-        },
-        {
-          "type": "item",
-          "title": "Device Usage Monitoring",
-          "uri": "/Platforms/Emerging/Device Usage Monitoring.md"
-        },
-        {
-          "type": "item",
-          "title": "Digital-Vouchers",
-          "uri": "/Platforms/Emerging/Digital-Vouchers.md"
+          "uri": "Platforms/Emerging/Welcome.md"
         },
         {
           "type": "item",
           "title": "dMRV Registry",
-          "uri": "/Platforms/Emerging/dMRV Registry.md"
+          "uri": "Platforms/Emerging/dMRV Registry.md"
         },
         {
           "type": "item",
-          "title": "Internationally-Transferred Mitigation Outcomes (ITMOS)",
-          "uri": "/Platforms/Emerging/ITMOs.md"
+          "title": "Claims",
+          "uri": "Platforms/Emerging/Claims-Submissions.md"
+        },
+        {
+          "type": "item",
+          "title": "Claims-Verifications",
+          "uri": "Platforms/Emerging/Claims-Evaluations.md"
         },
         {
           "type": "item",
           "title": "Registration",
-          "uri": "/Platforms/Emerging/Registration.md"
-        },
-        {
-          "type": "item",
-          "title": "Reporting",
-          "uri": "/Platforms/Emerging/Reporting.md"
-        },
-        {
-          "type": "item",
-          "title": "Self-Certification",
-          "uri": "/Platforms/Emerging/Self-Certification.md"
-        },
-        {
-          "type": "item",
-          "title": "Validation-and-Verification Bodies",
-          "uri": "/Platforms/Emerging/Validation-and-Verification.md"
+          "uri": "Platforms/Emerging/Registration.md"
         }
       ]
     }

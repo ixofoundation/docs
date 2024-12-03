@@ -59,4 +59,5 @@ The Blocksync GraphQL API Documentation is particularly useful for:
 To further support your understanding and use of the IXO Blocksync GraphQL API, the following resources are available:
 
 - **IXO Blocksync Core and Blocksync GitHub Repositories**: The Blocksync GraphQL API is provided by the [ixo-blocksync-core](https://github.com/ixofoundation/ixo-blocksync-core) and [ixo-blocksync](https://github.com/ixofoundation/ixo-blocksync) GitHub repositories. These repositories include the core components that power the API and provide developers with the necessary tools to build decentralised solutions.
+- **Links to the Blocksync Playground**: Use the IXO Blocksync GraphQL [Playground](https://blocksync-graphql.ixo.earth/graphiql) to write and test your queries. There are also playgrounds available for [Testnet](https://testnet-blocksync-graphql.ixo.earth/graphiql) and [Devnet](https://devnet-blocksync-graphql.ixo.earth/graphiql). 
 
