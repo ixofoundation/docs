@@ -1,0 +1,2318 @@
+{
+  "type": "object",
+  "x-examples": {
+    "Example 1": {
+      "$id": "root",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
+        },
+        "id": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "did:ixo:entity:abc123#1"
+          ]
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "VerifiableCredential"
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:abc123"
+              ]
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "issuanceDate": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2022-01-01T00:00:00Z"
+          ],
+          "format": "date-time"
+        },
+        "validFrom": {
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2022-01-01T00:00:00Z"
+          ],
+          "format": "date-time"
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "default": "",
+              "examples": [
+                "did:ixo:entity:123abc"
+              ]
+            },
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "ixo:entity"
+              }
+            },
+            "impact": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "protocol:VER"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:VER"
+                },
+                "claim": {
+                  "type": "string",
+                  "default": "GHG Emission Reduction"
+                },
+                "description": {
+                  "type": "string",
+                  "default": "Verified reduction in the emission of GHGs achieved by using a modern energy cooking device",
+                  "examples": [
+                    "Verified reduction in the emission of GHGs achieved by using a modern energy cooking device"
+                  ]
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "claim:GasifyingBiomass"
+                      ]
+                    },
+                    "credential": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:789xyz#ProjectCredential"
+                          ]
+                        },
+                        "type": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "default": "VerifiableCredential"
+                          }
+                        },
+                        "issuer": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "did:ixo:entity:abc123"
+                          ]
+                        },
+                        "proof": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "type",
+                        "issuer",
+                        "proof"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "credential"
+                  ],
+                  "additionalProperties": false
+                },
+                "location": {
+                  "type": "object",
+                  "properties": {
+                    "country": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "ZM"
+                      ]
+                    },
+                    "region": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Africa"
+                      ]
+                    },
+                    "setting": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Domestic"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "country",
+                    "region",
+                    "setting"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "claim",
+                "description",
+                "project",
+                "location"
+              ],
+              "additionalProperties": false
+            },
+            "evaluation": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "protocol#Evaluation-VER"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:Evaluation"
+                },
+                "methodology": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "https://globalgoals.goldstandard.org/431_ee_ics_methodology-for-metered-measured-energy-cooking-devices/"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "claim:GoldStandard"
+                      ]
+                    },
+                    "description": {
+                      "type": "string",
+                      "default": "",
+                      "examples": [
+                        "Methodology for Metered and Measured Cooking Devices"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "description"
+                  ],
+                  "additionalProperties": false
+                },
+                "model": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "methodology",
+                "model",
+                "version",
+                "date"
+              ],
+              "additionalProperties": false
+            },
+            "evaluator": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "did:ixo:entity:abc123"
+                  ]
+                },
+                "type": {
+                  "type": "string",
+                  "default": "ixo:oracle"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "impact",
+            "evaluation",
+            "evaluator"
+          ],
+          "additionalProperties": false
+        },
+        "outcome": {
+          "type": "object",
+          "properties": {
+            "linkedClaim": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "ixo:VER",
+                  "examples": [
+                    "ixo:VER"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                },
+                "issuanceDate": {
+                  "type": "string"
+                },
+                "issuer": {
+                  "type": "string"
+                },
+                "digestMultibase": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "description",
+                "issuanceDate",
+                "issuer",
+                "digestMultibase"
+              ],
+              "additionalProperties": false
+            },
+            "period": {
+              "type": "object",
+              "properties": {
+                "startDate": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "2022-01-01T00:00:00Z"
+                  ],
+                  "format": "date-time"
+                },
+                "endDate": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "2022-01-01T00:00:00Z"
+                  ],
+                  "format": "date-time"
+                }
+              },
+              "required": [
+                "startDate",
+                "endDate"
+              ],
+              "additionalProperties": false
+            },
+            "calculation": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "default": "claim:EmissionReductionFactor",
+                  "examples": [
+                    "claim:EmissionReductionFactor"
+                  ]
+                },
+                "factor": {
+                  "type": "number",
+                  "default": "",
+                  "examples": [
+                    11
+                  ]
+                },
+                "quantity": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "default": "claim:CookingFuel",
+                        "examples": [
+                          "claim:CookingFuel"
+                        ]
+                      }
+                    },
+                    "amount": {
+                      "type": "integer",
+                      "default": "",
+                      "examples": [
+                        50
+                      ]
+                    },
+                    "units": {
+                      "type": "string",
+                      "default": "kg",
+                      "examples": [
+                        "kg"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "amount",
+                    "units"
+                  ],
+                  "additionalProperties": false
+                },
+                "result": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "default": "claim:Carbon"
+                    },
+                    "amount": {
+                      "type": "number",
+                      "default": "",
+                      "examples": [
+                        550
+                      ]
+                    },
+                    "units": {
+                      "type": "string",
+                      "default": "kg",
+                      "examples": [
+                        "kg"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "amount",
+                    "units"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "factor",
+                "quantity",
+                "result"
+              ],
+              "additionalProperties": false
+            },
+            "confidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string",
+                    "default": "claim:Statistical",
+                    "examples": [
+                      "claim:Statistical"
+                    ]
+                  },
+                  "score": {
+                    "type": "string"
+                  },
+                  "threshold": {
+                    "type": "string"
+                  },
+                  "reason": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "https://library.emerging.eco/codes/A"
+                          ]
+                        },
+                        "type": {
+                          "type": "string",
+                          "default": "claim:Violation"
+                        },
+                        "description": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "Claim is not signed"
+                          ]
+                        },
+                        "result": {
+                          "type": "string",
+                          "default": "",
+                          "examples": [
+                            "rejected",
+                            "accepted",
+                            "disputed"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "type",
+                        "description",
+                        "result"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "type",
+                  "score",
+                  "threshold",
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "linkedClaim",
+            "period",
+            "calculation",
+            "confidence"
+          ],
+          "additionalProperties": false
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "default": "linkedClaim"
+              },
+              "description": {
+                "type": "string",
+                "default": "Fuel Purchase",
+                "examples": [
+                  "Fuel Purchase"
+                ]
+              },
+              "collectionId": {
+                "type": "string",
+                "default": 0,
+                "examples": [
+                  "1"
+                ]
+              },
+              "claimEvaluation": {
+                "type": "object",
+                "properties": {
+                  "submitted": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      100
+                    ]
+                  },
+                  "pending": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "approved": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      100
+                    ]
+                  },
+                  "rejected": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "disputed": {
+                    "type": "integer",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  }
+                },
+                "required": [
+                  "submitted",
+                  "pending",
+                  "approved",
+                  "rejected",
+                  "disputed"
+                ],
+                "additionalProperties": false
+              },
+              "proof": {
+                "type": "object",
+                "properties": {
+                  "digestMultibase": {
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                      "abc1skjhfbweoucbew"
+                    ]
+                  }
+                },
+                "required": [
+                  "digestMultibase"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "description"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "status": {
+          "type": "string",
+          "default": "verified",
+          "examples": [
+            "verified"
+          ]
+        },
+        "proof": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      "required": [
+        "@context",
+        "id",
+        "type",
+        "issuer",
+        "issuanceDate",
+        "validFrom",
+        "credentialSubject",
+        "outcome",
+        "evidence",
+        "status",
+        "proof"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "$id": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "@context": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "default": {
+              "type": "string"
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "type": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "default": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "default": {
+                      "type": "string"
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          }
+        },
+        "issuanceDate": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "default": {
+              "type": "string"
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "format": {
+              "type": "string"
+            }
+          }
+        },
+        "validFrom": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "default": {
+              "type": "string"
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "format": {
+              "type": "string"
+            }
+          }
+        },
+        "credentialSubject": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "default": {
+                      "type": "string"
+                    },
+                    "examples": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "default": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "impact": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "claim": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "description": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "project": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "credential": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "type": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "type": {
+                                                  "type": "string"
+                                                },
+                                                "default": {
+                                                  "type": "string"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "issuer": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "proof": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "location": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "country": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "region": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "setting": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "evaluation": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "methodology": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "description": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "model": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "version": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "date": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "evaluator": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          }
+        },
+        "outcome": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "linkedClaim": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "description": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "issuanceDate": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "issuer": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "digestMultibase": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "period": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "startDate": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "format": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "endDate": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "format": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "calculation": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "properties": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "type": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "factor": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "default": {
+                              "type": "string"
+                            },
+                            "examples": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        },
+                        "quantity": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "type": {
+                                          "type": "string"
+                                        },
+                                        "default": {
+                                          "type": "string"
+                                        },
+                                        "examples": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "amount": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "integer"
+                                      }
+                                    }
+                                  }
+                                },
+                                "units": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "result": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "properties": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "type": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "amount": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "integer"
+                                      }
+                                    }
+                                  }
+                                },
+                                "units": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "default": {
+                                      "type": "string"
+                                    },
+                                    "examples": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "required": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "confidence": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "type": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "string"
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "score": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "threshold": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "reason": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string"
+                                    },
+                                    "properties": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "type": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        },
+                                        "description": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "result": {
+                                          "type": "object",
+                                          "properties": {
+                                            "type": {
+                                              "type": "string"
+                                            },
+                                            "default": {
+                                              "type": "string"
+                                            },
+                                            "examples": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "string"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "additionalProperties": {
+                                      "type": "boolean"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "required": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "type": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "default": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "description": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "default": {
+                          "type": "string"
+                        },
+                        "examples": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "collectionId": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "default": {
+                          "type": "integer"
+                        },
+                        "examples": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "claimEvaluation": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "submitted": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "integer"
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer"
+                                  }
+                                }
+                              }
+                            },
+                            "pending": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "integer"
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer"
+                                  }
+                                }
+                              }
+                            },
+                            "approved": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "integer"
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer"
+                                  }
+                                }
+                              }
+                            },
+                            "rejected": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "integer"
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer"
+                                  }
+                                }
+                              }
+                            },
+                            "disputed": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "integer"
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "integer"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "required": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "boolean"
+                        },
+                        "": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "pg5l0e5m31z1m"
+                          }
+                        }
+                      }
+                    },
+                    "proof": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "digestMultibase": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "default": {
+                                  "type": "string"
+                                },
+                                "examples": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "required": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "status": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "default": {
+              "type": "string"
+            },
+            "examples": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "proof": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object"
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": {
+      "type": "boolean"
+    }
+  },
+  "examples": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        {
+          "ixo": "https://w3id.org/ixo/context/v1",
+          "claim": "https://w3id.org/emerging/vocab/v1",
+          "protocol": "did:ixo:entity:8fcbc757e75c120dd4beae0e5696fd38#",
+          "web3": "https://ipfs.io/ipfs/",
+          "cellnode": "https://cellnode.ixo.world",
+          "type": "@type",
+          "@protected": true,
+          "@version": 1.1
+        }
+      ],
+      "id": "urn:uuid:b708846f-7930-43bc-b704-4413aa0f01de",
+      "type": [
+        "VerifiableCredential",
+        "ixo:credential",
+        "claim:VER"
+      ],
+      "validFrom": "2024-05-20T18:56:49.634Z",
+      "status": "verified",
+      "credentialSubject": {
+        "id": "did:ixo:entity:00ee7c392cc9a9e56677cd298c5aae1c",
+        "type": [
+          "ixo:entity",
+          "claim:CleanCooking",
+          "claim:CER"
+        ],
+        "impact": {
+          "id": "protocol:VER",
+          "type": "claim:VER",
+          "claim": "GHG Emission Reduction",
+          "description": "Verified reduction in the emission of GHGs achieved by using a modern energy cooking device",
+          "project": {
+            "id": "did:ixo:entity:b3839c8bccf7ecff3cb6822869bb0d81",
+            "type": "claim:GasifyingBiomass",
+            "credential": {
+              "id": "did:ixo:entity:eb98bb2c92a62557b6c88c6f80e8d258#projectCredential",
+              "type": [
+                "VerifiableCredential",
+                "claim:ProjectCredential"
+              ],
+              "issuer": "did:ixo:entity:a1fcead81eab2f1158a726597d872413",
+              "proof": "bafybeihxer3dxr4zaagzntb7w7rrg3ck33rox6x42ersgb4p4z5ccnxkti"
+            }
+          },
+          "location": {
+            "country": "ZM",
+            "region": "Africa",
+            "setting": "Domestic"
+          }
+        },
+        "evaluation": {
+          "id": "protocol:Evaluation-VER",
+          "type": "claim:Evaluation",
+          "methodology": {
+            "id": "https://globalgoals.goldstandard.org/431_ee_ics_methodology-for-metered-measured-energy-cooking-devices/",
+            "type": "claim:GoldStandard",
+            "description": "Simplified Methodology for Metered and Measured Modern Energy Cooking Devices"
+          },
+          "model": "ProbabilisticModel1",
+          "version": "0cece87f-1d09-42e4-a629-e460f8ebb7cd",
+          "date": "2024-05-20T18:56:49.634Z"
+        },
+        "evaluator": {
+          "id": "did:ixo:entity:7889238a0a6a68554f65f5c7da96f13b",
+          "type": "ixo:oracle"
+        }
+      },
+      "outcome": {
+        "linkedClaim": {
+          "id": "cellnode:/bafkreidkufxgtiib7gyebnqfrdxkepj2umzuelgrk6rveftt4e3bbqcpsa",
+          "type": "ixo:CER",
+          "description": "Carbon Emission Reduction",
+          "issuanceDate": "2024-05-20T17:31:07.293Z",
+          "issuer": "did:ixo:entity:a1fcead81eab2f1158a726597d872413",
+          "digestMultibase": "bafkreidkufxgtiib7gyebnqfrdxkepj2umzuelgrk6rveftt4e3bbqcpsa"
+        },
+        "period": {
+          "startDate": "2023-11-06T00:00:00.000Z",
+          "endDate": "2023-12-06T00:00:00.000Z"
+        },
+        "calculation": {
+          "id": "web3:bafkreiahmy2t52a4zwmmzi644g27xuf3nzkngzpw7migxhmfnrjmzkeq24",
+          "type": "claim:EmissionReductionFactor",
+          "factor": 10.94,
+          "quantity": {
+            "type": [
+              "claim:CookingFuel",
+              "claim:BiomassPellets"
+            ],
+            "amount": 30,
+            "units": "kg"
+          },
+          "result": {
+            "id": "https://w3id.org/emerging/vocab/v1#Carbon",
+            "type": "claim:Carbon",
+            "amount": 328.2,
+            "units": "kgCO2"
+          }
+        },
+        "confidence": [
+          {
+            "id": "https://w3id.org/emerging/vocab/v1#Statistical",
+            "type": "claim:Statistical",
+            "score": "1",
+            "threshold": "0.95",
+            "reason": []
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "id": "cellnode:/bafkreife4hc4ehzctmopgtpf4lxvhhnohe3oovol3kgfo3hqgl5yuz3dsi",
+          "type": "linkedClaim",
+          "description": "Fuel Purchase",
+          "collectionId": "3",
+          "claimEvaluation": {
+            "submitted": 1,
+            "pending": 0,
+            "approved": 1,
+            "rejected": 0,
+            "disputed": 0
+          },
+          "proof": {
+            "digestMultibase": "bafkreife4hc4ehzctmopgtpf4lxvhhnohe3oovol3kgfo3hqgl5yuz3dsi"
+          }
+        },
+        {
+          "id": "https://api.supamoto.app/api/v2/stoves/202200311/sessions/cooking?pageSize=500&startDate=2023-11-06&endDate=2023-12-06",
+          "type": "claim:Data",
+          "description": "Cooking sessions monitored by IoT sensor"
+        }
+      ],
+      "issuer": {
+        "id": "did:ixo:entity:7889238a0a6a68554f65f5c7da96f13b"
+      },
+      "issuanceDate": "2024-05-20T18:56:54.178Z",
+      "proof": {
+        "type": "Ed25519Signature2018",
+        "created": "2024-05-20T18:56:54Z",
+        "verificationMethod": "did:ixo:entity:7889238a0a6a68554f65f5c7da96f13b#Dbux33xp6XEKAesTjewc4uUECtc9tywxvmaM28dpHN2R",
+        "proofPurpose": "assertionMethod",
+        "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..1eLiFElSN5SvlpiTGLRL6VyHgR_huHfmoseOl52OkHzBe7WY_Uu8AV3T5Gau3RtYACvUjZBSJq3zHNcJ6FVvBw"
+      }
+    }
+  ]
+}
