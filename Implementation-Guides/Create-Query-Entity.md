@@ -134,3 +134,14 @@ You can also use the **Entity** module to update the entity after it has been cr
 
 Refer to the Entity module for more information on available functions for managing entities.
 
+## Entity Module
+
+### Functions:
+- **CreateEntity**: Creates a new entity on the IXO blockchain.
+- **TransferEntity**: Transfers ownership of an entity to another party.
+- **UpdateEntity**: Updates details of an existing entity, such as status, dates, or credentials.
+- **UpdateEntityVerified**: Updates the verification status of an entity.
+- **CreateEntityAccount**: Creates a new account for the specified entity.
+- **GrantEntityAccountAuthz**: Grants authorization to another account to manage or perform actions related to the entity account.
+- **MsgRevokeEntityAccountAuthz**: Revokes a previously granted authorization for an entity account.
+
