@@ -84,8 +84,13 @@
     },
     {
       "type": "item",
-      "title": "Create and Query an Entity",
+      "title": "Create an Entity",
       "uri": "Implementation-Guides/Create-Query-Entity.md"
+    },
+    {
+      "type": "item",
+      "title": "Create Claims and Collections",
+      "uri": "Implementation-Guides/Claims-Module.md"
     },
     {
       "type": "divider",
