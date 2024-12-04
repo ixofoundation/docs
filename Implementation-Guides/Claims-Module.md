@@ -109,6 +109,46 @@ query MyQuery {
     collectionId
     paymentsStatus
     submissionDate
+  }
+}
+```
+
+## Step 5: Evaluate a Claim
+
+Once a claim has been submitted, it can be evaluated using the `MsgExecAgentEvaluate` function. This function allows an agent to assess the claim and determine its status.
+
+Here is an example of how to use the `MsgExecAgentEvaluate` function:
+
+```typescript
+const response = await MsgExecAgentEvaluate(
+  "claimId1234",        // Unique identifier for the claim
+  "collectionId1234",   // Identifier of the collection
+  "adminAddress1234"    // Admin address authorizing the claim evaluation
+);
+```
+
+In this example, the `MsgExecAgentEvaluate` function is invoked to evaluate a claim. The parameters include:
+
+- **claimId**: A unique identifier for the claim being evaluated.
+- **collectionId**: The collection to which the claim belongs.
+- **adminAddress**: The admin address authorizing the evaluation.
+
+### Step 6: View the Claim Using GraphQL
+
+After a claim has been evaluated, you can use the IXO Blocksync GraphQL API to view the details of the claim, including its evaluation status.
+
+Here is an example GraphQL query to retrieve the details of a specific claim:
+
+```graphql
+query MyQuery {
+  claim(claimId: "bafkreihzugslzexyu2c6o6nmtm7vxbsyelo7pzmcppsmqawj2s6blmgojy") {
+    schemaType
+    claimId
+    agentAddress
+    agentDid
+    collectionId
+    paymentsStatus
+    submissionDate
     evaluationByClaimId {
       status
       verificationProof
@@ -121,11 +161,9 @@ query MyQuery {
 }
 ```
 
-### Step 5: Update Collection or Claims (Optional)
+Replace the `claimId` field with the **claim ID** you obtained during claim submission to get specific details.
 
-You can also update the collection or claim after it has been created or submitted. The SDK provides several methods for performing operations on existing collections or claims, such as updating their status, payment information, or evaluation settings.
-
-Refer to the Claims module for more information on available functions for managing collections and claims.
+This query will provide detailed information about the claim, including its status, submission date, evaluation details, and related metadata. It is useful for verifying the claim's status and understanding the outcome of the evaluation.
 
 ## Claims Module
 
