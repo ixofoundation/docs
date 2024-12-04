@@ -28,7 +28,36 @@ In this example, the `CreateCollection` function is invoked to create a new coll
 
 This function sets up a collection where claims can be submitted, evaluated, and finalized. It also defines various parameters like start and end dates, quotas, and payment details.
 
-### Step 2: Submit a Claim to the Collection
+### Step 2: Retrieve Collection Data Using GraphQL
+
+After creating a collection and submitting a claim, you can retrieve the data related to the collection and claims using the IXO Blocksync GraphQL API.
+
+Here is an example GraphQL query to retrieve details about a specific collection:
+
+```graphql
+query MyQuery {
+  claimCollection(id: "99") {
+    id
+    startDate
+    endDate
+    entity
+    protocol
+    admin
+    count
+    evaluated
+    approved
+    rejected
+    disputed
+    claimSchemaTypesLoaded
+    invalidated
+    payments
+    quota
+    state
+  }
+}
+```
+
+### Step 3: Submit a Claim to the Collection
 
 Once the collection is created, you can proceed to submit a claim to this collection. This can be done using the `MsgExecAgentSubmit` function, which is designed to help agents submit claims for evaluation.
 
@@ -47,40 +76,6 @@ In this example, the `MsgExecAgentSubmit` function is invoked to submit a claim.
 - **claimId**: A unique identifier for the claim being submitted.
 - **collectionId**: The collection to which the claim belongs.
 - **adminAddress**: The admin address authorizing the submission.
-
-### Step 3: Retrieve Collection Data Using GraphQL
-
-After creating a collection and submitting a claim, you can retrieve the data related to the collection and claims using the IXO Blocksync GraphQL API.
-
-Here is an example GraphQL query to retrieve details about a specific collection:
-
-```graphql
-query MyQuery {
-  collection(id: "collectionId1234") {
-    id
-    state
-    startDate
-    endDate
-    quota
-    payments {
-      approval {
-        account
-        amount {
-          denom
-          amount
-        }
-      }
-      submission {
-        account
-        amount {
-          denom
-          amount
-        }
-      }
-    }
-  }
-}
-```
 
 Replace the `id` field with the **collection ID** you obtained during collection creation to get specific details.
 
@@ -102,7 +97,31 @@ In this example, the `MsgExecAgentSubmit` function is invoked to submit a claim.
 - **collectionId**: The collection to which the claim belongs.
 - **adminAddress**: The admin address authorizing the submission.
 
-### Step 3: Update Collection or Claims (Optional)
+### Step 4: Retrieve Claim Data Using GraphQL
+
+```graphql
+query MyQuery {
+  claim(claimId: "bafkreihzugslzexyu2c6o6nmtm7vxbsyelo7pzmcppsmqawj2s6blmgojy") {
+    schemaType
+    claimId
+    agentAddress
+    agentDid
+    collectionId
+    paymentsStatus
+    submissionDate
+    evaluationByClaimId {
+      status
+      verificationProof
+      amount
+      evaluationDate
+      oracle
+      reason
+    }
+  }
+}
+```
+
+### Step 5: Update Collection or Claims (Optional)
 
 You can also update the collection or claim after it has been created or submitted. The SDK provides several methods for performing operations on existing collections or claims, such as updating their status, payment information, or evaluation settings.
 

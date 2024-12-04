@@ -84,6 +84,11 @@ The claim object contains the core data payload, typically structured as JSON-LD
 ### Data Model 
 The data model defines the schema and semantics for the claim. IXO uses JSON-LD contexts to provide semantic meaning.
 
+The relevant data models are:
+- [**Fuel Purchase Claims**](../../models/Fuel-Purchase-Claim-Schema.json): Claims recording the purchase of sustainable fuel, such as biomass pellets.
+- [**Carbon Emission Reductions Claims**](../../models/Certified-Emissions-Reduction.json): Claims quantifying the greenhouse gas emissions reduced by switching to clean cooking methods.
+- [**Verifiable Emission Reductions Claims**](../../models/Verified-Emissions-Reduction.json): Claims facilitated by the Causal AI Oracle using Fuel Purchase and Carbon Emission Reductions Claims as input.
+
 ### JSON Schema
 A JSON Schema is used to validate the structure of the claim object. For example:
 
@@ -122,50 +127,9 @@ A JSON Schema is used to validate the structure of the claim object. For example
 ### Claim Signature
 The claim is cryptographically signed by the issuer to ensure authenticity and integrity.
 
-## Implementation
-To implement Verifiable Claims in your application:
+### Implementation
 
-1. **Install the IXO SDK**:
-
-```bash
-npm i @ixo/impactxclient-sdk
-```
-
-2. **Import the necessary modules**:
-
-```javascript
-import { VerifiableClaim, DID } from '@ixo/impactxclient-sdk';
-```
-
-3. **Create a new Verifiable Claim**:
-
-```javascript
-const claim = new VerifiableClaim({
-  context: 'https://www.w3.org/2018/credentials/v1',
-  id: 'http://example.com/credentials/1234',
-  type: ['VerifiableCredential', 'ExampleCredential'],
-  issuer: 'did:ixo:123456789abcdefghi',
-  issuanceDate: new Date().toISOString(),
-  credentialSubject: {
-    id: 'did:ixo:987654321zyxwvuts',
-    exampleAttribute: 'Example Value'
-  }
-});
-```
-
-4. **Sign the claim**:
-
-```javascript
-const issuerDid = new DID('did:ixo:123456789abcdefghi');
-const signedClaim = await claim.sign(issuerDid);
-```
-
-5. **Verify the claim**:
-
-```javascript
-const isValid = await signedClaim.verify();
-console.log('Claim is valid:', isValid);
-```
+To implement Verifiable Claims in your application, refer to the IXO Spatial Web [implementation guides](../../Implementation-Guides/Implementation-Guides-Overview.md).
 
 #### Best Practices
 - Use standardized claim schemas where possible to ensure interoperability

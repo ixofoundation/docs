@@ -84,7 +84,7 @@
     },
     {
       "type": "item",
-      "title": "Create an Entity",
+      "title": "Create Entities",
       "uri": "Implementation-Guides/Create-Query-Entity.md"
     },
     {
@@ -112,12 +112,12 @@
         },
         {
           "type": "item",
-          "title": "Claims",
+          "title": "Claims Submissions",
           "uri": "Platforms/Emerging/Claims-Submissions.md"
         },
         {
           "type": "item",
-          "title": "Claims-Verifications",
+          "title": "Claims Verifications",
           "uri": "Platforms/Emerging/Claims-Evaluations.md"
         },
         {
