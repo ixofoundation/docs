@@ -2,13 +2,7 @@
 stoplight-id: 1u13bejxkm95p
 ---
 
-# Creating and Querying an Entity
-
-## Prerequisites
-
-- Ensure the necessary SDKs are installed for your application.
-  - If you are using the [IXO Spatial Web Multiclient SDK](IXO-Spatial-Web-Multiclient-SDK.md), familiarize yourself with the [Signing Client](https://www.npmjs.com/package/@ixo/impactxclient-sdk#signing-client) to understand how to sign and broadcast transactions.
-- Familiarize yourself with the [IXO Blocksync GraphQL](Blocksync-GraphQL-API-Overview.md) queries for retrieving data from the blockchain.
+# Creating an Entity
 
 ## Step-by-Step Guide
 
@@ -27,6 +21,12 @@ testMsg("/ixo.entity.v1beta1.MsgCreateEntity asset", async () => {
   return res;
 });
 ```
+
+<!-- theme: info -->
+
+> #### Protocols as canonical classes 
+>
+> To instantiate a new entity, the first step is to create or reference an existing Protocol. This Protocol defines the class and common properties that all entities of this class inherit. Each entity document specifies its class under the `@context` field, with a key `class` and value like `did:ixo:entity:abc123`.
 
 In this example, the `CreateEntity` function is invoked to create a new entity, and the returned **entity DID** is logged to the console. The `entityDid` value will be required in the next step to query the entity details.
 

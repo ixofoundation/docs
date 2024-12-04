@@ -22,33 +22,17 @@
       "uri": "Errors.md"
     },
     {
-      "type": "item",
-      "title": "Pagination",
-      "uri": "Pagination.md"
+      "type": "divider",
+      "title": "Get Started"
     },
     {
       "type": "item",
-      "title": "Idempotency",
-      "uri": "Idempotency.md"
-    },
-    {
-      "type": "item",
-      "title": "Webhooks",
-      "uri": "Webhooks.md"
-    },
-    {
-      "type": "item",
-      "title": "Versioning",
-      "uri": "Versioning.md"
-    },
-    {
-      "type": "item",
-      "title": "Best Practices",
-      "uri": "Best-Practices-Overview.md"
+      "title": "Overview",
+      "uri": "Get-Started/Get-Started-Overview.md"
     },
     {
       "type": "divider",
-      "title": "APIs"
+      "title": "API"
     },
     {
       "type": "item",
@@ -67,7 +51,7 @@
     },
     {
       "type": "divider",
-      "title": "Software Development Kits"
+      "title": "SDK"
     },
     {
       "type": "item",

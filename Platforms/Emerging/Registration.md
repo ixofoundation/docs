@@ -26,11 +26,7 @@ The domain ontology outlines the structure of interconnected entities within the
 ## Creating an Entity
 To instantiate a new entity, the first step is to create or reference an existing Protocol. This Protocol defines the class and common properties that all entities of this class inherit. Each entity document specifies its class under the `@context` field, with a key "class" and value like `did:ixo:entity:abc123`.
 
-To create a new entity, use the function `msgCreateEntity`. The structure of this message is as follows:
-
-```
-[TODO: Add Message Struct]
-```
+To create a new entity, follow the [implementation guide](../../Implementation-Guides/Create-Query-Entity.md).
 
 Other chain services include:
 - **msgEditEntity**: To edit an existing entity.
