@@ -113,7 +113,7 @@ query MyQuery {
 }
 ```
 
-## Step 5: Evaluate a Claim
+### Step 5: Evaluate a Claim
 
 Once a claim has been submitted, it can be evaluated using the `MsgExecAgentEvaluate` function. This function allows an agent to assess the claim and determine its status.
 
