@@ -23,15 +23,6 @@
     },
     {
       "type": "divider",
-      "title": "Get Started"
-    },
-    {
-      "type": "item",
-      "title": "Overview",
-      "uri": "Get-Started/Get-Started-Overview.md"
-    },
-    {
-      "type": "divider",
       "title": "API"
     },
     {
