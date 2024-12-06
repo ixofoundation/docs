@@ -2,7 +2,7 @@
 stoplight-id: ta90eocvvnrx7
 ---
 
-# Overview
+# IXO gRPC Gateway API Overview
 
 The **gRPC Gateway API Reference** document serves as a comprehensive guide for developers and integrators working with the IXO blockchain. Its primary purpose is to facilitate efficient interactions with blockchain data by providing a RESTful interface to access gRPC services. The document bridges the gap between gRPC—a protocol commonly used for high-performance applications—and REST, which is more widely compatible and accessible for web development.
 
@@ -49,3 +49,11 @@ The **gRPC Gateway API Reference** includes numerous IXO-specific endpoints that
 - `/ixo/entity/{id}`: Get details about a specific entity within the IXO network.
 
 These endpoints and many more allow applications to read blockchain state, interact with entities, manage claims, and participate in the IXO ecosystem, all through straightforward REST calls.
+
+## Additional Resources
+
+To further support your understanding and implementation of the IXO Protocol, the following resources are available:
+
+- **IXO Blockchain GitHub Repository**: The core codebase of the IXO Blockchain, built using the Cosmos SDK, Tendermint, and IBC, can be found in the [GitHub repository](https://github.com/ixofoundation/ixo-blockchain). This repository contains custom modules for bonds, claims, entities, and more, providing developers with the necessary tools to build decentralised solutions.
+
+- **IXO Spatial Web Multiclient SDK**: This TypeScript SDK enables seamless interaction with the IXO Blockchain, providing access to RPC messages and more. Comprehensive documentation and examples are available in the [GitHub repository](https://github.com/ixofoundation/ixo-MultiClient-SDK).

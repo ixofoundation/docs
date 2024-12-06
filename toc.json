@@ -31,19 +31,46 @@
       "title": "API"
     },
     {
-      "type": "item",
-      "title": "RPC API",
-      "uri": "RPC-API/RPC-API-Overview.md"
-    },
-    {
-      "type": "item",
-      "title": "gRPC Gateway",
-      "uri": "gRPC-Gateway/gRPC-Gateway-Overview.md"
+      "type": "group",
+      "title": "IXO Protocol blockchain",
+      "items": [
+        {
+          "type": "item",
+          "title": "RPC API",
+          "uri": "RPC-API/RPC-API-Overview.md"
+        },
+        {
+          "type": "item",
+          "title": "gRPC Gateway",
+          "uri": "gRPC-Gateway/gRPC-Gateway-Overview.md"
+        }
+      ]
     },
     {
       "type": "item",
       "title": "Blocksync GraphQL API",
       "uri": "Blocksync-GraphQL-API/Blocksync-GraphQL-API-Overview.md"
+    },
+    {
+      "type": "group",
+      "title": "Matrix",
+      "items": [
+        {
+          "type": "item",
+          "title": "Matrix REST API",
+          "uri": "Matrix-REST-API/Matrix-REST-API-Overview.md"
+        },
+        {
+          "type": "item",
+          "title": "Matrix Bots and App Services REST API",
+          "uri": "Matrix-Bots-App-Services-REST-API/Matrix-Bots-App-Services-REST-API-Overview.md"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "title": "AI Companion REST API",
+      "uri": "AI-Companion-REST-API/AI-Companion-REST-API-Overview.md"
     },
     {
       "type": "divider",

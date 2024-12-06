@@ -7,6 +7,10 @@ tags: [Authentication]
 
 Proper authentication is a crucial part of ensuring the security and integrity of API interactions. The IXO Spatial Web API follows the best practices for REST services to provide a secure, reliable authentication mechanism for accessing its resources.
 
+<!-- theme: info -->
+> Best practices will always be adhered to.  
+> Each API defines its own authentication implementation - see the specific details per API.
+
 ## Best Practice Approach for Authentication
 
 ### 1. **Bearer Token Authentication**
