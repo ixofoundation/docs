@@ -1,5 +1,5 @@
 {
-  "collapseTableOfContents": false,
+  "collapseTableOfContents": true,
   "items": [
     {
       "type": "item",
@@ -97,6 +97,21 @@
       "uri": "SDKs/Matrix-Client-SDK.md"
     },
     {
+      "type": "item",
+      "title": "AI Companion SDK",
+      "uri": "SDKs/AI-Companion-SDK.md"
+    },
+    {
+      "type": "item",
+      "title": "JAMBO Wallet SDK",
+      "uri": "SDKs/JAMBO-Wallet-SDK.md"
+    },
+    {
+      "type": "item",
+      "title": "DID Provider SDK",
+      "uri": "SDKs/DID-Provider-SDK.md"
+    },
+    {
       "type": "divider",
       "title": "Implementation Guides"
     },
@@ -106,14 +121,82 @@
       "uri": "Implementation-Guides/Implementation-Guides-Overview.md"
     },
     {
-      "type": "item",
-      "title": "Create Entities",
-      "uri": "Implementation-Guides/Create-Query-Entity.md"
+      "type": "group",
+      "title": "GraphQL Queries",
+      "items": [
+        {
+          "type": "item",
+          "title": "Entities and IIDs",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Entities-IIDs.md"
+        },
+        {
+          "type": "item",
+          "title": "Claims and Collections",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Collections-Claims.md"
+        },
+        {
+          "type": "item",
+          "title": "Tokens",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Tokens.md"
+        },
+        {
+          "type": "item",
+          "title": "ixoSwap",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-ixoSwap.md"
+        },
+        {
+          "type": "item",
+          "title": "Bonds",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Bonds.md"
+        },
+        {
+          "type": "group",
+          "title": "Utility Queries",
+          "items": [
+            {
+              "type": "item",
+              "title": "Tokenomics",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Tokenomics.md"
+            },
+            {
+              "type": "item",
+              "title": "Transactions",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Transactions.md"
+            },
+            {
+              "type": "item",
+              "title": "Messages",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Messages.md"
+            },
+            {
+              "type": "item",
+              "title": "IPFS",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-IPFS.md"
+            },
+            {
+              "type": "item",
+              "title": "Chain",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Chain.md"
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "item",
-      "title": "Create Claims and Collections",
-      "uri": "Implementation-Guides/Claims-Module.md"
+      "type": "group",
+      "title": "Typescript Modules",
+      "items": [
+        {
+          "type": "item",
+          "title": "Create Entities",
+          "uri": "Implementation-Guides/Create-Query-Entity.md"
+        },
+        {
+          "type": "item",
+          "title": "Create Claims and Collections",
+          "uri": "Implementation-Guides/Claims-Module.md"
+        }
+      ]
     },
     {
       "type": "divider",
