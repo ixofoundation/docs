@@ -39,12 +39,5 @@ To prevent abuse and protect the API from malicious actors:
 - **Rate Limiting**: Clients are subject to rate limits, restricting the number of requests that can be made within a certain timeframe.
 - **IP Whitelisting**: To further enhance security, sensitive API endpoints may require requests to come from specific whitelisted IP addresses.
 
-### 7. **Best Practices Summary**
-- **Use Bearer Tokens and OAuth 2.0 for authentication.**
-- **Always transmit authentication tokens over HTTPS.**
-- **Avoid hard-coding sensitive credentials; use environment variables.**
-- **Apply JWTs with defined expiration times for secure and scalable authentication.**
-- **Leverage rate limiting and IP whitelisting to secure critical endpoints.**
-
 By following these best practices, the IXO Spatial Web API ensures robust security for its users and the applications interacting with it, helping to prevent unauthorized access and data breaches.
 

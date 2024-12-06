@@ -22,6 +22,11 @@
       "uri": "Errors.md"
     },
     {
+      "type": "item",
+      "title": "Pagination",
+      "uri": "Pagination.md"
+    },
+    {
       "type": "divider",
       "title": "API"
     },
