@@ -23,6 +23,6 @@ The IXO Blocksync GraphQL API offers a flexible query language, enabling develop
 <!-- theme: info --> 
 > ### Test Mode
 >
-> You can also use the IXO Spatial Web API in **test mode** by directing server endpoints to our testnet blockchain.  
+> You can also use the IXO Spatial Web API in test mode by directing server endpoints to our testnet blockchain.  
 > Transactions on the testnet do not involve real tokens or data, and they are not guaranteed to be available in the future.  
 > It is advisable to use anonymous or mock data during testing to ensure data privacy and integrity.

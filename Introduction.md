@@ -26,7 +26,6 @@ Ready to get your hands dirty? Here's how to dive in:
   - Get Started by setting up your development environment.
   - Explore the [Github](https://github.com/ixofoundation) documentation for a high-level overview and implementations.
 - **Start Building**: Whether you're building community infrastructure, streamlining financial services, or ensuring impact measurement — we have you covered.
-- **Contact Us**: [Let us know](https://linktr.ee/ixo_world) how we can support you! 
 
 ## Documentation Structure
 
@@ -42,7 +41,8 @@ Have a look at the Platforms section for successful implementations of the IXO S
 
 ## Let's Create Impact Together
 
-The power of the IXO Spatial Web is in your hands. We can't wait to see how you push boundaries, solve gnarly problems, and make an impact with your projects. Whether it's managing infrastructure, tokenising outcomes, or building decentralised apps that matter — the possibilities are endless.
+The power of the IXO Spatial Web is in your hands. We can't wait to see how you push boundaries, solve gnarly problems, and make an impact with your projects. Whether it's managing infrastructure, tokenising outcomes, or building decentralised apps that matter — the possibilities are endless.  
+
+[How can we support you?](https://linktr.ee/ixo_world) 
 
 Happy building, and welcome to the future of spatial web development!
-

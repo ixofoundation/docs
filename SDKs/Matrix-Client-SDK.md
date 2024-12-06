@@ -56,7 +56,7 @@ yarn add @ixo/matrixclient-sdk
 ```
 
 - **NPM Package**: [IXO Matrix Client SDK](https://www.npmjs.com/package/@ixo/matrixclient-sdk)
-- **GitHub Repository**: [IXO Matrix Client SDK GitHub](https://github.com/ixofoundation/ixo-matrixclient-sdk)
+- **GitHub Repository**: [IXO Matrix Client SDK GitHub*](https://github.com/ixofoundation/ixo-matrixclient-sdk)
 
 To get started, import the required components into your project:
 
@@ -69,7 +69,7 @@ import {
 } from '@ixo/matrixclient-sdk';
 ```
 
-For detailed information on usage and examples, refer to the [README.md file](https://github.com/ixofoundation/ixo-matrixclient-sdk/blob/main/README.md).
+For detailed information on usage and examples, refer to the [README.md file*](https://github.com/ixofoundation/ixo-matrixclient-sdk/blob/main/README.md).
 
 ## Use Cases for the SDK
 
@@ -81,3 +81,6 @@ The **IXO Matrix Client SDK** is highly versatile and can be used in multiple sc
 
 The **IXO Matrix Client SDK** equips developers with the tools needed to create secure, scalable, and well-integrated applications that take full advantage of the Matrix ecosystem, enabling effective real-time communication and management of decentralized rooms and services.
 
+<!-- theme:info -->
+> Note:
+> This Github repository is private. Request access by contacting the IXO World team.
