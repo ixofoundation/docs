@@ -1,5 +1,5 @@
 ---
-stoplight-id: 0zq7g0lz3gh5b
+stoplight-id: lqlllxh3d4289
 ---
 
 # Create Claims and Collections

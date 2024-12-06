@@ -1,5 +1,5 @@
 ---
-stoplight-id: 1u13bejxkm95p
+stoplight-id: n44c05pypw2gu
 ---
 
 # Creating an Entity

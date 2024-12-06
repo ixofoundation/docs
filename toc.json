@@ -188,13 +188,23 @@
       "items": [
         {
           "type": "item",
-          "title": "Create Entities",
-          "uri": "Implementation-Guides/Create-Query-Entity.md"
+          "title": "Manage Entities",
+          "uri": "Implementation-Guides/Manage-Entities.md"
         },
         {
           "type": "item",
-          "title": "Create Claims and Collections",
-          "uri": "Implementation-Guides/Claims-Module.md"
+          "title": "Manage Claims and Collections",
+          "uri": "Implementation-Guides/Manage-Claims-Collections.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Tokens",
+          "uri": "Implementation-Guides/Manage-Tokens.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Bonds",
+          "uri": "Implementation-Guides/Manage-Bonds.md"
         }
       ]
     },
