@@ -23,7 +23,7 @@ Ready to get your hands dirty? Here's how to dive in:
 
 - **Register Your Account**: Set up a self-custodial digital wallet and generate cryptographic keys with the [Impacts X mobile wallet](https://mobile.ixo.world/).
 - **Explore the Docs**: Unlock the potential of IXO's tools and services using our documentation.
-  - [Get Started](Getting-Started/Getting-Started-Overview.md) by setting up your development environment.
+  - Get Started by setting up your development environment.
   - Explore the [Github](https://github.com/ixofoundation) documentation for a high-level overview and implementations.
 - **Start Building**: Whether you're building community infrastructure, streamlining financial services, or ensuring impact measurement — we have you covered.
 - **Contact Us**: [Let us know](https://linktr.ee/ixo_world) how we can support you! 
