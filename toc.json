@@ -216,6 +216,21 @@
           "type": "item",
           "title": "Manage Bonds",
           "uri": "Implementation-Guides/Manage-Bonds.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage AuthZ",
+          "uri": "Implementation-Guides/Manage-AuthZ.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Liquid Staking",
+          "uri": "Implementation-Guides/Manage-Liquid-Staking.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Smart Accounts",
+          "uri": "Implementation-Guides/Manage-Smart-Accounts.md"
         }
       ]
     },
