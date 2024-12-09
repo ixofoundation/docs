@@ -2,35 +2,33 @@
 stoplight-id: n44c05pypw2gu
 ---
 
-# Creating an Entity
+# Managing Entities
 
 ## Step-by-Step Guide
 
-This guide will walk you through the process of creating a new entity using the **IXO Spatial Web Multiclient SDK** and then viewing the entity using a **GraphQL query** to the IXO Blocksync API.
+This guide walks you through managing entities using the **IXO Spatial Web Multiclient SDK**, including creating, transferring, and managing entity accounts.
 
 ### Step 1: Create an Entity
 
-To create a new entity, use the `CreateEntity` function provided by the IXO Spatial Web Multiclient SDK. Below is an example that demonstrates how to create an entity in TypeScript:
+To create a new entity, use the `CreateEntity` function. Here's an example in TypeScript:
 
 ```typescript
-let entityDid;
-testMsg("/ixo.entity.v1beta1.MsgCreateEntity asset", async () => {
-  const res = await Entity.CreateEntity();
-  entityDid = utils.common.getValueFromEvents(res, "wasm", "token_id");
-  console.log({ entityDid });
-  return res;
-});
+const entityType = "asset";
+const context = [{ key: "class", val: "did:ixo:entity:protocol123" }];
+const response = await Entity.CreateEntity(entityType, context);
+const entityDid = utils.common.getValueFromEvents(response, "wasm", "token_id");
+console.log({ entityDid });
 ```
 
 <!-- theme: info -->
 
-> #### Protocols as canonical classes 
+> #### Protocols as canonical classes
 >
-> To instantiate a new entity, the first step is to create or reference an existing Protocol. This Protocol defines the class and common properties that all entities of this class inherit. Each entity document specifies its class under the `@context` field, with a key `class` and value like `did:ixo:entity:abc123`.
+> Entities can be of different types (e.g., "asset") and include context information that defines their class and properties. The context helps establish the entity's relationship to protocols and inherited properties.
 
-In this example, the `CreateEntity` function is invoked to create a new entity, and the returned **entity DID** is logged to the console. The `entityDid` value will be required in the next step to query the entity details.
-
-The `CreateEntity` function is defined in the `Entity.ts` module and has the following structure:
+In this example, the `CreateEntity` function is invoked to create a new entity, and the returned **entity DID** is logged to 
+the console. The `entityDid` value will be required in the next step to query the entity details.
+The `CreateEntity` function accepts the following parameters:
 
 ```typescript
 export const CreateEntity = async (
@@ -40,108 +38,126 @@ export const CreateEntity = async (
   relayerNode: WalletUsers = WalletUsers.tester,
   signer: WalletUsers = WalletUsers.tester
 ) => {
-  const client = await createClient(getUser(signer));
-
-  const tester = getUser(signer);
-  const account = (await tester.getAccounts())[0];
-  const myAddress = account.address;
-  const myPubKey = account.pubkey;
-  const did = tester.did;
-
-  const relayerNodeDidLocal = relayerNodeDid || getUser(relayerNode).did;
-
-  const message = {
-    typeUrl: "/ixo.entity.v1beta1.MsgCreateEntity",
-    value: ixo.entity.v1beta1.MsgCreateEntity.fromPartial({
-      entityType: entityType,
-      context: createAgentIidContext(context),
-      verification: createIidVerificationMethods({
-        did,
-        pubkey: myPubKey,
-        address: myAddress,
-        controller: did,
-        type: keyType,
-      }),
-      controller: [did],
-      ownerDid: did,
-      ownerAddress: myAddress,
-      relayerNode: relayerNodeDidLocal,
-    }),
-  };
-
-  const response = await client.signAndBroadcast(
-    myAddress,
-    [message],
-    getFee(1, await client.simulate(myAddress, [message], undefined))
-  );
-  return response;
+  // ... implementation
 };
 ```
 
-In this function:
+### Step 2: Transfer Entity Ownership
 
-- **client** is used to sign and broadcast the transaction.
-- **entityType** defines the type of entity to be created (e.g., "asset").
-- **context** provides additional metadata, while **verification** and **controller** secure and validate the entity.
+To transfer ownership of an entity to another party, use the `TransferEntity` function:
 
-You can find more details about the `CreateEntity` function in the SDK [Entity module](https://github.com/ixofoundation/ixo-multiclient-sdk/blob/main/__tests__/modules/Entity.ts).
-
-### Step 2: Retrieve the Entity Using GraphQL
-
-Once the entity is created and you have logged the **entity DID**, you can query the IXO Blocksync GraphQL endpoint to retrieve the details of the entity. Use the following GraphQL query to fetch the entity's data:
-
-```graphql
-query MyQuery {
-  entity(id: "did:ixo:entity:eaff254f2fc62aefca0d831bc7361c14") {
-    id
-    type
-    owner
-    relayerNode
-    startDate
-    endDate
-    metadata
-    entityVerified
-    controller
-    verificationMethod
-    service
-    status
-    settings
-    accordedRight
-    accounts
-    alsoKnownAs
-    assertionMethod
-    authentication
-    capabilityDelegation
-    capabilityInvocation
-    context
-    credentials
-    externalId
-    linkedResource
-    linkedEntity
-    keyAgreement
-    linkedClaim
-  }
-}
+```typescript
+const entities = [entityDid];
+const recipientDid = "did:ixo:recipient123";
+const memo = "Transfer to new owner";
+await Entity.TransferEntity(WalletUsers.tester, entities, recipientDid, memo);
 ```
 
-Replace the `id` field with the **entity DID** obtained from the previous step to get the specific details of your entity.
+The `TransferEntity` function handles the ownership transfer process and optionally includes a memo for transaction reference.
 
-This query will provide you with comprehensive information about the entity, including its type, owner, relayer node, status, linked claims, and other metadata. It is useful for verifying that the entity has been successfully registered on the blockchain and understanding its state and relationships.
+### Step 3: Manage Entity Accounts
 
-### Step 3: Update the Entity (Optional)
+#### Create Entity Account
+To create an account for an entity:
 
-You can also use the **Entity** module to update the entity after it has been created. The SDK provides several methods for performing operations on existing entities, such as updating their context, ownership, or linked resources.
+```typescript
+const accountName = "treasury";
+await Entity.CreateEntityAccount(entityDid, accountName);
+```
 
-Refer to the Entity module for more information on available functions for managing entities.
+#### Grant Account Authorization
+To grant permissions to an account:
 
-## Entity Module
+```typescript
+const genericAuthMsg = "/cosmos.bank.v1beta1.MsgSend";
+await Entity.GrantEntityAccountAuthz(
+  entityDid,
+  "treasury",
+  WalletUsers.alice,
+  WalletUsers.tester,
+  genericAuthMsg
+);
+```
 
-### Functions:
-- **CreateEntity**: Creates a new entity on the IXO blockchain.
-- **TransferEntity**: Transfers ownership of an entity to another party.
-- **UpdateEntity**: Updates details of an existing entity, such as status, dates, or credentials.
-- **UpdateEntityVerified**: Updates the verification status of an entity.
-- **CreateEntityAccount**: Creates a new account for the specified entity.
-- **GrantEntityAccountAuthz**: Grants authorization to another account to manage or perform actions related to the entity account.
-- **MsgRevokeEntityAccountAuthz**: Revokes a previously granted authorization for an entity account.
+#### Revoke Account Authorization
+To revoke previously granted permissions:
 
+```typescript
+await Entity.MsgRevokeEntityAccountAuthz(
+  entityDid,
+  "treasury",
+  WalletUsers.alice,
+  "/cosmos.bank.v1beta1.MsgSend"
+);
+```
+
+### Step 4: Update Entity Status
+
+To update an entity's verification status:
+
+```typescript
+const entityDids = [entityDid];
+await Entity.UpdateEntityVerified(
+  WalletUsers.tester,
+  entityDids,
+  relayerDid,
+  true
+);
+```
+
+## Entity Module Reference
+
+### Core Functions:
+
+- **CreateEntity**: Creates a new entity with specified type and context
+  ```typescript
+  CreateEntity(entityType?, context?, relayerNodeDid?, relayerNode?, signer?)
+  ```
+
+- **TransferEntity**: Transfers entity ownership
+  ```typescript
+  TransferEntity(signer?, entities[], recipientDid?, memo?)
+  ```
+
+- **UpdateEntityVerified**: Updates entity verification status
+  ```typescript
+  UpdateEntityVerified(signer?, entityDids[], relayerDid?, entityVerified?)
+  ```
+
+### Account Management Functions:
+
+- **CreateEntityAccount**: Creates new entity account
+  ```typescript
+  CreateEntityAccount(entityDid, name?, signer?)
+  ```
+
+- **GrantEntityAccountAuthz**: Grants account authorization
+  ```typescript
+  GrantEntityAccountAuthz(entityDid, name?, grantee?, signer?, genericAuthMsg?)
+  ```
+
+- **MsgRevokeEntityAccountAuthz**: Revokes account authorization
+  ```typescript
+  MsgRevokeEntityAccountAuthz(entityDid, name?, grantee?, msgTypeUrl?, signer?)
+  ```
+
+## Common Issues and Solutions
+
+1. **Invalid Entity Type**
+   - Ensure the entityType matches one of the supported types
+   - Verify the context information is properly formatted
+
+2. **Authorization Errors**
+   - Check that the signer has appropriate permissions
+   - Verify the relayer node DID is valid and active
+
+3. **Account Management**
+   - Ensure account names are unique within the entity
+   - Verify authorization message types match intended permissions
+
+## Additional Notes
+
+- Entity DIDs are immutable and serve as unique identifiers
+- Context information helps establish entity relationships and inheritance
+- Account authorizations can be time-limited and specific to certain message types
+- Always verify entity status changes through appropriate query mechanisms
