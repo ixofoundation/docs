@@ -62,7 +62,6 @@ For more information on using the SDK and its capabilities, refer to the followi
 
 - **Documentation**: Full technical documentation is available in the GitHub repository, providing detailed explanations and code examples for each feature of the SDK.
 - **How-To Guides**: The GitHub repository includes practical guides on how to implement specific features, such as creating entities or interacting with smart contracts.
-- **Community Support**: Engage with the IXO community on platforms like Discord for assistance and knowledge sharing.
 - **GitHub Repository**: [IXO Multiclient SDK GitHub](https://github.com/ixofoundation/ixo-multiclient-sdk)
 
 Explore the **IXO Spatial Web Multiclient SDK** to bring the power of blockchain to your applications, enabling verifiable, impactful change on a global scale.

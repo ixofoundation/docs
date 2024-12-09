@@ -87,23 +87,6 @@ The IXO Blocksync GraphQL API supports the following key arguments to manage pag
   ```
   This request fetches entities that appear before the given cursor.
 
-### 2. **after**
-- **Description**: The `after` parameter is used as a cursor to indicate the point in the dataset from which to continue fetching results. It allows you to fetch subsequent pages without redundancy.
-- **Usage**: To retrieve the next set of results, include the `after` value returned in the previous response:
-  ```graphql
-  query {
-    entities(first: 20, after: "YXJyYXljb25uZWN0aW9uOjEw") {
-      edges {
-        node {
-          id
-          name
-        }
-      }
-    }
-  }
-  ```
-  This query will fetch the next set of entities starting from the provided cursor.
-
 ## Example Pagination Response
 
 A response from the GraphQL API includes pagination metadata that helps in navigating through the dataset.
