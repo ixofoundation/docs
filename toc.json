@@ -82,9 +82,20 @@
       "uri": "SDKs/SDKs-Overview.md"
     },
     {
-      "type": "item",
+      "type": "group",
       "title": "Multiclient SDK",
-      "uri": "SDKs/IXO-Spatial-Web-Multiclient-SDK.md"
+      "items": [
+        {
+          "type": "item",
+          "title": "Overview",
+          "uri": "SDKs/IXO-Spatial-Web-Multiclient-SDK.md"
+        },
+        {
+          "type": "item",
+          "title": "Module Reference",
+          "uri": "SDKs/Multiclient-SDK/Multiclient-SDK-Module-Reference.md"
+        }
+      ]
     },
     {
       "type": "item",
