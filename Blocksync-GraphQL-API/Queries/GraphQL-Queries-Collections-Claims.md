@@ -2,7 +2,7 @@
 stoplight-id: 5glmyf1zolslj
 ---
 
-# Claims and Collections Queries
+# Claims and Collections
 
 The following GraphQL queries enable interaction with claims and claim collections within the IXO ecosystem. These queries help manage submissions, evaluations, and associated metadata.
 
