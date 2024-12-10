@@ -29,7 +29,26 @@ To instantiate a new entity, the first step is to create or reference an existin
 To create a new entity, use the function `msgCreateEntity`. The structure of this message is as follows:
 
 ```
-[TODO: Add Message Struct]
+[type MsgCreateEntity struct {
+	EntityType string
+	EntityStatus int32
+	Controller     []string
+	Context        []*types.Context
+	Verification   []*types.Verification
+	Service        []*types.Service
+	AccordedRight  []*types.AccordedRight
+	LinkedResource []*types.LinkedResource
+	LinkedEntity   []*types.LinkedEntity
+	StartDate *time.Time
+	EndDate *time.Time
+	RelayerNode string
+	Credentials  []string
+	OwnerDid     DIDFragment
+	OwnerAddress string
+	Data         encoding_json.RawMessage
+	AlsoKnownAs  string
+	LinkedClaim  []*types.LinkedClaim
+}]
 ```
 
 Other chain services include:
