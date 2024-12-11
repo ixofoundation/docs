@@ -47,27 +47,6 @@
       "uri": "Blocksync-GraphQL-API/Blocksync-GraphQL-API-Overview.md"
     },
     {
-      "type": "group",
-      "title": "Matrix",
-      "items": [
-        {
-          "type": "item",
-          "title": "Matrix REST API",
-          "uri": "Matrix-REST-API/Matrix-REST-API-Overview.md"
-        },
-        {
-          "type": "item",
-          "title": "Matrix Bots and App Services REST API",
-          "uri": "Matrix-Bots-App-Services-REST-API/Matrix-Bots-App-Services-REST-API-Overview.md"
-        }
-      ]
-    },
-    {
-      "type": "item",
-      "title": "AI Companion REST API",
-      "uri": "AI-Companion-REST-API/AI-Companion-REST-API-Overview.md"
-    },
-    {
       "type": "divider",
       "title": "SDK"
     },
@@ -101,21 +80,6 @@
       "type": "item",
       "title": "Matrix Client SDK",
       "uri": "SDKs/Matrix-Client-SDK.md"
-    },
-    {
-      "type": "item",
-      "title": "AI Companion SDK",
-      "uri": "SDKs/AI-Companion-SDK.md"
-    },
-    {
-      "type": "item",
-      "title": "JAMBO Wallet SDK",
-      "uri": "SDKs/JAMBO-Wallet-SDK.md"
-    },
-    {
-      "type": "item",
-      "title": "DID Provider SDK",
-      "uri": "SDKs/DID-Provider-SDK.md"
     },
     {
       "type": "divider",
