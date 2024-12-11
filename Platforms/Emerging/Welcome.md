@@ -32,10 +32,6 @@ This offers a full-stack solution for:
 - **Advanced Analytics**: Query and process both on-chain and privately-stored offchain data, using graph-based queries
 - **Audit**: Perform third-party execution of dMRV procedures and computation, to validate Verifiable Credentials with zero-Knowledge Proofs
 
-## Getting Started
-
-Reference the [IXO Spatial Web documentation](../../Introduction.md) to get going.
-
 ## Impacts of the Platform
 
 ### Impact on Carbon Markets
