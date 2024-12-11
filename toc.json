@@ -3,11 +3,6 @@
   "items": [
     {
       "type": "item",
-      "title": "Introduction",
-      "uri": "Introduction.md"
-    },
-    {
-      "type": "item",
       "title": "API Reference",
       "uri": "API-Reference-Overview.md"
     },
