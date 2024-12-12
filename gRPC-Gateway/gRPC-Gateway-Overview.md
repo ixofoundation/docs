@@ -44,9 +44,9 @@ The **gRPC Gateway API Reference** includes numerous IXO-specific endpoints that
 
 ### Examples of IXO Endpoints
 
-- `/ixo/bonds/{bond_did}`: Retrieve information about a specific bond.
-- `/ixo/claims/claims`: Access claims data that has been submitted to the blockchain.
 - `/ixo/entity/{id}`: Get details about a specific entity within the IXO network.
+- `/ixo/claims/claims`: Access claims data that has been submitted to the blockchain.
+- `/ixo/token/params`: Get details about the parameters used by the Token module.
 
 These endpoints and many more allow applications to read blockchain state, interact with entities, manage claims, and participate in the IXO ecosystem, all through straightforward REST calls.
 

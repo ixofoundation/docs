@@ -47,6 +47,11 @@
       "uri": "Blocksync-GraphQL-API/Blocksync-GraphQL-API-Overview.md"
     },
     {
+      "type": "item",
+      "title": "Matrix State Bot API",
+      "uri": "Matrix-REST-API/Matrix-REST-API-Overview.md"
+    },
+    {
       "type": "divider",
       "title": "SDK"
     },
