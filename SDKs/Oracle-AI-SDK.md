@@ -4,7 +4,7 @@ stoplight-id: 1yx5ws0ns7kyn
 
 # Oracle AI SDK
 
-The **IXO Oracles UI SDK** is a comprehensive toolkit designed to seamlessly integrate conversational AI capabilities, such as Guru AI, into web and mobile applications. By providing React hooks and utilities, this SDK empowers developers to manage AI interactions dynamically while maintaining a rich and interactive user experience.
+The **IXO Oracle AI SDK** is a comprehensive toolkit designed to seamlessly integrate conversational AI capabilities, such as Guru AI, into web and mobile applications. By providing React hooks and utilities, this SDK empowers developers to manage AI interactions dynamically while maintaining a rich and interactive user experience.
 
 ## Key Features
 
@@ -18,7 +18,7 @@ The SDK enables applications to interface with conversational AI models, offerin
 
 ### 2. Dynamic UI Components
 
-One of the standout features of the **IXO Oracles UI SDK** is its ability to dynamically render custom UI components based on AI output. These components, such as cards or forms, are dynamically resolved and displayed in response to specific AI events.
+One of the standout features of the **IXO Oracle AI SDK** is its ability to dynamically render custom UI components based on AI output. These components, such as cards or forms, are dynamically resolved and displayed in response to specific AI events.
 
 - **Tool Call Integration**: Automatically map AI-generated events to React components.
 - **Custom Components**: Easily register and render application-specific components.
@@ -41,7 +41,7 @@ Through hooks like `useListMessages`, the SDK enables applications to:
 
 ## Use Cases
 
-The **IXO Oracles UI SDK** is versatile and can be used in a variety of applications:
+The **IXO Oracle AI SDK** is versatile and can be used in a variety of applications:
 
 - **AI-Powered Chat Interfaces**: Build interactive chat UIs with real-time AI-driven responses.
 - **Dynamic Content Rendering**: Create dynamic, data-driven UI components that respond to AI commands.
@@ -51,10 +51,10 @@ The **IXO Oracles UI SDK** is versatile and can be used in a variety of applicat
 
 For detailed documentation, code examples, and implementation guides, visit the GitHub repository:
 
-- **GitHub Repository**: [IXO Oracles UI SDK GitHub](https://github.com/ixoworld/ixo-ai-oracles)
+- **GitHub Repository**: [IXO Oracle AI SDK GitHub](https://github.com/ixoworld/ixo-ai-oracles)
 
 <!-- theme: info --> 
 > This repository is private. [Reach out to us](https://linktr.ee/ixo_world) to be added as a contributor. 
 
-The **IXO Oracles UI SDK** enables developers to create immersive, AI-driven applications that combine the power of conversational AI with dynamic and responsive user interfaces.
+The **IXO Oracle AI SDK** enables developers to create immersive, AI-driven applications that combine the power of conversational AI with dynamic and responsive user interfaces.
 
