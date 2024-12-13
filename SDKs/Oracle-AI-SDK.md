@@ -2,7 +2,7 @@
 stoplight-id: 1yx5ws0ns7kyn
 ---
 
-# IXO Oracles UI SDK
+# Oracle AI SDK
 
 The **IXO Oracles UI SDK** is a comprehensive toolkit designed to seamlessly integrate conversational AI capabilities, such as Guru AI, into web and mobile applications. By providing React hooks and utilities, this SDK empowers developers to manage AI interactions dynamically while maintaining a rich and interactive user experience.
 

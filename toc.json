@@ -87,6 +87,11 @@
       "uri": "SDKs/Matrix-Client-SDK.md"
     },
     {
+      "type": "item",
+      "title": "Oracle AI SDK",
+      "uri": "SDKs/Oracle-AI-SDK.md"
+    },
+    {
       "type": "divider",
       "title": "Implementation Guides"
     },
