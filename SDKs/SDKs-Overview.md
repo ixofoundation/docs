@@ -17,7 +17,7 @@ The IXO SDK overview includes the following components:
 - [**IXO Spatial Web Multiclient SDK**](IXO-Spatial-Web-Multiclient-SDK.md): The core SDK for interacting with the IXO blockchain, providing access to key functionalities such as transaction management and blockchain queries.
 - [**SignX SDK**](SignX-SDK.md): A cryptographic signature tool that simplifies the process of signing multiple blockchain transactions.
 - [**Matrix Client SDK**](Matrix-Client-SDK.md): Enables seamless interaction with Matrix, IXO’s encrypted messaging and data storage infrastructure.
-- [**AI Companion SDK**](AI-Companion-SDK.md): Leverages AI capabilities to enhance the development of decentralised applications by providing intelligent insights and automation.
+- [**Oracle AI SDK**](Oracle-AI-SDK.md): Leverages AI capabilities to enhance the development of decentralised applications by providing intelligent insights and automation.
 - [**JAMBO Wallet SDK**](JAMBO-Wallet-SDK.md): Provides integration capabilities for the Jambo wallet, allowing developers to easily build digital wallet functionalities into their applications.
 - [**DID Provider SDK**](DID-Provider-SDK.md): Manages decentralised identifiers (DIDs), enabling secure and verifiable digital identities for users.
 

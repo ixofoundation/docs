@@ -11,7 +11,6 @@ The IXO Spatial Web API is comprehensive and spans multiple domains, providing v
 - [**IXO Protocol Blockchain gRPC Gateway API**](gRPC-Gateway/gRPC-Gateway-Overview.md): Provides a gRPC REST interface for direct blockchain queries.
 - [**IXO Blocksync GraphQL API**](Blocksync-GraphQL-API/Blocksync-GraphQL-API-Overview.md): Provides a GraphQL interface for efficient and flexible querying of indexed blockchain data.
 - [**IXO Matrix State Bot API**](Matrix-REST-API/Matrix-REST-API-Overview.md): An interface to the private and secure data vaults stored in Matrix.
-- [**AI Companion REST API**](AI-Companion-REST-API/AI-Companion-REST-API-Overview.md): Offers artificial intelligence features and services to enhance the user experience.
 
 Each system contributes a specific part of the overall API, allowing users to leverage their functionalities to build and interact with impactful applications.
 
