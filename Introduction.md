@@ -2,15 +2,15 @@
 stoplight-id: 0yywb5kr8emri
 ---
 
-# Introduction to the IXO Spatial Web
+# Introduction to the IXO Spatial Web Platform
 
-The **IXO Spatial Web** is a decentralised technology ecosystem that connects blockchain, identity management, smart contracts, and conversational AI to enable trusted and verifiable interactions across social, environmental, and economic domains. It serves as a robust foundation for building decentralised applications (dApps) and solutions that can measure, manage, and report on real-world impacts.
+The **IXO Spatial Web Platform** is a decentralised technology ecosystem that connects blockchain, identity management, smart contracts, and conversational AI to enable trusted and verifiable interactions across social, environmental, and economic domains. It serves as a robust foundation for building decentralised applications (dApps) and solutions that can measure, manage, and report on real-world impacts.
 
-This introduction provides a comprehensive overview of everything included in the IXO Spatial Web, highlighting its core components, tools, SDKs, APIs, and resources.
+This introduction provides a comprehensive overview of everything included in the IXO Spatial Web Platform, highlighting its core components, tools, SDKs, APIs, and resources.
 
 ---
 
-## Core Components of the IXO Spatial Web
+## Core Components of the IXO Spatial Web Platform
 
 The Spatial Web is composed of several decentralised technologies that enable developers and organisations to create applications that interact with real-world data, entities, and verifiable digital assets.
 
@@ -34,7 +34,7 @@ The Spatial Web provides a suite of APIs to interact with blockchain data, ident
 - **Matrix State Bot API**: Manage identity states and ACLs in Matrix rooms.
 
 ### 4. SDKs and Tools
-The IXO Spatial Web offers modular SDKs to accelerate development and integration:
+The IXO Spatial Web Platform offers modular SDKs to accelerate development and integration:
 - **IXO Spatial Web Multiclient SDK**: Core SDK for interacting with the IXO blockchain.
 - **SignX SDK**: Enables secure multi-transaction signing and mobile-to-web authentication.
 - **Matrix Client SDK**: Tools for interacting with the Matrix communication network.
@@ -56,7 +56,7 @@ The Spatial Web supports developers with tools and environments that facilitate 
 
 ## Key Features
 
-The IXO Spatial Web is built to address critical challenges in verifiable data management, trust, and decentralisation:
+The IXO Spatial Web Platform is built to address critical challenges in verifiable data management, trust, and decentralisation:
 
 - **Self-Sovereign Identity**: Empower individuals and organisations to own and manage their identities.
 - **Impact Verification**: Report and verify claims about real-world social and environmental outcomes.
@@ -65,7 +65,7 @@ The IXO Spatial Web is built to address critical challenges in verifiable data m
 
 ---
 
-## Building Applications on the IXO Spatial Web
+## Building Applications on the IXO Spatial Web Platform
 
 Developers and organisations can use the Spatial Web to build dApps that deliver trusted outcomes. Key steps include:
 
@@ -84,7 +84,7 @@ Developers and organisations can use the Spatial Web to build dApps that deliver
 
 ## Use Cases
 
-The IXO Spatial Web enables innovative solutions across various sectors:
+The IXO Spatial Web Platform enables innovative solutions across various sectors:
 
 - **Social Impact Projects**: Measure, report, and verify project outcomes using trusted data.
 - **Governance Systems**: Build tools for decentralised governance and community decision-making.
