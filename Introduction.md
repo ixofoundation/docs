@@ -2,47 +2,103 @@
 stoplight-id: 0yywb5kr8emri
 ---
 
-# Welcome Developers!
+# Introduction to the IXO Spatial Web
 
-Welcome to the IXO Spatial Web developer documentation — your gateway to creating the future of decentralised, impact-driven applications. Whether you're building innovative projects or solving wicked problems, our infrastructure is here to help you bring your ideas to life.
+The **IXO Spatial Web** is a decentralised technology ecosystem that connects blockchain, identity management, smart contracts, and conversational AI to enable trusted and verifiable interactions across social, environmental, and economic domains. It serves as a robust foundation for building decentralised applications (dApps) and solutions that can measure, manage, and report on real-world impacts.
 
-## Why the IXO Spatial Web?
+This introduction provides a comprehensive overview of everything included in the IXO Spatial Web, highlighting its core components, tools, SDKs, APIs, and resources.
 
-The IXO Spatial Web is more than just a full-stack solution — it's a platform that empowers you to create, measure, and manage decentralised solutions for digital finance, outcome tracking, and community infrastructure. Here's what makes it special:
+---
 
-- **Decentralised Infrastructure Management**: Tokenise and manage decentralised IoT devices and physical assets with ease.
-- **Digital Identity & Credential Management**: Issue secure digital identities and verifiable credentials, ensuring user privacy and trust.
-- **Payments & Tokenised Assets**: Integrate payment processing, manage tokenised assets, and offer a seamless financial experience.
-- **Outcome Measurement & Verification (dMRV)**: Digitally measure and verify the impact of your projects, making transparency and accountability easy.
-- **AI-Enabled Services**: Use AI to automate decisions, generate actionable insights, and enhance your app's value.
-- **Tokenisation of Impact**: Register and manage outcomes as tokenised, verifiable units to ensure traceability for all stakeholders.
+## Core Components of the IXO Spatial Web
 
-## Let's Build Something Awesome
+The Spatial Web is composed of several decentralised technologies that enable developers and organisations to create applications that interact with real-world data, entities, and verifiable digital assets.
 
-Ready to get your hands dirty? Here's how to dive in:
+### 1. IXO Blockchain
+The IXO Blockchain serves as the foundational Layer-1 appchain of the Spatial Web, enabling:
+- **Decentralised Identifiers (DIDs)**: Secure identity creation and management.
+- **Verifiable Credentials (VCs)**: Cryptographically signed and trusted data.
+- **Smart Contracts**: Automate decentralised workflows and transactions.
+- **Governance**: On-chain governance tools for decentralised decision-making.
 
-- **Register Your Account**: Set up a self-custodial digital wallet and generate cryptographic keys with the [Impacts X mobile wallet](https://mobile.ixo.world/).
-- **Explore the Docs**: Unlock the potential of IXO's tools and services using our documentation.
-  - Get Started by setting up your development environment.
-  - Explore the [Github](https://github.com/ixofoundation) documentation for a high-level overview and implementations.
-- **Start Building**: Whether you're building community infrastructure, streamlining financial services, or ensuring impact measurement — we have you covered.
+### 2. Identity and Verifiable Data
+The Spatial Web utilises **Decentralised Identifiers (DIDs)** and **Verifiable Credentials (VCs)** to enable trust in digital interactions. Entities, projects, and individuals can establish self-sovereign identities and interact securely with verified information.
 
-## Documentation Structure
+- **DID Provider X SDK**: Simplifies the creation and management of DIDs on the IXO blockchain.
+- **Matrix State Bot**: Manages decentralised storage of identity-related state and ACL (Access Control List) data.
 
-Our docs are structured to get you from zero to production as smoothly as possible:
+### 3. APIs and Gateways
+The Spatial Web provides a suite of APIs to interact with blockchain data, identity systems, and decentralised storage:
+- **IXO Blocksync GraphQL API**: Retrieve and query blockchain data in a developer-friendly manner.
+- **gRPC Gateway API**: REST-based interface for accessing gRPC blockchain services.
+- **Matrix State Bot API**: Manage identity states and ACLs in Matrix rooms.
 
-- **API Reference**: All the endpoints, parameters, and examples you need to call our services.
-- **SDKs**: Plug-and-play resources to help you build using your favorite languages and frameworks.
-- **Implementation Guides**: Specific examples to demonstrate how to use the API and SDKs to create working software.
+### 4. SDKs and Tools
+The IXO Spatial Web offers modular SDKs to accelerate development and integration:
+- **IXO Spatial Web Multiclient SDK**: Core SDK for interacting with the IXO blockchain.
+- **SignX SDK**: Enables secure multi-transaction signing and mobile-to-web authentication.
+- **Matrix Client SDK**: Tools for interacting with the Matrix communication network.
+- **Oracles UI SDK**: Dynamic UI components for integrating AI-driven tools and workflows.
+- **JAMBO Wallet SDK**: Integrates blockchain wallet functionality for web and mobile.
 
-## Platforms Implementing IXO Spatial Web
+These SDKs are designed to work together, enabling developers to build scalable, user-friendly decentralised applications.
 
-Have a look at the Platforms section for successful implementations of the IXO Spatial Web infrastructure. The [Emerging platform](Platforms/Emerging/Welcome.md) is currently our flagship partnership with SupaMoto in Zambia.
+---
 
-## Let's Create Impact Together
+## Development Tools and Environments
 
-The power of the IXO Spatial Web is in your hands. We can't wait to see how you push boundaries, solve gnarly problems, and make an impact with your projects. Whether it's managing infrastructure, tokenising outcomes, or building decentralised apps that matter — the possibilities are endless.  
+The Spatial Web supports developers with tools and environments that facilitate application creation, testing, and deployment:
 
-[How can we support you?](https://linktr.ee/ixo_world) 
+- **Testnets and Devnets**: Access dedicated testing environments for experimentation.
+- **IXO dAppStore on Opera**: A decentralised marketplace to host and access dApps within the Spatial Web.
 
-Happy building, and welcome to the future of spatial web development!
+---
+
+## Key Features
+
+The IXO Spatial Web is built to address critical challenges in verifiable data management, trust, and decentralisation:
+
+- **Self-Sovereign Identity**: Empower individuals and organisations to own and manage their identities.
+- **Impact Verification**: Report and verify claims about real-world social and environmental outcomes.
+- **Blockchain Interoperability**: Enable decentralised transactions and workflows across blockchain networks.
+- **AI-Powered Applications**: Integrate AI tools to automate workflows and enhance decision-making processes.
+
+---
+
+## Building Applications on the IXO Spatial Web
+
+Developers and organisations can use the Spatial Web to build dApps that deliver trusted outcomes. Key steps include:
+
+1. **Set Up Your Development Environment**:
+   - Use the provided SDKs to interact with the IXO blockchain and APIs.
+   - Access testing environments (Testnet, Devnet) for experimentation.
+
+2. **Leverage the IXO SDKs**:
+   - Integrate core functionalities such as DID management, wallets, and AI components.
+   - Explore SDK documentation for examples and implementation details.
+
+3. **Access APIs**:
+   - Use GraphQL, gRPC, and Matrix APIs to query blockchain data, manage identities, and store stateful data.
+
+---
+
+## Use Cases
+
+The IXO Spatial Web enables innovative solutions across various sectors:
+
+- **Social Impact Projects**: Measure, report, and verify project outcomes using trusted data.
+- **Governance Systems**: Build tools for decentralised governance and community decision-making.
+- **Decentralised Finance (DeFi)**: Create applications for staking, rewards, and peer-to-peer transactions.
+- **AI-Enhanced Applications**: Integrate AI-driven workflows for enhanced automation and insights.
+- **Identity Solutions**: Implement secure, self-sovereign digital identity systems.
+
+---
+
+## Additional Resources
+
+- **IXO SDKs**: Explore SDKs for development [IXO SDKs](SDKs/SDKs-Overview.md).
+- **APIs Documentation**: Access the API references.
+- **GitHub Repositories**: View all IXO repositories at [IXO GitHub](https://github.com/ixofoundation).
+
+Connect with the IXO team for assistance via the [IXO World Linktree](https://linktr.ee/ixo_world).
+
