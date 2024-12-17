@@ -92,6 +92,11 @@
       "uri": "SDKs/Oracle-AI-SDK.md"
     },
     {
+      "type": "item",
+      "title": "JAMBO",
+      "uri": "SDKs/JAMBO-Wallet-SDK.md"
+    },
+    {
       "type": "divider",
       "title": "Implementation Guides"
     },
