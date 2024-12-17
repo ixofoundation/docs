@@ -1,5 +1,5 @@
 {
-  "collapseTableOfContents": false,
+  "collapseTableOfContents": true,
   "items": [
     {
       "type": "item",
@@ -27,38 +27,24 @@
       "uri": "Pagination.md"
     },
     {
-      "type": "item",
-      "title": "Idempotency",
-      "uri": "Idempotency.md"
-    },
-    {
-      "type": "item",
-      "title": "Webhooks",
-      "uri": "Webhooks.md"
-    },
-    {
-      "type": "item",
-      "title": "Versioning",
-      "uri": "Versioning.md"
-    },
-    {
-      "type": "item",
-      "title": "Best Practices",
-      "uri": "Best-Practices-Overview.md"
-    },
-    {
       "type": "divider",
-      "title": "APIs"
+      "title": "API"
     },
     {
-      "type": "item",
-      "title": "RPC API",
-      "uri": "RPC-API/RPC-API-Overview.md"
-    },
-    {
-      "type": "item",
-      "title": "gRPC Gateway",
-      "uri": "gRPC-Gateway/gRPC-Gateway-Overview.md"
+      "type": "group",
+      "title": "IXO Protocol blockchain",
+      "items": [
+        {
+          "type": "item",
+          "title": "RPC API",
+          "uri": "RPC-API/RPC-API-Overview.md"
+        },
+        {
+          "type": "item",
+          "title": "gRPC Gateway",
+          "uri": "gRPC-Gateway/gRPC-Gateway-Overview.md"
+        }
+      ]
     },
     {
       "type": "item",
@@ -67,45 +53,165 @@
     },
     {
       "type": "item",
-      "title": "Matrix REST API",
-      "uri": "Matrix-REST-API/Overview.md"
-    },
-    {
-      "type": "item",
-      "title": "Matrix Bots & App Services REST API",
-      "uri": "Matrix-Bots-App-Services-REST-API/Overview.md"
-    },
-    {
-      "type": "item",
-      "title": "AI Companion REST API",
-      "uri": "AI-Companion-REST-API/AI-Companion-REST-API-Overview.md"
+      "title": "Matrix State Bot API",
+      "uri": "Matrix-REST-API/Matrix-REST-API-Overview.md"
     },
     {
       "type": "divider",
-      "title": "SDKs and Libraries"
+      "title": "SDK"
     },
     {
       "type": "item",
       "title": "Overview",
-      "uri": "/SDKs-and-Articles-Overview.md"
+      "uri": "SDKs/SDKs-Overview.md"
+    },
+    {
+      "type": "group",
+      "title": "Multiclient SDK",
+      "items": [
+        {
+          "type": "item",
+          "title": "Overview",
+          "uri": "SDKs/IXO-Spatial-Web-Multiclient-SDK.md"
+        },
+        {
+          "type": "item",
+          "title": "Module Reference",
+          "uri": "SDKs/Multiclient-SDK/Multiclient-SDK-Module-Reference.md"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "title": "SignX SDK",
+      "uri": "SDKs/SignX-SDK.md"
+    },
+    {
+      "type": "item",
+      "title": "Matrix Client SDK",
+      "uri": "SDKs/Matrix-Client-SDK.md"
+    },
+    {
+      "type": "item",
+      "title": "Oracle AI SDK",
+      "uri": "SDKs/Oracle-AI-SDK.md"
+    },
+    {
+      "type": "item",
+      "title": "JAMBO",
+      "uri": "SDKs/JAMBO-Wallet-SDK.md"
     },
     {
       "type": "divider",
-      "title": "Use Cases"
+      "title": "Implementation Guides"
     },
     {
       "type": "item",
       "title": "Overview",
-      "uri": "/Use-Cases-Overview.md"
+      "uri": "Implementation-Guides/Implementation-Guides-Overview.md"
     },
     {
-      "type": "divider",
-      "title": "Tutorials"
+      "type": "group",
+      "title": "GraphQL Queries",
+      "items": [
+        {
+          "type": "item",
+          "title": "Entities and IIDs",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Entities-IIDs.md"
+        },
+        {
+          "type": "item",
+          "title": "Claims and Collections",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Collections-Claims.md"
+        },
+        {
+          "type": "item",
+          "title": "Tokens",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Tokens.md"
+        },
+        {
+          "type": "item",
+          "title": "ixoSwap",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-ixoSwap.md"
+        },
+        {
+          "type": "item",
+          "title": "Bonds",
+          "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Bonds.md"
+        },
+        {
+          "type": "group",
+          "title": "Utility Queries",
+          "items": [
+            {
+              "type": "item",
+              "title": "Tokenomics",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Tokenomics.md"
+            },
+            {
+              "type": "item",
+              "title": "Transactions",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Transactions.md"
+            },
+            {
+              "type": "item",
+              "title": "Messages",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Messages.md"
+            },
+            {
+              "type": "item",
+              "title": "IPFS",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-IPFS.md"
+            },
+            {
+              "type": "item",
+              "title": "Chain",
+              "uri": "Blocksync-GraphQL-API/Queries/GraphQL-Queries-Chain.md"
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "item",
-      "title": "Overview",
-      "uri": "/Tutorials-Overview.md"
+      "type": "group",
+      "title": "Typescript Modules",
+      "items": [
+        {
+          "type": "item",
+          "title": "Manage Entities",
+          "uri": "Implementation-Guides/Manage-Entities.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Claims and Collections",
+          "uri": "Implementation-Guides/Manage-Claims-Collections.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Tokens",
+          "uri": "Implementation-Guides/Manage-Tokens.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Bonds",
+          "uri": "Implementation-Guides/Manage-Bonds.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage AuthZ",
+          "uri": "Implementation-Guides/Manage-AuthZ.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Liquid Staking",
+          "uri": "Implementation-Guides/Manage-Liquid-Staking.md"
+        },
+        {
+          "type": "item",
+          "title": "Manage Smart Accounts",
+          "uri": "Implementation-Guides/Manage-Smart-Accounts.md"
+        }
+      ]
     },
     {
       "type": "divider",
@@ -118,72 +224,27 @@
         {
           "type": "item",
           "title": "Welcome",
-          "uri": "/Platforms/Emerging/Welcome.md"
-        },
-        {
-          "type": "item",
-          "title": "Audits",
-          "uri": "/Platforms/Emerging/Audits.md"
-        },
-        {
-          "type": "item",
-          "title": "Claims",
-          "uri": "/Platforms/Emerging/Claims-Submissions.md"
-        },
-        {
-          "type": "item",
-          "title": "Claims-Verifications",
-          "uri": "/Platforms/Emerging/Claims-Verifications.md"
-        },
-        {
-          "type": "item",
-          "title": "Credits-Issuance",
-          "uri": "/Platforms/Emerging/Credits-Issuance.md"
-        },
-        {
-          "type": "item",
-          "title": "Credits-Retirements",
-          "uri": "/Platforms/Emerging/Credits-Retirements.md"
-        },
-        {
-          "type": "item",
-          "title": "Device Usage Monitoring",
-          "uri": "/Platforms/Emerging/Device Usage Monitoring.md"
-        },
-        {
-          "type": "item",
-          "title": "Digital-Vouchers",
-          "uri": "/Platforms/Emerging/Digital-Vouchers.md"
-        },
-        {
-          "type": "item",
-          "title": "dMRV Registry",
-          "uri": "/Platforms/Emerging/dMRV Registry.md"
-        },
-        {
-          "type": "item",
-          "title": "Internationally-Transferred Mitigation Outcomes (ITMOS)",
-          "uri": "/Platforms/Emerging/ITMOs.md"
+          "uri": "Platforms/Emerging/Welcome.md"
         },
         {
           "type": "item",
           "title": "Registration",
-          "uri": "/Platforms/Emerging/Registration.md"
+          "uri": "Platforms/Emerging/Registration.md"
         },
         {
           "type": "item",
-          "title": "Reporting",
-          "uri": "/Platforms/Emerging/Reporting.md"
+          "title": "dMRV Registry",
+          "uri": "Platforms/Emerging/dMRV Registry.md"
         },
         {
           "type": "item",
-          "title": "Self-Certification",
-          "uri": "/Platforms/Emerging/Self-Certification.md"
+          "title": "Claims Submissions",
+          "uri": "Platforms/Emerging/Claims-Submissions.md"
         },
         {
           "type": "item",
-          "title": "Validation-and-Verification Bodies",
-          "uri": "/Platforms/Emerging/Validation-and-Verification.md"
+          "title": "Claims Verifications",
+          "uri": "Platforms/Emerging/Claims-Evaluations.md"
         }
       ]
     }

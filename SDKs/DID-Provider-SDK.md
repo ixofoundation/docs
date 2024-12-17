@@ -1,7 +1,7 @@
 ---
-stoplight-id: umwh7sq7xnnmt
+stoplight-id: j5uv13t4zbc2w
 ---
 
-# Overview
+# DID Provider SDK
 
 The beginning of an awesome article...

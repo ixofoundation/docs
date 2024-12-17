@@ -1,5 +1,5 @@
 ---
-stoplight-id: yuspvud49fwfu
+stoplight-id: u3cub67gj0lbn
 ---
 
 # Claims Verification
@@ -40,26 +40,7 @@ First, define the structure of your Verifiable Claim using JSON-LD:
 
 ### Step 2: Submit the Claim
 
-Use the IXO SDK to submit the claim to the network:
-
-```javascript
-import { ixo } from '@ixo/sdk';
-
-const claim = {
-  // Claim data as defined above
-};
-
-const submitClaim = async () => {
-  try {
-    const response = await ixo.claims.submit(claim);
-    console.log('Claim submitted:', response.id);
-  } catch (error) {
-    console.error('Error submitting claim:', error);
-  }
-};
-
-submitClaim();
-```
+Reference the IXO Spatial Web implementation guide to [submit claims](../../Implementation-Guides/Claims-Module.md).
 
 ### Step 3: Configure the Oracle Service
 
@@ -132,69 +113,11 @@ const processVerification = async (claimId, verificationResult) => {
 
 The IXO Spatial Web ClientSDK offers several methods that can be used to facilitate claims verification and management. Some relevant methods include:
 
-### `msgEvaluateClaim`
+- **GrantEntityAccountClaimsEvaluateAuthzThroughAuthz**: Grants claim evaluation authorization through existing authorizations.
+- **MsgExecAgentEvaluate**: Executes an evaluation of a claim, determining its approval status.
+- **DisputeClaim**: Initiates a dispute for a specific claim.
+- **MsgExecWithdrawal**: Executes a withdrawal of a payment related to a claim.
 
-The `msgEvaluateClaim` method is used to submit a claim for evaluation by a registered Oracle. This method takes the claim ID and Oracle information and initiates the verification process:
-
-```javascript
-const evaluateClaim = async (claimId, oracleDid) => {
-  try {
-    const response = await ixo.multiClient.msgEvaluateClaim({
-      claimId: claimId,
-      oracleDid: oracleDid
-    });
-    console.log('Evaluation initiated:', response);
-  } catch (error) {
-    console.error('Error initiating claim evaluation:', error);
-  }
-};
-
-evaluateClaim('claim1234', 'did:ixo:oracle123456789');
-```
-
-### `msgUpdateClaimStatus`
-
-The `msgUpdateClaimStatus` method can be used to update the status of a claim based on the evaluation results from the Oracle. This ensures that the status of the claim is accurately reflected on the blockchain:
-
-```javascript
-const updateClaimStatus = async (claimId, status) => {
-  try {
-    const response = await ixo.multiClient.msgUpdateClaimStatus({
-      claimId: claimId,
-      status: status
-    });
-    console.log('Claim status updated:', response);
-  } catch (error) {
-    console.error('Error updating claim status:', error);
-  }
-};
-
-updateClaimStatus('claim1234', 'VERIFIED');
-```
-
-### `msgRegisterOracle`
-
-The `msgRegisterOracle` method allows for the registration of a new Oracle on the IXO network. This Oracle can then be used to evaluate claims submitted to the network:
-
-```javascript
-const registerOracle = async (oracleDetails) => {
-  try {
-    const response = await ixo.multiClient.msgRegisterOracle(oracleDetails);
-    console.log('Oracle registered:', response);
-  } catch (error) {
-    console.error('Error registering Oracle:', error);
-  }
-};
-
-registerOracle({
-  name: "CausalAIOracle",
-  did: "did:ixo:oracle123456789",
-  evaluationModel: "causal-impact-model-v1",
-  endpoints: {
-    evaluate: "https://api.causal-oracle.example.com/evaluate"
-  }
-});
-```
 
 ## Best Practices
 

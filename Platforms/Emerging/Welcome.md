@@ -8,7 +8,6 @@ Welcome to the the developer documentation for the **Emerging Platform** for Mod
 
 For more information about the platform, please visit the [Emerging website](https://emerging.eco) and the [Emerging Mission Control](https://app.emerging.eco) client application where you can access the services of the platform. Here you can also access domain knowledge about Modern Emergy Cooking and ask any questions you may have about the IXO Spatial Web, by interacting with the Companion AI agent.
 
-
 ## Platform Overview
 
 **Emerging** is a domain-specific platform for Modern Energy Cooking and household-targeted sustainable socio-economic development and climate impact mitigation. 
@@ -33,27 +32,6 @@ This offers a full-stack solution for:
 - **Advanced Analytics**: Query and process both on-chain and privately-stored offchain data, using graph-based queries
 - **Audit**: Perform third-party execution of dMRV procedures and computation, to validate Verifiable Credentials with zero-Knowledge Proofs
 
-## Getting Started
-
-To begin using the Emerging Platform for Modern Energy Cooking:
-
-1. **Register an Account**: Download the Impacts X mobile app from the Apple App Store or Google Playstore to create your self-custodial digital account and cryptographic keys. To use the IXO Testnet, long-press on the `Confirm` button to reveal the PIN keypad. Use `2468` to reveal network options. Select `IXO Testnet`, close the modal by pressing `X` and tap `Confirm` to continue.
-![CleanShot 2024-11-29 at 07.06.06@2x.png](<../../assets/images/CleanShot 2024-11-29 at 07.06.06@2x.png>)
-
-2. **Obtain API Credentials**: Generate your API keys in the developer portal
-3. **Explore the Documentation**: Use this documentation to understand the platform's capabilities
-4. **Start Building**: Begin creating innovative Spatial Web solutions for Modern Energy Cooking and Emerging Households, using the Spatial Web platform tools and services
-
-## Documentation Structure
-
-The documentation is organized into the following sections:
-
-- [**API Reference**](../../API-Reference-Overview.md): Detailed information about available endpoints and authentication
-- [**SDKs and Libraries**](../../SDKs-and-Articles-Overview.md): Resources for integrating the platform into various programming languages
-- [**Best Practices**](../../Best-Practices-Overview.md): Guidelines for optimal use of the platform and its services
-- [**Use Cases**](../../Use-Cases-Overview.md): Real-world examples of applications built using the Emerging Platform
-- [**Tutorials**](../../Tutorials-Overview.md): Step-by-step guides to help you get started with the platform
-
 ## Impacts of the Platform
 
 ### Impact on Carbon Markets
@@ -67,5 +45,3 @@ The Emerging Platform provides the foundations, tools and services for building 
 ## Imagine what You can Build
 
 We're excited to see what you'll build with the Emerging Platform and using the powerful capabilities of the IXO Spatial Web!
-Join the IXO Developers Forum to [TODO: Alwyn add more details – forum will operate using a Matrix room for the IXO/Emerging Developers DAO] 
-

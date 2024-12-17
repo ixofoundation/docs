@@ -47,13 +47,12 @@ The Protocol Documentation is particularly useful for:
 
 - **Entity Management**: Managing decentralised identifiers and linked resources with messages such as `MsgCreateEntity` and `MsgAddLinkedClaim` to support decentralised identity solutions.
 - **Submitting and Evaluating Claims**: Using `MsgSubmitClaim` and related messages to create verifiable claims and participate in impact projects, ensuring transparency and accountability.
-- **Creating and Managing Bonds**: Using `MsgCreateBond` to set up token bonding curves and `MsgBuy` to facilitate purchases, supporting projects that require dynamic token economics.
+- **Creating and Managing Tokens**: Using `CreateToken` to set up token batches and `RetireToken` to achieve the objective of outcomes becoming the means to offset negative impacts.
 
 ## Additional Resources
 
 To further support your understanding and implementation of the IXO Protocol, the following resources are available:
 
-- **IXO Spatial Web Multiclient SDK**: This TypeScript SDK enables seamless interaction with the IXO Blockchain, providing access to RPC messages and more. Comprehensive documentation and examples are available in the [GitHub repository](https://github.com/ixofoundation/ixo-MultiClient-SDK).
-
 - **IXO Blockchain GitHub Repository**: The core codebase of the IXO Blockchain, built using the Cosmos SDK, Tendermint, and IBC, can be found in the [GitHub repository](https://github.com/ixofoundation/ixo-blockchain). This repository contains custom modules for bonds, claims, entities, and more, providing developers with the necessary tools to build decentralised solutions.
 
+- **IXO Spatial Web Multiclient SDK**: This TypeScript SDK enables seamless interaction with the IXO Blockchain, providing access to RPC messages and more. Comprehensive documentation and examples are available in the [GitHub repository](https://github.com/ixofoundation/ixo-MultiClient-SDK).

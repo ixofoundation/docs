@@ -1,3 +1,7 @@
+---
+stoplight-id: a0xprstdxq8hw
+---
+
 """Exposes a URL that specifies the behaviour of this scalar."""
 directive @specifiedBy(
   """The URL that specifies the behaviour of this scalar."""
