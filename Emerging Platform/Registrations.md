@@ -1,5 +1,5 @@
 ---
-stoplight-id: fftj0001sf8gb
+stoplight-id: l2nflcaahk5kl
 ---
 
 # Registration
@@ -45,5 +45,3 @@ query EntitiesByRelayerNodeAndType {
 For governance of entity registrations, the Market Relayer operator is responsible for setting the **Verified** status of entities. Any member of the Emerging DAO Compliance Group can submit a proposal to update an entity's Verified status to `true` or `false`. Compliance Group members vote on these proposals using an on-chain governance mechanism. Upon passing the proposal with the quorum and consensus settings, the chain automatically executes `msgVerifyEntity`.
 
 A standardized Deed Protocol is available for carrying out this governance procedure.
-
-

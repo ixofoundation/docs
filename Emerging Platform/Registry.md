@@ -1,8 +1,10 @@
 ---
-stoplight-id: u3ohgxhjfxj3t
+stoplight-id: rhtxzs5ft6mzx
 ---
 
-## Emerging Platform Registry
+# Registry
+
+## Decentralized Clean Cooking Registry
 
 The Emerging Platform leverages the Impact Hub Network to provide a decentralized, globally-distributed public registry service designed for the digital Measurement, Reporting, and Verification (dMRV) of Article 6.2 activities. This registry underpins the platform’s commitment to transparent, verifiable, and privacy-preserving documentation of mitigation efforts and outcomes.
 
