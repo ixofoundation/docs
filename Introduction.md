@@ -41,7 +41,7 @@ The IXO Spatial Web Platform offers modular SDKs to accelerate development and i
 - **Oracles UI SDK**: Dynamic UI components for integrating AI-driven tools and workflows.
 - **JAMBO Wallet SDK**: Integrates blockchain wallet functionality for web and mobile.
 
-These SDKs are designed to work together, enabling developers to build scalable, user-friendly decentralised applications.
+These SDKs are designed to work together, enabling developers to build scalable, user-friendly, and decentralised applications.
 
 ---
 
