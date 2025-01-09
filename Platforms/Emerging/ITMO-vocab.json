@@ -1,0 +1,380 @@
+{
+  "@context": [
+    /* 
+      This reference points to itself, allowing JSON-LD processors
+      to correctly resolve "itmo" as a prefix within this context file.
+      You can also include additional custom contexts or references 
+      if needed for cross-context relationships.
+    */
+    {
+      "@version": 1.1
+    },
+    {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "https://schema.org/",
+      "itmo": "https://w3id.org/article6/itmo-context.jsonld#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "itmo:ITMOCredential",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A Verifiable Credential type describing Internationally Transferred Mitigation Outcomes (ITMOs) and related data under Article 6.2 of the Paris Agreement.",
+      "rdfs:label": "ITMOCredential",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "itmo:authorizationInfo",
+      "@type": "rdf:Property",
+      "rdfs:comment": "High-level authorization information for an ITMO, including participating parties and references.",
+      "rdfs:label": "authorizationInfo",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:ndcQuantification",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Key parameters of the NDC, such as sectors, GHGs, and quantified emissions or removals.",
+      "rdfs:label": "ndcQuantification",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:correspondingAdjustments",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Accounting adjustments applied to avoid double counting in both transferring and acquiring Parties’ NDCs.",
+      "rdfs:label": "correspondingAdjustments",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:environmentalIntegrity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Information ensuring ITMOs meet environmental integrity standards, including methodologies and references to official guidelines.",
+      "rdfs:label": "environmentalIntegrity",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:authorizationReference",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A Party-issued reference or identifier granting authorization for ITMO generation or transfer.",
+      "rdfs:label": "authorizationReference",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:cooperativeApproachDuration",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Time frame during which cooperative approaches under Article 6.2 are active.",
+      "rdfs:label": "cooperativeApproachDuration",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:expectedMitigationOutcomes",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Projected mitigation outcomes (e.g., in tonnes of CO2e) to be achieved in a specified period.",
+      "rdfs:label": "expectedMitigationOutcomes",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Number"
+      }
+    },
+    {
+      "@id": "itmo:participatingParties",
+      "@type": "rdf:Property",
+      "rdfs:comment": "List of Party states participating in the ITMO cooperative arrangement.",
+      "rdfs:label": "participatingParties",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:authorizedEntities",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Entities authorized by Parties to engage in generating or trading ITMOs.",
+      "rdfs:label": "authorizedEntities",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:ndcSectors",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Sectors included within the NDC’s scope for generating or accounting for ITMOs.",
+      "rdfs:label": "ndcSectors",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:ndcSources",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Emission sources from which ITMOs originate or to which reductions are attributed.",
+      "rdfs:label": "ndcSources",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:ndcGHGs",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Greenhouse gases covered under the NDC that are relevant for ITMO generation and tracking.",
+      "rdfs:label": "ndcGHGs",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:ndcTimePeriods",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Time periods or compliance years under the NDC to which these ITMOs apply.",
+      "rdfs:label": "ndcTimePeriods",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:ndcReferenceLevel",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Reference emissions or removals level under the NDC used to measure progress or calculate ITMOs.",
+      "rdfs:label": "ndcReferenceLevel",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Number"
+      }
+    },
+    {
+      "@id": "itmo:ndcTargetLevel",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Target level of emissions or removals established by the NDC, crucial for defining ITMOs.",
+      "rdfs:label": "ndcTargetLevel",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Number"
+      }
+    },
+    {
+      "@id": "itmo:ndcQuantificationTonnesCO2e",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Tonnes of CO2 equivalent relevant to the ITMO for verifying climate impact.",
+      "rdfs:label": "ndcQuantificationTonnesCO2e",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Number"
+      }
+    },
+    {
+      "@id": "itmo:singleYearNDC",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Boolean indicating if the NDC target is set for a single, specific year.",
+      "rdfs:label": "singleYearNDC",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Boolean"
+      }
+    },
+    {
+      "@id": "itmo:multiYearNDC",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Boolean indicating if the NDC target covers multiple years or a cumulative period.",
+      "rdfs:label": "multiYearNDC",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Boolean"
+      }
+    },
+    {
+      "@id": "itmo:emissionsTrajectory",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A sequence of emissions or removal values over time, showing progress toward the NDC target.",
+      "rdfs:label": "emissionsTrajectory",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      }
+      /* Range can be an array of numbers or an object describing annual data, 
+         so no strict schema:rangeIncludes is applied here. */
+    },
+    {
+      "@id": "itmo:annualCorrespondingAdjustments",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Year-by-year accounting adjustments made to reflect ITMO transfers accurately in NDC balances.",
+      "rdfs:label": "annualCorrespondingAdjustments",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      }
+    },
+    {
+      "@id": "itmo:averageAnnualITMOs",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Average amount of ITMOs transferred per year, often relevant for single-year NDC targets.",
+      "rdfs:label": "averageAnnualITMOs",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Number"
+      }
+    },
+    {
+      "@id": "itmo:cumulativeAdjustments",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Accumulated total of all corresponding adjustments over the NDC implementation period.",
+      "rdfs:label": "cumulativeAdjustments",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Number"
+      }
+    },
+    {
+      "@id": "itmo:environmentalIntegrityMetrics",
+      "@type": "rdf:Property",
+      "rdfs:comment": "List of metrics or indicators (e.g., CO2e) ensuring ITMOs uphold environmental integrity requirements.",
+      "rdfs:label": "environmentalIntegrityMetrics",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      }
+    },
+    {
+      "@id": "itmo:ipccMethodologiesReference",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Reference to the IPCC guidelines used to calculate emissions or removals (e.g., IPCC 2006).",
+      "rdfs:label": "ipccMethodologiesReference",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "itmo:otherNonGHGMetrics",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Any additional metrics besides GHGs that the participating Parties have agreed to track.",
+      "rdfs:label": "otherNonGHGMetrics",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      }
+      /* Could be a list of items, so no strict range is applied here. */
+    },
+    {
+      "@id": "itmo:partyStatusUnderParis",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Boolean indicating that the relevant Party is formally recognized under the Paris Agreement.",
+      "rdfs:label": "partyStatusUnderParis",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Boolean"
+      }
+    },
+    {
+      "@id": "itmo:maintainedNDC",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Boolean confirming the Party has a valid and active NDC submission.",
+      "rdfs:label": "maintainedNDC",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Boolean"
+      }
+    },
+    {
+      "@id": "itmo:trackingArrangements",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Registries, trackers, or systems used to monitor ITMO creation and transfers.",
+      "rdfs:label": "trackingArrangements",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      }
+      /* Could be an array of URLs or text references. */
+    },
+    {
+      "@id": "itmo:mostRecentNationalInventory",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Reference (URL or document) to the latest national GHG inventory report applicable to NDC calculations.",
+      "rdfs:label": "mostRecentNationalInventory",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:URL"
+      }
+    },
+    {
+      "@id": "itmo:contributionToNDCImplementation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Boolean indicating that the ITMOs actively support NDC objectives or benchmarks.",
+      "rdfs:label": "contributionToNDCImplementation",
+      "schema:domainIncludes": {
+        "@id": "itmo:ITMOCredential"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Boolean"
+      }
+    }
+  ]
+}
