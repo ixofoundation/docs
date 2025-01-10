@@ -4,6 +4,48 @@ stoplight-id: 0u6gcad8tyblz
 
 # API-Integration
 
+
+## API Services
+
+### Authentication
+
+
+## Reporting APIs
+
+### Households
+- Number of Serviced Households
+- Profile of Services Households (Low, Medium, High Density)
+- Stove Stacking (LPG + Biomass)
+
+### Devices
+- 
+
+### Fuel Usage
+
+
+### Credits
+- Issued (per project per time-period)
+- Cancelled
+- Transferred
+- Retired
+
+### Claims
+- Household Onboarding
+- Fuel Purchase
+- Fuel Delivery
+- Emission Reduction (CER)
+- 
+
+# Certifications (Credentials)
+- Devices
+- Households (ID, Location, Density, SocioEconomic Status, Number of Inhabitants, # Children in first 1000 days)
+- Agents (ID, Age, Location, Qualification, Role, Employment Status)
+- Fuel Purchases
+- Verified Emission Reductions
+
+
+
+
 ### 9.1 Claim Submission
 Use `POST /v1/claims` to submit new claims to the platform.
 
