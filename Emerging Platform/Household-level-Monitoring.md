@@ -13,31 +13,31 @@ By using the Emerging Platform’s decentralized identifiers (DIDs), verifiable 
 ## Key Components of the Architecture
 
 **1. Household DID**  
-   Each household is represented by a unique, decentralized identifier. All devices, claims, and verifications link back to the Household DID, ensuring consistency and traceability.
+Each household is represented by a unique, decentralized identifier. All devices, claims, and verifications link back to the Household DID, ensuring consistency and traceability.
 
 **2. Device DIDs**  
-   Cooking appliances (e.g., electric pressure cookers, biomass stoves, or LPG burners) each have their own DID. This allows for cryptographically secure data signatures at the device level.
+Cooking appliances (e.g., electric pressure cookers, biomass stoves, or LPG burners) each have their own DID. This allows for cryptographically secure data signatures at the device level.
 
 **3. Claims and Credentials**  
-   A claim captures an activity or event (e.g., fuel purchase, device usage), while a credential is a verifiable digital document proving that claim is valid. This distinction enables strong traceability and trust.
+A claim captures an activity or event (e.g., fuel purchase, device usage), while a credential is a verifiable digital document proving that claim is valid. This distinction enables strong traceability and trust.
 
 **4. Oracle Services**  
-   Oracles are specialized software entities (or modules) with domain-specific knowledge. They verify claims, detect anomalies, and can perform causal AI analysis to prevent double-counting and ensure accurate emission reduction calculations.
+Oracles are specialized software entities (or modules) with domain-specific knowledge. They verify claims, detect anomalies, and can perform causal AI analysis to prevent double-counting and ensure accurate emission reduction calculations.
 
 **5. Immutable Data Store**  
-   Critical metadata (e.g., cryptographic hashes, usage summaries, verification statuses) are anchored on a blockchain-based directed acyclic graph (DAG). Large telemetry data may reside off-chain, with references and hashes on-chain for immutability.
+Critical metadata (e.g., cryptographic hashes, usage summaries, verification statuses) are anchored on a blockchain-based directed acyclic graph (DAG). Large telemetry data may reside off-chain, with references and hashes on-chain for immutability.
 
 ## Setting Up a Household for dMRV
 
 ### Registration
 
 **1. Create a Household DID**  
-   - Use the platform’s DID registration endpoint to generate a unique identifier for the household.  
-   - Store any metadata (e.g., location, population, technology preferences).
+- Use the platform’s DID registration endpoint to generate a unique identifier for the household.  
+- Store any metadata (e.g., location, population, technology preferences).
 
 2. **2. Associate Customer or Resident Profiles**  
-   - Optionally, link individual customers or household residents to the household.  
-   - This helps track user-level interactions and device ownership.
+- Optionally, link individual customers or household residents to the household.  
+- This helps track user-level interactions and device ownership.
 
 3. **3. Schema Example (JSON Payload)**
 
@@ -61,35 +61,35 @@ By using the Emerging Platform’s decentralized identifiers (DIDs), verifiable 
 
 ### Device Onboarding
 
-• **Device DID Creation**: Every stove or cooktop must be registered with the platform. This includes specifying the device model, serial number, and fuel type.  
-• **Sensor Calibration and Configuration**: Ensure that the cooking device’s sensors (e.g., temperature, fuel flow, electricity usage) meet the accuracy and reporting guidelines defined by the methodology.
+- **Device DID Creation**: Every stove or cooktop must be registered with the platform. This includes specifying the device model, serial number, and fuel type.  
+- **Sensor Calibration and Configuration**: Ensure that the cooking device’s sensors (e.g., temperature, fuel flow, electricity usage) meet the accuracy and reporting guidelines defined by the methodology.
 
 ## Data Ingestion Architecture
 
 1. **IoT Connectivity**  
-   - Devices periodically send telemetry to the platform (e.g., via MQTT, HTTP, or LoRaWAN gateways).  
+- Devices periodically send telemetry to the platform (e.g., via MQTT, HTTP, or LoRaWAN gateways).  
 2. **Edge or Mobile App Logging**  
-   - In areas without reliable connectivity, mobile apps can store data offline and sync it to the platform when a connection is available.
+- In areas without reliable connectivity, mobile apps can store data offline and sync it to the platform when a connection is available.
 3. **Cryptographic Signatures**  
-   - Each measurement is digitally signed with the device’s private key.  
-   - The platform verifies these signatures, ensuring no tampering in transit.
+- Each measurement is digitally signed with the device’s private key.  
+- The platform verifies these signatures, ensuring no tampering in transit.
 
 ### Claims Creation
 
 After each measurement cycle or transaction (e.g., fuel delivery):
 1. **Claim Payload**  
-   - Basic attributes: device ID, timestamp, usage metrics (e.g., burn time, fuel consumed).  
-   - Sign with the device’s private key.  
+- Basic attributes: device ID, timestamp, usage metrics (e.g., burn time, fuel consumed).  
+- Sign with the device’s private key.  
 2. **Household Association**  
-   - Link each claim to the Household DID for aggregated analytics.
+- Link each claim to the Household DID for aggregated analytics.
 
 ## Reporting and Aggregation at Household Level
 
 ### Household Credential
 
 Once claims accumulate, the household can receive an updated credential summarizing its consumption and fuel-switching activities:
-• **Credential Subject**: The household (via Household DID)  
-• **Embedded Claims**: A list of usage claims or references to them (instead of duplicating raw telemetry data).
+- **Credential Subject**: The household (via Household DID)  
+- **Embedded Claims**: A list of usage claims or references to them (instead of duplicating raw telemetry data).
 
 ```json
 {
@@ -118,31 +118,31 @@ Once claims accumulate, the household can receive an updated credential summariz
 ### Stove Stacking and Fuel Switching
 
 When multiple devices are linked to a household, the platform uses these references to:
-• **Detect Overlaps**: Identify if devices of different fuel types operated concurrently.  
-• **Prevent Double-Counting**: The Oracle cross-checks usage from multiple stoves to ensure the baseline emissions offset is only claimed once for the same cooking needs.
+- **Detect Overlaps**: Identify if devices of different fuel types operated concurrently.  
+- **Prevent Double-Counting**: The Oracle cross-checks usage from multiple stoves to ensure the baseline emissions offset is only claimed once for the same cooking needs.
 
 ## Verification Workflows
 
 ### Oracle-Based Analysis
 
 1. **Data Validation**  
-   - The Oracle retrieves all usage claims from the household.  
-   - Compares timestamps, quantities, and device types with expected patterns (e.g., the MMECD methodology’s standards).
+- The Oracle retrieves all usage claims from the household.  
+- Compares timestamps, quantities, and device types with expected patterns (e.g., the MMECD methodology’s standards).
 
 2. **Anomaly Detection**  
-   - Flags contradictory or implausible claims (e.g., more hours of cooking logged than possible in a day).  
-   - Identifies suspicious fuel purchase or usage intervals that don’t align with delivery logs.
+- Flags contradictory or implausible claims (e.g., more hours of cooking logged than possible in a day).  
+- Identifies suspicious fuel purchase or usage intervals that don’t align with delivery logs.
 
 3. **Causal AI**  
-   - If stove-stacking is detected, a causal model estimates each device’s impact versus a counterfactual scenario without that device.  
-   - Helps accurately attribute emission reductions to each device-fuel combination.
+- If stove-stacking is detected, a causal model estimates each device’s impact versus a counterfactual scenario without that device.  
+- Helps accurately attribute emission reductions to each device-fuel combination.
 
 ###  Manual or Third-Party Auditing
 
-• **External Auditors**  
-  - Some projects or registries (e.g., Gold Standard) require third-party verification. Auditors can pull verifiable credentials from the platform, check relevant cryptographic proofs, and confirm sensor accuracy.  
-• **On-Site Inspections**  
-  - Auditors may physically inspect a subset of stoves for calibration checks, ensuring device data is reliable.
+**External Auditors**  
+- Some projects or registries (e.g., Gold Standard) require third-party verification. Auditors can pull verifiable credentials from the platform, check relevant cryptographic proofs, and confirm sensor accuracy.  
+**On-Site Inspections**  
+- Auditors may physically inspect a subset of stoves for calibration checks, ensuring device data is reliable.
 
 ## Emission Reduction Calculation
 
@@ -157,10 +157,10 @@ This generally follows the following patterns:
 
 ### Stove Stacking Considerations
 
-• **Partial Fuel Switch**  
-  - If the household is using both LPG and biomass, the platform’s data integration keeps a record of exactly how much of each fuel was used in a given period.  
-• **Weighted Emission Factors**  
-  - Each device or fuel source has a known emission factor. The platform automatically applies these to the usage logs, summing the total emissions for the period.
+**Partial Fuel Switch**  
+- If the household is using both LPG and biomass, the platform’s data integration keeps a record of exactly how much of each fuel was used in a given period.  
+**Weighted Emission Factors**  
+- Each device or fuel source has a known emission factor. The platform automatically applies these to the usage logs, summing the total emissions for the period.
 
 #### Pseudocode for Emission Calculations
 
@@ -215,18 +215,18 @@ function calculateHouseholdEmissions(householdId, startDate, endDate):
 ## Best Practices
 
 1. **Standardized Protocols**  
-   - Adopt existing protocols (e.g., a “Clean Cooking Protocol”) that define data schemas, usage intervals, and emission factors to avoid custom logic for each project.  
+- Adopt existing protocols (e.g., a “Clean Cooking Protocol”) that define data schemas, usage intervals, and emission factors to avoid custom logic for each project.  
 2. **Fallback Options**  
-   - In limited-connectivity scenarios, allow devices or mobile apps to buffer data. On reconnection, the entire data set can be batch-submitted for verification.  
+- In limited-connectivity scenarios, allow devices or mobile apps to buffer data. On reconnection, the entire data set can be batch-submitted for verification.  
 3. **Security**  
-   - Rotate device keys periodically.  
-   - Employ robust authentication to ensure only authorized actors can submit or modify claims.  
+- Rotate device keys periodically.  
+- Employ robust authentication to ensure only authorized actors can submit or modify claims.  
 4. **Governance and Auditing**  
-   - Keep an immutable on-chain record of all updates to device configurations and Oracle validations.  
-   - Conduct routine system checks for data consistency.  
+- Keep an immutable on-chain record of all updates to device configurations and Oracle validations.  
+- Conduct routine system checks for data consistency.  
 5. **Scalability**  
-   - Use containerization or cloud auto-scaling for high-volume projects.  
-   - Employ message queues for asynchronous telemetry processing.
+- Use containerization or cloud auto-scaling for high-volume projects.  
+- Employ message queues for asynchronous telemetry processing.
 
 
 ## Conclusion
