@@ -5,7 +5,9 @@ tags: [Emerging, Introduction]
 
 ## Welcome Developers
 
-Welcome to the developer documentation for the Emerging Platform, an innovative ecosystem accelerating the adoption of regenerative household solutions in emerging economies. Built on the IXO Spatial Web infrastructure, this comprehensive platform integrates advanced IoT technologies, blockchain, and artificial intelligence to revolutionize modern energy cooking and climate impact mitigation. By offering tools to monitor, verify, and incentivize sustainable practices, Emerging empowers developers, project managers, and device distributors to create impactful and scalable solutions.
+Welcome to the developer documentation for the Emerging Platform, This provides an innovative digitally-enabled ecosystem for accelerating the adoption of regenerative household solutions in emerging economies. 
+
+The Emerging Platform is built on the [IXO Spatial Web](https://ixo.world) infrastructure. This integrates advanced IoT technologies, blockchain, and artificial intelligence to revolutionize modern energy cooking and climate impact mitigation. By offering tools to monitor, verify, and incentivize sustainable practices, Emerging empowers developers, project managers, and device distributors to create impactful and scalable solutions.
 
 For more information, please visit the [Emerging website](https://emerging.eco) and explore the [Emerging Mission Control](https://app.emerging.eco) application to access services, domain knowledge, and the Companion AI agent.
 
@@ -37,9 +39,10 @@ For more information, please visit the [Emerging website](https://emerging.eco) 
 
 As a developer, you have access to a suite of tools and APIs designed to simplify integration and enhance functionality. The platform supports:
 
-- **Integration of IoT devices**: Onboard devices seamlessly with programmable digital twins.
-- **Blockchain-based workflows**: Manage tokenized Impact Credits and digital claims through secure, verifiable processes.
+- **Integration of IoT devices**: Onboard and control devices as programmable digital twins, ingesting telemetric monitoring data.
+- **Verifiable workflows**: Manage submissions of verifiable digital claims and automate the processing of claims with Causal AI, to enable self-issuance of verifiable digital credential certificates, and minting of digital Impact Credits, through the full lifecycle of generating, transferring, trading, retiring, and making corresponding adjustments across registries.
 - **Customizable analytics dashboards**: Tailor analytics solutions to your specific project needs.
+- **AI automations and decision-support**: Configure powerful Oracle services that use advanced cognitive computing to manage data processing pipelines and interact intelligently with software systems and platform users.
 
 ### Impacts of the Platform
 
@@ -53,7 +56,7 @@ The Emerging Platform provides tools and services to build decentralized finance
 
 ### Getting Started
 
-This documentation will guide you through the platform's architecture, tools, and best practices for building impactful solutions. Whether you're managing clean cooking projects, optimizing device networks, or exploring innovative ways to incentivize sustainable practices, Emerging offers the resources and support you need to succeed.
+This documentation will guide you through the platform's architecture, tools, and best practices for building impactful and highly scalable solutions. Whether you're managing clean cooking projects, optimizing device networks, or exploring innovative ways to incentivize sustainable practices, Emerging offers the software capabilities and support you need to succeed at an Internet-scale.
 
 ### Imagine what You can Build
 

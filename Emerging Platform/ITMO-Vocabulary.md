@@ -4,7 +4,7 @@ stoplight-id: k1s9a6azxoa4f
 
 # ITMO-Vocabulary
 
-The ITMO Vocabulary provides a formalized dictionary for semantic definitions of the Types of data used in ITMO Credentials.
+The [ITMO Vocabulary](models/ITMO-Vocabulary.json) provides a formalized dictionary for semantic definitions of the Types of data used in ITMO Credentials.
 
 This JSON-LD model defines the `ITMOCredential` class, extending schema.org’s "Intangible," to capture key information relevant to Internationally Transferred Mitigation Outcomes (ITMOs) under Article 6.2 of the Paris Agreement. 
 

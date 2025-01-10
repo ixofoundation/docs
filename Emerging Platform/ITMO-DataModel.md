@@ -6,7 +6,7 @@ stoplight-id: xmebkzp1z1s5j
 
 Below is a first-draft version of the proposed ITMO Certificate Verifiable Credential data model.
 
-```json
+``` json
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",

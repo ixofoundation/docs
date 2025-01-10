@@ -6,7 +6,9 @@ stoplight-id: h7f87kzqsnbpa
 
 ## Introduction
 
-Household-level monitoring aggregates data from one or more cooking devices used by a family or dwelling. Rather than tracking each device in isolation, this approach ensures a holistic view of how the household’s collective cooking practices influence fuel consumption and emissions. By using the Emerging Platform’s decentralized identifiers (DIDs), verifiable credentials, and data orchestration tools, you can automate the measurement, reporting, and verification (MRV) of these activities while aligning with Mitigation Activity Design Documents, recognized standards and methodologies (Gold Standard for Metered & Measured Energy Cooking Devices).
+Household-level monitoring aggregates data from one or more cooking devices used by a family or dwelling. Rather than tracking each device in isolation, this approach ensures a holistic view of how the household’s collective cooking practices influence fuel consumption and emissions. 
+
+By using the Emerging Platform’s decentralized identifiers (DIDs), verifiable credentials, and data orchestration tools, you can automate the measurement, reporting, and verification (MRV) of these activities while aligning with Mitigation Activity Design Documents, recognized standards and methodologies (Gold Standard for Metered & Measured Energy Cooking Devices).
 
 ## Key Components of the Architecture
 

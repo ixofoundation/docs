@@ -32,7 +32,7 @@ stoplight-id: 1sex126cipyu9
 
 **Protocol Entities**: Templates, workflows, rules, and standards governing various processes.
 
-**Oracle Entities**: Verifiable AI-enabled services implementing Protocols for various platform functions.
+**Oracle Entities**: Verifiable AI-enabled services implementing Protocols for automating platform functions, such as claim processing and decision-support.
 
 ## Technical Terms
 

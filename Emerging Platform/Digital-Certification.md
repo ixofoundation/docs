@@ -4,13 +4,11 @@ stoplight-id: v0f0zl44gtl42
 
 # Digital-Certification
 
-# Digital Certification of ITMOs
-
-## 1. Introduction
+## Introduction
 
 This documentation describes how to implement Internationally Transferred Mitigation Outcome (ITMO) certificates using the W3C Verifiable Credential (VC) standard. It also explains how the accompanying JSON-LD context (the "itmo" context) helps define and interpret domain-specific properties relevant to Article 6.2 of the Paris Agreement. By following this schema, developers can create machine-verifiable, tamper-resistant ITMO certificates for carbon trading or cross-border climate initiatives.
 
-## 2. Why Use Verifiable Credentials for ITMOs?
+## Why Use Verifiable Credentials for ITMOs?
 
 ### Trust and Transparency
 Verifiable Credentials rely on cryptographic signatures to prove authenticity and detect tampering. This ensures that ITMO data, such as NDC quantification or authorization references, is trustworthy and resistant to manipulation.
@@ -24,7 +22,7 @@ The JSON-LD approach allows different stakeholders (e.g., project developers, go
 ### Fine-Grained Control Over Privacy
 VCs support selective disclosure, letting issuers or holders share only the necessary claims. In ITMO transactions, certain sensitive details (e.g., underlying financial arrangements) can be omitted if only emissions or authorization data is required.
 
-## 3. Schema Overview
+## Schema Overview
 
 The ITMO Credential Schema is an extension of the W3C Verifiable Credentials data model. Each ITMO certificate has core properties:
 
@@ -36,7 +34,7 @@ The ITMO Credential Schema is an extension of the W3C Verifiable Credentials dat
 
 Within `credentialSubject`, ITMO-specific fields are grouped into sub-sections, such as `authorizationInfo`, `ndcQuantification`, `correspondingAdjustments`, and `environmentalIntegrity`. These hold crucial details like references to authorizing entities, greenhouse gases covered, and environmental integrity metrics.
 
-## 4. JSON-LD Context Explanation
+## JSON-LD Context Explanation
 
 ### Purpose of the "itmo" Context
 
@@ -53,7 +51,7 @@ Each property includes `domainIncludes` and `rangeIncludes` statements referenci
 
 In your ITMO credential, add the context URLs in the "@context" array. For example:
 
-```json
+```
 "@context": [
   "https://www.w3.org/2018/credentials/v1",
   "https://w3id.org/security/suites/ed25519-2018/v1",
@@ -73,7 +71,7 @@ This ensures:
 
 When a verifier or parser reads the credential, it looks up "itmo:authorizationReference" in the "itmo" context. The context file describes it as a rdf:Property with domain itmo:ITMOCredential, clarifying that authorizationReference is text used within a credential typed as ITMOCredential. JSON-LD tooling then interprets the meaning of the property, enabling a consistent, semantic understanding across systems.
 
-## 5. Implementation Steps
+## Implementation Steps
 
 ### Creating an ITMO Credential
 
@@ -91,7 +89,7 @@ To create a valid ITMO credential:
 
 ### Example ITMO Credential
 
-```json
+```
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
@@ -110,7 +108,7 @@ To create a valid ITMO credential:
 }
 ```
 
-## 6. Validation and Verification
+## Validation and Verification
 
 ### Technical Validation
 
@@ -128,7 +126,7 @@ Check that:
 * Values conform to Article 6.2 requirements
 * Environmental integrity criteria are met
 
-## 7. Best Practices
+## Best Practices
 
 ### Security Considerations
 
@@ -144,7 +142,7 @@ Check that:
 * Consider data retention policies
 * Comply with relevant privacy regulations
 
-## 8. Conclusion
+## Conclusion
 
 By leveraging the W3C Verifiable Credential standard and the specialized JSON-LD context for ITMOs, developers can produce highly reliable, machine-verifiable records of climate action. This approach integrates seamlessly with blockchain-based registries, decentralized identifiers, and existing carbon accounting platforms, while remaining adaptable to future policy and technology changes.
 
@@ -156,7 +154,7 @@ Developers using this schema will enjoy:
 
 For questions or contributions, consult your platform’s documentation on VC issuance and verification, or get involved with the broader Verifiable Credentials and Article 6.2 communities working to strengthen climate data interoperability.
 
-## 9. References
+## References
 
 * [W3C Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/)
 * [Article 6.2 of the Paris Agreement](https://unfccc.int/process/the-paris-agreement/cooperative-implementation)
