@@ -1,0 +1,179 @@
+openapi: 3.1.0
+tags: []
+x-stoplight:
+  id: 884mys18ohpqo
+info:
+  title: Emerging Platform API
+  version: '1.0'
+  summary: |
+    The Emerging Platform API enables the registry system to retrieve accurate data from the dMRV system, ensuring seamless integration, reliable communication, and streamlined monitoring and verification workflows.
+  description: |
+    The Emerging Platform API is designed to facilitate seamless communication between the dMRV system and the registry system. It enables the registry system to retrieve accurate and timely data from the dMRV system, supporting efficient monitoring, reporting, and verification processes. By ensuring reliable data exchange and integration, the API plays a critical role in maintaining data integrity and streamlining workflows between these interconnected systems.
+
+    **Security**  
+    The Emerging Platform API uses HTTP Basic Authentication to authenticate requests, following the standard defined in [RFC 7617](https://datatracker.ietf.org/doc/html/rfc7617). This scheme transmits credentials as a Base64-encoded user ID and password pair.
+
+    When making a request, include the Base64-encoded credentials in the `Authorization` request header in the following format:  
+    "Basic " + <base64Encode(userid + ":" + password)>"
+
+    *Safeguards:*
+    - Keep your credentials private and do not share them outside your organisation.
+    - Avoid including credentials in publicly accessible source code or repositories.
+  contact:
+    name: IXO Team
+    url: ''
+    email: ixo@ixo.world
+  termsOfService: ''
+  license:
+    name: Apache License 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+servers:
+  - url: 'https://sandbox.api.emerging.eco'
+    description: Sandbox environment for testing
+  - url: 'https://api.emerging.eco'
+    description: Production server
+security:
+  - apiKey: []
+components:
+  securitySchemes:
+    apiKey:
+      type: http
+      scheme: basic
+  schemas:
+    HouseholdStats:
+      type: object
+      properties:
+        total_households:
+          type: integer
+          description: Total number of serviced households.
+        density:
+          type: object
+          properties:
+            low:
+              type: integer
+              description: Number of low-density households.
+            medium:
+              type: integer
+              description: Number of medium-density households.
+            high:
+              type: integer
+              description: Number of high-density households.
+    DeviceStatus:
+      type: object
+      properties:
+        device_id:
+          type: string
+          description: Unique identifier of the device.
+        status:
+          type: string
+          description: Current operational status of the device.
+        last_active:
+          type: string
+          format: date-time
+          description: Timestamp of the last recorded activity.
+    CreditsIssued:
+      type: object
+      properties:
+        credits:
+          type: integer
+          description: Number of credits issued within the specified time period.
+    EmissionReductionVerification:
+      type: object
+      properties:
+        project_id:
+          type: string
+          description: ID of the project.
+        period:
+          type: string
+          description: Certified time period.
+        reductions:
+          type: integer
+          description: Amount of verified emission reductions.
+paths:
+  /households/stats:
+    get:
+      summary: Get household statistics
+      description: 'Retrieve household statistics, including the number of serviced households and density profiles.'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HouseholdStats'
+      x-stoplight:
+        id: 1a3d5f3c-bdc4-4e65-a4a1-8f378a45f4f9
+  /devices/status:
+    get:
+      summary: Get device status
+      description: Retrieve the real-time status and activity logs of connected devices.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceStatus'
+      x-stoplight:
+        id: b3c12a7f-9f76-4d93-b8c9-c7d5c53f3e57
+  /credits/issued:
+    get:
+      summary: Get issued credits
+      description: Retrieve credits issued per project within a specified time period.
+      parameters:
+        - name: project_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: The unique identifier of the project.
+        - name: start_date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+          description: Start date for the reporting period.
+        - name: end_date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date
+          description: End date for the reporting period.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditsIssued'
+      x-stoplight:
+        id: c5d7a4b8-9f36-4c7f-a8d4-df84c7a9b4a6
+  /certifications/verified_emission_reductions:
+    get:
+      summary: Get verified emission reductions
+      description: Retrieve certified records of verified emission reductions for specified projects.
+      parameters:
+        - name: project_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Unique identifier of the project.
+        - name: period
+          in: query
+          required: true
+          schema:
+            type: string
+            description: Time period for which the emission reductions are certified.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmissionReductionVerification'
+      x-stoplight:
+        id: f3b9a7d5-c4a8-4d93-b8c7-a9f84c7b5d6a
+x-internal: false
