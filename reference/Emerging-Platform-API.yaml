@@ -1,0 +1,394 @@
+openapi: 3.1.0
+x-stoplight:
+  id: 884mys18ohpqo
+tags:
+  - name: Emerging-Platform-API
+info:
+  title: Emerging Platform API
+  version: '1.0'
+  summary: |
+    The Emerging Platform API enables the registry system to retrieve accurate data from the dMRV system, ensuring seamless integration, reliable communication, and streamlined monitoring and verification workflows.
+  description: |
+    The Emerging Platform API is designed to facilitate seamless communication between the dMRV system and the registry system. It enables the registry system to retrieve accurate and timely data from the dMRV system, supporting efficient monitoring, reporting, and verification processes. By ensuring reliable data exchange and integration, the API plays a critical role in maintaining data integrity and streamlining workflows between these interconnected systems.
+
+    **Households**
+    - [Get household statistics](Emerging-Platform-API.yaml/paths/~1households~1stats/get)
+    - [Get stove stacking data](Emerging-Platform-API.yaml/paths/~1households~1stove-stacking/get)
+    **Devices**
+    - [Get device status and activity](Emerging-Platform-API.yaml/paths/~1devices~1status/get)
+    **Fuel Usage**
+    - [Get fuel usage metrics](Emerging-Platform-API.yaml/paths/~1fuel-usage/get)
+    **Credits**
+    - [Get issued credits](Emerging-Platform-API.yaml/paths/~1credits~1issued/get)
+    - [Get cancelled credits](Emerging-Platform-API.yaml/paths/~1credits~1cancelled/get)
+    - [Get transferred credits](Emerging-Platform-API.yaml/paths/~1credits~1transferred/get)
+    - [Get retired credits](Emerging-Platform-API.yaml/paths/~1credits~1retired/get)
+    **Claims**
+    - [View household onboarding claims](Emerging-Platform-API.yaml/paths/~1claims~1household-onboarding/get)
+    - [View fuel purchase claims](Emerging-Platform-API.yaml/paths/~1claims~1fuel-purchase/get)
+    - [View fuel delivery claims](Emerging-Platform-API.yaml/paths/~1claims~1fuel-delivery/get)
+    - [View emission reduction claims](Emerging-Platform-API.yaml/paths/~1claims~1emission-reduction/get)
+
+    **Models**
+    - [Household Stats](Emerging-Platform-API.yaml/components/schemas/HouseholdStats)
+    - [Stove Stacking](Emerging-Platform-API.yaml/components/schemas/StoveStacking)
+    - [Device Status](Emerging-Platform-API.yaml/components/schemas/DeviceStatus)
+    - [Fuel Usage](Emerging-Platform-API.yaml/components/schemas/FuelUsage)
+    - [Credits Issued](Emerging-Platform-API.yaml/components/schemas/CreditsIssued)
+    - [Credits Cancelled](Emerging-Platform-API.yaml/components/schemas/CreditsCancelled)
+    - [Credits Transferred](Emerging-Platform-API.yaml/components/schemas/CreditsTransferred)
+    - [Credits Retired](Emerging-Platform-API.yaml/components/schemas/CreditsRetired)
+    - [Household Onboarding Claim](Emerging-Platform-API.yaml/components/schemas/HouseholdOnboardingClaim)
+    - [Fuel Purchase Claim](Emerging-Platform-API.yaml/components/schemas/FuelPurchaseClaim)
+    - [Fuel Delivery Claim](Emerging-Platform-API.yaml/components/schemas/FuelDeliveryClaim)
+    - [Emission Reducion Claim](Emerging-Platform-API.yaml/components/schemas/EmissionReductionClaim)
+    **Security**  
+    The Emerging Platform API uses HTTP Basic Authentication to authenticate requests, following the standard defined in [RFC 7617](https://datatracker.ietf.org/doc/html/rfc7617). This scheme transmits credentials as a Base64-encoded user ID and password pair.
+
+    When making a request, include the Base64-encoded credentials in the `Authorization` request header in the following format:  
+    "Basic " + <base64Encode(userid + ":" + password)>"
+
+    *Safeguards:*
+    - Keep your credentials private and do not share them outside your organisation.
+    - Avoid including credentials in publicly accessible source code or repositories.
+
+  contact:
+    name: IXO Team
+    url: ''
+    email: ixo@ixo.world
+  termsOfService: ''
+  license:
+    name: Apache License 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+servers: []
+security:
+  - apiKey: []
+components:
+  securitySchemes:
+    apiKey:
+      type: http
+      scheme: basic
+  schemas:
+    HouseholdStats:
+      type: object
+      properties:
+        total_households:
+          type: integer
+          description: Total number of serviced households.
+        density:
+          type: object
+          properties:
+            low:
+              type: integer
+              description: Number of low-density households.
+            medium:
+              type: integer
+              description: Number of medium-density households.
+            high:
+              type: integer
+              description: Number of high-density households.
+    StoveStacking:
+      type: object
+      properties:
+        fuel_type:
+          type: string
+          description: Type of fuel used (e.g., LPG + Biomass).
+        percentage:
+          type: number
+          format: float
+          description: Percentage of households using this combination.
+    DeviceStatus:
+      type: object
+      properties:
+        device_id:
+          type: string
+          description: Unique identifier of the device.
+        status:
+          type: string
+          description: Current operational status of the device.
+        last_active:
+          type: string
+          format: date-time
+          description: Timestamp of the last recorded activity.
+    FuelUsage:
+      type: object
+      properties:
+        household_id:
+          type: string
+          description: Unique identifier of the household.
+        fuel_consumed:
+          type: number
+          description: Total fuel consumed in the specified period.
+        region:
+          type: string
+          description: Geographic region of the household.
+    CreditsIssued:
+      type: object
+      properties:
+        project_id:
+          type: string
+          description: Unique identifier of the project.
+        time_period:
+          type: string
+          description: Time period for which credits were issued.
+        credits:
+          type: integer
+          description: Number of credits issued.
+    CreditsCancelled:
+      type: object
+      properties:
+        credit_id:
+          type: string
+          description: Unique identifier of the invalidated credit.
+        cancellation_date:
+          type: string
+          format: date
+          description: Date of credit cancellation.
+    CreditsTransferred:
+      type: object
+      properties:
+        sender:
+          type: string
+          description: Entity transferring the credits.
+        recipient:
+          type: string
+          description: Entity receiving the credits.
+        amount:
+          type: integer
+          description: Number of credits transferred.
+        transfer_date:
+          type: string
+          format: date
+          description: Date of credit transfer.
+    CreditsRetired:
+      type: object
+      properties:
+        credit_id:
+          type: string
+          description: Unique identifier of the retired credit.
+        retirement_date:
+          type: string
+          format: date
+          description: Date of credit retirement.
+        emission_reductions:
+          type: integer
+          description: Amount of emission reductions associated with the retired credit.
+    HouseholdOnboardingClaim:
+      type: object
+      properties:
+        household_id:
+          type: string
+          description: Unique identifier of the household.
+        onboarding_date:
+          type: string
+          format: date
+          description: Date of onboarding.
+    FuelPurchaseClaim:
+      type: object
+      properties:
+        fuel_id:
+          type: string
+          description: Identifier for the fuel purchase claim.
+        amount:
+          type: number
+          description: Amount of fuel purchased.
+        purchase_date:
+          type: string
+          format: date
+          description: Date of the fuel purchase.
+    FuelDeliveryClaim:
+      type: object
+      properties:
+        delivery_id:
+          type: string
+          description: Identifier for the fuel delivery.
+        delivery_date:
+          type: string
+          format: date
+          description: Date of delivery.
+        delivered_quantity:
+          type: number
+          description: Quantity of fuel delivered.
+    EmissionReductionClaim:
+      type: object
+      properties:
+        project_id:
+          type: string
+          description: ID of the project associated with the emission reduction.
+        period:
+          type: string
+          description: Time period of the emission reduction.
+        reductions:
+          type: integer
+          description: Amount of emission reductions achieved.
+paths:
+  /households/stats:
+    get:
+      tags:
+        - Households
+      summary: Get household statistics
+      description: Retrieve household statistics, including the number of serviced households and density profiles.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HouseholdStats'
+  /households/stove-stacking:
+    get:
+      tags:
+        - Households
+      summary: Get stove stacking data
+      description: Analyze usage patterns combining multiple fuel types (e.g., LPG + Biomass).
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoveStacking'
+  /devices/status:
+    get:
+      tags:
+        - Devices
+      summary: Get device status and activity
+      description: Monitor real-time status and activity logs of connected devices.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceStatus'
+  /fuel-usage:
+    get:
+      tags:
+        - Fuel-Usage
+      summary: Get fuel usage metrics
+      description: Retrieve data on fuel usage aggregated by household, region, or time period.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FuelUsage'
+  /credits/issued:
+    get:
+      tags:
+        - Credits
+      summary: Get issued credits
+      description: Retrieve the number of credits issued per project and time period.
+      parameters:
+        - name: project_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Unique identifier of the project.
+        - name: time_period
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Time period for which credits were issued.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditsIssued'
+  /credits/cancelled:
+    get:
+      tags:
+        - Credits
+      summary: Get cancelled credits
+      description: Retrieve records of credits that have been invalidated.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditsCancelled'
+  /credits/transferred:
+    get:
+      tags:
+        - Credits
+      summary: Get transferred credits
+      description: View records of credits transferred between entities.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditsTransferred'
+  /credits/retired:
+    get:
+      tags:
+        - Credits
+      summary: Get retired credits
+      description: Retrieve information about retired credits and their associated emission reductions.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditsRetired'
+  /claims/household-onboarding:
+    get:
+      tags:
+        - Claims
+      summary: View household onboarding claims
+      description: Retrieve details of onboarding claims for new households.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HouseholdOnboardingClaim'
+  /claims/fuel-purchase:
+    get:
+      tags:
+        - Claims
+      summary: View fuel purchase claims
+      description: Retrieve verified claims of purchased fuel units.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FuelPurchaseClaim'
+  /claims/fuel-delivery:
+    get:
+      tags:
+        - Claims
+      summary: View fuel delivery claims
+      description: Retrieve details of completed fuel deliveries.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FuelDeliveryClaim'
+  /claims/emission-reduction:
+    get:
+      tags:
+        - Claims
+      summary: View emission reduction claims
+      description: Retrieve records of Certified Emission Reductions (CERs) achieved.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmissionReductionClaim'
+x-internal: false
