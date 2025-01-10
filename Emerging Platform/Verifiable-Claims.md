@@ -11,7 +11,7 @@ Verifiable claims enable digital Measurement, Reporting, and Verification (dMRV)
 
 A Verifiable Claim is a cryptographically secure statement about a fact or attribute that is issued and cryptographically signed by a trusted entity. These claims are structured as data items linked to a specific domain or entity, providing tamper-proof evidence of events, activities, or states—such as the usage of a device, delivery of goods, or achievement of an impact goal. 
 
-Verifiable Claims leverage the latest web standards (W3C Verifiable Claims and Credentials) to ensure authenticity, integrity, and interoperability. This enables remote monitoring and decentralized verification without having to rely on central authorities and top-down processes. Verifiable Claims dynamically update a domain’s state and play a critical role in establishing trust within the Emerging Platform ecosystem, by assuring [data integrity](Emerging Platform/Data-Integrity.md). 
+Verifiable Claims leverage the latest web standards (W3C Verifiable Claims and Credentials) to ensure authenticity, integrity, and interoperability. This enables remote monitoring and decentralized verification without having to rely on central authorities and top-down processes. Verifiable Claims dynamically update a domain’s state and play a critical role in establishing trust within the Emerging Platform ecosystem, by assuring [data integrity](Data-Integrity.md). 
 
 The main types of Verifiable Claims relevant to the Emerging Platform ecosystem include:
 

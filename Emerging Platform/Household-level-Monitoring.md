@@ -12,34 +12,34 @@ By using the Emerging Platform’s decentralized identifiers (DIDs), verifiable 
 
 ## Key Components of the Architecture
 
-1. **Household DID**  
+**1. Household DID**  
    Each household is represented by a unique, decentralized identifier. All devices, claims, and verifications link back to the Household DID, ensuring consistency and traceability.
 
-2. **Device DIDs**  
+**2. Device DIDs**  
    Cooking appliances (e.g., electric pressure cookers, biomass stoves, or LPG burners) each have their own DID. This allows for cryptographically secure data signatures at the device level.
 
-3. **Claims and Credentials**  
+**3. Claims and Credentials**  
    A claim captures an activity or event (e.g., fuel purchase, device usage), while a credential is a verifiable digital document proving that claim is valid. This distinction enables strong traceability and trust.
 
-4. **Oracle Services**  
+**4. Oracle Services**  
    Oracles are specialized software entities (or modules) with domain-specific knowledge. They verify claims, detect anomalies, and can perform causal AI analysis to prevent double-counting and ensure accurate emission reduction calculations.
 
-5. **Immutable Data Store**  
+**5. Immutable Data Store**  
    Critical metadata (e.g., cryptographic hashes, usage summaries, verification statuses) are anchored on a blockchain-based directed acyclic graph (DAG). Large telemetry data may reside off-chain, with references and hashes on-chain for immutability.
 
 ## Setting Up a Household for dMRV
 
 ### Registration
 
-1. **Create a Household DID**  
+**1. Create a Household DID**  
    - Use the platform’s DID registration endpoint to generate a unique identifier for the household.  
    - Store any metadata (e.g., location, population, technology preferences).
 
-2. **Associate Customer or Resident Profiles**  
+2. **2. Associate Customer or Resident Profiles**  
    - Optionally, link individual customers or household residents to the household.  
    - This helps track user-level interactions and device ownership.
 
-3. **Schema Example (JSON Payload)**
+3. **3. Schema Example (JSON Payload)**
 
 ```json
 {

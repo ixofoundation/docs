@@ -20,7 +20,7 @@ Prerequisites
 ### Step 1: Define the Claim Structure
 
 Start by defining the structure of the Verifiable Claim using the JSON-LD format. This ensures compatibility with IXO protocols and linked-data frameworks:
-```
+``` json
 {
   "@context": "https://www.w3.org/2018/credentials/v1",
   "id": "http://example.com/claims/1234",
@@ -42,7 +42,7 @@ Submit the structured claim to the IXO Claims Module using the platform’s SDK 
 ### Step 3: Set Up an Oracle Service
 
 Configure an Oracle service to evaluate claims using Causal AI. The Oracle should be registered on the IXO network with the appropriate evaluation endpoints:
-```
+``` json
 const oracleConfig = {
   name: "CausalImpactOracle",
   did: "did:ixo:oracle789",
@@ -63,7 +63,7 @@ Example:
 from causal_impact import CausalImpact
 
 def evaluate_claim(data):
-```
+``` json
     # Preprocess the data for causal analysis
     time_series_data = preprocess_claim_data(data)
     
@@ -89,7 +89,7 @@ def evaluate_claim(data):
 ### Step 5: Process Verification Results
 
 Process the results of the claim evaluation and update its status on the IXO network:
-```
+``` json
 const updateClaimStatus = async (claimId, result) => {
   try {
     await ixo.claims.updateStatus(claimId, result);
@@ -107,10 +107,11 @@ Leverage IXO’s ClientSDK to facilitate operations related to claims evaluation
 - DisputeClaim: Challenge the results of an evaluation if necessary.
 
 ## Best Practices
-	1.	Maintain Data Quality: Ensure input data for claims and Causal AI models is accurate and complete.
-	2.	Monitor Model Performance: Regularly evaluate and update Causal AI models to adapt to changing conditions or new data.
-	3.	Standardize Claims: Use common schemas and ontologies to enhance interoperability.
-	4.	Log and Audit: Implement robust logging and auditing mechanisms for traceability and accountability.
+
+- Maintain Data Quality: Ensure input data for claims and Causal AI models is accurate and complete.
+- Monitor Model Performance: Regularly evaluate and update Causal AI models to adapt to changing conditions or new data.
+- Standardize Claims: Use common schemas and ontologies to enhance interoperability.
+- Log and Audit: Implement robust logging and auditing mechanisms for traceability and accountability.
   
 
 ## Conclusion

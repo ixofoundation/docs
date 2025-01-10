@@ -8,25 +8,26 @@ This guide details how to implement a Digital Voucher scheme in the Emerging Pla
 
 ## Overview
 
-1. **ITMO Generation**  
-   - A Mitigation Activity issues ITMOs after verified emission reductions are recognized under Article 6 of the Paris Agreement.  
-   - For each ITMO sold, part of the revenue is earmarked for end-user incentives.
+**1. ITMO Generation**  
+- A Mitigation Activity issues ITMOs after verified emission reductions are recognized under Article 6 of the Paris Agreement.  
+- For each ITMO sold, part of the revenue is earmarked for end-user incentives.
 
-2. **Voucher Creation**  
-   - The system mints a unique digital voucher linked to a user’s decentralized identifier (DID).  
-   - Each voucher has an on-chain representation as a token that specifies its value and redemption terms.
+**2. Voucher Creation**  
+- The system mints a unique digital voucher linked to a user’s decentralized identifier (DID).  
+- Each voucher has an on-chain representation as a token that specifies its value and redemption terms.
 
-3. **Distribution to End-Users**  
-   - Users are notified via a mobile app, SMS, or another interface that a voucher is available.  
-   - The voucher is assigned to the user’s DID-based wallet or account, ensuring cryptographic ownership.
+**3. Distribution to End-Users**  
+- Users are notified via a mobile app, SMS, or another interface that a voucher is available.  
+- The voucher is assigned to the user’s DID-based wallet or account, ensuring cryptographic ownership.
 
-4. **Redemption**  
-   - Users can redeem vouchers for selected goods and services (e.g., further cooking devices, fuel supplies, educational or healthcare benefits) from partner suppliers.  
-   - Once redeemed, the voucher is marked as spent or burned, preventing double usage.
+**4. Redemption**  
+- Users can redeem vouchers for selected goods and services (e.g., further cooking devices, fuel supplies, educational or healthcare benefits) from partner suppliers.  
+- Once redeemed, the voucher is marked as spent or burned, preventing double usage.
 
-5. **Settlements & Reporting**  
-   - Merchants or service providers receive payment or credit in exchange for accepting vouchers.  
-   - The Emerging Platform tracks each step, ensuring transparency and full value transfer to end-users.
+**5. Settlements & Reporting**  
+- Merchants or service providers receive payment or credit in exchange for accepting vouchers.  
+- The Emerging Platform tracks each step, ensuring transparency and full value transfer to end-users.
+
 ## Key Technical Components
 
 ### Decentralized Identifiers (DIDs)
@@ -38,7 +39,7 @@ This guide details how to implement a Digital Voucher scheme in the Emerging Pla
 - **Voucher Credential**: A cryptographic document binding the voucher’s value, expiration date, and redemption conditions to the user’s DID.  
 - **On-Chain Representation**: Vouchers are minted as digital tokens
 
-### 2.3 Smart Contracts
+### Smart Contracts
 - **Minting Contract**: Issues new vouchers when ITMOs are sold, ensuring a transparent link between ITMO revenue and voucher creation.  
 - **Redemption Contract**: Tracks voucher usage, verifying that a user meets redemption conditions and preventing double-spending.  
 - **Settlement Contract**: Handles merchant reimbursements, ensuring they receive the promised value once a voucher is redeemed.
@@ -51,12 +52,12 @@ This guide details how to implement a Digital Voucher scheme in the Emerging Pla
 ## Voucher Creation & Distribution
 
 ### Linking Vouchers to ITMO Sales
-1. **ITMO Sale Event**  
-   - When a transaction on an ITMO marketplace completes, the platform logs the revenue details.  
-2. **Oracle Notification**  
-   - The Oracle checks the sale data for accuracy, including the quantity of ITMOs and final price.  
-3. **Minting Contract**  
-   - The Oracle calls the Minting Contract, specifying the user’s DID, the voucher’s numeric value, and relevant metadata (e.g., voucher ID, issuance date, expiry date).
+**1. ITMO Sale Event**  
+- When a transaction on an ITMO marketplace completes, the platform logs the revenue details.  
+**2. Oracle Notification**  
+- The Oracle checks the sale data for accuracy, including the quantity of ITMOs and final price.  
+**3. Minting Contract**  
+- The Oracle calls the Minting Contract, specifying the user’s DID, the voucher’s numeric value, and relevant metadata (e.g., voucher ID, issuance date, expiry date).
 
 #### Example Pseudocode
 ```pseudo
@@ -91,11 +92,11 @@ Each voucher includes:
 - The user presents a credential or token proving voucher ownership.
 
 ### Merchant Confirmation
-1. **Voucher Validation**  
-   - The merchant’s system checks the voucher’s metadata, cryptographic signatures, and expiry.  
-   - Ensures the voucher has not already been redeemed or voided.
-2. **Authorization**  
-   - If valid, the merchant’s system requests redemption from the Redemption Contract.
+**1. Voucher Validation**  
+- The merchant’s system checks the voucher’s metadata, cryptographic signatures, and expiry.  
+- Ensures the voucher has not already been redeemed or voided.
+**2. Authorization**  
+- If valid, the merchant’s system requests redemption from the Redemption Contract.
 
 #### Example REST Call
 ```http
@@ -154,73 +155,73 @@ function redeemVoucher(voucherId, redeemerDid, merchantDid):
 
 Below is a step-by-step outline for developers integrating the voucher scheme into their apps or services:
 
-1. **Deploy Smart Contracts**  
-   - Minting Contract: Handles voucher issuance post-ITMO sale.  
-   - Redemption/Settlement Contract: Manages redemption requests and merchant payouts.
+**1. Deploy Smart Contracts**  
+- Minting Contract: Handles voucher issuance post-ITMO sale.  
+- Redemption/Settlement Contract: Manages redemption requests and merchant payouts.
 
-2. **Register Entities (DIDs)**  
-   - Each user, merchant, and the project itself must have a DID.  
-   - Store DID documents on the Emerging Platform’s DID registry for easy lookup and trust verification.
+**2. Register Entities (DIDs)**  
+- Each user, merchant, and the project itself must have a DID.  
+- Store DID documents on the Emerging Platform’s DID registry for easy lookup and trust verification.
 
-3. **Develop or Integrate a Wallet**  
-   - Provide a user-friendly interface where end-users can see voucher balances, transaction history, and redeem vouchers.  
-   - The same wallet could store carbon credits, credentials, or other digital assets.
+**3. Develop or Integrate a Wallet**  
+- Provide a user-friendly interface where end-users can see voucher balances, transaction history, and redeem vouchers.  
+- The same wallet could store carbon credits, credentials, or other digital assets.
 
-4. **Implement Oracle Functionality**  
-   - Oracle for ITMO Sales: Observes external carbon marketplaces, triggers voucher minting.  
-   - Oracle for Redemption: (Optional) Validates offline redemption claims or cross-checks external data sources.
+**4. Implement Oracle Functionality**  
+- Oracle for ITMO Sales: Observes external carbon marketplaces, triggers voucher minting.  
+- Oracle for Redemption: (Optional) Validates offline redemption claims or cross-checks external data sources.
 
-5. **Merchant Integration**  
-   - Expose APIs or a web dashboard for merchants to scan user credentials and trigger redemptions.  
-   - Provide instructions on how to handle refunds, partial redemptions, or expansions of accepted voucher types.
+**5. Merchant Integration**  
+- Expose APIs or a web dashboard for merchants to scan user credentials and trigger redemptions.  
+- Provide instructions on how to handle refunds, partial redemptions, or expansions of accepted voucher types.
 
-6. **Notification System**  
-   - Implement push notifications, SMS, or email to inform users when new vouchers are issued.  
-   - Notify merchants of successful redemptions and any relevant settlement details.
+**6. Notification System**  
+- Implement push notifications, SMS, or email to inform users when new vouchers are issued.  
+- Notify merchants of successful redemptions and any relevant settlement details.
 
-7. **Monitoring & Analytics**  
-   - Track voucher distribution, redemption rates, merchant payment flows, and potential fraud signals.  
-   - Generate reports for stakeholders or auditors, showing how ITMO revenue is disbursed to end-users.
+**7. Monitoring & Analytics**  
+- Track voucher distribution, redemption rates, merchant payment flows, and potential fraud signals.  
+- Generate reports for stakeholders or auditors, showing how ITMO revenue is disbursed to end-users.
 
 ## Example User Journey
 
-1. **Emission Reductions Verified**  
-   A household using modern cooking solutions generates verified emission reductions. The project obtains an ITMO for this carbon credit.
-2. **ITMO Sale**  
-   An international buyer purchases the ITMO from the project’s marketplace listing.
-3. **Voucher Minting**  
-   Once the sale is confirmed, the Oracle triggers the minting contract to create a digital voucher worth USD 10 (for example).
-4. **User Notification**  
-   The user receives a message: “You have a new voucher valued at USD 10, redeemable at Partner Merchants until December 31.”
-5. **Redemption**  
-   The user presents the voucher credential at a partner store for a product or service. The store’s system verifies the voucher is legitimate, then redeems it.
-6. **Settlement**  
-   The merchant receives a payment or token credit from the project’s settlement contract.  
-7. **Audit & Reporting**  
-   The entire flow is recorded on the blockchain, providing an auditable trail demonstrating that end-users fully benefited from the ITMO proceeds.
+**1. Emission Reductions Verified**  
+A household using modern cooking solutions generates verified emission reductions. The project obtains an ITMO for this carbon credit.
+**2. ITMO Sale**  
+An international buyer purchases the ITMO from the project’s marketplace listing.
+**3. Voucher Minting**  
+Once the sale is confirmed, the Oracle triggers the minting contract to create a digital voucher worth USD 10 (for example).
+**4. User Notification**  
+The user receives a message: “You have a new voucher valued at USD 10, redeemable at Partner Merchants until December 31.”
+**5. Redemption**  
+The user presents the voucher credential at a partner store for a product or service. The store’s system verifies the voucher is legitimate, then redeems it.
+**6. Settlement**  
+The merchant receives a payment or token credit from the project’s settlement contract.  
+**7. Audit & Reporting**  
+The entire flow is recorded on the blockchain, providing an auditable trail demonstrating that end-users fully benefited from the ITMO proceeds.
 
 ## Best Practices and Recommendations
 
-1. **Scalability**  
-   - Use layer-2 solutions or sidechains for high-volume voucher issuance if transaction fees on the main chain are too high.  
-   - Cache voucher states for quick lookups.
+**1. Scalability**  
+- Use layer-2 solutions or sidechains for high-volume voucher issuance if transaction fees on the main chain are too high.  
+- Cache voucher states for quick lookups.
 
-2. **User Experience (UX)**  
-   - Provide simple redemption flows (e.g., scanning a QR code or tapping a mobile app button).  
-   - Offer clear instructions in local languages, especially for end-users unfamiliar with blockchain.
+**2. User Experience (UX)**  
+- Provide simple redemption flows (e.g., scanning a QR code or tapping a mobile app button).  
+- Offer clear instructions in local languages, especially for end-users unfamiliar with blockchain.
 
-3. **Security & Privacy**  
-   - Encrypt sensitive data off-chain.  
-   - Deploy robust authentication for merchant dashboards.  
-   - Implement role-based access for administrators.
+**3. Security & Privacy**  
+- Encrypt sensitive data off-chain.  
+- Deploy robust authentication for merchant dashboards.  
+- Implement role-based access for administrators.
 
-4. **Compliance**  
-   - Stay up-to-date with local financial regulations (e.g., e-money, voucher laws).  
-   - Implement KYC/AML checks if required for large-value vouchers or cross-border payments.
+**4. Compliance**  
+- Stay up-to-date with local financial regulations (e.g., e-money, voucher laws).  
+- Implement KYC/AML checks if required for large-value vouchers or cross-border payments.
 
-5. **Flexible Redemption Options**  
-   - Partner with a diverse set of merchants (health, education, cooking fuel, etc.) to maximize SDG impact.  
-   - Create partial redemption or top-up features so users can combine vouchers for higher-value products.
+**5. Flexible Redemption Options**  
+- Partner with a diverse set of merchants (health, education, cooking fuel, etc.) to maximize SDG impact.  
+- Create partial redemption or top-up features so users can combine vouchers for higher-value products.
 
 ## Conclusion
 

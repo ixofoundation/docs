@@ -37,14 +37,14 @@ The Emerging Platform Registry offers the following services for dMRV processes:
 
 1. **[Registration](Registration.md)**: Onboarding of projects, agents, and activities.
 2. **Credential Issuance**: Provision of verified credentials for authorized entities.
-3. **[Claims Submissions](Claims-Submissions.md)**: Secure submission of digital claims.
-4. **[Claims Evaluations](Claims-Evaluations.md)**: Verification and validation of submitted claims.
-5. **[Self-Certification](Self-Certification.md)**: Enabling entities to self-certify their actions with robust audit trails.
-6. **[Credits Issuance](Credits-Issuance.md)**: Generation of tokenized credits for verified outcomes.
-7. **[Credits Transfers](Credits-Transfers.md)**: Secure and traceable transfer of tokenized credits.
-8. **[Credits Retirements](Credits-Retirements.md)**: Permanent retirement of credits to account for emissions reductions.
-9. **[International Settlements](International-Settlements.md)**: Cross-border trading and settlement of tokenized credits.
-10. **[Audits](Audits.md)**: Comprehensive review and verification of activities and claims.
+3. **[Claims Submissions](Verifiable-Claims.md)**: Secure submission of digital claims.
+4. **[Claims Evaluations](Claim-Evaluations.md)**: Verification and validation of submitted claims.
+5. **[Self-Certification](to-do.md)**: Enabling entities to self-certify their actions with robust audit trails.
+6. **[Credits Issuance](to-do.md)**: Generation of tokenized credits for verified outcomes.
+7. **[Credits Transfers](to-do.md)**: Secure and traceable transfer of tokenized credits.
+8. **[Credits Retirements](to-do.md)**: Permanent retirement of credits to account for emissions reductions.
+9. **[International Settlements](to-do.md)**: Cross-border trading and settlement of tokenized credits.
+10. **[Audits](to-do.md)**: Comprehensive review and verification of activities and claims.
 
 ### Building with the Registry
 

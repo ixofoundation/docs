@@ -3,7 +3,7 @@ stoplight-id: dl3lk7f413nac
 tags: [Emerging, Introduction]
 ---
 
-# IXO dMRV
+# Digital MRV
 
 ## Introduction  
 The [Emerging Platform](https://emerging.eco) implements the market-leading [IXO](https://ixo.world) dMRV protocols and software systems for managing data related to clean cooking initiatives, and to generate evidence for Internationally Transferred Mitigation Outcomes (ITMOs).

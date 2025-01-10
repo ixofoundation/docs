@@ -51,7 +51,7 @@ Each property includes `domainIncludes` and `rangeIncludes` statements referenci
 
 In your ITMO credential, add the context URLs in the "@context" array. For example:
 
-```
+``` json
 "@context": [
   "https://www.w3.org/2018/credentials/v1",
   "https://w3id.org/security/suites/ed25519-2018/v1",
@@ -77,19 +77,19 @@ When a verifier or parser reads the credential, it looks up "itmo:authorizationR
 
 To create a valid ITMO credential:
 
-1. **Prepare the Base Document**
-   * Include required W3C VC fields
-   * Add ITMO-specific context
-   * Structure the `credentialSubject` data
+**1. Prepare the Base Document**
+* Include required W3C VC fields
+* Add ITMO-specific context
+* Structure the `credentialSubject` data
 
-2. **Add Required ITMO Fields**
-   * Authorization information
-   * NDC quantification data
-   * Environmental integrity metrics
+**2. Add Required ITMO Fields**
+* Authorization information
+* NDC quantification data
+* Environmental integrity metrics
 
 ### Example ITMO Credential
 
-```
+``` json
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",

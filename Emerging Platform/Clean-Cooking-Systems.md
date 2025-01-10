@@ -48,7 +48,7 @@ Data from real-world systems is fused into the digital twin system through Verif
 
 ### Digital Domain Setup
 
-Entities and their relationships are [registered](Emerging Platform/Registration.md) in the platform as _domains_ and each domain is configured with its Domain Properties:  
+Entities and their relationships are [registered](Registration.md) in the platform as _domains_ and each domain is configured with its Domain Properties:  
 1. Digital Identifier  
    Created as a DID for verifiable ownership and uniqueness; can be enhanced with verifiable credentials.  
 2. Domain Controllers  
