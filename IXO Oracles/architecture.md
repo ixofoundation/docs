@@ -1,3 +1,7 @@
+---
+stoplight-id: pqt0jekvox5wa
+---
+
 # IXO Oracles: Technical Architecture
 
 ## 1. Architectural Overview

@@ -5,7 +5,7 @@ tags: [Introduction]
 
 # API Reference
 
-The IXO Spatial Web API is comprehensive and spans multiple domains, providing various functions to interact with different components of the IXO ecosystem. The key systems involved in offering these functionalities include:
+The IXO Spatial Web API is comprehensive and spans multiple layers of the software stack, providing various functions to interact with different components of the IXO ecosystem. The key systems involved in offering these functionalities include:
 
 - [**IXO Protocol Blockchain RPC API**](RPC-API/RPC-API-Overview.md): Manages on-chain data and transactions via direct RPC communication.
 - [**IXO Protocol Blockchain gRPC Gateway API**](gRPC-Gateway/gRPC-Gateway-Overview.md): Provides a gRPC REST interface for direct blockchain queries.

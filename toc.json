@@ -215,7 +215,7 @@
     },
     {
       "type": "divider",
-      "title": "platforms"
+      "title": "Platforms"
     },
     {
       "type": "group",
@@ -223,28 +223,98 @@
       "items": [
         {
           "type": "item",
+          "title": "Definitions",
+          "uri": "Emerging Platform/Definitions.md"
+        },
+        {
+          "type": "item",
           "title": "Welcome",
-          "uri": "Platforms/Emerging/Welcome.md"
+          "uri": "Emerging Platform/Welcome.md"
+        },
+        {
+          "type": "item",
+          "title": "Concepts",
+          "uri": "Emerging Platform/Concepts.md"
+        },
+        {
+          "type": "item",
+          "title": "Clean Cooking Systems",
+          "uri": "Emerging Platform/Clean-Cooking-Systems.md"
+        },
+        {
+          "type": "item",
+          "title": "Digital MRV",
+          "uri": "Emerging Platform/IXO-dMRV.md"
+        },
+        {
+          "type": "item",
+          "title": "Household Level Monitoring",
+          "uri": "Emerging Platform/Household-level-Monitoring.md"
+        },
+        {
+          "type": "item",
+          "title": "Stove Stacking",
+          "uri": "Emerging Platform/Stove-Stacking.md"
         },
         {
           "type": "item",
           "title": "Registration",
-          "uri": "Platforms/Emerging/Registration.md"
+          "uri": "Emerging Platform/Registration.md"
         },
         {
           "type": "item",
-          "title": "dMRV Registry",
-          "uri": "Platforms/Emerging/dMRV Registry.md"
+          "title": "Verifiable Claims",
+          "uri": "Emerging Platform/Verifiable-Claims.md"
         },
         {
           "type": "item",
-          "title": "Claims Submissions",
-          "uri": "Platforms/Emerging/Claims-Submissions.md"
+          "title": "Claim Evaluations",
+          "uri": "Emerging Platform/Claim-Evaluations.md"
         },
         {
           "type": "item",
-          "title": "Claims Verifications",
-          "uri": "Platforms/Emerging/Claims-Evaluations.md"
+          "title": "ITMO Credentials",
+          "uri": "Emerging Platform/ITMO-Credentials.md"
+        },
+        {
+          "type": "item",
+          "title": "SDG Monitoring",
+          "uri": "Emerging Platform/SDG-Monitoring.md"
+        },
+        {
+          "type": "item",
+          "title": "Digital Vouchers",
+          "uri": "Emerging Platform/Digital-Vouchers.md"
+        },
+        {
+          "type": "item",
+          "title": "API Integration",
+          "uri": "Emerging Platform/API-Integration.md"
+        },
+        {
+          "type": "item",
+          "title": "Policy Brief",
+          "uri": "Emerging Platform/Policy-Brief.md"
+        },
+        {
+          "type": "item",
+          "title": "Kitchen Performance Tests",
+          "uri": "Emerging Platform/Kitchen-Performance-Tests.md"
+        },
+        {
+          "type": "item",
+          "title": "ITMO Data Model",
+          "uri": "Emerging Platform/ITMO-DataModel.md"
+        },
+        {
+          "type": "item",
+          "title": "ITMO Vocabulary",
+          "uri": "Emerging Platform/ITMO-Vocabulary.md"
+        },
+        {
+          "type": "item",
+          "title": "ITMO Vocabulary JSON",
+          "uri": "models/ITMO-Vocabulary.json"
         }
       ]
     }

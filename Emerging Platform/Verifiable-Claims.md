@@ -1,11 +1,19 @@
 ---
-stoplight-id: tfoyzkf9nkdgr
+stoplight-id: zj20b6m8odcxm
 ---
 
 # Verifiable Claims
-This guide will walk you through implementing Verifiable Claims using the IXO protocols and Spatial Web platform.
+
+This guide will walk you through implementing Verifiable Claims using the Emerging Platform.
 ## Overview
-The Emerging Platform for Modern Energy Cooking, built on the IXO infrastructure, enables various types of claims relevant to clean cooking implementation. These claims are essential for digital Measurement, Reporting, and Verification (dMRV) of outcomes from modern energy cooking activities. The main types of claims include:
+
+Verifiable claims enable digital Measurement, Reporting, and Verification (dMRV) of outcomes from modern energy cooking activities.
+
+A Verifiable Claim is a cryptographically secure statement about a fact or attribute that is issued and cryptographically signed by a trusted entity. These claims are structured as data items linked to a specific domain or entity, providing tamper-proof evidence of events, activities, or states—such as the usage of a device, delivery of goods, or achievement of an impact goal. 
+
+Verifiable Claims leverage the latest web standards (W3C Verifiable Claims and Credentials) to ensure authenticity, integrity, and interoperability. This enables remote monitoring and decentralized verification without having to rely on central authorities and top-down processes. Verifiable Claims dynamically update a domain’s state and play a critical role in establishing trust within the Emerging Platform ecosystem, by assuring [data integrity](Data-Integrity.md). 
+
+The main types of Verifiable Claims relevant to the Emerging Platform ecosystem include:
 
 ### Emission Reduction Claims
 These claims are fundamental to the platform's carbon credit generation process:
@@ -19,8 +27,8 @@ These claims are fundamental to the platform's carbon credit generation process:
 - **Device Performance**: Claims related to the efficiency and effectiveness of the cooking devices.
 
 ### Fuel-Related Claims
-- **Fuel Consumption**: Claims measuring the amount of clean cooking fuel used (e.g., LPG, biogas, electricity).
 - **Fuel Purchase**: Claims recording the purchase of sustainable fuel, such as biomass pellets.
+- **Fuel Consumption**: Claims measuring the amount of clean cooking fuel used (e.g., biomass pellets, LPG, biogas, electricity).
 
 ### Social and Economic Impact Claims
 - **Health Improvements**: Claims related to reduced exposure to indoor air pollution.
@@ -46,15 +54,17 @@ These various types of claims, when processed and verified through the IXO Emerg
 
 # Technical Specification
 
-
 ## Overview
-Verifiable Claims are the foundation for all identified data objects in the Internet of Impact. They allow encoding high-definition data with the following key characteristics:
+Verifiable Claims: A Foundation for Trusted Data in the Internet of Impact
 
-- Resolution to decentralized identifier keys (DIDs)
-- Linked-data contexts for resolving ontologies  
-- Cryptographic verifiability
-- Content addressability
-- Cryptographic authentication of subject and issuer
+Verifiable Claims are the cornerstone of all identified data objects within the Internet of Impact ecosystem. These claims enable the encoding of high-definition data with robust features that ensure security, trust, and interoperability. Key characteristics of Verifiable Claims include:
+- Decentralized Identifiers (DIDs): Claims are resolvable to DIDs, ensuring verifiable ownership and authenticity
+- Linked-Data Contexts: Ontology-based data models provide semantic clarity and enhance machine-readable interoperability
+- Cryptographic Verifiability: Claims are cryptographically signed to guarantee data integrity and prevent tampering
+- Content Addressability: Claims are referenced via unique hashes, ensuring their data is immutable and reliably retrievable
+- Authenticated Relationships: Both the subject and issuer of a claim are cryptographically authenticated, enabling secure and trusted data exchanges
+
+By integrating these capabilities, Verifiable Claims empower decentralized systems to operate with high assurance, fostering trust and transparency across the Internet of Impact.
 
 ## Claim Structure
 A Verifiable Claim in IXO consists of the following components:
@@ -123,21 +133,3 @@ A JSON Schema is used to validate the structure of the claim object. For example
   "required": ["@context", "id", "type", "issuer", "issuanceDate", "credentialSubject"]
 }
 ```
-
-### Claim Signature
-The claim is cryptographically signed by the issuer to ensure authenticity and integrity.
-
-### Implementation
-
-To implement Verifiable Claims in your application, refer to the IXO Spatial Web [implementation guides](../../Implementation-Guides/Implementation-Guides-Overview.md).
-
-#### Best Practices
-- Use standardized claim schemas where possible to ensure interoperability
-- Implement proper key management for DIDs used to sign claims
-- Validate claims against their JSON Schema before processing
-- Store claims securely, preferably using decentralized storage like IPFS
-
-#### Conclusion
-By following this guide, you can implement Verifiable Claims in your application using the IXO protocols and Spatial Web platform. This enables secure, verifiable data exchange in the Internet of Impacts ecosystem.
-
-
