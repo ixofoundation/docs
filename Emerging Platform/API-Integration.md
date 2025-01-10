@@ -93,5 +93,5 @@ Certify the emission reductions achieved, linked to specific projects and time p
 
 5. **Sandbox Environment**: Test your integrations in the sandbox environment before deploying to production.
 
-The Emerging Platform APIs provide a comprehensive suite of tools to enable developers to build scalable, data-driven applications. For detailed API specifications, visit the [API documentation](https://docs.emerging.eco).
+The Emerging Platform APIs provide a comprehensive suite of tools to enable developers to build scalable, data-driven applications. For detailed API specifications, visit the [API Specification](../reference/dMRV-API.yaml).
 
