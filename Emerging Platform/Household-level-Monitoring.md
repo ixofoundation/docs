@@ -35,11 +35,11 @@ Critical metadata (e.g., cryptographic hashes, usage summaries, verification sta
 - Use the platform’s DID registration endpoint to generate a unique identifier for the household.  
 - Store any metadata (e.g., location, population, technology preferences).
 
-2. **2. Associate Customer or Resident Profiles**  
+**2. Associate Customer or Resident Profiles**  
 - Optionally, link individual customers or household residents to the household.  
 - This helps track user-level interactions and device ownership.
 
-3. **3. Schema Example (JSON Payload)**
+**3. Schema Example (JSON Payload)**
 
 ```json
 {
@@ -66,21 +66,21 @@ Critical metadata (e.g., cryptographic hashes, usage summaries, verification sta
 
 ## Data Ingestion Architecture
 
-1. **IoT Connectivity**  
+**IoT Connectivity**  
 - Devices periodically send telemetry to the platform (e.g., via MQTT, HTTP, or LoRaWAN gateways).  
-2. **Edge or Mobile App Logging**  
+**Edge or Mobile App Logging**  
 - In areas without reliable connectivity, mobile apps can store data offline and sync it to the platform when a connection is available.
-3. **Cryptographic Signatures**  
+**Cryptographic Signatures**  
 - Each measurement is digitally signed with the device’s private key.  
 - The platform verifies these signatures, ensuring no tampering in transit.
 
 ### Claims Creation
 
 After each measurement cycle or transaction (e.g., fuel delivery):
-1. **Claim Payload**  
+**Claim Payload**  
 - Basic attributes: device ID, timestamp, usage metrics (e.g., burn time, fuel consumed).  
 - Sign with the device’s private key.  
-2. **Household Association**  
+**Household Association**  
 - Link each claim to the Household DID for aggregated analytics.
 
 ## Reporting and Aggregation at Household Level
@@ -118,31 +118,32 @@ Once claims accumulate, the household can receive an updated credential summariz
 ### Stove Stacking and Fuel Switching
 
 When multiple devices are linked to a household, the platform uses these references to:
-- **Detect Overlaps**: Identify if devices of different fuel types operated concurrently.  
-- **Prevent Double-Counting**: The Oracle cross-checks usage from multiple stoves to ensure the baseline emissions offset is only claimed once for the same cooking needs.
+**Detect Overlaps**: Identify if devices of different fuel types operated concurrently.  
+**Prevent Double-Counting**: The Oracle cross-checks usage from multiple stoves to ensure the baseline emissions offset is only claimed once for the same cooking needs.
 
 ## Verification Workflows
 
 ### Oracle-Based Analysis
 
-1. **Data Validation**  
+**Data Validation**  
 - The Oracle retrieves all usage claims from the household.  
 - Compares timestamps, quantities, and device types with expected patterns (e.g., the MMECD methodology’s standards).
 
-2. **Anomaly Detection**  
+**Anomaly Detection**  
 - Flags contradictory or implausible claims (e.g., more hours of cooking logged than possible in a day).  
 - Identifies suspicious fuel purchase or usage intervals that don’t align with delivery logs.
 
-3. **Causal AI**  
+**Causal AI**  
 - If stove-stacking is detected, a causal model estimates each device’s impact versus a counterfactual scenario without that device.  
 - Helps accurately attribute emission reductions to each device-fuel combination.
 
 ###  Manual or Third-Party Auditing
 
 **External Auditors**  
-- Some projects or registries (e.g., Gold Standard) require third-party verification. Auditors can pull verifiable credentials from the platform, check relevant cryptographic proofs, and confirm sensor accuracy.  
+Some projects or registries (e.g., Gold Standard) require third-party verification. Auditors can pull verifiable credentials from the platform, check relevant cryptographic proofs, and confirm sensor accuracy.  
+
 **On-Site Inspections**  
-- Auditors may physically inspect a subset of stoves for calibration checks, ensuring device data is reliable.
+Auditors may physically inspect a subset of stoves for calibration checks, ensuring device data is reliable.
 
 ## Emission Reduction Calculation
 
@@ -151,16 +152,17 @@ This generally follows the following patterns:
 
 ### Baseline vs. Actual Emissions
 
-1. **Baseline Emissions**: Estimate the household’s emissions using its traditional cooking fuels (e.g., wood, charcoal).  
-2. **Actual Emissions**: Aggregate the real-time usage data from the new, cleaner devices.  
-3. **Reduction** = Baseline – Actual
+**Baseline Emissions**: Estimate the household’s emissions using its traditional cooking fuels (e.g., wood, charcoal).  
+**Actual Emissions**: Aggregate the real-time usage data from the new, cleaner devices.  
+**Reduction** = Baseline – Actual
 
 ### Stove Stacking Considerations
 
 **Partial Fuel Switch**  
-- If the household is using both LPG and biomass, the platform’s data integration keeps a record of exactly how much of each fuel was used in a given period.  
+If the household is using both LPG and biomass, the platform’s data integration keeps a record of exactly how much of each fuel was used in a given period.  
+
 **Weighted Emission Factors**  
-- Each device or fuel source has a known emission factor. The platform automatically applies these to the usage logs, summing the total emissions for the period.
+Each device or fuel source has a known emission factor. The platform automatically applies these to the usage logs, summing the total emissions for the period.
 
 #### Pseudocode for Emission Calculations
 
@@ -198,33 +200,33 @@ function calculateHouseholdEmissions(householdId, startDate, endDate):
 
 ### Household Management
 - `POST /v1/households`  
-  - Registers a new household or updates metadata.  
+- Registers a new household or updates metadata.  
 
 ### Claim Submission
 - `POST /v1/claims`  
-  - Accepts new claims (e.g., usage logs, fuel purchase).  
+- Accepts new claims (e.g., usage logs, fuel purchase).  
 
 ### Oracle Query
-- `POST /dmrv/analysis`  
-  - Trigger an analysis run for a specified period or set of claims.  
+`POST /dmrv/analysis`  
+Trigger an analysis run for a specified period or set of claims.  
 
 ### Credential Issuance
-- `POST /v1/credentials`  
-  - Issues a verifiable credential once claims pass Oracle validation.
+`POST /v1/credentials`  
+Issues a verifiable credential once claims pass Oracle validation.
 
 ## Best Practices
 
-1. **Standardized Protocols**  
+**Standardized Protocols**  
 - Adopt existing protocols (e.g., a “Clean Cooking Protocol”) that define data schemas, usage intervals, and emission factors to avoid custom logic for each project.  
-2. **Fallback Options**  
+**Fallback Options**  
 - In limited-connectivity scenarios, allow devices or mobile apps to buffer data. On reconnection, the entire data set can be batch-submitted for verification.  
-3. **Security**  
+**Security**  
 - Rotate device keys periodically.  
 - Employ robust authentication to ensure only authorized actors can submit or modify claims.  
-4. **Governance and Auditing**  
+**Governance and Auditing**  
 - Keep an immutable on-chain record of all updates to device configurations and Oracle validations.  
 - Conduct routine system checks for data consistency.  
-5. **Scalability**  
+**Scalability**  
 - Use containerization or cloud auto-scaling for high-volume projects.  
 - Employ message queues for asynchronous telemetry processing.
 
