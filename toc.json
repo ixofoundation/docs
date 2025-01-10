@@ -243,11 +243,6 @@
         },
         {
           "type": "item",
-          "title": "Digital MRV",
-          "uri": "Emerging Platform/IXO-dMRV.md"
-        },
-        {
-          "type": "item",
           "title": "Household Level Monitoring",
           "uri": "Emerging Platform/Household-level-Monitoring.md"
         },
