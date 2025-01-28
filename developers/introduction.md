@@ -6,7 +6,7 @@ description: Developers are spoilt for choice!
 
 {% hint style="info" %}
 **Are you a Validator?** \
-Refer to our Github [documentation](https://github.com/ixofoundation/genesis/blob/main/README.md) for details about setting up a _testnet_ node on`pandora` or a _mainnet_ node on `ixo.`
+Refer to our Github [documentation](https://github.com/ixofoundation/genesis/blob/main/README.md) for details about setting up a _testnet_ node on `pandora` or a _mainnet_ node on `ixo.`
 {% endhint %}
 
 {% hint style="info" %}
